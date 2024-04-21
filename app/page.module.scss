@@ -1,0 +1,81 @@
+// theme-variables.scss
+
+// Colori
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+// Font
+$font-family-base: 'Arial', sans-serif;
+$font-size-base: 16px;
+
+// Spacing
+$spacer: 1rem;
+$spacer-lg: 1.5rem; // Spaziatura grande
+$spacer-xl: 2rem; // Spaziatura extra grande
+
+// Borders
+$border-width: 1px;
+$border-radius: 0.25rem;
+
+// media queries
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Media query breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Z-index
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+
+// Layout
+$container-padding-x: 15px; // Padding orizzontale del contenitore
+$container-padding-y: 15px; // Padding verticale del contenitore
+
+// Flexbox categories
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  // Altre proprietà flexbox...
+}
+
+.flex-item {
+  flex: 1;
+  // Altre proprietà degli item...
+}
+
+// Grid categories
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: $spacer;
+  // Altre proprietà grid...
+}
+
+.grid-item {
+  // Proprietà degli item...
+}
+
+// Altre variabili e regole...
+
+.h1{
+  font-size: 4rem;
+}

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import styles from "./page.module.scss";
+import s from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-     <h1>penis</h1>
+    <main className={s.main}>
+     <h1 className={s.h1}>penis</h1>
     </main>
   );
 }
