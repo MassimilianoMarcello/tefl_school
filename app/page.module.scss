@@ -51,9 +51,10 @@ $container-padding-x: 15px; // Padding orizzontale del contenitore
 $container-padding-y: 15px; // Padding verticale del contenitore
 
 // Flexbox categories
-.flex-container {
+.flexContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   // Altre proprietà flexbox...
 }
 
@@ -70,12 +71,26 @@ $container-padding-y: 15px; // Padding verticale del contenitore
   // Altre proprietà grid...
 }
 
-.grid-item {
-  // Proprietà degli item...
-}
+// .grid-item {
+//   // Proprietà degli item...
+// }
 
 // Altre variabili e regole...
 
 .h1{
   font-size: 4rem;
+  margin: 15rem;
 }
+
+.phone icon {
+  font-size: 16px; /* Imposta la dimensione delle icone */
+}
+
+
+.phone > svg {
+  font-size: 0.5rem;
+}
+
+
+
+
