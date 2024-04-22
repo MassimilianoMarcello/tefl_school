@@ -11,7 +11,7 @@ $light-color: #f8f9fa;
 $dark-color: #343a40;
 
 // Font
-$font-family-base: 'Arial', sans-serif;
+$font-family-base: "Arial", sans-serif;
 $font-size-base: 16px;
 
 // Spacing
@@ -28,7 +28,7 @@ $container-max-widths: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 );
 
 // Media query breakpoints
@@ -36,7 +36,7 @@ $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 );
 
 // Z-index
@@ -51,17 +51,47 @@ $container-padding-x: 15px; // Padding orizzontale del contenitore
 $container-padding-y: 15px; // Padding verticale del contenitore
 
 // Flexbox categories
-.flexContainer {
+@mixin flexProperties {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // Altre proprietà flexbox...
 }
-
 .flex-item {
   flex: 1;
   // Altre proprietà degli item...
 }
+
+@mixin padOne {
+  padding: 1rem;
+}
+// POSITION
+@mixin posAbsoluteTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@mixin posAbsoluteTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin posAbsoluteBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin posAbsoluteBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@mixin relative{
+  position: relative;
+}
+
+
 
 // Grid categories
 .grid-container {
@@ -77,20 +107,29 @@ $container-padding-y: 15px; // Padding verticale del contenitore
 
 // Altre variabili e regole...
 
-.h1{
+.h1 {
   font-size: 4rem;
   margin: 15rem;
+  height: 150vh;
 }
 
 .phone icon {
   font-size: 16px; /* Imposta la dimensione delle icone */
 }
 
-
 .phone > svg {
   font-size: 0.5rem;
 }
 
+// LIST
 
+@mixin listItem {
+  list-style: none; 
+  margin: 0; 
+  padding: 1rem;
+}
 
-
+@mixin Link {
+ 
+    text-decoration: none;
+}

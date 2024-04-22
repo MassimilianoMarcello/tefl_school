@@ -1,0 +1,42 @@
+@import  '../../app/page.module.scss';
+
+
+.flexContainer {
+    @include flexProperties; 
+@include padOne;
+  }
+
+  .navOne{
+    @include flexProperties; 
+    background-color: lightblue;
+    color: cadetblue;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+  .navTwo{
+    @include flexProperties; 
+    background-color: beige;
+    color: black;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+
+  }
+
+  .navItem{
+    @include listItem;
+    margin-left: .5rem;
+  }
+  .linkTag{
+    @include Link;
+    text-transform: capitalize;
+  }
+
+  .socialIcon{
+    margin-left: .5rem;
+  }
+
+  .logoContainer{
+    @include flexProperties; 
+  }

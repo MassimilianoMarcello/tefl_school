@@ -1,14 +1,15 @@
 import React from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import s from "@/app/page.module.scss";
+import c from "@/app/page.module.scss";
+import s from'./navbar.module.scss'
 import Image from "next/image";
 import Link from "next/link";
 
 const TopDoubleNavBar = () => {
   return (
     <>
-      <nav className={s.flexContainer}>
+      <nav className={s.navOne}>
         <div className={s.flexContainer}>
           <div className="email">
             <Image
@@ -18,7 +19,7 @@ const TopDoubleNavBar = () => {
               height={20}
             />
 
-            <span>info@youdomain.com</span>
+            {/* <span>info@youdomain.com</span> */}
           </div>
           <div className="phone">
             <Image
@@ -31,7 +32,7 @@ const TopDoubleNavBar = () => {
           </div>
         </div>
         <div className={s.flexContainer}>
-          <div className="facebook">
+          <div className={s.socialIcon}>
             <Image
               src={"/icons/facebook.svg"}
               alt={"facebook icon"}
@@ -39,7 +40,7 @@ const TopDoubleNavBar = () => {
               height={20}
             />
           </div>
-          <div className="instagram">
+          <div className={s.socialIcon}>
             <Image
               src={"/icons/instagram.svg"}
               alt={"instagram icon"}
@@ -47,7 +48,7 @@ const TopDoubleNavBar = () => {
               height={20}
             />
           </div>
-          <div className="youtube">
+          <div className={s.socialIcon}>
             <Image
               src={"/icons/youtube.svg"}
               alt={"youtube icon"}
@@ -57,34 +58,34 @@ const TopDoubleNavBar = () => {
           </div>
         </div>
       </nav>
-      <nav className={s.flexContainer}>
-        <div className={s.flexContainer}>
+      <nav className={s.navTwo}>
+        <div className={s.logoContainer}>
           <Image
-            src={"/icons/youtube.svg"}
+            src={"/assets/tefl_transp.png"}
             alt={"logo image"}
-            width={20}
-            height={20}
+            width={350}
+            height={80}
           />
-          <h1>website name</h1>
+          {/* <h1>website name</h1> */}
         </div>
         <ul className={s.flexContainer}>
-          <li className="nav-item">
-            <Link href={"/"}>Home</Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}>home</Link>
           </li>
-          <li className="nav-item">
-            <Link href={"/"}> OurCourses</Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}> our courses</Link>
           </li>
-          <li className="nav-item">
-            <Link href={"/"}>Our Teachers</Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}>our teachers</Link>
           </li>
-          <li className="nav-item">
-            <Link href={"/"}>Testimonials</Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}>testimonials</Link>
           </li>
-          <li className="nav-item">
-            <Link href={"/"}>FAQ</Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}>FAQ</Link>
           </li>
-          <li className="nav-item">
-            <Link href={"/"}></Link>
+          <li className={s.navItem}>
+            <Link href={"/"} className={s.linkTag}>blog</Link>
           </li>
         </ul>
       </nav>
