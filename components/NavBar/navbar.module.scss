@@ -15,13 +15,16 @@
   }
 
   .navTwo{
-    @include flexProperties; 
+  
     background-color: beige;
     color: black;
     cursor: pointer;
     position: sticky;
     top: 0;
 
+  }
+  .navTwoBox{
+    @include flexProperties; 
   }
 
   .navItem{
@@ -40,3 +43,18 @@
   .logoContainer{
     @include flexProperties; 
   }
+
+
+
+  // BOTTOM NAVBAR
+
+  .bottomNavContainer{
+    background-color: lightpink;
+    position: sticky;
+    top: 0;
+  }
+
+  .fixed{
+    background-color: red;
+  }
+

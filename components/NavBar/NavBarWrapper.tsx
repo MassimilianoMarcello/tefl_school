@@ -6,7 +6,7 @@ const NavBarWrapper = () => {
   return (<>
   
   <TopDoubleNavBar/>
- <BottomNavbar/>
+
   </>
 
   )

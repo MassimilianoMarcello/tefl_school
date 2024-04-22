@@ -5,6 +5,7 @@ import c from "@/app/page.module.scss";
 import s from'./navbar.module.scss'
 import Image from "next/image";
 import Link from "next/link";
+import BottomNavbar from "./BottomNavbar";
 
 const TopDoubleNavBar = () => {
   return (
@@ -59,6 +60,7 @@ const TopDoubleNavBar = () => {
         </div>
       </nav>
       <nav className={s.navTwo}>
+        <div className={s.navTwoBox}>
         <div className={s.logoContainer}>
           <Image
             src={"/assets/tefl_transp.png"}
@@ -68,27 +70,11 @@ const TopDoubleNavBar = () => {
           />
           {/* <h1>website name</h1> */}
         </div>
-        <ul className={s.flexContainer}>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>home</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}> our courses</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>our teachers</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>testimonials</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>FAQ</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>blog</Link>
-          </li>
-        </ul>
+       
+        </div>
+        <BottomNavbar/>
       </nav>
+     
     </>
   );
 };
