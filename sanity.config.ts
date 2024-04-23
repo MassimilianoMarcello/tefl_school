@@ -6,7 +6,7 @@ import {schemaTypes} from './schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'tefl school',
-
+  basePath:"/studio",
   projectId: 'r8udx71r',
   dataset: 'production',
 
