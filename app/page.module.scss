@@ -9,6 +9,10 @@ $warning-color: #ffc107;
 $danger-color: #dc3545;
 $light-color: #f8f9fa;
 $dark-color: #343a40;
+$hover-bg-color: #9e9e9e;
+
+// Colore di sfondo generico
+$bg-color: #ffffff; // Puoi sostituire questo con il colore di sfondo desiderato
 
 // Font
 $font-family-base: "Arial", sans-serif;
@@ -134,3 +138,38 @@ $container-padding-y: 15px; // Padding verticale del contenitore
  
     text-decoration: none;
 }
+
+// Mixin per lo stile dei pulsanti
+@mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size-base;
+  text-align: center;
+  text-decoration: none;
+  list-style: none; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin:0 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+  }
+}
+
+
+
+.samplePage{
+  margin: 20rem ;
+  background-color:$primary-color ;
+  font-size: 4rem;
+  color: #fff;
+}
+
+
+

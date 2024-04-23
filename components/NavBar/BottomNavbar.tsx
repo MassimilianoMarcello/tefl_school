@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import React, { useState, useEffect } from "react";
-import s from './navbar.module.scss'
+import s from "./navbar.module.scss";
 import Link from "next/link";
 
 const BottomNavbar = () => {
@@ -16,36 +16,67 @@ const BottomNavbar = () => {
       }
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  return <div className={fix ? `${s.bottomNavContainer} ${s.fixed}` : s.bottomNavContainer}>
-     <ul className={s.flexContainer}>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>home</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}> our courses</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>our teachers</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>testimonials</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>FAQ</Link>
-          </li>
-          <li className={s.navItem}>
-            <Link href={"/"} className={s.linkTag}>blog</Link>
-          </li>
-        </ul>
-  </div>;
+  return (
+    <div
+      className={
+        fix ? `${s.bottomNavContainer} ${s.fixed}` : s.bottomNavContainer
+      }
+    >
+      <div className={s.flexContainer}>
+        <div>
+          <ul className={s.flexContainer}>
+            <li className={s.navItem}>
+              <Link href={"/"} className={s.linkTag}>
+                home
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/our_courses"} className={s.linkTag}>
+                {" "}
+                our courses
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/our_teachers"} className={s.linkTag}>
+                our teachers
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/testimonials"} className={s.linkTag}>
+                testimonials
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/faq"} className={s.linkTag}>
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          {" "}
+          <ul className={s.flexContainer}>
+            <li className={s.navItem}>
+              <button className={s.primaryButton}>Dates&Prices </button>
+            </li>
+
+            <li className={s.navItem}>
+              <button className={s.warningButton}>ApplyNow </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default BottomNavbar;

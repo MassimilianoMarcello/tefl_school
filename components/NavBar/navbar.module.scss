@@ -3,7 +3,7 @@
 
 .flexContainer {
     @include flexProperties; 
-@include padOne;
+// @include padOne;
   }
 
   .navOne{
@@ -57,4 +57,16 @@
   .fixed{
     background-color: red;
   }
+
+  // buttons in bottom navbar
+
+  // Utilizzo del mixin per creare un pulsante primario
+.primaryButton {
+  @include button-style($primary-color, #fff, darken($primary-color, 10%), #fff);
+}
+
+// Utilizzo del mixin per creare un pulsante di avviso
+.warningButton {
+  @include button-style($warning-color, #fff, darken($warning-color, 10%), #fff);
+}
 

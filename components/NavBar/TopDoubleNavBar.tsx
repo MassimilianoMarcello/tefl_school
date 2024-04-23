@@ -33,29 +33,62 @@ const TopDoubleNavBar = () => {
           </div>
         </div>
         <div className={s.flexContainer}>
+        <ul className={s.flexContainer}>
+            <li className={s.navItem}>
+              <Link href={"/about_us"} className={s.linkTag}>
+             about us
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/contact"} className={s.linkTag}>
+                {" "}
+         contact
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/account"} className={s.linkTag}>
+              account
+              </Link>
+            </li>
+            <li className={s.navItem}>
+              <Link href={"/sign_in"} className={s.linkTag}>
+              sign-in
+              </Link>
+            </li>
+            
+          </ul>
           <div className={s.socialIcon}>
-            <Image
+          <Link href="https://www.facebook.com/tefltuscany" target="_blank" className={s.linkTag}>
+          <Image
               src={"/icons/facebook.svg"}
               alt={"facebook icon"}
-              width={20}
-              height={20}
+              width={30}
+              height={30}
             />
+      </Link>
+     
           </div>
           <div className={s.socialIcon}>
+          <Link href="https://www.instagram.com/centrostudimugello1994/" target="_blank" className={s.linkTag}>
+  
             <Image
               src={"/icons/instagram.svg"}
               alt={"instagram icon"}
-              width={20}
-              height={20}
+              width={30}
+              height={30}
             />
+              </Link>
           </div>
           <div className={s.socialIcon}>
+          <Link href="https://www.youtube.com/channel/UC4Iq349wLtnznhw_BfO1Dhw" target="_blank" className={s.linkTag}>
+  
             <Image
               src={"/icons/youtube.svg"}
               alt={"youtube icon"}
-              width={20}
-              height={20}
+              width={30}
+              height={30}
             />
+               </Link>
           </div>
         </div>
       </nav>
@@ -70,7 +103,21 @@ const TopDoubleNavBar = () => {
           />
           {/* <h1>website name</h1> */}
         </div>
-       
+        <ul className={s.flexContainer}>
+          <li className={s.navItem}>
+            <Link href={"/accreditated"} className={s.linkTag}>accredited</Link>
+          </li>
+          <li className={s.navItem}>
+            <Link href={"/internship"} className={s.linkTag}>internship</Link>
+          </li>
+          <li className={s.navItem}>
+            <Link href={"/blog"} className={s.linkTag}>blog</Link>
+          </li>
+          <li className={s.navItem}>
+            <Link href={"/consultation_sessions"} className={s.linkTag}>consultation sessions</Link>
+          </li>
+
+        </ul>
         </div>
         <BottomNavbar/>
       </nav>
