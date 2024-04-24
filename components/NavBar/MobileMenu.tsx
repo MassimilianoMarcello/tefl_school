@@ -1,20 +1,23 @@
 import Link from 'next/dist/client/link'
+import s from'./navbar.module.scss'
 import React from 'react'
 
 const MobileMenu = () => {
   return (<>
       <div>MobileMenu</div>
-      <ul>
-        <li>
-            <Link href={''}>Courses</Link>
+      <ul className={s.flexContainerRow}>
+        <li className={s.navItemMobile}>
+            <Link href={"/courses"}>Courses</Link>
         </li>
-        <li>
-            <Link href={''}>Internship</Link>
+        <li className={s.navItemMobile}>
+        
+            <Link href={'/internship'}>Internship</Link>
         </li>
-        <li>
-            <Link href={''}>About Us</Link>
+        <li className={s.navItemMobile}>
+            <Link href={'/about_us'}>About Us</Link>
         </li>
       </ul>
+            
   
   </>
 

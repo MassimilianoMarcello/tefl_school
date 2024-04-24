@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import IconOpen from './IconOpen'; // Importa il componente JSX per l'icona uno
 import IconClose from './IconClose'; // Importa il componente JSX per l'icona due
+import MobileMenu from "./MobileMenu";
 
 
 
@@ -30,8 +31,12 @@ const HamburgerButton = () => {
         )}
       </button>
       {isOpen && (
-        <div className={s.menu}>
+        <div className={s.menuMobile}>
           {/* Inserisci qui i tuoi link per il menu mobile */}
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <MobileMenu/>
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
