@@ -1,15 +1,26 @@
-import React from 'react'
-import TopDoubleNavBar from './TopDoubleNavBar'
-import BottomNavbar from './BottomNavbar'
+import React from "react";
+
+import BottomNavbar from "./BottomNavbar";
+import TopNavBar from "./TopNavBar";
+import CenterNavBar from "./CenterNavBar";
 
 const NavBarWrapper = () => {
-  return (<>
-  
-  <TopDoubleNavBar/>
+  return (
+    <>
+      <div>
+        {" "}
+        <TopNavBar />
+      </div>
+      <div>
+        {" "}
+        <CenterNavBar />
+      </div>
+      <div>
+        {" "}
+        <BottomNavbar />
+      </div>
+    </>
+  );
+};
 
-  </>
-
-  )
-}
-
-export default NavBarWrapper
+export default NavBarWrapper;

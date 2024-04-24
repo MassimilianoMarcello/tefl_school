@@ -1,11 +1,26 @@
 @import  '../../app/page.module.scss';
 
 
+// COMMON GENERAL STYLES
+
 .flexContainer {
     @include flexProperties; 
 // @include padOne;
   }
+  .navItem{
+    @include listItem;
+    margin-left: .5rem;
+  }
+  .linkTag{
+    @include Link;
+    text-transform: capitalize;
+  }
 
+
+
+
+
+// TOPNAVABAR
   .navOne{
     @include flexProperties; 
     background-color: lightblue;
@@ -13,6 +28,8 @@
     height: 3rem;
     cursor: pointer;
   }
+
+// CENTRAL NAVBAR
 
   .navTwo{
   
@@ -27,14 +44,7 @@
     @include flexProperties; 
   }
 
-  .navItem{
-    @include listItem;
-    margin-left: .5rem;
-  }
-  .linkTag{
-    @include Link;
-    text-transform: capitalize;
-  }
+
 
   .socialIcon{
     margin-left: .5rem;
