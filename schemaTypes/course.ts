@@ -9,12 +9,17 @@ export default {
         type: 'string',
       },
       {
+        name: 'photo',
+        title: 'Photo',
+        type: 'image',
+      },
+      {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
         options: {
           source: 'name',
-          maxLength: 200, // Imposta la lunghezza massima dello slug se lo desideri
+          maxLength: 200,
         },
       },
       {
@@ -45,15 +50,21 @@ export default {
         title: 'Course Description',
         type: 'text',
       },
-      {
-        name: 'photo',
-        title: 'Photo',
-        type: 'image',
-      },
+
       {
         name: 'completionTimeWeeks',
         title: 'Completion Time (weeks)',
         type: 'number',
+      },
+      {
+        name: 'startDate',
+        title: 'Start Date',
+        type: 'date',
+      },
+      {
+        name: 'endDate',
+        title: 'End Date',
+        type: 'date',
       },
     ],
   };
