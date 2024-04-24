@@ -89,6 +89,7 @@ $breakpoints: (
 
 // TOPNAVABAR
   .navOne{
+  
     @include flexProperties; 
     background-color: lightblue;
     color: cadetblue;
@@ -103,13 +104,14 @@ $breakpoints: (
 // CENTER NAVBAR
 
   .navTwo{
+    position: sticky;
+    top: 0;
   
-    background-color: beige;
+   background-color: beige;
     height: 4rem;
     color: black;
     cursor: pointer;
-    position: sticky;
-    top: 0;
+ 
     @include respond-to(sm, max) {
       position: fixed;
       top: 0;
@@ -121,6 +123,7 @@ $breakpoints: (
 
   }
   .navTwoBox{
+
     @include flexProperties; 
   }
   .logoContainer{
@@ -129,7 +132,7 @@ $breakpoints: (
   }
   .logoImage{
     margin-left: -6rem;
-    position: relative;
+    // position: relative;
   }
 
 

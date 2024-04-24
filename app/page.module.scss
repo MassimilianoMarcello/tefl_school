@@ -68,7 +68,7 @@ $container-padding-y: 15px; // Padding verticale del contenitore
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
 }
 .flex-item {
   flex: 1;
