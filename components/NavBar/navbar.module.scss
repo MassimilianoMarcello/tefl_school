@@ -1,4 +1,43 @@
 @import  '../../app/page.module.scss';
+// @import  '/styles/mediaqueries.module.scss;';
+
+// mediaqueries
+
+// Definizione dei breakpoint come mappa
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin per rispondere ai breakpoint
+@mixin respond-to($breakpoint, $type: min) {
+  // Controlla se il breakpoint è definito nella mappa
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    // Costruisci la query media
+    $query: if($type == min, min-width, max-width);
+    @media (#{$query}: $value) {
+      @content;
+    }
+  } @else {
+    // Se il breakpoint non è definito, emetti un avviso
+    @warn "Breakpoint #{$breakpoint} non definito nella mappa dei breakpoint.";
+  }
+}
+
+// Esempio di utilizzo del mixin
+// .container {
+//   width: 100%;
+//   @include respond-to(sm) {
+//     width: 90%;
+//   }
+//   @include respond-to(md, max) {
+//     width: 80%;
+//   }
+// }
+
 
 
 // COMMON GENERAL STYLES
@@ -10,12 +49,34 @@
   .navItem{
     @include listItem;
     margin-left: .5rem;
+    @include respond-to(sm, max) {
+      display: none;
+    }
+
   }
   .linkTag{
     @include Link;
     text-transform: capitalize;
   }
 
+
+  // NAVBAR WRAPPER
+  .topNavBar {
+    @include respond-to(sm, max) {
+      display: none;
+    }
+  }
+
+    
+ 
+
+  
+  
+  .bottomNavBar {
+    @include respond-to(sm, max) {
+      display: none;
+    }
+  }
 
 
 
@@ -29,30 +90,47 @@
     cursor: pointer;
   }
 
-// CENTRAL NAVBAR
+  .socialIcon{
+    margin-left: .5rem;
+  }
+
+// CENTER NAVBAR
 
   .navTwo{
   
     background-color: beige;
+    height: 4rem;
     color: black;
     cursor: pointer;
     position: sticky;
     top: 0;
+    @include respond-to(sm, max) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3rem;
+   
+    }
 
   }
   .navTwoBox{
     @include flexProperties; 
   }
-
-
-
-  .socialIcon{
-    margin-left: .5rem;
-  }
-
   .logoContainer{
     @include flexProperties; 
+ 
   }
+  .logoImage{
+    margin-left: -6rem;
+    position: relative;
+  }
+
+
+
+
+
+
 
 
 
@@ -79,4 +157,90 @@
 .warningButton {
   @include button-style($warning-color, #fff, darken($warning-color, 10%), #fff);
 }
+
+
+
+// mediaqueries
+
+// Definizione dei breakpoint come mappa
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin per rispondere ai breakpoint
+@mixin respond-to($breakpoint, $type: min) {
+  // Controlla se il breakpoint è definito nella mappa
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    // Costruisci la query media
+    $query: if($type == min, min-width, max-width);
+    @media (#{$query}: $value) {
+      @content;
+    }
+  } @else {
+    // Se il breakpoint non è definito, emetti un avviso
+    @warn "Breakpoint #{$breakpoint} non definito nella mappa dei breakpoint.";
+  }
+}
+
+// Esempio di utilizzo del mixin
+// .container {
+//   width: 100%;
+//   @include respond-to(sm) {
+//     width: 90%;
+//   }
+//   @include respond-to(md, max) {
+//     width: 80%;
+//   }
+// }
+
+
+// hamburger button
+
+.hamburgerMenu {
+  position: relative;
+}
+
+.hamburgerIcon {
+margin: .2rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+.iconMenuClose {
+  fill: red; 
+}
+.iconMenuOpen{}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 3rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .hamburgerMenu {
+    display: none; // Nascondi il menu hamburger su schermi più grandi
+  }
+}
+
+
 
