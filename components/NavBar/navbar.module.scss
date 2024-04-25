@@ -264,7 +264,13 @@ margin: .45rem 2rem;
 
 
 .dropdownContainer{
-
+  // @include respond-to(sm, max) {
+  // display: none;
+  // }
+  height: 15rem;
+  width: auto;
+  // margin-right: 40rem;
+  background-color: aqua;
 }
 
 

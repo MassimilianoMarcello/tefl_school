@@ -6,26 +6,25 @@ const DropdownMenu = () => {
   return (
     <div className={s.dropdownContainer}>DropdownMenu
      <div className={s.flexContainer}>
-        <ul className={s.flexContainer}>
+        <ul className={s.flexContainerRow}>
             <li className={s.navItem}>
-              <Link href={"/about_us"} className={s.linkTag}>
-             about us
+              <Link href={"/courseone"} className={s.linkTag}>
+           120 h course one
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/contact"} className={s.linkTag}>
-                {" "}
-         contact
+              <Link href={"/course2"} className={s.linkTag}>
+              180 h course two
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/account"} className={s.linkTag}>
-              account
+              <Link href={"/course3"} className={s.linkTag}>
+          220h course 3
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/sign_in"} className={s.linkTag}>
-              sign-in
+              <Link href={"/course4"} className={s.linkTag}>
+            all included course
               </Link>
             </li>
             
