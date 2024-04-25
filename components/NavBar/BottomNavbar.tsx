@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import s from "./navbar.module.scss";
 import Link from "next/link";
+import DropdownMenu from "./DropdownMenu";
 
 const BottomNavbar = () => {
   const [fix, setFix] = useState(false);
@@ -75,7 +76,9 @@ const BottomNavbar = () => {
           </ul>
         </div>
       </div>
+      <DropdownMenu/>
     </div>
+  
   );
 };
 

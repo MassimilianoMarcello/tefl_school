@@ -95,6 +95,12 @@ $container-padding-y: 15px; // Padding verticale del contenitore
   bottom: 0;
   right: 0;
 }
+@mixin posAbsoluteBottomRightLeft {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 
 @mixin posAbsoluteBottomLeft {
   position: absolute;

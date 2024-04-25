@@ -13,7 +13,7 @@ const NavBarWrapper = () => {
       <CenterNavBar />
 
       <BottomNavbar />
-      <DropdownMenu/>
+      {/* <DropdownMenu/> */}
     </>
   );
 };
