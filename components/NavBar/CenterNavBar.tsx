@@ -13,15 +13,15 @@ const CenterNavBar = () => {
       <div className={s.navTwoBox}>
         <div className={s.logoContainer}>
           
-          {/* <Image
+          <Image
             src={tefl_logo}
             alt={"logo image"}
-            layout="fill"
-              objectFit="cover"
+            // layout="fill"
+            //   objectFit="content"
             className={s.logoImage}
-            priority
-          /> */}
-          {/* <h1>website name</h1> */}
+            // priority
+          /> 
+        {/* <h1>website name</h1> */}
         </div>
         <div className={s.allLinksDesktop}>
           <ul className={s.flexContainer}>

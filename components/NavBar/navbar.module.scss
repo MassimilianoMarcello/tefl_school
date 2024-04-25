@@ -128,11 +128,20 @@ $breakpoints: (
   }
   .logoContainer{
     @include flexProperties; 
+    align-items: center;
+
  
   }
   .logoImage{
-    margin-left: -6rem;
-    // position: relative;
+    margin-left: 1rem;
+    width: 320px;
+    height: 60px;
+    @include respond-to(sm, max) {
+      width: 200px;
+      height: 40px;
+      margin:  .2rem ;
+    }
+  
   }
 
 
@@ -211,12 +220,14 @@ $breakpoints: (
 
 .hamburgerMenu {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .hamburgerIcon {
-margin: .2rem 1rem;
+margin: .45rem 2rem;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   background: none;
   border: none;
@@ -253,7 +264,7 @@ margin: .2rem 1rem;
 
 
 .dropdownContainer{
-  
+
 }
 
 
