@@ -7,6 +7,7 @@ import DropdownMenu from "./DropdownMenu";
 
 const BottomNavbar = () => {
   const [fix, setFix] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false); // Aggiunto stato per la visibilità del menu dropdown
 
   useEffect(() => {
     function handleScroll() {
@@ -39,11 +40,13 @@ const BottomNavbar = () => {
                 home
               </Link>
             </li>
-            <li className={s.navItem}>
-              <Link href={"/our_courses"} className={s.linkTag}>
-                {" "}
-                our courses
-              </Link>
+            <li
+              className={s.navItem}
+              onMouseEnter={() => setDropdownVisible(true)} // Mostra il menu dropdown quando passi il mouse sopra
+              onMouseLeave={() => setDropdownVisible(false)} // Nascondi il menu dropdown quando il mouse esce
+            >
+              <a className={s.linkTag}>our courses</a> {/* Cambiato Link in 'a' per gestire manualmente l'evento */}
+              {dropdownVisible && <DropdownMenu />} {/* Mostra il menu dropdown se dropdownVisible è true */}
             </li>
             <li className={s.navItem}>
               <Link href={"/our_teachers"} className={s.linkTag}>
@@ -76,9 +79,7 @@ const BottomNavbar = () => {
           </ul>
         </div>
       </div>
-      <DropdownMenu/>
     </div>
-  
   );
 };
 
