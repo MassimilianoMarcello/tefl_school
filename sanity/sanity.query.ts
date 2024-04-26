@@ -19,11 +19,11 @@ export async function getSlideItem(): Promise<SlideItem[]> {
           alt,
           
       }`,
-    {
-      next: {
-        revalidate: 63,
-      },
-    }
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
   );
 }
 
