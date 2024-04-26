@@ -45,45 +45,50 @@ import Image from "next/image";
 import { getSlideItem } from "@/sanity/sanity.query";
 import type { SlideItem } from "@/Types/SlideItem";
 
+
+
 export default function SlideCarousel() {
-  const [slideItems, setSlideItems] = useState
+  const [slideItems, setSlideItems] = useState([] as SlideItem[]);
+  const [index, setIndex] = useState(0); // Dichiarazione e inizializzazione di index
 
-  ([]); // Inizializzo lo stato slideItems come un array vuoto
-const [index, setIndex] = useState(0); // Inizializzo lo stato index a 0
+  useEffect(() => {
+    async function fetchSlideItems() {
+      const items: SlideItem[] | null = await getSlideItem();
+      if (items) {
+        setSlideItems(items);
+      }
+    }
+    fetchSlideItems();
+  }, []);
 
-useEffect(() => {
-async function fetchSlideItems() {
-const items: SlideItem[] = await getSlideItem();
-setSlideItems(items);
-}
-fetchSlideItems();
-}, []);
+  function prevSlide(): void {
+    setIndex(prevIndex => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
+  }
+  
+  function nextSlide(): void {
+    setIndex(prevIndex => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
+  }
 
-const prevSlide = () => {
-setIndex((prevIndex) => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
-};
-
-const nextSlide = () => {
-setIndex((prevIndex) => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
-};
-
-return (
-<div className="carousel">
-{slideItems.length > 0 && (
-<div key={slideItems[index]._id} className="carousel-item">
-<Image src={slideItems[index].image} alt={slideItems[index].alt} width={1200} height={600} />
-<div className="carousel-text">
-<h2>{slideItems[index].title}</h2>
-<p>{slideItems[index].subtitle}</p>
-<p>{slideItems[index].text}</p>
-<a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
-</div>
-</div>
-)}
-<div className="controls">
+  return (
+    <>
+      {slideItems.length > 0 && (
+        <div key={slideItems[index]._id} className="carousel-item">
+          <Image src={slideItems[index].image} alt={slideItems[index].alt} width={500} height={300} />
+          <div className="carousel-text">
+            <h2>{slideItems[index].title}</h2>
+            <p>{slideItems[index].subtitle}</p>
+            <p>{slideItems[index].text}</p>
+            <a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
+          </div>
+          <div className="controls">
 <button onClick={prevSlide}>Prev</button>
 <button onClick={nextSlide}>Next</button>
 </div>
-</div>
-);
+        </div>
+        
+      )}
+    </>
+  );
 }
+
+
