@@ -45,11 +45,9 @@ import Image from "next/image";
 import { getSlideItem } from "@/sanity/sanity.query";
 import type { SlideItem } from "@/Types/SlideItem";
 
-
-
 export default function SlideCarousel() {
   const [slideItems, setSlideItems] = useState([] as SlideItem[]);
-  const [index, setIndex] = useState(0); // Dichiarazione e inizializzazione di index
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     async function fetchSlideItems() {
@@ -61,13 +59,8 @@ export default function SlideCarousel() {
     fetchSlideItems();
   }, []);
 
-  function prevSlide(): void {
-    setIndex(prevIndex => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
-  }
-  
-  function nextSlide(): void {
-    setIndex(prevIndex => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
-  }
+  const prevSlide = () => setIndex(prevIndex => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
+  const nextSlide = () => setIndex(prevIndex => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
 
   return (
     <>
@@ -81,14 +74,11 @@ export default function SlideCarousel() {
             <a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
           </div>
           <div className="controls">
-<button onClick={prevSlide}>Prev</button>
-<button onClick={nextSlide}>Next</button>
-</div>
+            <button onClick={prevSlide}>Prev</button>
+            <button onClick={nextSlide}>Next</button>
+          </div>
         </div>
-        
       )}
     </>
   );
 }
-
-
