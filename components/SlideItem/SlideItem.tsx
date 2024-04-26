@@ -40,7 +40,7 @@
 "use client"
 // 333333333333333333
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from "next/image";
 import { getSlideItem } from "@/sanity/sanity.query";
 import type { SlideItem } from "@/Types/SlideItem";
@@ -48,19 +48,23 @@ import type { SlideItem } from "@/Types/SlideItem";
 export default function SlideCarousel() {
   const [slideItems, setSlideItems] = useState([] as SlideItem[]);
   const [index, setIndex] = useState(0);
+  const [fetched, setFetched] = useState(false);
 
   useEffect(() => {
-    async function fetchSlideItems() {
-      const items: SlideItem[] | null = await getSlideItem();
-      if (items) {
-        setSlideItems(items);
+    const fetchSlideItems = async () => {
+      if (!fetched) {
+        const items: SlideItem[] | null = await getSlideItem();
+        if (items) {
+          setSlideItems(items);
+          setFetched(true);
+        }
       }
-    }
+    };
     fetchSlideItems();
-  }, []);
+  }, [fetched]);
 
-  const prevSlide = () => setIndex(prevIndex => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
-  const nextSlide = () => setIndex(prevIndex => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
+  const prevSlide = useCallback(() => setIndex((prevIndex) => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1)), [slideItems]);
+  const nextSlide = useCallback(() => setIndex((prevIndex) => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1)), [slideItems]);
 
   return (
     <>
