@@ -1,35 +1,31 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-// import { Project } from "@/types/Projects";
-// import  {Post}  from "@/types/Post";
-// import { AboutMe } from "@/types/AboutMe";
 
-// export async function getProjects(): Promise<Project[]> {
-//   return client.fetch(
-//     groq`*[_type == "project"]{
-// name,
-//     _id,
-//      _key,
-//       technologies,
-//     _createdAt,
-//     _updatedAt,
-//    _type,
-//    url,
-//     githubUrl,
-//    "slug": slug.current,
-    // 'content': content[].children[].text,
-//     content,
-//      'image' :image.asset->url,
-//      'imageAlt':image.alt,
-//   status, 
-//    }`,
-//     {
-//       next: {
-//         revalidate: 63,
-//       },
-//     }
-//   );
-// }
+import { SlideItem } from "@/Types/SlideItem";
+
+
+export async function getSlideItem(): Promise<SlideItem[]> {
+  return client.fetch(
+    groq`*[_type == "slideItem"]{
+        _id,
+          _rev,
+          subtitle,
+          title,
+          linkText,
+          text,
+          "slug": slug.current,
+          "image":image.asset->url,
+           "imageIcon":image.asset->url,
+          alt,
+          
+      }`,
+    {
+      next: {
+        revalidate: 63,
+      },
+    }
+  );
+}
 
 // export async function getProject(slug: string): Promise<Project> {
 //   return client.fetch(
