@@ -1,41 +1,4 @@
-// import Image from "next/image";
-// import { getSlideItem } from "@/sanity/sanity.query";
-// import type { SlideItem } from "@/Types/SlideItem";
 
-
-// export default async function SlideItem() {
-//   const profile: SlideItem[] = await getSlideItem();
-
-// export default SlideItem
-
-// 22222222222222
-// import Image from "next/image";
-// import { getSlideItem } from "@/sanity/sanity.query";
-// import type { SlideItem } from "@/Types/SlideItem";
-
-// export default async function SlideCarousel() {
-//   const slideItems: SlideItem[] = await getSlideItem();
-//   const firstSlideItem = slideItems[0]; // Accedi al primo elemento dell'array
-
-//   if (!firstSlideItem) {
-//     // Gestisci il caso in cui non ci sia nessun elemento nell'array
-//     return null;
-//   }
-
-//   return (
-//     <div className="carousel">
-//       <div key={firstSlideItem._id} className="carousel-item">
-//         <Image src={firstSlideItem.image} alt={firstSlideItem.alt} width={200} height={200} />
-//         <div className="carousel-text">
-//           <h2>{firstSlideItem.title}</h2>
-//           <p>{firstSlideItem.subtitle}</p>
-//           <p>{firstSlideItem.text}</p>
-//           <a href={firstSlideItem.slug}>{firstSlideItem.linkText}</a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 "use client"
 // 333333333333333333
@@ -43,17 +6,18 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from "next/image";
 import { getSlideItem } from "@/sanity/sanity.query";
-import type { SlideItem } from "@/Types/SlideItem";
+// import type { SlideItem } from "@/Types/SlideItem";
+import type { SlideItem as SlideItemType } from "@/Types/SlideItem";
 
 export default function SlideCarousel() {
-  const [slideItems, setSlideItems] = useState([] as SlideItem[]);
+  const [slideItems, setSlideItems] = useState([] as SlideItemType[]);
   const [index, setIndex] = useState(0);
   const [fetched, setFetched] = useState(false);
 
   useEffect(() => {
     const fetchSlideItems = async () => {
       if (!fetched) {
-        const items: SlideItem[] | null = await getSlideItem();
+        const items: SlideItemType[] | null = await getSlideItem();
         if (items) {
           setSlideItems(items);
           setFetched(true);
@@ -86,3 +50,5 @@ export default function SlideCarousel() {
     </>
   );
 }
+
+
