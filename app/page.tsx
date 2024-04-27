@@ -8,7 +8,7 @@ import type { SlideItem as SlideItemType } from "@/Types/SlideItem";
 export default function Home() {
   return (
     <main className={s.main}>
-       <SlideItem  />
+       {/* <SlideItem  /> */}
        {/* <B_Design/> */}
      <h1 className={s.h1}>tefl website</h1>
    
