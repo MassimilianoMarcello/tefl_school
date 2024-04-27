@@ -1,0 +1,54 @@
+
+@mixin border {
+border-left: .5rem solid #f5a70a ;
+border-top:.5rem solid #f5a70a ;
+border-bottom:.5rem solid #f5a70a  ;
+padding: 12rem;
+// border-top-left-radius: 1250%;
+border-bottom: 1250%;
+
+  }
+
+
+
+
+
+
+.lineYellowContainer {
+    position: relative;
+    margin-top: 15rem;
+    margin-left: 12rem;
+}
+.lineYellowOne {
+    @include border;
+    position: absolute;
+    left: 0;
+}
+.lineYellowTwo {
+    @include border;
+    border-left:.5rem solid  #37b5ff;
+    border-top: .5rem solid  #37b5ff;
+    border-bottom:.5rem solid #37b5ff;
+    position: absolute;
+    left: 0;
+    margin-left:1.5rem;
+}
+.lineYellowThree {
+    @include border;
+
+    border-left: .5rem solid #37b5ff;
+    border-top: .5rem solid p#37b5ff;
+    border-bottom:.5rem solid #37b5ff;
+    position: absolute;
+    left: 0;
+    margin-left:1rem;
+}
+.lineYellowFour {
+    @include border;
+    border-left: .5rem solid  #f5a70a;
+    border-top: .5rem solid  #f5a70a;
+    border-bottom:.5rem solid #f5a70a;
+    position: absolute;
+    left: 0;
+    margin-left:.5rem;
+}
