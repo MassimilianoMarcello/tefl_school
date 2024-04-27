@@ -51,14 +51,16 @@ export default function SlideCarousel() {
       {slideItems.length > 0 && (
         <div key={slideItems[index]._id} className={styles['carousel-item']}>
           <Image src={slideItems[index].image} alt={slideItems[index].alt} width={1400} height={500} />
-          <div className={styles['carousel-text-relativeBox']}>
-          <div className={styles['carousel-text']}>
-            <h2>{slideItems[index].title}</h2>
-            <p>{slideItems[index].subtitle}</p>
-            <p>{slideItems[index].text}</p>
-            <a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
-          </div>
-          </div>
+          <div className={`${styles['carousel-text-box']} ${styles[`carousel-text-box-${index}`]}`}>
+          <div className={`${styles['carousel-text']} ${styles[`carousel-text-${index}`]}`}>
+    <h2>{slideItems[index].title}</h2>
+    <p>{slideItems[index].subtitle}</p>
+    <p>{slideItems[index].text}</p>
+    <a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
+  </div>
+</div>
+
+
           <div className={styles.controls}>
             <button className={styles.buttonPrev} onClick={prevSlide}>Prev</button>
             <button className={styles.buttonNext} onClick={nextSlide}>Next</button>

@@ -15,14 +15,30 @@
 }
 .carousel-text-relativeBox{
     position: relative;
+    z-index: -1;
 }
 .carousel-text {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: 20rem;
-  margin-left: -20rem;
+ 
+
 }
+.carousel-text-0{
+    margin-bottom:20rem;
+    margin-left: 1rem;
+}
+.carousel-text-1{
+    margin-bottom:20rem;
+    margin-left: 1rem;
+}
+.carousel-text-2{
+    margin-bottom:20rem;
+    margin-left: 1rem;
+    left: auto;
+    right: 0;
+}
+
 
 .controls {
   margin-top: 20px;
