@@ -35,7 +35,7 @@ export default function SlideCarousel() {
     <>
       {slideItems.length > 0 && (
         <div key={slideItems[index]._id} className={styles['carousel-item']}>
-          <Image src={slideItems[index].image} alt={slideItems[index].alt} width={1400} height={200} />
+          <Image src={slideItems[index].image} alt={slideItems[index].alt} width={1400} height={600} />
           <div className={styles['carousel-text']}>
             <h2>{slideItems[index].title}</h2>
             <p>{slideItems[index].subtitle}</p>
