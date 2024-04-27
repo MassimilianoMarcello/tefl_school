@@ -1,12 +1,13 @@
 
 
 "use client"
-// 333333333333333333
+
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from "next/image";
 import { getSlideItem } from "@/sanity/sanity.query";
-// import type { SlideItem } from "@/Types/SlideItem";
+import styles from './SlideCarousel.module.scss'; // Importa il file Sass
+
 import type { SlideItem as SlideItemType } from "@/Types/SlideItem";
 
 export default function SlideCarousel() {
@@ -33,22 +34,20 @@ export default function SlideCarousel() {
   return (
     <>
       {slideItems.length > 0 && (
-        <div key={slideItems[index]._id} className="carousel-item">
-          <Image src={slideItems[index].image} alt={slideItems[index].alt} width={500} height={300} />
-          <div className="carousel-text">
+        <div key={slideItems[index]._id} className={styles['carousel-item']}>
+          <Image src={slideItems[index].image} alt={slideItems[index].alt} width={1400} height={200} />
+          <div className={styles['carousel-text']}>
             <h2>{slideItems[index].title}</h2>
             <p>{slideItems[index].subtitle}</p>
             <p>{slideItems[index].text}</p>
             <a href={slideItems[index].slug}>{slideItems[index].linkText}</a>
           </div>
-          <div className="controls">
-            <button onClick={prevSlide}>Prev</button>
-            <button onClick={nextSlide}>Next</button>
+          <div className={styles.controls}>
+            <button className={styles.button} onClick={prevSlide}>Prev</button>
+            <button className={styles.button} onClick={nextSlide}>Next</button>
           </div>
         </div>
       )}
     </>
   );
 }
-
-
