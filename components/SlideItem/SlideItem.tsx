@@ -28,8 +28,23 @@ export default function SlideCarousel() {
     fetchSlideItems();
   }, [fetched]);
 
-  const prevSlide = useCallback(() => setIndex((prevIndex) => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1)), [slideItems]);
-  const nextSlide = useCallback(() => setIndex((prevIndex) => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1)), [slideItems]);
+  // Funzione per passare alla diapositiva successiva
+  const nextSlide = useCallback(() => {
+    setIndex((prevIndex) => (prevIndex === slideItems.length - 1 ? 0 : prevIndex + 1));
+  }, [slideItems]);
+
+  // Funzione per passare alla diapositiva precedente
+  const prevSlide = useCallback(() => {
+    setIndex((prevIndex) => (prevIndex === 0 ? slideItems.length - 1 : prevIndex - 1));
+  }, [slideItems]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide(); // Passa automaticamente alla prossima diapositiva
+    }, 5000); // Intervallo di 5 secondi
+
+    return () => clearInterval(interval); // Pulisce l'intervallo quando il componente viene smontato o l'indice delle diapositive cambia
+  }, [nextSlide]);
 
   return (
     <>
