@@ -23,13 +23,13 @@ export default async function HomePage() {
             <Image src={data.bannerImage} alt={data.mainTitle} width={1400} height={600} />
             
             {/* Itera su ciascun componente di HomePage */}
-            {data.components.map((component) => (
+            {/* {data.components.map((component) => (
               <div key={component._key}>
                 <h2>{component.title}</h2>
                 <p>{component.text}</p>
                 <Image src={component.image} alt="Component Image" width={400} height={300} />
               </div>
-            ))}
+            ))} */}
           </div>
         ))}
       </section>
