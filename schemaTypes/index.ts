@@ -6,4 +6,4 @@ import testimonial from './testimonial';
 
 import slideItem from './slideItem';
 
-export const schemaTypes = [course,componentPrototype,homepage,slideItem,testimonial]
+export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial]

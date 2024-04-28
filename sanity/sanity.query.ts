@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import client from "./sanity.client";
 
 import { SlideItem } from "@/Types/SlideItem";
-
+import { HomePage } from "@/Types/Homepage";
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -49,53 +49,49 @@ export async function getSlideItem(): Promise<SlideItem[]> {
 //   );
 // }
 
-// export async function getPost(): Promise<Post[]> {
+export async function getHomePage(): Promise<HomePage[]> {
+  return client.fetch(
+    groq`*[_type == "homepage"]{
+      _id,
+      mainTitle,
+        mainText,
+        "bannerImage":bannerImage.asset->url,
+       components[]{
+         title,
+         text,
+           _key,
+         "image":image.asset->url
+       }
+       
+          
+    }`,
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
+  );
+}
+
+// export async function getComponent(): Promise<Component[]> {
 //   return client.fetch(
-//     groq`*[_type == 'post' ] {
-//       _id,
-//       title,
-//       author->{name, "bio":bio[].children[].text,_createdAt},
-//       "body": body[]{
-//         ...,
-//         _type == 'block' => {
-//           ...,
-//           "children": children[]{
-//             ...,
-//             _type == 'span' => {
-//               ...,
-//               "marks": marks[]->{
-//                 _type,
-//               }
-//             },
-//             _type == 'image' => {
-//               ...,
-//               "asset": asset->{
-//                 ...
-//               }
-//             },
-//             _type == 'link' => {
-//               ...,
-//               "href": href
-//             }
-//           }
-//         }
-//       },
-//       categories[]->{title,_Id},
-//       "imageURL": mainImage.asset->url,
-//       "slug": slug.current,
-//       "mainImage": mainImage.asset->url,
-      // Aggiungi campi separati per le immagini e i link
-//       "images": body[][_type == 'image'].asset->url,
-//       "links": body[][_type == 'link'].href
-//     }`,
-//     {
-//       next: {
-//         revalidate: 63,
-//       },
-//     }
+//     groq`*[_type == "components"]{
+
+//         title,
+//         text,
+//           _key,
+//         "image":image.asset->url
+      
+      
+         
+//    }`
+//     // {
+//     //   next: {
+//     //     revalidate: 63,
+//     //   },
+//     // }
 //   );
 // }
-
 
 // export async function getPosts(slug: string): Promise<Post> {
 //   return client.fetch(
@@ -160,5 +156,3 @@ export async function getSlideItem(): Promise<SlideItem[]> {
 //     }
 //   );
 // }
-
-
