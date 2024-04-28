@@ -1,11 +1,15 @@
-import A_FirstComponent from './A_FirstComponent.tsx';
+import FirstComponent from './A_FirstComponent.tsx';
+// import SecondComponent from './B_SecondComponent.jsx';
+import SecondComponent from "./B_SecondComponent";
 
 const _MainPageWrapper = () => {
   return (<>
-  <A_FirstComponent/>
+  <FirstComponent/>
+  <SecondComponent/>
   </>
    
   )
 }
 
 export default _MainPageWrapper
+

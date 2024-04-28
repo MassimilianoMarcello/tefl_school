@@ -8,15 +8,15 @@ import type {HomePage as HomeType} from '@/Types/Homepage';
 
 import type { HomePage } from '@/Types/Homepage';
 
-export default async function HomePage() {
+export default async function FirstComponent() {
   // Ottieni i dati della homepage
-  const homepage: HomePage[] = await getHomePage();
+  const firstComponent: HomePage[] = await getHomePage();
 
   return (
     <main className="pannarru">
       <section className="busicco">
         {/* Itera su ciascun oggetto HomePage */}
-        {homepage.map((data) => (
+        {firstComponent.map((data) => (
           <div key={data._id} className="gavini">
             <h1 className="alicion">{data.mainTitle}</h1>
             <p className="tamarindo">{data.mainText}</p>
@@ -36,3 +36,4 @@ export default async function HomePage() {
     </main>
   );
 }
+
