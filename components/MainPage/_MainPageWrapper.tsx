@@ -12,44 +12,47 @@
 // }
 
 // export default _MainPageWrapper
-"use client"
 
-import { useEffect, useState } from 'react';
+
+// import { useEffect, useState } from 'react';
+// import { getHomePage } from '@/sanity/sanity.query';
+// import FirstComponent from './A_FirstComponent.tsx';
+// import SecondComponent from "./B_SecondComponent";
+// import React from 'react';
+
+
+
+
 import { getHomePage } from '@/sanity/sanity.query';
 import FirstComponent from './A_FirstComponent.tsx';
 import SecondComponent from "./B_SecondComponent";
 
-const _MainPageWrapper = () => {
-  const [data, setData] = useState([]); // Inizializza lo stato con un array vuoto
 
-  useEffect(() => {
-    // Funzione per il fetching parallelo dei dati
-    const fetchData = async () => {
-      try {
-        // Esegui il fetching parallelo dei dati
-        const [firstComponentData, secondComponentData] = await Promise.all([
-          getHomePage(),
-          getHomePage() // Chiamata duplicata, puoi aggiungere altre chiamate se necessario
-        ]);
 
-        // Imposta i dati nello stato
-        setData([firstComponentData, secondComponentData]);
-      } catch (error) {
-        console.error('Errore nel recupero dei dati:', error);
-      }
-    };
+const MainPageWrapper = async () => {
+  try {
+    const [firstComponentData, secondComponentData] = await Promise.all([
+      getHomePage(),
+      getHomePage()
+    ]);
 
-    // Richiama la funzione per il fetching dei dati
-    fetchData();
-  }, []); // [] indica che useEffect viene eseguito solo al montaggio del componente
+    // Verifica che entrambi i set di dati non siano nulli
+    if (!firstComponentData || !secondComponentData) {
+      console.error('Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli');
+      return null;
+    }
 
-  return (
-    <>
-      {/* Passa i dati come props ai componenti figlio */}
-      <FirstComponent data={data[0]} />
-      <SecondComponent data={data[1]} />
-    </>
-  );
+    return (
+      <>
+        {/* Passa i dati come props ai componenti figlio */}
+        <FirstComponent data={firstComponentData} />
+        <SecondComponent data={secondComponentData} />
+      </>
+    );
+  } catch (error) {
+    console.error('Errore nel recupero dei dati:', error);
+    return null;
+  }
 };
 
-export default _MainPageWrapper;
+export default MainPageWrapper;
