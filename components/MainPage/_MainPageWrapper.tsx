@@ -1,35 +1,35 @@
 
 
 
-import { getHomePage } from '@/sanity/sanity.query';
+import { getHomePage,getCourse } from '@/sanity/sanity.query';
 import FirstComponent from './A_FirstComponent.tsx';
 import SecondComponent from "./B_SecondComponent";
 import ThirdComponent from "./C_ThirdComponent";
-import { HomePage } from '@/Types/Homepage';
-
+import D_CoursesPreview from './D_CoursesPreview';
 
 
 const MainPageWrapper = async () => {
   try {
-    const components = [FirstComponent, SecondComponent,ThirdComponent]; // Array dei componenti da includere
-  
-    // Genera un array di promesse, una per ogni componente, chiamando getHomePage()
-    const homePageDataPromises = components.map(Component => getHomePage());
-  
-    const componentDataArray = await Promise.all(homePageDataPromises);
-  
-    // Verifica che tutti i set di dati non siano nulli
-    if (componentDataArray.some((data: any) => !data)) {
-      console.error('Errore nel recupero dei dati: uno o più set di dati sono nulli');
+    const [firstComponentData, secondComponentData,thirdComponentData,courseData] = await Promise.all([
+      getHomePage(),
+      getHomePage(),
+      getHomePage(),
+      getCourse()
+    ]);
+
+    // Verifica che entrambi i set di dati non siano nulli
+    if (!firstComponentData  || !secondComponentData  || !thirdComponentData || !courseData) {
+      console.error('Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli');
       return null;
     }
-  
+
     return (
       <>
-        {/* Mappa i dati dei componenti e passali come props ai componenti figlio */}
-        {components.map((Component, index) => (
-          <Component key={index} data={componentDataArray[index]} />
-        ))}
+        {/* Passa i dati come props ai componenti figlio */}
+        <FirstComponent data={firstComponentData} />
+        <SecondComponent data={secondComponentData} />
+        <ThirdComponent data={thirdComponentData} />
+        <D_CoursesPreview data={courseData}/>
       </>
     );
   } catch (error) {
