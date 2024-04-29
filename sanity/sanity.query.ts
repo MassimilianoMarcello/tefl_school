@@ -4,6 +4,7 @@ import client from "./sanity.client";
 import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
+import { Testimonial } from "@/Types/Testimonials";
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -20,11 +21,11 @@ export async function getSlideItem(): Promise<SlideItem[]> {
           alt,
           
       }`,
-    {
-      next: {
-        revalidate: 63,
-      },
-    }
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
   );
 }
 
@@ -47,11 +48,30 @@ export async function getCourse(): Promise<Course[]> {
         
       
   }`,
-    {
-      next: {
-        revalidate: 63,
-      },
-    }
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
+  );
+}
+
+export async function getTestimonials(): Promise<Testimonial[]> {
+  return client.fetch(
+    groq`*[_type == 'testimonial']{
+      name,
+        _id,
+        city,
+        review,
+        state,
+        title,
+        "image":image.asset->url,
+  }`,
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
   );
 }
 
@@ -93,11 +113,11 @@ export async function getHomePage(): Promise<HomePage[]> {
        
           
     }`,
-    {
-      next: {
-        revalidate: 64,
-      },
-    }
+    // {
+    //   next: {
+    //     revalidate: 64,
+    //   },
+    // }
   );
 }
 
