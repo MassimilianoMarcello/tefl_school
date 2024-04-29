@@ -3,6 +3,7 @@ import client from "./sanity.client";
 
 import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
+import { Course } from "@/Types/Course";
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -19,11 +20,38 @@ export async function getSlideItem(): Promise<SlideItem[]> {
           alt,
           
       }`,
-    // {
-    //   next: {
-    //     revalidate: 63,
-    //   },
-    // }
+    {
+      next: {
+        revalidate: 63,
+      },
+    }
+  );
+}
+
+export async function getCourse(): Promise<Course[]> {
+  return client.fetch(
+    groq`*[_type == 'course']{
+ 
+      _id,
+    name,
+    startDate,
+      endDate,
+      price,
+      completionTimeWeeks,
+      "slug":slug.current,
+        description,
+        hours,
+        level,
+       "photo":photo.asset->url,
+        
+        
+      
+  }`,
+    {
+      next: {
+        revalidate: 63,
+      },
+    }
   );
 }
 
@@ -81,9 +109,7 @@ export async function getHomePage(): Promise<HomePage[]> {
 //         text,
 //           _key,
 //         "image":image.asset->url
-      
-      
-         
+
 //    }`
 //     // {
 //     //   next: {
