@@ -1,35 +1,27 @@
 
-import { Course } from '@/Types/Course';
+import { Testimonial} from '@/Types/Testimonials';
 import Image from "next/image";
 
-// const D_CoursesPreview = () => {
-//   return (
-//     <div>D_CoursesPreview</div>
-//   )
-// }
 
-// export default D_CoursesPreview
 
-interface CourseProps {
-    data: Course[]; // Accetta i dati come prop
+interface TestimonialProps {
+    data: Testimonial[]; // Accetta i dati come prop
   }
 
-export default function D_CoursesPreview({ data }: CourseProps) {
+export default function E_Testimonials({ data }: TestimonialProps) {
     return (
       <main className="pannarru">
         <section className="busicco">
           {/* Verifica se data è definito prima di eseguire l'iterazione */}
-          {data && data.map((course) => (
-            <div key={course._id} className="gavini">
-              <h1 className="alicion">{course.name}</h1>
-              <p className="tamarindo">{course.description}</p>
-              <Image src={course.photo} alt={course.name} width={1400} height={600} />
-              <h1 className="alicion">{course.completionTimeWeeks}</h1>
-              <h1 className="alicion">{course.hours}</h1>
-              <h1 className="alicion">{course.startDate}</h1>
-              <h1 className="alicion">{course.endDate}</h1>
-              <h1 className="alicion">{course.price}</h1>
-              <h1 className="alicion">{course.level}</h1>
+          {data && data.map((testimonial) => (
+            <div key={testimonial._id} className="gavini">
+              <h1 className="alicion">{testimonial.name}</h1>
+              <p className="tamarindo">{testimonial.title}</p>
+              <Image src={testimonial.image} alt={testimonial.name} width={400} height={400} />
+              <h1 className="alicion">{testimonial.review}</h1>
+              <h1 className="alicion">{testimonial.state}</h1>
+              <h1 className="alicion">{testimonial.city}</h1>
+             
             </div>
           ))}
         </section>
