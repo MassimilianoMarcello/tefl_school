@@ -20,7 +20,7 @@ export async function getSlideItem(): Promise<SlideItem[]> {
            "imageIcon":image.asset->url,
           alt,
           
-      }`,
+      }`
     // {
     //   next: {
     //     revalidate: 63,
@@ -47,12 +47,30 @@ export async function getCourse(): Promise<Course[]> {
         
         
       
-  }`,
+  }`
     // {
     //   next: {
     //     revalidate: 63,
     //   },
     // }
+  );
+}
+
+export async function getCourses(slug: string): Promise<Course> {
+  return client.fetch(
+    groq`*[_type == "course" && slug.current == $slug][0]{
+    _id,
+    name,
+    startDate,
+      endDate,
+      price,
+      completionTimeWeeks,
+      "slug":slug.current,
+        description,
+        hours,
+        level,
+       "photo":photo.asset->url,
+}`
   );
 }
 
@@ -66,7 +84,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
         state,
         title,
         "image":image.asset->url,
-  }`,
+  }`
     // {
     //   next: {
     //     revalidate: 63,
@@ -77,7 +95,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
 
 // export async function getProject(slug: string): Promise<Project> {
 //   return client.fetch(
-//     groq`*[_type == "project" && slug.current == $slug][0]{
+//     groq`*[_type == "project" && slug.current == $slug][0]{}`)}
 //       _id,
 //       _createdAt,
 //       author->,
@@ -112,7 +130,7 @@ export async function getHomePage(): Promise<HomePage[]> {
        }
        
           
-    }`,
+    }`
     // {
     //   next: {
     //     revalidate: 64,

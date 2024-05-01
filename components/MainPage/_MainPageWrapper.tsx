@@ -5,6 +5,7 @@ import ThirdComponent from "./C_ThirdComponent";
 import D_CoursesPreview from "./D_CoursesPreview";
 import E_Testimonials from "./E_Testimonials";
 import SlideItem from "../SlideItem/SlideItem";
+import OurCourses from "../OurCourses/OurCourses";
 
 const MainPageWrapper = async () => {
   try {
@@ -43,7 +44,7 @@ const MainPageWrapper = async () => {
         <FirstComponent data={firstComponentData} />
         <SlideItem/>
         <SecondComponent data={secondComponentData} />
-   
+   <OurCourses/>
         <ThirdComponent data={thirdComponentData} />
         <D_CoursesPreview data={courseData} />
         <E_Testimonials data={testimonialData} />

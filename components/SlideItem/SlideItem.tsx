@@ -41,7 +41,7 @@ export default function SlideCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide(); // Passa automaticamente alla prossima diapositiva
-    }, 5000); // Intervallo di 5 secondi
+    }, 15000); // Intervallo di 5 secondi
 
     return () => clearInterval(interval); // Pulisce l'intervallo quando il componente viene smontato o l'indice delle diapositive cambia
   }, [nextSlide]);
