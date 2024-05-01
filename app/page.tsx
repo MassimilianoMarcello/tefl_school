@@ -10,7 +10,7 @@ import MainPageWrapper from '@/components/MainPage/_MainPageWrapper';
 export default function Home() {
   return (
     <main className={s.main}>
-       {/* <SlideItem  /> */}
+       <SlideItem  />
        {/* <B_Design/> */}
     <MainPageWrapper/>
      <h1 className={s.h1}>tefl website</h1>
