@@ -36,7 +36,12 @@ export default function D_CoursesPreview({ data }: CourseProps) {
               <div className={styles.courseDetails}>
                 <p className={styles.courseDetail}>{course.startDate} - {course.endDate}</p>
                 <p className={styles.courseDetail}>{course.completionTimeWeeks} weeks</p>
-                <p className={styles.courseDetail}>{course.hours} hours</p>
+               
+                <div className={styles.cardHours}>
+   
+    <p className={styles.cardHoursText}>{course.hours} </p>
+    <span className={styles.hourSpan}>hours</span> 
+  </div>
                 <p className={styles.courseDetail}>Price: {course.price}</p>
                 <p className={styles.courseDetail}>Level: {course.level}</p>
               </div>
