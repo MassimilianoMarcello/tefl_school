@@ -1,6 +1,6 @@
 import Link from 'next/dist/client/link'
 import s from'./navbar.module.scss'
-import React from 'react'
+
 
 const MobileMenu = () => {
   return (<>

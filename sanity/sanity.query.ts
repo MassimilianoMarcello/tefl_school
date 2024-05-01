@@ -70,7 +70,8 @@ export async function getCourses(slug: string): Promise<Course> {
         hours,
         level,
        "photo":photo.asset->url,
-}`
+}`,
+ { slug },
   );
 }
 

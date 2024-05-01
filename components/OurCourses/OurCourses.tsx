@@ -2,6 +2,7 @@ import React from 'react'
 import { getCourse } from "@/sanity/sanity.query";
 import Image from "next/image";
 import { Course as CourseType } from '@/Types/Course';
+import Link from 'next/dist/client/link'
 
 export default async function OurCourses() {
     const courseCard: CourseType[] = await getCourse();
@@ -40,6 +41,8 @@ return(
          
      
               </div>
+              <Link href={`/our_courses/${course.slug}`}>Click for Details </Link>
+   
             </section>
 
             
