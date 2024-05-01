@@ -1,0 +1,98 @@
+
+@import "./theme.module";
+
+
+// Flexbox categories
+@mixin flexProperties {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @mixin flexPropertiesRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+  }
+  .flex-item {
+    flex: 1;
+    // Altre proprietà degli item...
+  }
+  
+  @mixin padOne {
+    padding: 1rem;
+  }
+  // POSITION
+  @mixin posAbsoluteTopLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  
+  @mixin posAbsoluteBottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @mixin posAbsoluteBottomRightLeft {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  @mixin posAbsoluteBottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  @mixin posRelative{
+    position: relative;
+  }
+  
+  
+  
+  // Grid categories
+  @mixin grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: $spacer;
+    // Altre proprietà grid...
+  }
+
+  // LIST
+
+@mixin listItem {
+  list-style: none; 
+  margin: 0; 
+  padding: .5rem;
+}
+
+@mixin Link {
+ 
+    text-decoration: none;
+}
+
+// Mixin per lo stile dei pulsanti
+@mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size-base;
+  text-align: center;
+  text-decoration: none;
+  list-style: none; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin:0 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+  }
+}
