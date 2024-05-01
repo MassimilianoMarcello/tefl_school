@@ -2,11 +2,44 @@
 
 
 // D_CoursesPreview.module.scss
+.cardNameContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Sfondo trasparente bianco */
+  padding: .5rem; /* Spazio interno */
+  backdrop-filter: blur(2px); /* Effetto sfocatura */
+}
 
+.cardName {
+  margin: 0; /* Rimuove il margine */
+  color: #007bff; /* Colore blu */
+  font-size: 1.5rem;
+}
+.courseLevelContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(50%) rotate(45deg) translatex(10%); 
+    // transform-origin: top right; 
+  }
+
+.courseLevel {
+  margin-top: -1rem;
+  margin-right: -2.2rem;
+  padding: .4rem 3rem;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+}
 .mainContainer {
     display: flex;
     justify-content: center;
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
   }
   
   .coursesSection {
@@ -72,7 +105,7 @@ text-align: center;
   
   .cardImage {
     width: 100%;
-    height: 50%;
+    height: 20rem;
     display: block;
   }
   

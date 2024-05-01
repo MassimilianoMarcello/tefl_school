@@ -22,6 +22,7 @@ export default function D_CoursesPreview({ data }: CourseProps) {
         {latestProjects.map((course) => (
           <div key={course._id} className={styles.cardContainer}>
             <div className={styles.cardImageContainer}>
+       
               <Image
                 className={styles.cardImage}
                 src={course.photo}
@@ -29,9 +30,17 @@ export default function D_CoursesPreview({ data }: CourseProps) {
                 width={500}
                 height={300}
               />
+                   <div className={styles.courseLevelContainer}>
+    <p className={styles.courseLevel}>{course.level}</p>
+  </div>
+              <div className={styles.cardNameContainer}>
+    <p className={styles.cardName}>{course.name}</p>
+
+  </div>
+
             </div>
             <div className={styles.cardTextContainer}>
-              <h1 className={styles.cardTitle}>{course.name}</h1>
+          
               <p className={styles.cardDescription}>{course.description}</p>
               <div className={styles.courseDetails}>
                 <p className={styles.courseDetail}>{course.startDate} - {course.endDate}</p>
@@ -43,10 +52,11 @@ export default function D_CoursesPreview({ data }: CourseProps) {
     <span className={styles.hourSpan}>hours</span> 
   </div>
                 <p className={styles.courseDetail}>Price: {course.price}</p>
-                <p className={styles.courseDetail}>Level: {course.level}</p>
+            
               </div>
-              <Link href={`/our_courses/${course.slug}`} className={styles.detailsLink}>Details</Link>
+
             </div>
+            <Link href={`/our_courses/${course.slug}`} className={styles.detailsLink}>Details</Link>
           </div>
         ))}
       </section>
