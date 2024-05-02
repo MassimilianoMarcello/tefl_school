@@ -221,3 +221,91 @@ export async function getHomePage(): Promise<HomePage[]> {
 //     }
 //   );
 // }
+
+
+
+// test query
+
+// export async function getCourse(name:string)Promise<Course> {
+//   return client.fetch(
+//     groq`*[_type == 'course' && name == $name][0] {
+//       _id,
+//       name,
+//       startDate,
+//       endDate,
+//       price,
+//       completionTimeWeeks,
+//       "slug": slug.current,
+//       description,
+//       hours,
+//       level,
+//       "photo": photo.asset->url
+//     }`,
+//     { name } // Utilizza il titolo passato come argomento
+//   );
+// }
+
+
+// componente in cui mettiamo come argomento il nome del corso "computer"
+
+
+// import { getHomePage, getTestimonials, getCourse } from "@/sanity/sanity.query";
+// import FirstComponent from "./A_FirstComponent.tsx";
+// import SecondComponent from "./B_SecondComponent";
+// import ThirdComponent from "./C_ThirdComponent";
+// import D_CoursesPreview from "./D_CoursesPreview";
+// import E_Testimonials from "./E_Testimonials";
+// import SlideItem from "../SlideItem/SlideItem";
+// import OurCourses from "../OurCourses/OurCourses";
+
+// const MainPageWrapper = async () => {
+//   try {
+//     const [
+//       firstComponentData,
+//       secondComponentData,
+//       thirdComponentData,
+//       courseData,
+//       testimonialData,
+//     ] = await Promise.all([
+//       getHomePage(),
+//       getHomePage(),
+//       getHomePage(),
+//       getCourse("computer"), // Chiamata per recuperare i dati del corso filtrando per il titolo "computer"
+//       getTestimonials(),
+//     ]);
+
+//     // Verifica che tutti i set di dati non siano nulli
+//     if (
+//       !firstComponentData ||
+//       !secondComponentData ||
+//       !thirdComponentData ||
+//       !courseData ||
+//       !testimonialData
+//     ) {
+//       console.error(
+//         "Errore nel recupero dei dati: uno o più set di dati sono nulli"
+//       );
+//       return null;
+//     }
+
+//     return (
+//       <>
+//         {/* Passa i dati come props ai componenti figlio */}
+//         {/* <FirstComponent data={firstComponentData} /> */}
+//         {/* <SlideItem/> */}
+//         {/* <SecondComponent data={secondComponentData} /> */}
+//         {/* <OurCourses/> */}
+//         {/* <ThirdComponent data={thirdComponentData} /> */}
+//         <D_CoursesPreview data={courseData} />
+//         {/* <E_Testimonials data={testimonialData} /> */}
+//       </>
+//     );
+//   } catch (error) {
+//     console.error("Errore nel recupero dei dati:", error);
+//     return null;
+//   }
+// };
+
+// export default MainPageWrapper;
+
+

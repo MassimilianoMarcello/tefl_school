@@ -1,25 +1,13 @@
-// @import  '../styles/mediaqueries.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import "./mixin.module";
+@import "./theme.module";
 
-@import  './mixin.module';
-@import  './theme.module';
-
-
-
-
-
-
-.samplePage{
-  margin: 20rem ;
-  background-color:$primary-color ;
+.samplePage {
+  margin: 20rem;
+  background-color: $primary-color;
   font-size: 4rem;
   color: #fff;
- 
 }
-.samplePageBackground{
+.samplePageBackground {
   background-color: #dc3545;
 }
-
-
-

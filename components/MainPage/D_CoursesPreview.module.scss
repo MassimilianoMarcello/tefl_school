@@ -4,9 +4,11 @@
 // D_CoursesPreview.module.scss
 .cardNameContainer {
   position: absolute;
+  margin: 4rem;
   bottom: 0;
   left: 0;
-  width: 100%;
+  min-width: 25rem;
+  max-width: 25rem;
   background-color: rgba(255, 255, 255, 0.8); /* Sfondo trasparente bianco */
   padding: .5rem; /* Spazio interno */
   backdrop-filter: blur(2px); /* Effetto sfocatura */
@@ -38,13 +40,15 @@
 .mainContainer {
     display: flex;
     justify-content: center;
-    font-family: 'Oswald', sans-serif;
+    // font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
+    font-family: "Zeitung Micro Pro";
+    font-weight: 700;
   }
   
   .coursesSection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 3rem;
   }
   
@@ -67,33 +71,35 @@
   .cardHours {
     position: absolute; /* Aggiunto */
     top: 1rem; /* Posizionato in alto */
-    left: 5rem; /* Centrato orizzontalmente */
+    left: 10rem; /* Centrato orizzontalmente */
 text-align: center;
     transform: translateX(-50%); /* Centrato orizzontalmente */
-    background-color: #d2d8da ; /* Colore blu notte */
-    color: #1a3847 ; /* Testo bianco */
-    padding: 1rem; /* Padding */
+    background-color: #1a3847 ; /* Colore blu notte */
+    color: #d2d8da ; /* Testo bianco */
+    padding: 1.5rem; /* Padding */
     height: 7rem;
     width: 7rem;
     border: 2px solid #ffd700; /* Bordo dorato */
     border-radius: 5px; /* Bordi arrotondati */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
-       font-weight: 900;
+       font-weight: 700;
    
   }
   
   .cardHoursText {
-    font-size: 3rem; /* Dimensione del testo grande */
+    font-size: 2.8rem; /* Dimensione del testo grande */
  
-    margin-top: -1rem;
-    margin-bottom: -1rem;
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    margin-left: -1.8rem;
     letter-spacing: 2px;
-    padding: 0; 
+    padding: 1rem; 
     
   }
   .hourSpan{
-    font-size:2rem;
+    font-size:1.8rem;
     letter-spacing: 1px;
+    margin-left: -.7rem;
    
   }
   
@@ -105,7 +111,7 @@ text-align: center;
   
   .cardImage {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     display: block;
   }
   
@@ -138,7 +144,10 @@ text-align: center;
   
   .detailsLink {
     display: inline-block;
-    
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
