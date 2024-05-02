@@ -2,6 +2,7 @@ import { Course } from "@/Types/Course";
 import Image from "next/image";
 import styles from "./D_CoursesPreview.module.scss";
 import Link from 'next/link'
+import { format } from 'date-fns';
 
 interface CourseProps {
   data: Course[]; // Accetta i dati come prop
@@ -45,12 +46,12 @@ export default function D_CoursesPreview({ data }: CourseProps) {
 
               {/* dates :start and end course */}
            
-                <p className={styles.courseDetail}>
-                  {course.startDate} - {course.endDate}
-                </p>
+              <p className={styles.courseDetail}>
+              from  {format(new Date(course.startDate), 'dd MMMM yyyy')} to {format(new Date(course.endDate), 'dd MMMM yyyy')}
+              </p>
 
                 {/* weeks to finish the course */}
-                 <p className={styles.courseWeeks}>
+                 <p className={styles.courseWeeks}> completion time:
                   {course.completionTimeWeeks} weeks
                 </p> 
 {/* card total hours course  */}

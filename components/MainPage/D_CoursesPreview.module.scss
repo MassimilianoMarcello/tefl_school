@@ -2,20 +2,24 @@
 
 
 // D_CoursesPreview.module.scss
-// .cardNameContainer {
+.cardNameContainer {
 
-//    margin-top: -4rem;
+   margin-top: -4rem;
+// border-top: solid .11rem  
+// #c61b72;
+// border-bottom: solid .11rem  #c61b72 ;
+  background-color: rgb(71, 71, 71); 
+  background-color: #1a3847;
+  background-color: #017bfe;
+  padding: .5rem; 
+  backdrop-filter: blur(12px); 
+}
 
-//   background-color: rgba(140, 138, 138, 0.224); 
-//   padding: .5rem; 
-//   backdrop-filter: blur(2px); 
-// }
-
-// .cardName {
-//   margin: 0; 
-//   color: #007bff;
-//   font-size: 1.5rem;
-// }
+.cardName {
+  margin: 0; 
+  color: #fff;
+  font-size: 1.5rem;
+}
 
 .mainContainer {
      display: flex;
@@ -31,7 +35,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
-    z-index: -1;
+  
   }
   
   .cardContainer {
