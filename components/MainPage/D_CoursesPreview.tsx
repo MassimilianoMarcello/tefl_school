@@ -28,38 +28,51 @@ export default function D_CoursesPreview({ data }: CourseProps) {
                 width={500}
                 height={300}
               />
+              
               <div className={styles.courseLevelContainer}>
                 <p className={styles.courseLevel}>{course.level}</p>
-              </div>
-              <div className={styles.cardNameContainer}>
+              </div> 
+               <div className={styles.cardNameContainer}>
                 <p className={styles.cardName}>{course.name}</p>
               </div>
             </div>
+
+            {/* text sotto */}
             <div className={styles.cardTextContainer}>
+
+              {/* description course */}
               <p className={styles.cardDescription}>{course.description}</p>
-              <div className={styles.courseDetails}>
+
+              {/* dates :start and end course */}
+           
                 <p className={styles.courseDetail}>
                   {course.startDate} - {course.endDate}
                 </p>
-                <p className={styles.courseDetail}>
-                  {course.completionTimeWeeks} weeks
-                </p>
 
-                <div className={styles.cardHours}>
+                {/* weeks to finish the course */}
+                 <p className={styles.courseWeeks}>
+                  {course.completionTimeWeeks} weeks
+                </p> 
+{/* card total hours course  */}
+                 <div className={styles.cardHours}>
                   <p className={styles.cardHoursText}>{course.hours} </p>
                   <span className={styles.hourSpan}>hours</span> <br />
-                  <span> course</span>
-                </div>
-                <p className={styles.courseDetail}>Price: {course.price}</p>
-              </div>
+                  <span className={styles.hourSpanTwo}> course</span>
+                </div> 
+
+                {/* course price */}
+                <p className={styles.coursePrice}>Price: {course.price}</p>
+        
             </div>
-            <div>
-            <Link href={`/our_courses/${course.slug}`} className={styles.detailsLink}>Details</Link>
+           
+            <Link href={`/our_courses/${course.slug}`} className={styles.detailsLink}>Details</Link>        
+
  
-            </div>
+        
            
  
           </div>
+          
         ))}
 
 

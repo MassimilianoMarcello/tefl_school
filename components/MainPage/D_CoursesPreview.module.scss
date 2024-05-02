@@ -2,37 +2,36 @@
 
 
 // D_CoursesPreview.module.scss
-.cardNameContainer {
-  // position: absolute;
-   margin-top: -4rem;
-  // bottom: 0;
-  // left: 0;
-  // min-width: 10rem;
-  // max-width:auto;
-  background-color: rgba(140, 138, 138, 0.224); /* Sfondo trasparente bianco */
-  padding: .5rem; /* Spazio interno */
-  backdrop-filter: blur(2px); /* Effetto sfocatura */
-}
+// .cardNameContainer {
 
-.cardName {
-  margin: 0; /* Rimuove il margine */
-  color: #007bff; /* Colore blu */
-  font-size: 1.5rem;
-}
+//    margin-top: -4rem;
+
+//   background-color: rgba(140, 138, 138, 0.224); 
+//   padding: .5rem; 
+//   backdrop-filter: blur(2px); 
+// }
+
+// .cardName {
+//   margin: 0; 
+//   color: #007bff;
+//   font-size: 1.5rem;
+// }
 
 .mainContainer {
-    // display: flex;
-    // justify-content: center;
-    // font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-    font-family: "Zeitung Micro Pro";
-    font-weight: 700;
+     display: flex;
+     justify-content: center;
+     font-family: 'Oswald', sans-serif;
+     letter-spacing: 1px;
+     font-family: "Zeitung Micro Pro";
+     font-weight: 700;
+   
   }
   
   .coursesSection {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    // gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    z-index: -1;
   }
   
   .cardContainer {
@@ -44,7 +43,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: -1;
+
   }
   .cardContainer {
     // position: relative; 
@@ -114,6 +113,7 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    z-index: 12;
   }
   
   .detailsLink:hover {
