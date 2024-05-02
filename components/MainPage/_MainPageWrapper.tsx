@@ -41,8 +41,8 @@ const MainPageWrapper = async () => {
       <>
         {/* Passa i dati come props ai componenti figlio */}
        
-        {/* <FirstComponent data={firstComponentData} />
-        <SlideItem/>
+       <FirstComponent data={firstComponentData} />
+        {/*  <SlideItem/>
         <SecondComponent data={secondComponentData} /> */}
    {/* <OurCourses/> */}
         {/* <ThirdComponent data={thirdComponentData} /> */}
