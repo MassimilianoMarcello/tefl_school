@@ -53,7 +53,11 @@ export default function D_CoursesPreview({ data }: CourseProps) {
                 <p className={styles.courseDetail}>Price: {course.price}</p>
               </div>
             </div>
+            <div>
             <Link href={`/our_courses/${course.slug}`} className={styles.detailsLink}>Details</Link>
+ 
+            </div>
+           
  
           </div>
         ))}
