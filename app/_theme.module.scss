@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
-@import url(https://db.onlinewebfonts.com/c/035afbc26597d9396a64d8fe88645d29?family=Zeitung+Micro+Pro);
+// @import url(https://db.onlinewebfonts.com/c/035afbc26597d9396a64d8fe88645d29?family=Zeitung+Micro+Pro);
+@font-face {
+  font-family: "Zeitung Micro Pro";;
+  src: url('/font/zeitung.woff2') format('woff2'),
+       url('/font/zeitung.woff') format('woff');
+  /* Aggiungi altri formati di font se necessario */
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
