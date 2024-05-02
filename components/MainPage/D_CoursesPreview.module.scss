@@ -10,7 +10,7 @@
   min-width: 25rem;
   max-width: 25rem;
   background-color: rgba(255, 255, 255, 0.8); /* Sfondo trasparente bianco */
-  padding: .5rem; /* Spazio interno */
+  padding: 1rem; /* Spazio interno */
   backdrop-filter: blur(2px); /* Effetto sfocatura */
 }
 
@@ -19,24 +19,7 @@
   color: #007bff; /* Colore blu */
   font-size: 1.5rem;
 }
-.courseLevelContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateY(50%) rotate(45deg) translatex(10%); 
-    // transform-origin: top right; 
-  }
 
-.courseLevel {
-  margin-top: -1rem;
-  margin-right: -2.2rem;
-  padding: .4rem 3rem;
-  font-size: 1.2rem;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
-}
 .mainContainer {
     display: flex;
     justify-content: center;
@@ -70,17 +53,17 @@
   
   .cardHours {
     position: absolute; /* Aggiunto */
-    top: 1rem; /* Posizionato in alto */
-    left: 10rem; /* Centrato orizzontalmente */
+    top: 2rem; /* Posizionato in alto */
+     left: 6rem; /* Centrato orizzontalmente */
 text-align: center;
-    transform: translateX(-50%); /* Centrato orizzontalmente */
+    // transform: translateX(-50%); 
     background-color: #1a3847 ; /* Colore blu notte */
     color: #d2d8da ; /* Testo bianco */
     padding: 1.5rem; /* Padding */
-    height: 7rem;
-    width: 7rem;
+    height: 8rem;
+    width: 8rem;
     border: 2px solid #ddb239 ; /* Bordo dorato */
-    border-radius: 5px; /* Bordi arrotondati */
+    border-radius: 25px; /* Bordi arrotondati */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
        font-weight: 700;
    
@@ -88,10 +71,10 @@ text-align: center;
   
   .cardHoursText {
     font-size: 2.8rem; /* Dimensione del testo grande */
- 
-    margin-top: -3rem;
-    margin-bottom: -2rem;
-    margin-left: -1.8rem;
+ color: #ddb239 ;
+    margin-top: -2.8rem;
+    margin-bottom: -1.8rem;
+    margin-left: -1.4rem;
     letter-spacing: 2px;
     padding: 1rem; 
     
@@ -99,7 +82,8 @@ text-align: center;
   .hourSpan{
     font-size:1.8rem;
     letter-spacing: 1px;
-    margin-left: -.7rem;
+    margin-left: -.2rem;
+    font-weight: 200;
    
   }
   
@@ -158,5 +142,25 @@ text-align: center;
   
   .detailsLink:hover {
     background-color: #0056b3;
+  }
+
+  // level course 
+  .courseLevelContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(50%) rotate(45deg) translatex(10%); 
+      // transform-origin: top right; 
+    }
+  
+  .courseLevel {
+    margin-top: -1rem;
+    margin-right: -2.2rem;
+    padding: .4rem 3rem;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
   }
   

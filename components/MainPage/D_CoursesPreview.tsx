@@ -47,7 +47,8 @@ export default function D_CoursesPreview({ data }: CourseProps) {
 
                 <div className={styles.cardHours}>
                   <p className={styles.cardHoursText}>{course.hours} </p>
-                  <span className={styles.hourSpan}>hours</span>
+                  <span className={styles.hourSpan}>hours</span> <br />
+                  <span> course</span>
                 </div>
                 <p className={styles.courseDetail}>Price: {course.price}</p>
               </div>
