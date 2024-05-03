@@ -1,0 +1,49 @@
+// SignUp.module.scss
+@import '../../app/page.module.scss';
+
+.signUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signUpForm {
+  background-color: blue; // Utilizza il colore di sfondo blu notte dal tuo file di stile globale
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: blue; // Utilizza il colore di sfondo blu notte dal tuo file di stile globale
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid transparent;
+
+  &:focus {
+    border-color: lightgoldenrodyellow; // Utilizza il colore primario dal tuo file di stile globale quando l'input è in focus
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: grey; // Utilizza il colore primario dal tuo file di stile globale per il bottone
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(grey, 10%); // Scurisce leggermente il colore primario al passaggio del mouse
+  }
+}

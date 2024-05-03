@@ -131,10 +131,10 @@ export async function getHomePage(): Promise<HomePage[]> {
        }
        
           
-    }`
+    }`,
     // {
     //   next: {
-    //     revalidate: 64,
+    //     revalidate: 65,
     //   },
     // }
   );

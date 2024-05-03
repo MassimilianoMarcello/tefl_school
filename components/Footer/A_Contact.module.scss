@@ -1,0 +1,36 @@
+// Contact.module.scss
+@import '../../app/page.module.scss';
+
+.contactContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: lightgray; // Usa il tuo colore primario dal file di stile globale per evidenziare il testo
+}
+
+.address {
+  margin: 0.5rem 0;
+}
+
+.info {
+  margin-top: 1rem;
+}
+
+.phoneNumber {
+  color: lightgray; // Usa il tuo colore primario dal file di stile globale per il numero di telefono
+}
+
+.hours {
+  font-size: 0.8rem;
+  color: lightgreen; // Usa il tuo colore secondario dal file di stile globale per l'orario di apertura
+}

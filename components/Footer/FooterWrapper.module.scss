@@ -1,0 +1,89 @@
+// SignUp.module.scss
+@import '../../app/page.module.scss';
+
+
+
+.footerWrapper {
+  background-color: lightblue; // Usa il colore di sfondo del piè di pagina dal tuo file di stile globale
+  padding: 2rem 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  max-width: auto; // Usa la larghezza massima del contenitore dal tuo file di stile globale
+  margin: 0 auto;
+}
+
+.contactContainer,
+.quickLinksContainer,
+.informationContainer,
+.signUpContainer {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: lightblue; // Usa il colore di sfondo del contenitore del piè di pagina dal tuo file di stile globale
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+// mailform styles
+.signUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signUpForm {
+  background-color:lightgray; // Utilizza il colore di sfondo blu notte dal tuo file di stile globale
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: lightgray; // Utilizza il colore di sfondo blu notte dal tuo file di stile globale
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid transparent;
+
+  &:focus {
+    border-color: lightgray; // Utilizza il colore primario dal tuo file di stile globale quando l'input è in focus
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: $primary-color; // Utilizza il colore primario dal tuo file di stile globale per il bottone
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(lightgray, 10%); // Scurisce leggermente il colore primario al passaggio del mouse
+  }
+}

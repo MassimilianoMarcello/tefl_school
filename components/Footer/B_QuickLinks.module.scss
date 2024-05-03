@@ -1,0 +1,21 @@
+// B_QuickLinks.module.scss
+@import '../../app/page.module.scss';
+
+.quickLinksContainer {
+  margin-top: 2rem;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  color: $primary-color; // Usa il tuo colore primario dal file di stile globale per i link
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken(lightgray, 10%); // Scurisce leggermente il colore primario al passaggio del mouse
+  }
+}
