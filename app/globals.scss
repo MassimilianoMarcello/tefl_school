@@ -1,5 +1,11 @@
-@import "./theme.module";
-// @import url(https://db.onlinewebfonts.com/c/035afbc26597d9396a64d8fe88645d29?family=Zeitung+Micro+Pro);
+@font-face {
+  font-family: "Zeitung Micro Pro";
+  src: url('/font/zeitung.woff2') format('woff2'),
+       url('/font/zeitung.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
@@ -13,6 +19,6 @@
 body {
   width: 100%;
   height: 100vh;
-  // font-family: 'Oswald', sans-serif;
-  font-family: "Zeitung Micro Pro";
+  font-family: "Zeitung Micro Pro", Arial, sans-serif;
 }
+

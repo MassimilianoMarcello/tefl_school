@@ -19,7 +19,8 @@ export default function SecondComponent({ data }: SecondComponentProps) {
            <span className={styles.coloredTuscanyTitle}>tuscany</span>
           </h1>
           <div className={styles.textBox}>
-          <p className={styles.aboutUs}>
+            <div className={styles.aboutUs}>
+            <p >
             TEFL Tuscany has been offering its language students and TEFL
             trainees top-notch services since 2006 when it opened its doors as
             TEFL Tuscany, offers an extremely high-quality TESOL/TEFL
@@ -27,16 +28,22 @@ export default function SecondComponent({ data }: SecondComponentProps) {
             well-respected language and culture center. The locals know about
             the local language center and continuously refer their family and
             friends to take part in its offerings.
+           
           </p>
-          <Link href={""} className={styles.readMoreLink}>Who we are </Link>      
+          <Link href={""} className={styles.readMoreLink}>Who we are </Link>  
+            </div>
+       
+           
           <p className={styles.sloganOne}>
-          Unlocking Language, Connecting Cultures.
-TEFL Tuscany: Where Communication Transcends Boundaries.
+          Unlocking Language, Connecting Cultures. <span>TEFL Tuscany: Where Communication Transcends Boundaries.</span>
+
           </p>
+          <div className={styles.sloganTwoBox}>
           <p className={styles.sloganTwo}>
-          Immerse Yourself in Language, Embrace a Global Perspective.
-TEFL Tuscany: Your Gateway to Cultural Fluency.
+          Immerse Yourself in Language, Embrace a Global Perspective. <span>TEFL Tuscany: Your Gateway to Cultural Fluency.</span>
+
           </p>
+          </div>
 
        
           </div>
