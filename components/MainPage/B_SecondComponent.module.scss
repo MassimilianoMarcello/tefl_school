@@ -1,0 +1,74 @@
+@import "../../app/page.module.scss";
+
+.introContainer {
+  background-color: #eceff0;
+  .mainTitle {
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    // background-color: #748b67;
+
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+
+    margin-bottom: 10px;
+    text-align: center;
+
+    .coloredTuscanyTitle {
+      font-weight: normal;
+      background-color: gold;
+      color: #1a3847;
+      padding: 0.5rem 1rem;
+      text-transform: capitalize;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    .coloredTeflTitle {
+      background-color: #748b67;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #ecfce2;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .aboutUs {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 6rem;
+    padding-bottom: .5rem;
+  }
+}
+
+.readMoreLink{
+
+}
+.textBox{
+    height: 666px;
+}
+
+.OneMainContainer {
+}
+.TwoSectionContainer {
+}
+
+.threeMapContainer {
+  position: relative;
+}
+.textContainer {
+  @include posAbsoluteTopLeft;
+  // height: 15rem;
+  // width: 33rem;
+  margin-top: 3rem;
+  margin-left: 4rem;
+}
+
+// .mainTitle {
+
+//     font-size: 3rem;
+//     color: rgb(0, 72, 255);
+
+// }
+.mainText {
+}
+.backgroundImage {
+  margin: 2rem;
+}

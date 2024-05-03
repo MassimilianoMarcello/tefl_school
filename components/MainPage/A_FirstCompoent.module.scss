@@ -1,4 +1,4 @@
-
+@import  '../../app/page.module.scss';
 
 .OneMainContainer {
 }
@@ -9,9 +9,7 @@
     position: relative;
 }
 .textContainer{
-    position: absolute;
-    top: 0;
-    left: 0;
+@include posAbsoluteTopLeft ;
     height: 15rem;
     width: 33rem;
     margin: 10rem 6rem;

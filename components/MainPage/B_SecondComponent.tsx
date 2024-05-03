@@ -1,9 +1,7 @@
-
-
-
 import Image from "next/image";
-import type { HomePage } from '@/Types/Homepage';
+import type { HomePage } from "@/Types/Homepage";
 import styles from "./B_SecondComponent.module.scss";
+import Link from "next/link";
 
 interface SecondComponentProps {
   data: HomePage[]; // Accetta i dati come prop
@@ -14,19 +12,49 @@ export default function SecondComponent({ data }: SecondComponentProps) {
   const secondComponent = data && data[0]?.components[0];
 
   return (
-    <main className="pannarru">
-      <section className="busicco">
-      <div className={styles.introContainer}>
-<h1 className={styles.mainTitle}>TEFL <span>Tuscany</span></h1>
-<p className={styles.mainText}>TEFL Tuscany has been offering its language students and TEFL trainees top-notch services since 2006 when it opened its doors as TEFL Tuscany, offers an extremely high-quality TESOL/TEFL certification program and has quickly grown to become a well-respected language and culture center. The locals know about the local language center and continuously refer their family and friends to take part in its offerings.</p>
-<p className={styles.mainText}>TEFL Tuscany believes that the study of language enhances communication, understanding and knowledge and that language and culture are inseparable. We are dedicated to the concept of intercultural exchange through language with the intention to provide deeper cultural understanding and awareness through our language teaching.</p>
-</div>
+    <main className={styles.oneMainContainer}>
+      <section className={styles.twoSectionContainer}>
+        <div className={styles.introContainer}>
+          <h1 className={styles.mainTitle}> <span className={styles.coloredTeflTitle}> tefl </span>
+           <span className={styles.coloredTuscanyTitle}>tuscany</span>
+          </h1>
+          <div className={styles.textBox}>
+          <p className={styles.aboutUs}>
+            TEFL Tuscany has been offering its language students and TEFL
+            trainees top-notch services since 2006 when it opened its doors as
+            TEFL Tuscany, offers an extremely high-quality TESOL/TEFL
+            certification program and has quickly grown to become a
+            well-respected language and culture center. The locals know about
+            the local language center and continuously refer their family and
+            friends to take part in its offerings.
+          </p>
+          <Link href={""} className={styles.readMoreLink}>Who we are </Link>      
+          <p className={styles.sloganOne}>
+          Unlocking Language, Connecting Cultures.
+TEFL Tuscany: Where Communication Transcends Boundaries.
+          </p>
+          <p className={styles.sloganTwo}>
+          Immerse Yourself in Language, Embrace a Global Perspective.
+TEFL Tuscany: Your Gateway to Cultural Fluency.
+          </p>
+
+       
+          </div>
+          </div>
         {/* Renderizza solo il secondo componente della prima HomePage se data è definito */}
         {secondComponent && (
-          <div key={secondComponent._key} className="gavini">
-            <h1 className="alicion">{secondComponent.title}</h1>
-            <p className="tamarindo">{secondComponent.text}</p>
-            <Image src={secondComponent.image} alt="Component Image" width={400} height={300} />
+          <div key={secondComponent._key} className={styles.threeMapContainer}>
+            <div className={styles.textContainer}>
+              <h1 className={styles.mainTitle}>{secondComponent.title}</h1>
+              <p className={styles.mainText}>{secondComponent.text}</p>
+            </div>
+            <Image
+              className={styles.backgroundImage}
+              src={secondComponent.image}
+              alt="Component Image"
+              width={1250}
+              height={600}
+            />
           </div>
         )}
       </section>
