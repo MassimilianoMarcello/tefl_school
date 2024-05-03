@@ -5,11 +5,26 @@
 .TwoSectionContainer {
 }
 
-.threeMapContainer{}
+.threeMapContainer{
+    position: relative;
+}
+.textContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15rem;
+    width: 33rem;
+    margin: 10rem 6rem;
+}
 
 .mainTitle {
+
+    font-size: 3rem;
+    color: gold;
+
 }
 .mainText {
 }
 .backgroundImage {
+margin: 2rem;
 }

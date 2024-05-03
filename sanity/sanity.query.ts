@@ -134,7 +134,7 @@ export async function getHomePage(): Promise<HomePage[]> {
     }`,
     {
       next: {
-        revalidate: 65,
+        revalidate: 67,
       },
     }
   );

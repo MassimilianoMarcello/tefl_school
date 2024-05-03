@@ -15,9 +15,11 @@ export default function FirstComponent({ data }: FirstComponentProps) {
         {/* Verifica se data è definito prima di eseguire l'iterazione */}
         {data && data.map((homePage) => (
           <div key={homePage._id} className={styles.threeMapContainer}>
+            <div className={styles.textContainer}>
             <h1 className={styles.mainTitle}>{homePage.mainTitle}</h1>
             <p className={styles.mainText}>{homePage.mainText}</p>
-            <Image className={styles.backgroundImage}      src={homePage.bannerImage} alt={homePage.mainTitle} width={1400} height={800} />
+            </div>
+            <Image className={styles.backgroundImage}      src={homePage.bannerImage} alt={homePage.mainTitle} width={1250} height={600} />
           </div>
         ))}
       </section>

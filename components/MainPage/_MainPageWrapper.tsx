@@ -1,5 +1,5 @@
 import { getHomePage, getCourse, getTestimonials } from "@/sanity/sanity.query";
-import FirstComponent from "./A_FirstComponent.tsx";
+import FirstComponent from "./A_FirstComponent";
 import SecondComponent from "./B_SecondComponent";
 import ThirdComponent from "./C_ThirdComponent";
 import D_CoursesPreview from "./D_CoursesPreview";
@@ -42,8 +42,8 @@ const MainPageWrapper = async () => {
         {/* Passa i dati come props ai componenti figlio */}
        
        <FirstComponent data={firstComponentData} />
-        {/*  <SlideItem/>
-        <SecondComponent data={secondComponentData} /> */}
+        {/*  <SlideItem/>*/}
+    <SecondComponent data={secondComponentData} /> 
    {/* <OurCourses/> */}
         {/* <ThirdComponent data={thirdComponentData} /> */}
         <D_CoursesPreview data={courseData} />
