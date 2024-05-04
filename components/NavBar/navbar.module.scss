@@ -91,7 +91,7 @@ $breakpoints: (
   .navOne{
   
     @include flexProperties; 
-    background-color: lightblue;
+    background-color: rgba(116, 139, 103, 0.8);
     color: cadetblue;
     height: 3rem;
     cursor: pointer;
@@ -107,7 +107,7 @@ $breakpoints: (
     position: sticky;
     top: 0;
   
-   background-color: beige;
+   background-color: #fff;
     height: 4rem;
     color: black;
     cursor: pointer;
@@ -155,13 +155,13 @@ $breakpoints: (
   // BOTTOM NAVBAR
 
   .bottomNavContainer{
-    background-color: lightpink;
+    background-color: #fff;
     position: sticky;
     top: 0;
   }
 
   .fixed{
-    background-color: red;
+    background-color: transparent;
   }
 
   // buttons in bottom navbar

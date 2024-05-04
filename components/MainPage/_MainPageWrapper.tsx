@@ -6,6 +6,7 @@ import D_CoursesPreview from "./D_CoursesPreview";
 import E_Testimonials from "./E_Testimonials";
 import SlideItem from "../SlideItem/SlideItem";
 import OurCourses from "../OurCourses/OurCourses";
+import F_Parallax from "./F_Parallax";
 
 const MainPageWrapper = async () => {
   try {
@@ -48,6 +49,7 @@ const MainPageWrapper = async () => {
         {/* <ThirdComponent data={thirdComponentData} /> */}
         <D_CoursesPreview data={courseData} />
         {/* <E_Testimonials data={testimonialData} /> */}
+        <F_Parallax/>
      
       </>
     );
