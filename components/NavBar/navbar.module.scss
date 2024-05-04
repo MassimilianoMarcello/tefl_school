@@ -93,8 +93,9 @@ $breakpoints: (
     @include flexProperties; 
     background-color: rgba(116, 139, 103, 0.8);
     color: cadetblue;
-    height: 3rem;
+    height: 2rem;
     cursor: pointer;
+    z-index: 10000;
   }
 
   .socialIcon{
@@ -106,9 +107,9 @@ $breakpoints: (
   .navTwo{
     position: sticky;
     top: 0;
-  
+    display: block;
    background-color: #fff;
-    height: 4rem;
+    height: 5rem;
     color: black;
     cursor: pointer;
  
@@ -118,7 +119,7 @@ $breakpoints: (
       right: 0;
       left: 0;
       height: 3rem;
-   
+      
     }
 
   }
@@ -134,8 +135,9 @@ $breakpoints: (
   }
   .logoImage{
     margin-left: 1rem;
-    width: 320px;
-    height: 60px;
+  
+    width: 25rem;
+    height: 5rem;
     @include respond-to(sm, max) {
       width: 200px;
       height: 40px;
@@ -158,10 +160,11 @@ $breakpoints: (
     background-color: #fff;
     position: sticky;
     top: 0;
+    z-index: 10000;
   }
 
   .fixed{
-    background-color: transparent;
+    background-color: #eceff0 ;
   }
 
   // buttons in bottom navbar
