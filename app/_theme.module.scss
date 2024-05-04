@@ -1,16 +1,14 @@
 @font-face {
-  font-family: "Zeitung Micro Pro";;
-  src: url('/font/zeitung.woff2') format('woff2'),
-       url('/font/zeitung.woff') format('woff');
+  font-family: "Zeitung Micro Pro";
+  src: url("/font/zeitung.woff2") format("woff2"),
+    url("/font/zeitung.woff") format("woff");
   /* Aggiungi altri formati di font se necessario */
   font-weight: normal;
   font-style: normal;
 }
 
-
-
-$primary-color: #007bff;
-$secondary-color: #6c757d;
+$primary-color: #748b68;
+$secondary-color: #598069;
 $success-color: #28a745;
 $info-color: #17a2b8;
 $warning-color: #ffc107;
@@ -18,6 +16,52 @@ $danger-color: #dc3545;
 $light-color: #f8f9fa;
 $dark-color: #343a40;
 $hover-bg-color: #9e9e9e;
+
+// palette 1 Generic Gradient
+
+$generic1: #748b68;
+$generic2: #598069;
+$generic3: #437369;
+$generic4: #356568;
+$generic5: #2f5762;
+$generic6: #2f4858;
+$generic7: #59896d;
+$generic8: #378678;
+$generic9: #008287;
+$generic10: #4f926c;
+$generic11: #0074a2;
+$generic12: #a8c19b;
+$generic13: #e1f8d4;
+$generic14: #4f87c6;
+$generic15: #007c96;
+$genericNuances1: #f4f6f3;
+$genericNuances2: #EAEDE8;
+$genericNuances3: #E0E4DD;
+$genericNuances4: #D6DBD2;
+$genericNuances5: #CBD2C6;
+$genericNuances6: #C1C9BA;
+$genericNuances7: #B7C0AF;
+$genericNuances8: #ADB7A4;
+$genericNuances9: #A2AE98;
+$genericNuances10: #98A58D;
+$genericLight1: #00bfff;
+$genericLight2: #cbf7ff;
+$genericLight3: #f6edd9;
+$genericLight4: #f5fbf1;
+$genericLight5: #ebffdd;
+$genericLight6: #f1eedf;
+$genericSkip1: #ffd589;
+$genericSkip2: #df9e55;
+$genericSkip3: #a46b23;
+$genericSkip4: #598aa7;
+$genericSkip5: #225873;
+$genericSkip6: #bb7253;
+$genericSkip7: #ffd589;
+$genericSkip8: #bd6d78;
+$genericSkip8: #9999cc;
+$genericGrey1: #40493b;
+$genericGrey2: #a4ae9e;
+$genericGrey3: #d9d6c3;
 
 // Colore di sfondo generico
 $bg-color: #ffffff; // Puoi sostituire questo con il colore di sfondo desiderato
@@ -61,8 +105,6 @@ $zindex-modal: 1050;
 // Layout
 $container-padding-x: 15px; // Padding orizzontale del contenitore
 $container-padding-y: 15px; // Padding verticale del contenitore
-
-
 
 // .grid-item {
 //   // Proprietà degli item...

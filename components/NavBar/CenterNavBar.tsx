@@ -27,22 +27,22 @@ const CenterNavBar = () => {
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
               <Link href={"/accreditated"} className={s.linkTag}>
-                accredited
+              <p className={s.navNamesCenter}>accredited</p>
               </Link>
             </li>
             <li className={s.navItem}>
               <Link href={"/internship"} className={s.linkTag}>
-                internship
+              <p className={s.navNamesCenter}>internship</p>
               </Link>
             </li>
             <li className={s.navItem}>
               <Link href={"/blog"} className={s.linkTag}>
-                blog
+              <p className={s.navNamesCenter}>blog</p>
               </Link>
             </li>
             <li className={s.navItem}>
               <Link href={"/consultation_sessions"} className={s.linkTag}>
-                consultation sessions
+              <p className={s.navNamesCenter}>consultation sessions</p>
               </Link>
             </li>
           </ul>

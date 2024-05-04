@@ -1,5 +1,13 @@
 @import  '../../app/page.module.scss';
 
+@mixin navNames {
+  font-size: 1.2rem;
+  color: #748b67;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
 // @import  '/styles/mediaqueries.module.scss;';
 
 // mediaqueries
@@ -105,6 +113,11 @@ $breakpoints: (
     margin-left: .5rem;
   }
 
+  .navNamesTop{
+    @include navNames;
+    margin-top: 0;
+      }
+
 // CENTER NAVBAR
 
   .navTwo{
@@ -153,7 +166,10 @@ $breakpoints: (
   
   }
 
+  .navNamesCenter{
+    @include navNames;
 
+      }
 
 
 
@@ -178,12 +194,9 @@ $breakpoints: (
   }
 
   .navNames{
-    font-size: 1.2rem;
-    color: #748b67;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 2rem;
+@include navNames;
   }
+
 
   // buttons in bottom navbar
 
