@@ -5,13 +5,8 @@ $secondary-green: #d2d8da;
 $dark-blue: #1a3847;
 
 .introContainer {
-    font-family: "Zeitung Micro Pro";
   background-color: #eceff0;
   .mainTitle {
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-
-    // background-color: #748b67;
-
     letter-spacing: 0.2rem;
     font-size: 3rem;
 
@@ -35,16 +30,15 @@ $dark-blue: #1a3847;
     }
   }
 
-  .aboutUs {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 1rem 6rem;
-    padding-bottom: 0.5rem;
-  }
+  //   .aboutUs {
+  //     font-size: 1rem;
+  //     line-height: 1.5;
+  //     margin: 1rem 6rem;
+  //     padding-bottom: 0.5rem;
+  //   }
 }
 
-.readMoreLink {
-}
+
 
 .textBox {
   height: auto;
@@ -60,29 +54,35 @@ $dark-blue: #1a3847;
   grid-column: 1;
   grid-row: 1;
 
-
   p {
+    font-family: "Zeitung Micro Pro";
     font-size: 1rem;
     color: $dark-blue;
-    margin-top: 2rem;
-    
-
+    margin: 0 1.5rem;
+    margin-top: 5rem;
+   
+    line-height: 1.5;
+    padding-bottom: 2.5rem;
   }
   .readMoreLink {
+    font-family: "Zeitung Pro Black";
     font-size: 1rem;
     color: $dark-blue;
     text-decoration: none;
 
-    margin-top: 14rem;
+ 
   }
 }
 
 .sloganOne {
+    font-family: 'AktivGrotesk';
   grid-column: 2;
   font-size: 3rem;
-  font-weight: 900;
-  color: $primary-green; /* Colore del testo verde primario */
+  font-weight: XBold;
+  color: $primary-green; 
+margin: 0 .5rem;
   margin-top: 4rem;
+
   span {
     color: $dark-blue; /* Colore del testo scuro */
   }

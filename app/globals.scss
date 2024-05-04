@@ -7,6 +7,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Zeitung Pro Black";
+  src: url('/font/Zeitung\ Pro\ Black.woff2') format('woff2'),
+       url('/font/Zeitung\ Pro\ Black.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ZeitungPro Regular";
+  src: url('/font/ZeitungPro-Regular.woff2') format('woff2'),
+       url('/font/ZeitungPro-Regular.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 

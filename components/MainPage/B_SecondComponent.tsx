@@ -35,12 +35,12 @@ export default function SecondComponent({ data }: SecondComponentProps) {
        
            
           <p className={styles.sloganOne}>
-          Unlocking Language, Connecting Cultures. <span>TEFL Tuscany: Where Communication Transcends Boundaries.</span>
+          Unlocking Language, Connecting Cultures. <span> Where Communication Transcends Boundaries.</span>
 
           </p>
           <div className={styles.sloganTwoBox}>
           <p className={styles.sloganTwo}>
-          Immerse Yourself in Language, Embrace a Global Perspective. <span>TEFL Tuscany: Your Gateway to Cultural Fluency.</span>
+          Immerse Yourself in Language, Embrace a Global Perspective. <span>Your Gateway to Cultural Fluency.</span>
 
           </p>
           </div>
