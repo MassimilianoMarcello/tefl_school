@@ -63,21 +63,25 @@ $genericGrey1: #40493b;
 $genericGrey2: #a4ae9e;
 $genericGrey3: #d9d6c3;
 
+// transparent
+$genericTransparent1: rgba(116, 139, 103, 0.8);
+
+
 // Colore di sfondo generico
 $bg-color: #ffffff; // Puoi sostituire questo con il colore di sfondo desiderato
 
 // Font
-$font-family-base: "Arial", sans-serif;
+$fontNumbers: "Zeitung Micro Pro";
 $font-size-base: 16px;
 
 // Spacing
 $spacer: 1rem;
-$spacer-lg: 1.5rem; // Spaziatura grande
-$spacer-xl: 2rem; // Spaziatura extra grande
+$spacerLg: 1.5rem; // Spaziatura grande
+$spacerXl: 2rem; // Spaziatura extra grande
 
 // Borders
 $border-width: 1px;
-$border-radius: 0.25rem;
+$borderRadius: 0.25rem;
 
 // media queries
 $container-max-widths: (
