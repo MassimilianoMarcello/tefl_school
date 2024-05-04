@@ -1,0 +1,18 @@
+@import  '../../app/page.module.scss';
+
+.socialIconBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4rem;
+    margin-top: .2rem;
+}
+
+
+.socialIcon{
+    margin-left: .5rem;
+  svg{
+    fill: $genericNuances2;
+    
+  }
+  }

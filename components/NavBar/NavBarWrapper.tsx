@@ -1,8 +1,8 @@
 import s from "./navbar.module.scss";
 
-import BottomNavbar from "./BottomNavbar";
-import TopNavBar from "./TopNavBar";
-import CenterNavBar from "./CenterNavBar";
+import BottomNavbar from "./_C_BottomNavbar";
+import TopNavBar from "./_A_TopNavBar";
+import CenterNavBar from "./_B_CenterNavBar";
 import DropdownMenu from "./DropdownMenu";
 
 const NavBarWrapper = () => {

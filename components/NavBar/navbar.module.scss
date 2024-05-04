@@ -109,9 +109,7 @@ $breakpoints: (
     z-index: 10000;
   }
 
-  .socialIcon{
-    margin-left: .5rem;
-  }
+
   .phone{
     margin:0 2.5rem;
   }
@@ -219,7 +217,7 @@ $breakpoints: (
 
 // Utilizzo del mixin per creare un pulsante di avviso
 .warningButton {
-  @include button-style($warning-color, #fff, darken($warning-color, 10%), #fff);
+  @include button-style($warning-color, #fff, darken($genericSkip1, 10%), #fff);
 }
 
 
