@@ -10,7 +10,7 @@ const TopNavBar = () => {
   return (
     <nav className={s.navOne}>
         <div className={s.flexContainer}>
-          <div className="email">
+          {/* <div className="email">
             <Image
               src={"/icons/envelope.svg"}
               alt={"mail icon"}
@@ -18,16 +18,16 @@ const TopNavBar = () => {
               height={20}
             />
 
-            {/* <span>info@youdomain.com</span> */}
-          </div>
-          <div className="phone">
-            <Image
+            <span>info@youdomain.com</span>
+          </div> */}
+          <div className={s.phone}>
+            {/* <Image
               src={"/icons/phone-call.svg"}
               alt={"phone icon"}
-              width={20}
-              height={20}
-            />
-            <span>Call us +39 055 849 5765</span>
+              width={15}
+              height={15}
+            /> */}
+            <span>Call us: +39 055 849 5765</span>
           </div>
         </div>
         <div className={s.flexContainer}>

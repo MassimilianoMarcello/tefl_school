@@ -103,7 +103,7 @@ $breakpoints: (
   
     @include flexProperties; 
     background-color: rgba(116, 139, 103, 0.8);
-    color: cadetblue;
+    color: $genericNuances2;
     height: 2rem;
     cursor: pointer;
     z-index: 10000;
@@ -112,10 +112,18 @@ $breakpoints: (
   .socialIcon{
     margin-left: .5rem;
   }
+  .phone{
+    margin:0 2.5rem;
+  }
 
   .navNamesTop{
     @include navNames;
     margin-top: 0;
+    margin-left: 1rem;
+    color: $generic13;
+    &:hover{
+      color:$generic12;
+    }
       }
 
 // CENTER NAVBAR
@@ -168,7 +176,10 @@ $breakpoints: (
 
   .navNamesCenter{
     @include navNames;
-
+    margin-left: -.5rem;
+&:hover{
+  color:$generic12;
+}
       }
 
 
