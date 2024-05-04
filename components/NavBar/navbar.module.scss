@@ -1,4 +1,5 @@
 @import  '../../app/page.module.scss';
+
 // @import  '/styles/mediaqueries.module.scss;';
 
 // mediaqueries
@@ -89,6 +90,8 @@ $breakpoints: (
 
 // TOPNAVABAR
   .navOne{
+    font-family: "ZeitungPro Regular";
+    text-transform: uppercase;
   
     @include flexProperties; 
     background-color: rgba(116, 139, 103, 0.8);
@@ -105,12 +108,15 @@ $breakpoints: (
 // CENTER NAVBAR
 
   .navTwo{
+    font-family: "ZeitungPro Regular";
+    text-transform: uppercase;
     position: sticky;
     top: 0;
     display: block;
    background-color: #fff;
     height: 5rem;
     margin-top: 1rem;
+    margin-left: 1rem;
     color: black;
     cursor: pointer;
  
@@ -136,7 +142,7 @@ $breakpoints: (
   }
   .logoImage{
     margin-left: 1rem;
-  
+  padding-top: 1rem;
     width: 25rem;
     height: 5rem;
     @include respond-to(sm, max) {
@@ -158,9 +164,12 @@ $breakpoints: (
   // BOTTOM NAVBAR
 
   .bottomNavContainer{
+    font-family: "ZeitungPro Regular";
+ text-transform: uppercase;
     background-color: #fff;
     position: sticky;
     top: 0;
+  
     z-index: 10000;
   }
 
@@ -168,11 +177,20 @@ $breakpoints: (
     background-color: #eceff0 ;
   }
 
+  .navNames{
+    font-size: 1.2rem;
+    color: #748b67;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
   // buttons in bottom navbar
 
   // Utilizzo del mixin per creare un pulsante primario
 .primaryButton {
   @include button-style($primary-color, #fff, darken($primary-color, 10%), #fff);
+
 }
 
 // Utilizzo del mixin per creare un pulsante di avviso

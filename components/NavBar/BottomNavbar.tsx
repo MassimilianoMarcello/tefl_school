@@ -37,7 +37,7 @@ const BottomNavbar = () => {
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
               <Link href={"/"} className={s.linkTag}>
-                home
+                <p className={s.navNames}>home</p>
               </Link>
             </li>
             <li
@@ -45,22 +45,24 @@ const BottomNavbar = () => {
               onMouseEnter={() => setDropdownVisible(true)} // Mostra il menu dropdown quando passi il mouse sopra
               onMouseLeave={() => setDropdownVisible(false)} // Nascondi il menu dropdown quando il mouse esce
             >
-              <a className={s.linkTag}>our courses</a> {/* Cambiato Link in 'a' per gestire manualmente l'evento */}
+              <a className={s.linkTag}>
+              <p className={s.navNames}>our courses</p>
+                </a> {/* Cambiato Link in 'a' per gestire manualmente l'evento */}
               {dropdownVisible && <DropdownMenu />} {/* Mostra il menu dropdown se dropdownVisible è true */}
             </li>
             <li className={s.navItem}>
               <Link href={"/our_teachers"} className={s.linkTag}>
-                our teachers
+              <p className={s.navNames}>our teachers</p>
               </Link>
             </li>
             <li className={s.navItem}>
               <Link href={"/testimonials"} className={s.linkTag}>
-                testimonials
+              <p className={s.navNames}>testimonials</p>
               </Link>
             </li>
             <li className={s.navItem}>
               <Link href={"/faq"} className={s.linkTag}>
-                FAQ
+              <p className={s.navNames}>FAQ</p>
               </Link>
             </li>
           </ul>

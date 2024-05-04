@@ -1,6 +1,34 @@
 @import "./mixin.module";
 @import "./theme.module";
 
+@font-face {
+  font-family: "Zeitung Micro Pro";
+  src: url('/font/zeitung.woff2') format('woff2'),
+       url('/font/zeitung.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zeitung Pro Black";
+  src: url('/font/Zeitung\ Pro\ Black.woff2') format('woff2'),
+       url('/font/Zeitung\ Pro\ Black.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ZeitungPro Regular";
+  src: url('/font/ZeitungPro-Regular.woff2') format('woff2'),
+       url('/font/ZeitungPro-Regular.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .samplePage {
   margin: 20rem;
   background-color: $primary-color;
