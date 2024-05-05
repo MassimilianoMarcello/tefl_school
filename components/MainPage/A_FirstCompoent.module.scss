@@ -45,8 +45,8 @@
   width: 12rem;
   padding: 5rem;
  background-color: gold;
-  margin-left: 6rem;
-  margin-top: 20rem;
+  margin-left: 7rem;
+  margin-top: 21rem;
   z-index: 2;
 }
 
@@ -54,7 +54,8 @@
   @include posAbsoluteTopLeft;
   height: 5rem;
   padding: 5rem;
-  color: gold;
-  margin-left: -3rem;
-  z-index: 10000000;
+  background-color:lightblue;
+  margin-left: 29rem;
+  margin-top: 29rem;
+  z-index: 2;
 }
