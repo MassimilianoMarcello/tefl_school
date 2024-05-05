@@ -15,9 +15,11 @@
 .textContainer {
     
   @include posAbsoluteTopLeft;
+  top: 8.5rem;
+  left: 8.5rem;
   height: auto;
   width: 30rem;
-  margin: 10rem 0 0 8rem;
+//   margin: 10rem 0 0 8rem;
   background-color: $bgColor;
   padding: 1.5rem;
   z-index: 4;

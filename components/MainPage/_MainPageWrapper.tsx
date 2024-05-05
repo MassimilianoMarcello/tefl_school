@@ -1,3 +1,5 @@
+'use server'
+
 import { getHomePage, getCourse, getTestimonials } from "@/sanity/sanity.query";
 import FirstComponent from "./A_FirstComponent";
 import SecondComponent from "./B_SecondComponent";
@@ -8,7 +10,11 @@ import SlideItem from "../SlideItem/SlideItem";
 import OurCourses from "../OurCourses/OurCourses";
 import F_Parallax from "./F_Parallax";
 
+ 
+import { revalidateTag } from 'next/cache'
+
 const MainPageWrapper = async () => {
+  revalidateTag('collection')
   try {
     const [
       firstComponentData,

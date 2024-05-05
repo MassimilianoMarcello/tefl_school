@@ -4,7 +4,7 @@ import c from "@/app/page.module.scss";
 import s from "./navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import tefl_logo from "../../public/assets/Tuscany_Logo.png";
+import tefl_logo from "../../public/assets/Tuscany_Logo4.png";
 import HamburgerButton from "./HamburgerButton";
 
 const CenterNavBar = () => {

@@ -165,11 +165,13 @@ $breakpoints: (
   }
   .logoImage{
     margin-left: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  // padding-top: 1rem;
+  // padding-bottom: .5rem;
+  // margin-top: -3rem;
+  // margin-bottom: -3rem;
   margin-left: 2rem;
     width: 25rem;
-    height: 5rem;
+    height: 6rem;
     @include respond-to(sm, max) {
       width: 200px;
       height: 40px;
