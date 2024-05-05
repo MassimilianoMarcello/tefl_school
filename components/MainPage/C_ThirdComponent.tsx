@@ -20,8 +20,8 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
         {/* Renderizza solo il secondo componente della prima HomePage se data è definito */}
         {thirdComponent && (
           <div key={thirdComponent._key} className={styles.three_Map_Container}>
-              <span className={styles.squareOne}>1</span>
-              <span className={styles.squareTwo}>1</span>
+              <span className={styles.squareOne}></span>
+              <span className={styles.squareTwo}></span>
             <div className={styles.textContainer}>
               <h1 className={styles.mainTitle}>{thirdComponent.title}</h1>
               <p className={styles.mainText}>{thirdComponent.text}</p>
