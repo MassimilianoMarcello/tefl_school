@@ -1,11 +1,11 @@
-// SignUp.module.scss
 @import '../../app/page.module.scss';
 
 
 
 .footerWrapper {
-  background-color: lightblue; // Usa il colore di sfondo del piè di pagina dal tuo file di stile globale
-  padding: 2rem 0;
+  background-color:$generic1 ;
+    padding: 2rem 0;
+    font-family: $fontFirst;
 }
 
 .gridContainer {
@@ -23,7 +23,7 @@
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: lightblue; // Usa il colore di sfondo del contenitore del piè di pagina dal tuo file di stile globale
+  background-color:$generic1 ;
 }
 
 @media (max-width: 768px) {

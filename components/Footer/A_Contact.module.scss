@@ -1,36 +1,50 @@
-// Contact.module.scss
 @import '../../app/page.module.scss';
-
+// A_Contact.module.scss
+// A_Contact.module.scss
 .contactContainer {
   text-align: center;
   margin-top: 2rem;
+  background-color: $generic1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #555;
 }
 
 .highlight {
-  color: lightgray; // Usa il tuo colore primario dal file di stile globale per evidenziare il testo
+  color: #fff;
+  background-color: #00bcd4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
 }
 
 .address {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #666;
 }
 
 .info {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .phoneNumber {
-  color: lightgray; // Usa il tuo colore primario dal file di stile globale per il numero di telefono
+  color: #00bcd4;
+  font-size: 1.2rem;
 }
 
 .hours {
-  font-size: 0.8rem;
-  color: lightgreen; // Usa il tuo colore secondario dal file di stile globale per l'orario di apertura
+  font-size: 1rem;
+  color: #666;
 }

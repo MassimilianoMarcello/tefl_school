@@ -6,7 +6,7 @@ import styles from './B_QuickLinks.module.scss'; // Importa i tuoi stili Sass
 const C_Information = () => {
   return (
     <div className={styles.quickLinksContainer}>
-      <h2>B_QuickLinks</h2>
+      <h2>Information</h2>
       <ul className={styles.linksList}>
         <li>
           <Link href={''}>
