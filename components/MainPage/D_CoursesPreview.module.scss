@@ -35,13 +35,54 @@
   width: 50%; // Occupa il 50% della larghezza della pagina
 }
 
-.stickyComponent {
+// D_CoursesPreview.module.scss
+// boxes sticky on the right
+@mixin stickyComponent {
   position: sticky;
-  top: 4rem; // Altezza dell'header o spazio desiderato dalla parte superiore
-  height: 100vh; // Altezza massima pari all'altezza della viewport
-  overflow-y: auto; // Scroll verticale se necessario
-  width: 50%; // Occupa il restante 50% della larghezza della pagina
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  width: 50%;
 }
+
+.stickyComponent {
+  @include stickyComponent ;
+background-color: $generic11;
+color: #fff;
+font-size: 3rem;
+}
+
+
+
+
+
+.container1 {
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: $generic11;
+  color: #fff;
+h1{
+
+  font-size: 2rem;
+  color: #fff;
+}
+p{
+  font-size: 1rem;
+  background-color: $genericLight1;
+padding-top: 10rem;
+}
+}
+.container2 {
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: $generic12;
+color: #fff;
+font-size: 3rem;
+}
+
+// Resto dello stile per le schede dei corsi e il componente sticky
+
+
   
   .coursesSection {
     margin: 0 2rem;
@@ -115,15 +156,12 @@
     color: #888;
     margin-right: 10px;
   }
-  
+  // link more details
   .detailsLink {
     display: inline-block;
     grid-row: 4/5;
     grid-column: 1/3;
-    // position:absolute;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
+ 
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
