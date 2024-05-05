@@ -41,8 +41,12 @@
   opacity: 0.5;
 }
 .backgroundImage {
-  margin-left: 2rem;
+
+max-width: 100%;
+overflow: hidden;
+height: auto;
   margin-top: 2rem;
+
 
 }
 

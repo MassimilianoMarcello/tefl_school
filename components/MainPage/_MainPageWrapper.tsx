@@ -55,7 +55,7 @@ const MainPageWrapper = async () => {
        
        <FirstComponent data={firstComponentData} />
         {/*  <SlideItem/>*/}
-    <SecondComponent data={secondComponentData} /> 
+        <SecondComponent data={secondComponentData} /> 
    {/* <OurCourses/> */}
         <ThirdComponent data={thirdComponentData} />
         <D_CoursesPreview data={courseData} />
