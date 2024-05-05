@@ -12,9 +12,10 @@ export default function SecondComponent({ data }: SecondComponentProps) {
   const secondComponent = data && data[0]?.components[0];
 
   return (
-    <main className={styles.oneMainContainer}>
-      <section className={styles.twoSectionContainer}>
-        <div className={styles.introContainer}>
+    <main className={styles.one_MainContainer}>
+      <section className={styles.two_SectionContainer}>
+  
+        <div className={styles.three_introContainer}>
           <h1 className={styles.mainTitle}> <span className={styles.coloredTeflTitle}> tefl </span>
            <span className={styles.coloredTuscanyTitle}>tuscany</span>
           </h1>
@@ -48,23 +49,7 @@ export default function SecondComponent({ data }: SecondComponentProps) {
        
           </div>
           </div>
-        {/* Renderizza solo il secondo componente della prima HomePage se data è definito */}
-        {secondComponent && (
-          <div key={secondComponent._key} className={styles.threeMapContainer}>
-            <div className={styles.textContainer}>
-              <h1 className={styles.mainTitle}>{secondComponent.title}</h1>
-              <p className={styles.mainText}>{secondComponent.text}</p>
-            </div>
-            <Image
-              className={styles.backgroundImage}
-              src={secondComponent.image}
-              alt="Component Image"
-              width={1250}
-              height={600}
-            />
-          </div>
-        )}
-      </section>
+          </section>
     </main>
   );
 }

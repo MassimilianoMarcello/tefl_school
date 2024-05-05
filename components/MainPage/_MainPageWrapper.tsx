@@ -10,8 +10,10 @@ import SlideItem from "../SlideItem/SlideItem";
 import OurCourses from "../OurCourses/OurCourses";
 import F_Parallax from "./F_Parallax";
 
+
  
 import { revalidateTag } from 'next/cache'
+import RenameComponent from "./G_RenameLater";
 
 const MainPageWrapper = async () => {
   revalidateTag('collection')
@@ -22,12 +24,14 @@ const MainPageWrapper = async () => {
       thirdComponentData,
       courseData,
       testimonialData,
+      renameComponentData,
     ] = await Promise.all([
       getHomePage(),
       getHomePage(),
       getHomePage(),
       getCourse(),
       getTestimonials(),
+      getHomePage(),
     ]);
 
     // Verifica che entrambi i set di dati non siano nulli
@@ -36,7 +40,8 @@ const MainPageWrapper = async () => {
       !secondComponentData ||
       !thirdComponentData ||
       !courseData         ||
-      !testimonialData
+      !testimonialData    ||
+      !renameComponentData
     ) {
       console.error(
         "Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli"
@@ -52,11 +57,11 @@ const MainPageWrapper = async () => {
         {/*  <SlideItem/>*/}
     <SecondComponent data={secondComponentData} /> 
    {/* <OurCourses/> */}
-        {/* <ThirdComponent data={thirdComponentData} /> */}
+        <ThirdComponent data={thirdComponentData} />
         <D_CoursesPreview data={courseData} />
         {/* <E_Testimonials data={testimonialData} /> */}
         <F_Parallax/>
-     
+        <RenameComponent data={renameComponentData}  />   
       </>
     );
   } catch (error) {
