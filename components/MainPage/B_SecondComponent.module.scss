@@ -38,8 +38,6 @@ $dark-blue: #1a3847;
   //   }
 }
 
-
-
 .textBox {
   height: auto;
   display: grid;
@@ -60,7 +58,7 @@ $dark-blue: #1a3847;
     color: $dark-blue;
     margin: 0 1.5rem;
     margin-top: 5rem;
-   
+
     line-height: 1.5;
     padding-bottom: 2.5rem;
   }
@@ -69,18 +67,16 @@ $dark-blue: #1a3847;
     font-size: 1rem;
     color: $dark-blue;
     text-decoration: none;
-
- 
   }
 }
 
 .sloganOne {
-    font-family: 'AktivGrotesk';
+  font-family: "AktivGrotesk";
   grid-column: 2;
   font-size: 3rem;
   font-weight: XBold;
-  color: $primary-green; 
-margin: 0 .5rem;
+  color: $primary-green;
+  margin: 0 0.5rem;
   margin-top: 4rem;
 
   span {
@@ -107,8 +103,6 @@ margin: 0 .5rem;
   }
 }
 
-
-
 .OneMainContainer {
   background-color: #fff;
 }
@@ -122,8 +116,7 @@ margin: 0 .5rem;
   position: relative;
 }
 .textContainer {
-    
-  @include posAbsoluteTopRight ;
+  @include posAbsoluteTopRight;
   height: auto;
   width: 30rem;
   margin: 10rem 8rem 0 0rem;
@@ -149,23 +142,24 @@ margin: 0 .5rem;
 }
 
 .square1 {
-  @include posAbsoluteTopLeft;
+  position: absolute;
+  left: 7rem;
+  top: 21rem;
   height: 15rem;
   width: 12rem;
   padding: 5rem;
- background-color: gold;
-  margin-left: 7rem;
-  margin-top: 21rem;
+  background-color: gold;
+
   z-index: 2;
 }
 
 .square2 {
-  @include posAbsoluteTopLeft;
+position: absolute;
+left: 29rem;
+top: 29rem;
   height: 5rem;
   padding: 5rem;
-  background-color:lightblue;
-  margin-left: 29rem;
-  margin-top: 29rem;
+  background-color: lightblue;
+
   z-index: 2;
 }
-

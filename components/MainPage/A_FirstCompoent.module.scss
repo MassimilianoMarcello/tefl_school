@@ -42,22 +42,23 @@
 }
 
 .square1 {
-  @include posAbsoluteTopLeft;
+position: absolute;
+  left: 7rem;
+  top: 21rem;
   height: 15rem;
   width: 12rem;
-  padding: 5rem;
+
  background-color: gold;
-  margin-left: 7rem;
-  margin-top: 21rem;
+ 
   z-index: 2;
 }
 
 .square2 {
-  @include posAbsoluteTopLeft;
+position: absolute;
   height: 5rem;
   padding: 5rem;
   background-color:lightblue;
-  margin-left: 29rem;
-  margin-top: 29rem;
+  left: 29rem;
+  top: 29rem;
   z-index: 2;
 }
