@@ -13,7 +13,7 @@ export default function Home() {
        {/* <SlideItem  /> */}
        {/* <B_Design/> */}
     <MainPageWrapper/>
-     <h1 className={s.h1}>tefl website</h1>
+     {/* <h1 className={s.h1}>tefl website</h1> */}
    
     </main>
   );
