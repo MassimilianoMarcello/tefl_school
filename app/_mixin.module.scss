@@ -28,6 +28,12 @@
     left: 0;
   }
 
+  @mixin posAbsoluteTopRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   
   @mixin posAbsoluteBottomRight {
     position: absolute;

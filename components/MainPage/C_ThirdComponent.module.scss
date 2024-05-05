@@ -1,0 +1,61 @@
+@import "../../app/page.module.scss";
+
+.OneMainContainer {
+  background-color: #fff;
+}
+.TwoSectionContainer {
+  background-color: #fff;
+}
+
+.threeMapContainer {
+  position: relative;
+  background-color: #fff;
+  position: relative;
+}
+.textContainer {
+    
+  @include posAbsoluteTopLeft;
+  height: auto;
+  width: 30rem;
+  margin: 10rem 0 0 8rem;
+  background-color: $bgColor;
+  padding: 1.5rem;
+  z-index: 4;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  color: $blueColor;
+}
+.mainText {
+  margin-top: 1rem;
+  color: $blueColor;
+  // background-color:$generic1;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.backgroundImage {
+  margin: 2rem;
+}
+
+.square1 {
+  @include posAbsoluteTopLeft;
+  height: 15rem;
+  width: 12rem;
+  padding: 5rem;
+ background-color: gold;
+  margin-left: 7rem;
+  margin-top: 21rem;
+  z-index: 2;
+}
+
+.square2 {
+  @include posAbsoluteTopLeft;
+  height: 5rem;
+  padding: 5rem;
+  background-color:lightblue;
+  margin-left: 29rem;
+  margin-top: 29rem;
+  z-index: 2;
+}
