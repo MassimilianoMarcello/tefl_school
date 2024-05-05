@@ -113,6 +113,9 @@ $breakpoints: (
   .phone{
     margin:0 2.5rem;
   }
+  .callMeIcon{
+    margin-left: .5rem;
+  }
 
   .navNamesTop{
     @include navNames;
@@ -306,19 +309,76 @@ margin: .45rem 2rem;
   }
 }
 
+// dropdownmenu
+
+
 
 .dropdownContainer{
+  font-family: $fontThird;
   @include respond-to(sm, max) {
   display: none;
   }
   @include posAbsoluteBottomRightLeft;
-  margin-bottom: -15rem;
+  margin:0 1.6rem -15rem 2rem;
+
   height: 15rem;
   width: auto;
   // margin-right: 40rem;
-  background-color: aqua;
+  background-color: $genericNuances4;
 
 }
+
+.dropdownMenu {
+  list-style: none;
+  margin: 0;
+  padding: 2rem;
+  background-color: $azureColor;
+  height: 15rem;
+  width: 20rem;
+  border-radius: 5%;
+  text-align: left;
+
+  .dropdownItem {
+    margin-bottom: 20px; // Aggiungi spazio tra gli elementi del menu a discesa
+  }
+
+  h3 {
+ 
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  
+  }
+
+  p {
+    font-family: $fontFirst;
+    font-size: .75rem;
+    margin-bottom: 10px;
+    color: #666;
+  }
+
+  .testButton {
+    font-family: $fontFirst;
+    background-color: $blueColor;
+    color: white;
+    border: none;
+    padding: 1rem 4rem;
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+
+    &:hover {
+      background-color: #0056b3; // Cambia il colore al passaggio del mouse
+    }
+  }
+
+  .linkTag {
+    text-decoration: none;
+  }
+}
+
 
 
 

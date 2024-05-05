@@ -19,7 +19,7 @@ const TopNavBar = () => {
               width={15}
               height={15}
             />
-          <span>Call us: +39 055 849 5765</span>
+          <span className={s.callMeIcon}>Call us: +39 055 849 5765</span>
         </div>
         <SocialIconsComponent/>
       </div>

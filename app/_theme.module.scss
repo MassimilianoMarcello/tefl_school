@@ -2,7 +2,25 @@
   font-family: "Zeitung Micro Pro";
   src: url("/font/zeitung.woff2") format("woff2"),
     url("/font/zeitung.woff") format("woff");
-  /* Aggiungi altri formati di font se necessario */
+ 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zeitung Pro Black";
+  src: url("/font/Zeitung\ Pro\ Black.woff2") format("woff2"),
+    url("/font/Zeitung\ Pro\ Black.woff") format("woff");
+ 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zeitung Pro Regular";
+  src: url("../public/font/ZeitungPro-Regular.woff2") format("woff2"),
+    url("../public/font/ZeitungPro-Regular.woff") format("woff");
+ 
   font-weight: normal;
   font-style: normal;
 }
@@ -16,6 +34,9 @@ $danger-color: #dc3545;
 $light-color: #f8f9fa;
 $dark-color: #343a40;
 $hover-bg-color: #9e9e9e;
+$blueColor:#1f3d4b  ;
+$azureColor:#5cb9d0  ;
+
 
 // palette 1 Generic Gradient
 
@@ -37,7 +58,7 @@ $generic15: #007c96;
 $genericNuances1: #f4f6f3;
 $genericNuances2: #EAEDE8;
 $genericNuances3: #E0E4DD;
-$genericNuances4: #D6DBD2;
+$genericNuances4: #ffffff;
 $genericNuances5: #CBD2C6;
 $genericNuances6: #C1C9BA;
 $genericNuances7: #B7C0AF;
@@ -71,7 +92,9 @@ $genericTransparent1: rgba(116, 139, 103, 0.8);
 $bg-color: #ffffff; // Puoi sostituire questo con il colore di sfondo desiderato
 
 // Font
-$fontNumbers: "Zeitung Micro Pro";
+$fontFirst: "Zeitung Micro Pro";
+$fontSecond: "Zeitung Pro Regular";
+$fontThird: "Zeitung Pro Black";
 $font-size-base: 16px;
 
 // Spacing
