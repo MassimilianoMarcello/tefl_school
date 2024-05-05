@@ -16,7 +16,8 @@ export default function D_CoursesPreview({ data }: CourseProps) {
 
   return (
     <main className={styles.mainContainer}>
-      <section className={styles.coursesSection}>
+  <div className={styles.coursesColumn}>
+  <section className={styles.coursesSection}>
         {/* Itera solo sugli ultimi 4 progetti */}
         {latestProjects.map((course) => (
           <div key={course._id} className={styles.cardContainer}>
@@ -78,6 +79,16 @@ export default function D_CoursesPreview({ data }: CourseProps) {
 
 
       </section>
-    </main>
+  </div>
+  <div className={styles.stickyComponent}>
+  <div>
+   sticky container
+  </div>
+  </div>
+</main>
+
+
+     
+
   );
 }

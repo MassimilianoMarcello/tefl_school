@@ -23,19 +23,30 @@
 }
 
 .mainContainer {
-     display: flex;
-     justify-content: center;
-   padding: 4rem;
-     letter-spacing: 1px;
-     font-family: "Zeitung Micro Pro";
-     font-weight: 700;
-   
-  }
+  display: flex;
+  justify-content: space-between; // Spazio tra le due colonne
+  padding: 4rem;
+  letter-spacing: 1px;
+  font-family: "Zeitung Micro Pro";
+  font-weight: 700;
+}
+
+.coursesColumn {
+  width: 50%; // Occupa il 50% della larghezza della pagina
+}
+
+.stickyComponent {
+  position: sticky;
+  top: 4rem; // Altezza dell'header o spazio desiderato dalla parte superiore
+  height: 100vh; // Altezza massima pari all'altezza della viewport
+  overflow-y: auto; // Scroll verticale se necessario
+  width: 50%; // Occupa il restante 50% della larghezza della pagina
+}
   
   .coursesSection {
     margin: 0 2rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 3rem;
   
   }
