@@ -11,11 +11,15 @@ interface FirstComponentProps {
 export default function FirstComponent({ data }: FirstComponentProps) {
   return (
     <main className={styles.oneMainContainer}>
+    
       <section className={styles.twoSectionContainer}>
+      <span className={styles.square1}>1</span>
+              <span className={styles.square2}>1</span>
         {/* Verifica se data è definito prima di eseguire l'iterazione */}
         {data && data.map((homePage) => (
           <div key={homePage._id} className={styles.threeMapContainer}>
             <div className={styles.textContainer}>
+             
             <h1 className={styles.mainTitle}>{homePage.mainTitle}</h1>
             <p className={styles.mainText}>{homePage.mainText}</p>
             </div>

@@ -1,31 +1,60 @@
-@import  '../../app/page.module.scss';
+@import "../../app/page.module.scss";
 
 .OneMainContainer {
-    background-color: #fff;
+  background-color: #fff;
 }
 .TwoSectionContainer {
-    background-color: #fff; 
+  background-color: #fff;
 }
 
-.threeMapContainer{
-    background-color: #fff;
-    position: relative;
+.threeMapContainer {
+  position: relative;
+  background-color: #fff;
+  position: relative;
 }
-.textContainer{
-@include posAbsoluteTopLeft ;
-    height: 15rem;
-    width: 33rem;
-    margin: 10rem 6rem;
+.textContainer {
+    
+  @include posAbsoluteTopLeft;
+  height: auto;
+  width: 30rem;
+  margin: 10rem 0 0 8rem;
+  background-color: $bgColor;
+  padding: 1.5rem;
+  z-index: 4;
 }
 
 .mainTitle {
-
-    font-size: 3rem;
-    color: gold;
-
+  font-size: 3rem;
+  color: $blueColor;
 }
 .mainText {
+  margin-top: 1rem;
+  color: $blueColor;
+  // background-color:$generic1;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0.5;
 }
 .backgroundImage {
-margin: 2rem;
+  margin: 2rem;
+}
+
+.square1 {
+  @include posAbsoluteTopLeft;
+  height: 15rem;
+  width: 12rem;
+  padding: 5rem;
+ background-color: gold;
+  margin-left: 6rem;
+  margin-top: 20rem;
+  z-index: 2;
+}
+
+.square2 {
+  @include posAbsoluteTopLeft;
+  height: 5rem;
+  padding: 5rem;
+  color: gold;
+  margin-left: -3rem;
+  z-index: 10000000;
 }
