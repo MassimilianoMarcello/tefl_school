@@ -11,8 +11,8 @@ const Contact = () => {
             <Image
             src={tefl_logo}
             alt={"logo image"}
-         width={300}
-         height={150}
+         width={250}
+         height={100}
             //   objectFit="content"
             className={styles.logoImage}
         

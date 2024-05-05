@@ -17,7 +17,7 @@ export default function SecondComponent({ data }: SecondComponentProps) {
   
         <div className={styles.three_introContainer}>
           <h1 className={styles.mainTitle}> <span className={styles.coloredTeflTitle}> tefl </span>
-           <span className={styles.coloredTuscanyTitle}>tuscany</span>
+           <span className={styles.coloredTuscanyTitle }>tuscany</span>
           </h1>
           <div className={styles.textBox}>
             <div className={styles.aboutUs}>
