@@ -3,7 +3,7 @@
 
 // D_CoursesPreview.module.scss
 .cardNameContainer {
-
+  
    margin-top: -4rem;
  
 // border-top: solid .11rem  
@@ -14,9 +14,11 @@
   background-color: #017bfe;
   padding: .5rem; 
   backdrop-filter: blur(12px); 
+  
 }
 
 .cardName {
+
   margin: 0; 
   color: #fff;
   font-size: 1.5rem;
@@ -25,14 +27,16 @@
 .mainContainer {
   display: flex;
   justify-content: space-between; // Spazio tra le due colonne
-  padding: 4rem;
+  padding: 2.5rem;
   letter-spacing: 1px;
   font-family: "Zeitung Micro Pro";
   font-weight: 700;
+  
 }
 
 .coursesColumn {
-  width: 50%; // Occupa il 50% della larghezza della pagina
+  width: 50%; 
+
 }
 
 // D_CoursesPreview.module.scss
@@ -48,6 +52,7 @@
 .stickyComponent {
   @include stickyComponent ;
 background-color: $generic11;
+
 color: #fff;
 font-size: 3rem;
 }
@@ -57,7 +62,7 @@ font-size: 3rem;
 
 
 .container1 {
-  max-height: 100%;
+  max-height: 50%;
   overflow-y: auto;
   background-color: $generic11;
   color: #fff;
@@ -65,27 +70,34 @@ h1{
 
   font-size: 2rem;
   color: #fff;
+  padding: 1rem;
 }
 p{
   font-size: 1rem;
   background-color: $genericLight1;
-padding-top: 10rem;
+  padding: 1rem;
+padding-top: 1rem;
+padding-bottom: 2rem;
+
+
 }
 }
-.container2 {
-  max-height: 100%;
-  overflow-y: auto;
-  background-color: $generic12;
-color: #fff;
-font-size: 3rem;
-}
+// .container2 {
+//   max-height: 100%;
+//   overflow-y: auto;
+//   background-color: $generic12;
+// color: #fff;
+// font-size: 3rem;
+// }
 
 // Resto dello stile per le schede dei corsi e il componente sticky
 
 
   
   .coursesSection {
-    margin: 0 2rem;
+
+    padding: 0;
+    padding-right: 2rem;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     gap: 3rem;
@@ -93,6 +105,7 @@ font-size: 3rem;
   }
   
   .cardContainer {
+
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(6,auto);
@@ -103,13 +116,7 @@ font-size: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   }
-  .cardContainer {
-    // position: relative; 
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+
   
   // image
   

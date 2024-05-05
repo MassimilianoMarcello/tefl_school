@@ -16,8 +16,11 @@ export default function D_CoursesPreview({ data }: CourseProps) {
 
   return (
     <main className={styles.mainContainer}>
+        
+  
   <div className={styles.coursesColumn}>
   <section className={styles.coursesSection}>
+  
         {/* Itera solo sugli ultimi 4 progetti */}
         {latestProjects.map((course) => (
           <div key={course._id} className={styles.cardContainer}>
@@ -81,15 +84,15 @@ export default function D_CoursesPreview({ data }: CourseProps) {
       </section>
   </div>
   <div className={styles.stickyComponent}>
-        <div className={styles.container1} style={{ height: "600px" }}>
+        <div className={styles.container1} style={{ height: "20rem" }}>
           {/* Primo contenitore */}
   <h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
       <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
         </div>
-        <div className={styles.container2} style={{ height: "400px" }}>
-          {/* Secondo contenitore */}
+        {/* <div className={styles.container2} style={{ height: "400px" }}>
+       
        lamo
-        </div>
+        </div> */}
         {/* Aggiungi altri contenitori se necessario */}
       </div>
 </main>

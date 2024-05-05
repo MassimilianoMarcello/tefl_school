@@ -14,6 +14,7 @@ import F_Parallax from "./F_Parallax";
  
 import { revalidateTag } from 'next/cache'
 import RenameComponent from "./G_RenameLater";
+import FeaturedCourseTitle from "./Z_TitleFeaturedCourse";
 
 const MainPageWrapper = async () => {
   revalidateTag('collection')
@@ -58,6 +59,7 @@ const MainPageWrapper = async () => {
         <SecondComponent data={secondComponentData} /> 
    {/* <OurCourses/> */}
         <ThirdComponent data={thirdComponentData} />
+        <FeaturedCourseTitle/>
         <D_CoursesPreview data={courseData} />
         {/* <E_Testimonials data={testimonialData} /> */}
         <F_Parallax/>
