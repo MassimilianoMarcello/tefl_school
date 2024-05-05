@@ -26,7 +26,8 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               <h1 className={styles.mainTitle}>{thirdComponent.title}</h1>
               <p className={styles.mainText}>{thirdComponent.text}</p>
             </div>
-            <Image
+            <div   className={styles.backgroundImageContainer}>
+            <Image 
               className={styles.backgroundImage}
               src={thirdComponent.image}
               alt="Component Image"
@@ -34,6 +35,15 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               height={600}
               layout="responsive"
             />
+            <section className={styles.parallax1}>
+        <div className={styles.blueBack}>
+          <div className={styles.parallax1Inner}>
+            
+            <Link href="./">apply now</Link>
+          </div>
+        </div>
+      </section>
+            </div>
           </div>
         )}
       </div>
