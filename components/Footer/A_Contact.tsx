@@ -1,7 +1,7 @@
 // Contact.tsx
 import React from 'react';
 import styles from './A_Contact.module.scss'; 
-import tefl_logo from "@/public/assets/Tuscany_logo4.png";
+import tefl_logo from "@/public/assets/Tuscany_logo6.png";
 import Image from "next/image";
 import Link from "next/link";
 
