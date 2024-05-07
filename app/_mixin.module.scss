@@ -101,3 +101,19 @@
     color: $hover-text-color;
   }
 }
+
+@mixin button-styling {
+  display: inline-block;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0.333em;
+  background: #fff;
+  color: #0741a4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
