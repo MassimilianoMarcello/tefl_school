@@ -12,19 +12,19 @@
 .threeMapContainer {
   position: relative;
   background-color: #fff;
-  position: relative;
+
   margin-bottom: 8rem;
 }
 .textContainer {
     
   @include posAbsoluteTopLeft;
-  top: 8.5rem;
+  top: 9.5rem;
   left: 8.5rem;
   height: auto;
-  width: 30rem;
+  width: 31rem;
 
   background-color: $bgColor;
-  padding: 2rem;
+  padding:3rem 2rem;
   z-index: 4;
 }
 
@@ -33,7 +33,7 @@
   color: $blueColor;
 }
 .mainText {
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: $blueColor;
   // background-color:$generic1;
   font-weight: 500;
@@ -56,9 +56,9 @@ height: auto;
 .square1 {
 position: absolute;
   left: 7rem;
-  top: 21rem;
+  top: 22rem;
   height: 15rem;
-  width: 12rem;
+  width: 15rem;
 
  background-color: gold;
  
@@ -70,7 +70,7 @@ position: absolute;
   height: 5rem;
   padding: 5rem;
   background-color:lightblue;
-  left: 30rem;
-  top: 33rem;
+  left: 31rem;
+  top: 34rem;
   z-index: 2;
 }

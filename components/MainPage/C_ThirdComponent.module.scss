@@ -68,7 +68,7 @@ height: auto;
   .squareTwo {
   position: absolute;
   right: 33rem;
-  bottom: 14rem;
+  bottom: 20rem;
     height: 5rem;
     padding: 5rem;
     background-color: lightblue;
@@ -111,6 +111,7 @@ height: auto;
         position: absolute;
         right: 10rem;
         bottom: 6rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     }
   }
   
