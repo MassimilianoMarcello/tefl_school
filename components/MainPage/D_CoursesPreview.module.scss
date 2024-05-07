@@ -44,15 +44,16 @@
 @mixin stickyComponent {
   position: sticky;
   top: 4rem;
-  height: calc(100vh - 4rem);
-  overflow-y: auto;
+  height: calc(90vh - 4rem);
+  // overflow-y: auto;
   width: 50%;
 }
 
 .stickyComponent {
   @include stickyComponent ;
-background-color: $generic11;
-
+  background-color: $generic6;
+border-radius:25px;
+border: solid .2rem $generic11;
 color: #fff;
 font-size: 3rem;
 }
@@ -62,22 +63,31 @@ font-size: 3rem;
 
 
 .container1 {
-  max-height: 50%;
-  overflow-y: auto;
-  background-color: $generic11;
-  color: #fff;
+  border-radius:25px;
+  max-height: 100%;
+  // overflow-y: auto;
+  background-color: $generic6;
+  color: $generic11;
+
+
+
 h1{
 
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
   padding: 1rem;
+  margin: 0 auto;
 }
 p{
   font-size: 1rem;
-  background-color: $genericLight1;
+  background-color: $genericLight2;
   padding: 1rem;
 padding-top: 1rem;
 padding-bottom: 2rem;
+border-radius:25px;
+margin: 0 auto;
+margin-top: 2rem;
+width: 90%;
 
 
 }
