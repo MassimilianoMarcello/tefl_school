@@ -3,6 +3,7 @@
 @mixin navNames {
   font-size: 1.2rem;
   color: #748b67;
+  color: $blueColor;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 2rem;
@@ -71,7 +72,9 @@ $breakpoints: (
   }
   .linkTag{
     @include Link;
+    text-align: left;
     text-transform: capitalize;
+
   }
 
 
@@ -219,7 +222,7 @@ $breakpoints: (
 
   // Utilizzo del mixin per creare un pulsante primario
 .primaryButton {
-  @include button-style($primary-color, #fff, darken($primary-color, 10%), #fff);
+  @include button-style($generic10, #fff, darken($primary-color, 10%), #fff);
 
 }
 
@@ -319,6 +322,7 @@ margin: .45rem 2rem;
 
 
 .dropdownContainer{
+  color: $generic1;
   font-family: $fontThird;
   @include respond-to(sm, max) {
   display: none;
@@ -330,7 +334,9 @@ margin: .45rem 2rem;
   width: auto;
   // margin-right: 40rem;
   background-color: $genericNuances4;
-
+p{
+  color: $generic6;
+}
 }
 
 .dropdownMenu {
@@ -344,45 +350,67 @@ margin: .45rem 2rem;
   text-align: left;
 
   .dropdownItem {
-    margin-bottom: 20px; // Aggiungi spazio tra gli elementi del menu a discesa
+    margin-bottom: 20px; 
+    .linkTag   {
+      @include Link;
+  @include listItem;
+    }
+
   }
+ 
 
   h3 {
  
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10px;
+ 
   
   }
 
   p {
-    font-family: $fontFirst;
+    font-family: $fontSecond;
     font-size: .75rem;
     margin-bottom: 10px;
     color: #666;
+
+  }
+
+  .navdropNames{
+    font-family: $fontSecond;
+  color: red;
+  background-color: #748b67;
+  &:hover{
+    color:fuchsia ;
+  }
   }
 
   .testButton {
-    font-family: $fontFirst;
-    background-color: $blueColor;
-    color: white;
-    border: none;
-    padding: 1rem 4rem;
-    margin: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
+    font-family: $fontSecond;
+    @include  button-styling;
+    // background-color: $blueColor;
+    // color: white;
+    // border: none;
+    // padding: 1rem 4rem;
+    // margin: 1rem;
+    // border-radius: 5px;
+    // cursor: pointer;
+    // transition: background-color 0.3s;
+    // text-align: center;
 
     &:hover {
-      background-color: #0056b3; // Cambia il colore al passaggio del mouse
-    }
+      background-color: #0056b3; 
+        }
   }
 
   .linkTag {
     text-decoration: none;
+
+   
   }
 }
+
+
 
 
 

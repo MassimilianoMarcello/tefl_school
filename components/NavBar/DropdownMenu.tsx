@@ -1,4 +1,4 @@
-import React from 'react'
+
 import s from'./navbar.module.scss'
 import Link from 'next/link'
 
@@ -8,28 +8,28 @@ const DropdownMenu = () => {
     <div className={s.dropdownContainer}>
      <div className={s.flexContainer}>
         <ul className={s.flexContainerRow}>
-          <li className={s.navItem}>
+          <li className={s.dropdownItem } style={{ listStyleType: 'none' }}>
             <h3>Next Courses</h3>
           </li>
        
-            <li className={s.navItem}>
-              <Link href={"/courseone"} className={s.linkTag}>
-           120 h course one
+          <li className={s.dropdownItem} style={{ listStyleType: 'none' }}>
+              <Link href={"/"} className={s.linkTag}>
+              <p className={s.navdropNames}>120 h course one</p>
+              </Link>
+            </li>
+            <li className={s.dropdownItem } style={{ listStyleType: 'none'}}>
+              <Link href={"/"} className={s.linkTag}>
+              <p className={s.navNamesDrop}>180 h course two</p> 
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/course2"} className={s.linkTag}>
-              180 h course two
+              <Link href={"/"} className={s.linkTag} style={{ listStyleType: 'none' }}>
+              <p className={s.navNamesDrop}>220h course 3</p> 
               </Link>
             </li>
-            <li className={s.navItem}>
-              <Link href={"/course3"} className={s.linkTag}>
-          220h course 3
-              </Link>
-            </li>
-            <li className={s.navItem}>
-              <Link href={"/course4"} className={s.linkTag}>
-            all included course
+            <li className={s.dropdownItem } style={{ listStyleType: 'none' }}>
+              <Link href={"/"} className={s.linkTag}>
+              <p className={s.navNamesDrop}>all included course</p>
               </Link>
             </li>
             

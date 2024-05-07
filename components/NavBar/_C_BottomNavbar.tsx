@@ -72,11 +72,11 @@ const BottomNavbar = () => {
           {" "}
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
-              <button className={s.primaryButton}>Dates&Prices </button>
+              <button className={s.primaryButton}>Dates & Prices </button>
             </li>
 
             <li className={s.navItem}>
-              <button className={s.warningButton}>ApplyNow </button>
+              <button className={s.warningButton}>Apply Now </button>
             </li>
           </ul>
         </div>
