@@ -14,7 +14,7 @@ const DropdownMenu = () => {
        
           <li className={s.dropdownItem} style={{ listStyleType: 'none' }}>
               <Link href={"/"} className={s.linkTag}>
-              <p className={s.navdropNames}>120 h course one</p>
+              <p className={s.navNamesDrop}>120 h course one</p>
               </Link>
             </li>
             <li className={s.dropdownItem } style={{ listStyleType: 'none'}}>

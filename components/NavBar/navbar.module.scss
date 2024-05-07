@@ -336,6 +336,7 @@ margin: .45rem 2rem;
   background-color: $genericNuances4;
 p{
   color: $generic6;
+  padding: .4rem 2rem;
 }
 }
 
@@ -376,14 +377,15 @@ p{
 
   }
 
-  .navdropNames{
-    font-family: $fontSecond;
-  color: red;
-  background-color: #748b67;
-  &:hover{
-    color:fuchsia ;
-  }
-  }
+  // .navdropNames{
+  //   font-family: $fontSecond;
+  // // color: red;
+  // // background-color: #748b67;
+  // padding: 1rem 2rem;
+  // &:hover{
+  //   color:fuchsia ;
+  // }
+  // }
 
   .testButton {
     font-family: $fontSecond;
