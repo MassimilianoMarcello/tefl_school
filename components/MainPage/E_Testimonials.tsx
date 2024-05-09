@@ -40,9 +40,13 @@ export default function E_Testimonials({ data }: TestimonialProps) {
                   {testimonial.city}, {testimonial.state}.
                 </p>
               </div>
+              
             </div>
+            
           ))}
-      </section>
+             </section>
+             <Link href={"/testimonials"} className={styles.testimonialsLink}> More reviews</Link>
+
     </main>
   );
 }
