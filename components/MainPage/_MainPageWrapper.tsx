@@ -61,7 +61,8 @@ const MainPageWrapper = async () => {
         <ThirdComponent data={thirdComponentData} />
         <FeaturedCourseTitle/>
         <D_CoursesPreview data={courseData} />
-        {/* <E_Testimonials data={testimonialData} /> */}
+        <E_Testimonials data={testimonialData} />
+        
         <F_Parallax/>
         {/* <RenameComponent data={renameComponentData}  />    */}
       </>
