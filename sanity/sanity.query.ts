@@ -86,9 +86,9 @@ export async function getTestimonials(): Promise<Testimonial[]> {
         title,
         "image":image.asset->url,
   }`
-    // {
+    // ,{
     //   next: {
-    //     revalidate: 63,
+    //     revalidate: 62,
     //   },
     // }
   );
