@@ -88,8 +88,10 @@ export default function D_CoursesPreview({ data }: CourseProps) {
           {/* Primo contenitore */}
   <h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
       <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
+      <Link href={"/our_courses"} className={styles.testimonialsLink}> all courses</Link>
+
         </div>
-        {/* <div className={styles.container2} style={{ height: "400px" }}>
+                {/* <div className={styles.container2} style={{ height: "400px" }}>
        
        lamo
         </div> */}

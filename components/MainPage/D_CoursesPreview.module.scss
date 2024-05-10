@@ -23,7 +23,7 @@
   color: #fff;
   font-size: 1.5rem;
 }
-
+// divider in two containers
 .mainContainer {
   display: flex;
   justify-content: space-between; // Spazio tra le due colonne
@@ -33,7 +33,7 @@
   font-weight: 700;
   
 }
-
+// right container
 .coursesColumn {
   width: 50%; 
 
@@ -92,6 +92,20 @@ width: 90%;
 
 }
 }
+
+
+.testimonialsLink{
+  margin-top: orem;
+  font-size: 1rem;
+  text-align: center;
+  margin-left: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none; 
+  color:#fff  ;
+  border-bottom:.2rem solid #90cee3 ;
+  padding-bottom: .5rem;
+}
 // .container2 {
 //   max-height: 100%;
 //   overflow-y: auto;
@@ -102,7 +116,7 @@ width: 90%;
 
 // Resto dello stile per le schede dei corsi e il componente sticky
 
-
+// left container
   
   .coursesSection {
 
