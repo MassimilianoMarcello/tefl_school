@@ -13,7 +13,7 @@
   font-family: "Zeitung Micro Pro";
   font-weight: 700;
   overflow-x: auto;
-  background-color: #0056b3;
+
 }
 .imageBackground {
   margin-bottom: 15rem;
@@ -28,7 +28,7 @@
   position: absolute;
   right: 0rem;
   top: 5rem;
-  background-color: red;
+
 
 
   h1 {
@@ -70,7 +70,7 @@
     // top: 48rem;
     background-color: $bgColor;
     padding: 3rem 2rem;
-
+    z-index: 4;
     height: auto;
     // width: 70rem;
 margin:1rem;
@@ -130,15 +130,27 @@ margin:1rem;
 
 .square3 {
   position: absolute;
-  right: 4rem;
-  bottom: 19rem;
-  height: 52rem;
-  width: 2rem;
+  right: 0rem;
+  top: 40rem;
+  height: 28rem;
+  width: 6rem;
 
   background-color: gold;
 
   z-index: 2;
 }
+
+.square4 {
+    position: absolute;
+    left: 0rem;
+    top: 50rem;
+    height: 18rem;
+    width: 6rem;
+  
+    background-color: lightblue;
+  
+    z-index: 2;
+  }
 
 // card courses style
 

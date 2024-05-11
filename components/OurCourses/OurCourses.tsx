@@ -43,10 +43,10 @@ export default async function OurCourses() {
           institutions across Firenze, enabling us to offer a wide array of TEFL
           courses.
         </p>
-       <span className={styles.square1}></span>
+              <span className={styles.square1}></span>
               <span className={styles.square2}></span>
                <span className={styles.square3}></span>
-               {/*<span className={styles.square4}></span> */}
+               <span className={styles.square4}></span>
 
         <div className={styles.titleBox}>
 
