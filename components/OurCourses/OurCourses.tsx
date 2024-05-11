@@ -1,59 +1,165 @@
-import React from 'react'
+import React from "react";
 import { getCourse } from "@/sanity/sanity.query";
+import { format } from "date-fns";
 import Image from "next/image";
-import { Course as CourseType } from '@/Types/Course';
-import Link from 'next/dist/client/link'
+import { Course as CourseType } from "@/Types/Course";
+import Link from "next/dist/client/link";
+import styles from "./OurCourses.module.scss";
 
 export default async function OurCourses() {
-    const courseCard: CourseType[] = await getCourse();
-return(
-    <main className="lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6">
-    {courseCard &&
-      courseCard.map((course) => (
-        <div key={course._id}>
-          <section className="gilandro">
-            <div className="piloddo">
-              <h1 className="cannizzu">
-             {course.name}
-              </h1>
+  const courseCard: CourseType[] = await getCourse();
+  const imageBackgorund = "/assets/girl_right_space.jpg";
+  return (
+    <main className={styles.mainContainer}>
+      <Image
+        className={styles.imageBackground}
+        src={imageBackgorund}
+        alt={"girl background"}
+        sizes="100vw"
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+        width={1250}
+        height={600}
+      />
+      <section className={styles.coursesTextContainer}>
+        <h1     className={styles.coursesTitle}>About Our TEFL Courses In Tuscany, Italy</h1>
+        <p className={styles.coursesIntroductionOne}>
+          Our aspiring English as a Foreign Language TEFL teachers hail from
+          diverse professional backgrounds, each with their unique needs and
+          aspirations. To accommodate this diversity, our TEFL programs in
+          Tuscany, Italy, are tailored to be beginner-friendly, welcoming
+          individuals with minimal or no prior teaching experience. </p>
+          <p className={styles.coursesIntroductionTwo}>We
+          prioritize intimate learning environments, limiting class sizes to a
+          maximum of 12 trainees. This ensures personalized attention and
+          guidance for everyone. At TEFL Tuscany learning center, we emphasize
+          practical teaching experience, offering a minimum of 7 hours of
+          in-person teaching practice with real English learners. Our objective
+          is to address the developmental requirements of our trainees
+          comprehensively, enhancing their teaching abilities and employability.
+          To achieve this, we've forged partnerships with several educational
+          institutions across Firenze, enabling us to offer a wide array of TEFL
+          courses.
+        </p>
+        <span className={styles.square1}></span>
+              <span className={styles.square2}></span>
+              <span className={styles.square3}></span>
+              <span className={styles.square4}></span>
+        {/* <p>Our TEFL offerings in Firenze comprise:</p>
+        <ul>
+          <li>
+            <h1>Our 120-hour intensive course</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
+              alias quam reiciendis autem similique molestiae nam facere aut
+              expedita, non, doloribus repellendus ratione voluptatibus
+              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
+              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
+              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
+              distinctio quasi, blanditiis minima doloremque dolorum assumenda
+              ipsum neque.
+            </p>
+          </li>
+          <li>
+            <h1>Our 120-hour intensive course</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
+              alias quam reiciendis autem similique molestiae nam facere aut
+              expedita, non, doloribus repellendus ratione voluptatibus
+              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
+              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
+              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
+              distinctio quasi, blanditiis minima doloremque dolorum assumenda
+              ipsum neque.
+            </p>
+          </li>
+          <li>
+            <h1>Our 120-hour intensive course</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
+              alias quam reiciendis autem similique molestiae nam facere aut
+              expedita, non, doloribus repellendus ratione voluptatibus
+              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
+              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
+              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
+              distinctio quasi, blanditiis minima doloremque dolorum assumenda
+              ipsum neque.
+            </p>
+          </li>
+          <li>
+            <h1>Our 120-hour intensive course</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
+              alias quam reiciendis autem similique molestiae nam facere aut
+              expedita, non, doloribus repellendus ratione voluptatibus
+              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
+              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
+              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
+              distinctio quasi, blanditiis minima doloremque dolorum assumenda
+              ipsum neque.
+            </p>
+          </li>
+        </ul> */}
+      </section>
+      {courseCard &&
+        courseCard.map((course) => (
+          <div key={course._id} className={styles.cardContainer}>
+            <div className={styles.cardImageContainer}>
+              <Image
+                className={styles.cardImage}
+                src={course.photo}
+                alt={course.name}
+                width={500}
+                height={300}
+              />
 
-              <div className="nenneddu">
-              {course.description}
+              <div className={styles.courseLevelContainer}>
+                <p className={styles.courseLevel}>{course.level}</p>
+              </div>
+              <div className={styles.cardNameContainer}>
+                <p className={styles.cardName}>{course.name}</p>
               </div>
             </div>
 
-            <div className="gaglioffo">
-              <div>
-                <Image
-                  className="cilandro"
-                  src={course.photo}
-                  width={400}
-                  height={400}
-                  quality={100}
-                  alt={course.name}
-                />
+            {/* text sotto */}
+            <div className={styles.cardTextContainer}>
+              {/* description course */}
+              <p className={styles.cardDescription}>{course.description}</p>
 
-           
-             
-              
+              {/* dates :start and end course */}
+
+              <p className={styles.courseDetail}>
+                from {format(new Date(course.startDate), "dd MMMM yyyy")} to{" "}
+                {format(new Date(course.endDate), "dd MMMM yyyy")}
+              </p>
+
+              {/* weeks to finish the course */}
+              <p className={styles.courseWeeks}>
+                {" "}
+                completion time:
+                {course.completionTimeWeeks} weeks
+              </p>
+              {/* card total hours course  */}
+              <div className={styles.cardHours}>
+                <p className={styles.cardHoursText}>{course.hours} </p>
+                <span className={styles.hourSpan}>hours</span> <br />
+                <span className={styles.hourSpanTwo}> course</span>
               </div>
 
-         
-     
-              </div>
-              <Link href={`/our_courses/${course.slug}`}>Click for Details </Link>
-   
-            </section>
+              {/* course price */}
+              <p className={styles.coursePrice}>Price: {course.price}</p>
+            </div>
 
-            
+            <Link
+              href={`/our_courses/${course.slug}`}
+              className={styles.detailsLink}
+            >
+              Details
+            </Link>
           </div>
         ))}
     </main>
   );
 }
-
-
-
-
-
-
