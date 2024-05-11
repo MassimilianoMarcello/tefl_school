@@ -10,7 +10,7 @@ import { revalidateTag } from 'next/cache'
 export default async function OurCourses() {
   revalidateTag('collection')
   const courseCard: CourseType[] = await getCourse();
-  const imageBackgorund = "/assets/girl_right_space.jpg";
+  const imageBackgorund = "/assets/girl_right_space 3.webp";
   return (
     <main className={styles.mainContainer}>
       <Image
