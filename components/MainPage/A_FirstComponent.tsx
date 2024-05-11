@@ -23,7 +23,7 @@ export default function FirstComponent({ data }: FirstComponentProps) {
             <h1 className={styles.mainTitle}>{homePage.mainTitle}</h1>
             <p className={styles.mainText}>{homePage.mainText}</p>
             </div>
-            <Image className={styles.backgroundImage}      src={homePage.bannerImage} alt={homePage.mainTitle} sizes="100vw"
+            <Image className={styles.backgroundImage} priority     src={homePage.bannerImage} alt={homePage.mainTitle} sizes="100vw"
       style={{
         width: '100%',
         height: 'auto',
