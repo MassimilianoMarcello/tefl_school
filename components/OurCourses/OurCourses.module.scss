@@ -1,85 +1,8 @@
 @import "../../app/page.module.scss";
 
 // picturest title style
-.imageBackground{
-    margin-bottom: 15rem;
-}
-
-.coursesTextContainer {
-  position: relative;
-
-  h1 {
-    position: absolute;
-    right: 6rem;
-    top: 4rem;
-    background-color: $bgColor;
-    padding:3rem 2rem;
-    z-index: 4;
-    font-size: 3rem;
-    color: $blueColor;
-    height: auto;
-    width: 31rem;
-  }
-
-  .coursesIntroductionOne{
-    position: absolute;
-    background-color: $bgColor;
-    padding:3rem 2rem;
-    right: 5rem;
-    bottom: 20rem;
-    height: auto;
-    width: 31rem;
-    z-index: 4;
-  }
-  .coursesIntroductionTwo{
-    position: absolute;
-    background-color: $bgColor;
-    padding:3rem 2rem;
-    right: 0rem;
-    top: 48rem;
-    height: auto;
-    width: 70rem;
-    padding: 2rem;
-   
-  }
-}
-.square1 {
-    position: absolute;
-      right: 4rem;
-      top: 1rem;
-      height: 15rem;
-      width: 15rem;
-    
-     background-color: gold;
-     
-      z-index: 2;
-    }
-    
-    .square2 {
-    position: absolute;
-      height: 20rem;
-      padding: 5rem;
-      background-color:lightblue;
-     right: 30rem;
-      top: 15rem;
-      z-index: 2;
-    }
-
-    .square3 {
-        position: absolute;
-          right: 4rem;
-          bottom: 19rem;
-          height: 2rem;
-          width: 2rem;
-        
-         background-color: gold;
-         
-          z-index: 2;
-        }
-
-// card courses style
-
 .mainContainer {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -91,6 +14,127 @@
   font-weight: 700;
   overflow-x: auto;
 }
+.imageBackground {
+  margin-bottom: 15rem;
+  width: 100%;
+}
+
+.coursesTextContainer {
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+
+  h1 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    // position: absolute;
+    // right: 6rem;
+    // top: 4rem;
+    background-color: $bgColor;
+    padding: 3rem 2rem;
+    z-index: 4;
+    font-size: 3rem;
+    color: $blueColor;
+    height: 20rem;
+    width: 30rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+
+  .coursesIntroductionOne {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    // position: absolute;
+    // right: 5rem;
+    // bottom: 20rem;
+    background-color: $bgColor;
+    padding: 3rem 2rem;
+
+    height: auto;
+    width: 31rem;
+    z-index: 4;
+  }
+  .coursesIntroductionTwo {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    // position: absolute;
+    // right: 0rem;
+    // top: 48rem;
+    background-color: $bgColor;
+    padding: 3rem 2rem;
+
+    height: auto;
+    width: 70rem;
+    padding: 2rem;
+  }
+
+  .titleBox {
+    grid-column: 1/4;
+    grid-row: 4/5;
+
+    h1 {
+      display: block;
+      width: 94%;
+
+      margin: 0 auto;
+      font-size: 4rem;
+      padding: 3rem 0;
+      margin-top: 4rem;
+      color: $blueColor;
+      text-align: center;
+      background-image: #add8e6;
+
+      border: 0.2rem solid #90cee3;
+    }
+  }
+  .courseCardsBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1/4;
+    grid-row: 5/6;
+    width: 100%;
+  }
+}
+
+.square1 {
+  position: absolute;
+  right: 4rem;
+  top: 1rem;
+  height: 15rem;
+  width: 15rem;
+
+  background-color: gold;
+
+  z-index: 2;
+}
+
+.square2 {
+  position: absolute;
+  height: 20rem;
+  padding: 5rem;
+  background-color: lightblue;
+  right: 30rem;
+  top: 15rem;
+  z-index: 2;
+}
+
+.square3 {
+  position: absolute;
+  right: 4rem;
+  bottom: 19rem;
+  height: 2rem;
+  width: 2rem;
+
+  background-color: gold;
+
+  z-index: 2;
+}
+
+// card courses style
 
 .coursesSection {
   padding: 0;
@@ -105,10 +149,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, auto);
+
   position: relative;
   border: 1px solid #ccc;
   border-radius: 10px;
-  overflow: hidden;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   margin: 2rem auto; /* Centra le carte */

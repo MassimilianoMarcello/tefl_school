@@ -43,67 +43,20 @@ export default async function OurCourses() {
           institutions across Firenze, enabling us to offer a wide array of TEFL
           courses.
         </p>
-        <span className={styles.square1}></span>
+        {/* <span className={styles.square1}></span>
               <span className={styles.square2}></span>
               <span className={styles.square3}></span>
-              <span className={styles.square4}></span>
-        {/* <p>Our TEFL offerings in Firenze comprise:</p>
-        <ul>
-          <li>
-            <h1>Our 120-hour intensive course</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
-              alias quam reiciendis autem similique molestiae nam facere aut
-              expedita, non, doloribus repellendus ratione voluptatibus
-              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
-              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
-              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
-              distinctio quasi, blanditiis minima doloremque dolorum assumenda
-              ipsum neque.
-            </p>
-          </li>
-          <li>
-            <h1>Our 120-hour intensive course</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
-              alias quam reiciendis autem similique molestiae nam facere aut
-              expedita, non, doloribus repellendus ratione voluptatibus
-              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
-              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
-              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
-              distinctio quasi, blanditiis minima doloremque dolorum assumenda
-              ipsum neque.
-            </p>
-          </li>
-          <li>
-            <h1>Our 120-hour intensive course</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
-              alias quam reiciendis autem similique molestiae nam facere aut
-              expedita, non, doloribus repellendus ratione voluptatibus
-              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
-              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
-              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
-              distinctio quasi, blanditiis minima doloremque dolorum assumenda
-              ipsum neque.
-            </p>
-          </li>
-          <li>
-            <h1>Our 120-hour intensive course</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a
-              alias quam reiciendis autem similique molestiae nam facere aut
-              expedita, non, doloribus repellendus ratione voluptatibus
-              consectetur tempora, quis perferendis modi. Blanditiis, molestias.
-              Fugit beatae quidem aliquid dolor illo animi quis at quibusdam,
-              accusantium voluptas quam ad vel eius cumque pariatur. Aliquid
-              distinctio quasi, blanditiis minima doloremque dolorum assumenda
-              ipsum neque.
-            </p>
-          </li>
-        </ul> */}
-      </section>
-      {courseCard &&
+              <span className={styles.square4}></span> */}
+
+        <div className={styles.titleBox}>
+
+<h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
+      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
+
+
+</div>
+<div className={styles.courseCardsBox}>
+{courseCard &&
         courseCard.map((course) => (
           <div key={course._id} className={styles.cardContainer}>
             <div className={styles.cardImageContainer}>
@@ -160,6 +113,9 @@ export default async function OurCourses() {
             </Link>
           </div>
         ))}
+</div>
+      </section>
+     
     </main>
   );
 }
