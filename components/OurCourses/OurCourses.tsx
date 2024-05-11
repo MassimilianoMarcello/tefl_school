@@ -5,8 +5,10 @@ import Image from "next/image";
 import { Course as CourseType } from "@/Types/Course";
 import Link from "next/dist/client/link";
 import styles from "./OurCourses.module.scss";
+import { revalidateTag } from 'next/cache'
 
 export default async function OurCourses() {
+  revalidateTag('collection')
   const courseCard: CourseType[] = await getCourse();
   const imageBackgorund = "/assets/girl_right_space.jpg";
   return (
