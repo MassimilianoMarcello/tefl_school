@@ -2,8 +2,9 @@ import course from './course';
 import componentPrototype from './componentPrototype';
 import homepage from './homepage';
 import testimonial from './testimonial';
+import teachers from './teachers';
 
 
 import slideItem from './slideItem';
 
-export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial]
+export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial,teachers]

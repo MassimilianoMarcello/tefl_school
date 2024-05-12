@@ -5,6 +5,7 @@ import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
 import { Testimonial } from "@/Types/Testimonials";
+import {Teachers} from '@/Types/Teachers';
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -140,23 +141,22 @@ export async function getHomePage(): Promise<HomePage[]> {
   );
 }
 
-// export async function getComponent(): Promise<Component[]> {
-//   return client.fetch(
-//     groq`*[_type == "components"]{
+export async function getTeachers(): Promise<Teachers[]> {
+  return client.fetch(
+    groq`*[_type == "teachers"]{
+ _id,
+        _type,
+        "idPhoto":idPhoto.asset->url,
+       name,
+       role,
+       infoParagraph,
+      //  content,
+        "slug": slug.current
 
-//         title,
-//         text,
-//           _key,
-//         "image":image.asset->url
+   }`
 
-//    }`
-//     // {
-//     //   next: {
-//     //     revalidate: 63,
-//     //   },
-//     // }
-//   );
-// }
+  );
+}
 
 // export async function getPosts(slug: string): Promise<Post> {
 //   return client.fetch(
