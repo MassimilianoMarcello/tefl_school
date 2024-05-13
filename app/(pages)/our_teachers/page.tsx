@@ -2,6 +2,7 @@
 
 import { getTeachers, getCommonTopPage } from "@/sanity/sanity.query";
 import OurTeachers from "@/components/Our teachers/OurTeachers";
+import CommonTopPageTeachers from '@/components/Our teachers/CommonTopPageTeachers';
 
 
 
@@ -38,8 +39,9 @@ const TeacherPageWrapper = async () => {
     return (
       <>
         {/* Passa i dati come props ai componenti figlio */}
-       
+        <CommonTopPageTeachers data={commonTopPageData  } />
        <OurTeachers data={teachersData } />
+   
    
         {/* <CommonTopPage data={commonTopPageData } />  */}
  
