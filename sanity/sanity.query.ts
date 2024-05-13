@@ -6,6 +6,7 @@ import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
 import { Testimonial } from "@/Types/Testimonials";
 import {Teachers} from '@/Types/Teachers';
+import {CommonTop} from '@/Types/CommonTop';
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -160,15 +161,13 @@ export async function getTeachers(): Promise<Teachers[]> {
 
 export async function getCommonTopPage(): Promise<CommonTop[]> {
   return client.fetch(
-    groq`*[_type == "commonTopPage"]{
- _id,
-        _type,
-        "idPhoto":idPhoto.asset->url,
-       name,
-       role,
-       infoParagraph,
-      //  content,
-        "slug": slug.current
+    groq`*[_type == 'commonTopPage']{
+      _id,
+      _rev,
+      title,
+      subtitle,
+       "image":backgroundImage.asset->url,
+    
 
    }`
 

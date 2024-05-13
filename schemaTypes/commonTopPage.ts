@@ -1,8 +1,8 @@
 // commonPageTop.ts
 
 export default {
-    name: 'commonPageTop',
-    title: 'Common Page Top',
+    name: 'commonTopPage',
+    title: 'Common Top Page',
     type: 'document',
     fields: [
       {
