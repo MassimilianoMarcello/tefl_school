@@ -57,63 +57,216 @@
 
 // teachers section
 
+// .mainContainer {
+//   /* Stile per il contenitore principale */
+// }
+
+// .coursesTextContainer {
+//   /* Stile per il contenitore del testo del corso */
+// }
+
+// .square1 {
+//   /* Stile per il quadrato 1 */
+// }
+
+// .square2 {
+//   /* Stile per il quadrato 2 */
+// }
+
+// .square3 {
+//   /* Stile per il quadrato 3 */
+// }
+
+// .square4 {
+//   /* Stile per il quadrato 4 */
+// }
+
+// .courseCardsBox {
+//   /* Stile per il contenitore delle card del corso */
+// }
+
+// .cardContainer {
+// }
+
+// .cardContainer0 {
+//   background-color: aqua;
+// }
+
+
+
+// .cardContainer5 {
+//   background-color: pink;
+// }
+
+// .cardImageContainer {
+//   /* Stile per il contenitore dell'immagine della card */
+// }
+
+// .cardImage {
+//   /* Stile per l'immagine della card */
+// }
+
+// .courseLevelContainer {
+//   /* Stile per il contenitore del livello del corso */
+// }
+
+// .courseLevel {
+//   /* Stile per il livello del corso */
+// }
+
+// .cardNameContainer {
+//   /* Stile per il contenitore del nome della card */
+// }
+
+// .cardName {
+//   /* Stile per il nome della card */
+// }
+
+// .detailsLink {
+//   /* Stile per il link dei dettagli */
+// }
+
+
 .mainContainer {
   /* Stile per il contenitore principale */
 }
 
 .coursesTextContainer {
   /* Stile per il contenitore del testo del corso */
+  position: relative; /* Per permettere il posizionamento assoluto degli elementi interni */
 }
 
-.square1 {
-  /* Stile per il quadrato 1 */
-}
+// .square1,
+// .square2,
+// .square3,
+// .square4 {
+//   /* Stile per i quadrati */
+//   position: absolute;
+//   background-color: #f0f0f0; /* Colore di sfondo dei quadrati */
+// }
 
-.square2 {
-  /* Stile per il quadrato 2 */
-}
+// .square1 {
+//   top: 0;
+//   left: 0;
+//   width: 50px;
+//   height: 50px;
+// }
 
-.square3 {
-  /* Stile per il quadrato 3 */
-}
+// .square2 {
+//   top: 0;
+//   right: 0;
+//   width: 50px;
+//   height: 50px;
+// }
 
-.square4 {
-  /* Stile per il quadrato 4 */
-}
+// .square3 {
+//   bottom: 0;
+//   left: 0;
+//   width: 50px;
+//   height: 50px;
+// }
+
+// .square4 {
+//   bottom: 0;
+//   right: 0;
+//   width: 50px;
+//   height: 50px;
+// }
 
 .courseCardsBox {
   /* Stile per il contenitore delle card del corso */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(6,auto);
+gap: 1rem;
 }
 
 .cardContainer {
+  /* Stile per il contenitore della card */
+  // width: calc(25% - 20px); 
+  margin: 2rem;
+  position: relative;
+  .cardName{
+    font-size: 1.5rem;
+    padding-top: .1rem;
+
+    
+  }
+  .cardRole{
+    font-size: .9rem;
+
+  
+  }
+}
+.cardContainer1 {
+
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.cardContainer2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
 }
 
-.cardContainer0 {
-  background-color: aqua;
+.cardContainer3 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+
 }
+// Kristin style
+.cardContainer4 {
+  position: relative;
+  grid-column: 1/5;
+  grid-row: 1/2;
+  margin: 3rem;
+ 
+
+  .cardImage {
+    width: 259px;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  .cardNameContainer{
+    position: absolute;
+    left: 16rem ;
+    top: 3rem;
+}
+.cardName{
+  font-size: 3rem;
+  padding-top: 1rem;
+  border-top: solid .2rem gold;
+  
+}
+.cardRole{
+  font-size: 1.2rem;
+  padding: 2rem 0;
+  border-bottom: solid .2rem gold;
+}
+}
+
 
 .cardImageContainer {
   /* Stile per il contenitore dell'immagine della card */
+  position: relative;
 }
 
 .cardImage {
   /* Stile per l'immagine della card */
+  width: 100%;
+  height: auto;
 }
 
-.courseLevelContainer {
-  /* Stile per il contenitore del livello del corso */
-}
-
-.courseLevel {
-  /* Stile per il livello del corso */
-}
-
+.courseLevelContainer,
 .cardNameContainer {
-  /* Stile per il contenitore del nome della card */
+  /* Stile per i contenitori del livello e del nome della card */
+  padding:1rem;
 }
 
+.courseLevel,
 .cardName {
-  /* Stile per il nome della card */
+  /* Stile per il livello e il nome della card */
+  margin: 0;
 }
 
 .detailsLink {
