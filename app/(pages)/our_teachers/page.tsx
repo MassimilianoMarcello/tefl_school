@@ -1,55 +1,56 @@
-import styles from "./teachers.module.scss";
-import { getTeachers } from "@/sanity/sanity.query";
-import React from "react";
-import Image from "next/image";
-import { Teachers as TeachersType } from "@/Types/Teachers";
-import Link from "next/dist/client/link";
-import { revalidateTag } from "next/cache";
+'use server'
+
+import { getTeachers, getCommonTopPage } from "@/sanity/sanity.query";
+import OurTeachers from "@/components/Our teachers/OurTeachers";
 
 
 
-export default async function OurTeachers() {
-  revalidateTag("collection");
-  const teacherCard: TeachersType[] = await getTeachers();
+ 
+import { revalidateTag } from 'next/cache'
 
-  return (
-    <main className={styles.mainContainer}>
-      <section className={styles.coursesTextContainer}>
-        <span className={styles.square1}></span>
-        <span className={styles.square2}></span>
-        <span className={styles.square3}></span>
-        <span className={styles.square4}></span>
 
-        <div className={styles.courseCardsBox}>
-          {teacherCard &&
-            teacherCard.map((teacher, index) => (
-              <div key={teacher._id} className={`${styles.cardContainer} ${styles[`cardContainer${index}`]}`}>
-                <div className={styles.cardImageContainer}>
-                  <Image
-                    className={styles.cardImage}
-                    src={teacher.idPhoto}
-                    alt={teacher.alt}
-                    width={500}
-                    height={300}
-                  />
 
-                  <div className={styles.courseLevelContainer}>
-                    <p className={styles.courseLevel}>
-                      {teacher.infoParagraph}
-                    </p>
-                  </div>
-                  <div className={styles.cardNameContainer}>
-                    <p className={styles.cardName}>{teacher.role}</p>
-                  </div>
-                </div>
+const TeacherPageWrapper = async () => {
+  revalidateTag('collection')
+  try {
+    const [
+      teachersData,
+      commonTopPageData,
+  
+    ] = await Promise.all([
+      getTeachers(),
+      getCommonTopPage(),
 
-                <Link href={`/`} className={styles.detailsLink}>
-                  Details
-                </Link>
-              </div>
-            ))}
-        </div>
-      </section>
-    </main>
-  );
-}
+    ]);
+
+    // Verifica che entrambi i set di dati non siano nulli
+    if (
+      !teachersData ||
+      ! commonTopPageData 
+
+    ) {
+      console.error(
+        "Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli"
+      );
+      return null;
+    }
+
+    return (
+      <>
+        {/* Passa i dati come props ai componenti figlio */}
+       
+       <OurTeachers data={teachersData } />
+   
+        {/* <CommonTopPage data={commonTopPageData } />  */}
+ 
+       
+
+      </>
+    );
+  } catch (error) {
+    console.error("Errore nel recupero dei dati:", error);
+    return null;
+  }
+};
+
+export default TeacherPageWrapper;

@@ -1,16 +1,18 @@
 import styles from "./teachers.module.scss";
 import { getTeachers } from "@/sanity/sanity.query";
-import React from "react";
+
 import Image from "next/image";
 import { Teachers as TeachersType } from "@/Types/Teachers";
 import Link from "next/dist/client/link";
 import { revalidateTag } from "next/cache";
 
+interface TeachersTypeProps {
+  data: TeachersType[]; // Accetta i dati come prop
+}
 
-
-export default async function OurTeachers() {
+export default function OurTeachers({ data }: TeachersTypeProps) {
   revalidateTag("collection");
-  const teacherCard: TeachersType[] = await getTeachers();
+
 
   return (
     <main className={styles.mainContainer}>
@@ -21,8 +23,8 @@ export default async function OurTeachers() {
         <span className={styles.square4}></span>
 
         <div className={styles.courseCardsBox}>
-          {teacherCard &&
-            teacherCard.map((teacher, index) => (
+          {data &&
+           data.map((teacher, index) => (
               <div key={teacher._id} className={`${styles.cardContainer} ${styles[`cardContainer${index}`]}`}>
                 <div className={styles.cardImageContainer}>
                   <Image
