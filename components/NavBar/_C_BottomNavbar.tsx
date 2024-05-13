@@ -42,12 +42,15 @@ const BottomNavbar = () => {
             </li>
             <li
               className={s.navItem}
-              onMouseEnter={() => setDropdownVisible(true)} // Mostra il menu dropdown quando passi il mouse sopra
-              onMouseLeave={() => setDropdownVisible(false)} // Nascondi il menu dropdown quando il mouse esce
+              // riattivare per far funzionare il menu dropdown
+              // onMouseEnter={() => setDropdownVisible(true)} 
+              // onMouseLeave={() => setDropdownVisible(false)} 
             >
-              <a className={s.linkTag}>
+              {/* <a className={s.linkTag}> */}
+              <Link href={"/our_courses"} className={s.linkTag}>
               <p className={s.navNames}>our courses</p>
-                </a> {/* Cambiato Link in 'a' per gestire manualmente l'evento */}
+              </Link>
+                {/* </a>  */}
               {dropdownVisible && <DropdownMenu />} {/* Mostra il menu dropdown se dropdownVisible è true */}
             </li>
             <li className={s.navItem}>

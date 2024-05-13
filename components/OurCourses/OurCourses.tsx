@@ -18,10 +18,10 @@ export default async function OurCourses() {
         src={imageBackgorund}
         alt={"girl background"}
         sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
+        // style={{
+        //   width: "100%",
+        //   height: "auto",
+        // }}
         width={1250}
         height={600}
       />
