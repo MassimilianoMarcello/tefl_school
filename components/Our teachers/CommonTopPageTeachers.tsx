@@ -1,5 +1,7 @@
 import styles from "./teachers.module.scss";
 import { getCommonTopPage } from "@/sanity/sanity.query";
+import { urlFor } from "@/sanity/sanity.client";
+
 
 import Image from "next/image";
 import { CommonTop as CommonTopType } from "@/Types/CommonTop";
@@ -20,16 +22,18 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
     return null; // Se l'elemento specifico non esiste, ritorna null o gestisci di conseguenza
   }
 
-  const { image, title, subtitle } = specificItem;
-
-  return <>
-  <div>
+  const imageUrl = urlFor(specificItem.image).url();
 
 
-    <Image
+  const { title, subtitle } = specificItem;
+
+  return (
+    <div>
+      {/* Utilizza l'URL dell'immagine nell'elemento Image */}
+      <Image
         className={styles.imageBackground}
-        src={image}
-        alt={"title"}
+        src={imageUrl}
+        alt={title}
         sizes="100vw"
         style={{
           width: "100%",
@@ -38,15 +42,7 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
         width={1250}
         height={600}
       />
-    <h1>{title}</h1>
-    <p>{subtitle}</p>
-    
-    
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
     </div>
- 
-  
-
-  
-  
-  </>;
-}
+  )};
