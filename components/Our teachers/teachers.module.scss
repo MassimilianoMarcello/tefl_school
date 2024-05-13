@@ -1,70 +1,121 @@
-.mainContainer {
-    /* Stile per il contenitore principale */
-  }
+@import "../../app/page.module.scss";
+
+// top page image and titles
+.topMainContainer {
+  position: relative;
+}
+
+.topTextContainer{
+  position: absolute;
+  left: 25rem;
+  top: 5rem;
+  background-color: $bgColor;
+  padding: 3rem;
+  text-transform: capitalize;
+  z-index: 4;
+
+}
+.mainTitle {
+  font-size: 4rem;
+  color: $blueColor;
+  font-weight: 900;
+}
+.mainText {
+  margin-top: 2rem;
+  color: $blueColor;
+  // background-color:$generic1;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.square1 {
+  position: absolute;
+    right: 23rem;
+    top: 15rem;
+    height: 5rem;
+    width: 5rem;
   
-  .coursesTextContainer {
-    /* Stile per il contenitore del testo del corso */
-  }
-  
-  .square1 {
-    /* Stile per il quadrato 1 */
+   background-color: gold;
+   
+   z-index: 1;
   }
   
   .square2 {
-    /* Stile per il quadrato 2 */
-  }
-  
-  .square3 {
-    /* Stile per il quadrato 3 */
-  }
-  
-  .square4 {
-    /* Stile per il quadrato 4 */
-  }
-  
-  .courseCardsBox {
-    /* Stile per il contenitore delle card del corso */
-  }
-  
-  .cardContainer {
-
-  }
-
-  .cardContainer0 {
-background-color: aqua;
+  position: absolute;
+    // height: 2rem;
+    padding: 5rem;
+    background-color:lightblue;
+    left: 23rem;
+    top: 3rem;
+    z-index: 1;
   }
 
 
 
 
 
+// teachers section
 
-  
-  .cardImageContainer {
-    /* Stile per il contenitore dell'immagine della card */
-  }
-  
-  .cardImage {
-    /* Stile per l'immagine della card */
-  }
-  
-  .courseLevelContainer {
-    /* Stile per il contenitore del livello del corso */
-  }
-  
-  .courseLevel {
-    /* Stile per il livello del corso */
-  }
-  
-  .cardNameContainer {
-    /* Stile per il contenitore del nome della card */
-  }
-  
-  .cardName {
-    /* Stile per il nome della card */
-  }
-  
-  .detailsLink {
-    /* Stile per il link dei dettagli */
-  }
-  
+.mainContainer {
+  /* Stile per il contenitore principale */
+}
+
+.coursesTextContainer {
+  /* Stile per il contenitore del testo del corso */
+}
+
+.square1 {
+  /* Stile per il quadrato 1 */
+}
+
+.square2 {
+  /* Stile per il quadrato 2 */
+}
+
+.square3 {
+  /* Stile per il quadrato 3 */
+}
+
+.square4 {
+  /* Stile per il quadrato 4 */
+}
+
+.courseCardsBox {
+  /* Stile per il contenitore delle card del corso */
+}
+
+.cardContainer {
+}
+
+.cardContainer0 {
+  background-color: aqua;
+}
+
+.cardImageContainer {
+  /* Stile per il contenitore dell'immagine della card */
+}
+
+.cardImage {
+  /* Stile per l'immagine della card */
+}
+
+.courseLevelContainer {
+  /* Stile per il contenitore del livello del corso */
+}
+
+.courseLevel {
+  /* Stile per il livello del corso */
+}
+
+.cardNameContainer {
+  /* Stile per il contenitore del nome della card */
+}
+
+.cardName {
+  /* Stile per il nome della card */
+}
+
+.detailsLink {
+  /* Stile per il link dei dettagli */
+}

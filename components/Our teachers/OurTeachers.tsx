@@ -17,8 +17,7 @@ export default function OurTeachers({ data }: TeachersTypeProps) {
   return (
     <main className={styles.mainContainer}>
       <section className={styles.coursesTextContainer}>
-        <span className={styles.square1}></span>
-        <span className={styles.square2}></span>
+ 
         <span className={styles.square3}></span>
         <span className={styles.square4}></span>
 

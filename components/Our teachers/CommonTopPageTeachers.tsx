@@ -28,7 +28,7 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
   const { title, subtitle } = specificItem;
 
   return (
-    <div>
+    <div className={styles.topMainContainer} >
       {/* Utilizza l'URL dell'immagine nell'elemento Image */}
       <Image
         className={styles.imageBackground}
@@ -43,7 +43,12 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
         width={1000}
         height={400}
       />
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
+      <div className={styles.topTextContainer}>
+      <h1 className={styles.mainTitle}>{title}</h1>
+      <p className={styles.mainText}>{subtitle}</p>
+      </div>
+      <span className={styles.square1}></span>
+        <span className={styles.square2}></span>
+
     </div>
   )};
