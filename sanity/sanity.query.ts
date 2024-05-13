@@ -158,6 +158,23 @@ export async function getTeachers(): Promise<Teachers[]> {
   );
 }
 
+export async function getCommonTopPage(): Promise<CommonTop[]> {
+  return client.fetch(
+    groq`*[_type == "commonTopPage"]{
+ _id,
+        _type,
+        "idPhoto":idPhoto.asset->url,
+       name,
+       role,
+       infoParagraph,
+      //  content,
+        "slug": slug.current
+
+   }`
+
+  );
+}
+
 // export async function getPosts(slug: string): Promise<Post> {
 //   return client.fetch(
 //     groq`*[_type == 'post' && slug.current == $slug][0]{
