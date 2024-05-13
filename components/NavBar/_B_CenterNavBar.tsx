@@ -31,8 +31,8 @@ const CenterNavBar = () => {
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/internship"} className={s.linkTag}>
-              <p className={s.navNamesCenter}>internship</p>
+              <Link href={"/work_in_italy"} className={s.linkTag}>
+              <p className={s.navNamesCenter}>work in italy</p>
               </Link>
             </li>
             <li className={s.navItem}>
