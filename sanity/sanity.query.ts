@@ -166,8 +166,15 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
       _rev,
       title,
       subtitle,
-       "image":backgroundImage.asset->url,
-    
+      backgroundImage{
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot,
+        alt
+      }
 
    }`
 

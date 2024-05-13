@@ -22,7 +22,7 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
     return null; // Se l'elemento specifico non esiste, ritorna null o gestisci di conseguenza
   }
 
-  const imageUrl = urlFor(specificItem.image).url();
+  const imageUrl = urlFor(specificItem.backgroundImage).url();
 
 
   const { title, subtitle } = specificItem;
@@ -33,14 +33,15 @@ export default function CommonTopPageTeachers({ data }: CommonTopTypeProps) {
       <Image
         className={styles.imageBackground}
         src={imageUrl}
+        // src={imageUrl}
         alt={title}
         sizes="100vw"
         style={{
           width: "100%",
           height: "auto",
         }}
-        width={1250}
-        height={600}
+        width={1000}
+        height={400}
       />
       <h1>{title}</h1>
       <p>{subtitle}</p>
