@@ -23,27 +23,6 @@ export default {
         title: 'Subtitle',
         type: 'string',
       },
-      {
-        name: 'secondImage',
-        title: 'Second Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-      },
-      {
-        name: 'thirdImage',
-        title: 'Third Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-      },
-      {
-        name: "content",
-        title: "Content",
-        type: "array",
-        of: [{ type: "block" }]
-      }
+      
     ],
   };
