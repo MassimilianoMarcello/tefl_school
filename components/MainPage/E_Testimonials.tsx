@@ -9,7 +9,7 @@ interface TestimonialProps {
 
 export default function E_Testimonials({ data }: TestimonialProps) {
   // const sortedData = data.sort((a, b) => data.indexOf(b) - data.indexOf(a));
-  const latestReviews = data.slice(0, 3);
+  const latestReviews = data.slice(0, 2);
   return (
     <main className={styles.testimonialOneMain}>
       <div className={styles.titleBox}>
@@ -45,7 +45,7 @@ export default function E_Testimonials({ data }: TestimonialProps) {
             
           ))}
              </section>
-             <Link href={"/testimonials"} className={styles.testimonialsLink}> More reviews</Link>
+             <Link href={"/reviews"} className={styles.testimonialsLink}> More reviews</Link>
 
     </main>
   );

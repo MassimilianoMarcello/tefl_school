@@ -99,10 +99,14 @@ border: .2rem solid #90cee3;
 .testimonialTwoSection{
 
     display: flex;
+    flex-direction: row;
     gap: 4rem;
     // margin: 12rem;
+    flex-wrap: wrap;
     margin: 2rem ;
- overflow: hidden;
+justify-content: space-between;
+//  overflow: hidden;
+
 
 }
 
@@ -144,16 +148,17 @@ border: .2rem solid #90cee3;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto auto;
 height: auto;
-min-width: 35rem;
+// min-width: 35rem;
 margin-top: 2rem;
-
+width: 45%;
 border: .2rem solid #90cee3;
 
-  overflow: hidden;
+  // overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   background-color: #fff;
+
   padding: 1.5rem;
 
 }
