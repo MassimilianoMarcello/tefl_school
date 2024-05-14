@@ -1,10 +1,14 @@
-import React from 'react'
-import s from "../../page.module.scss";
+import React from 'react';
 
-const FAQ = () => {
-  return (
-    <div className={s.samplePage}>F.A.Q.</div>
-  )
-}
+import FaqPage from '@/components/FAQ/FaqPage';
+import { getAllFaqs } from '@/sanity/sanity.query';
 
-export default FAQ
+
+
+const Faq = async () => {
+  const faqs = await getAllFaqs();
+
+  return <FaqPage faqs={faqs} />;
+};
+
+export default Faq;

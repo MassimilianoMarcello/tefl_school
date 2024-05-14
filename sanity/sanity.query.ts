@@ -230,15 +230,16 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
 //   );
 // }
 
-export async function getFaq(): Promise<Faq[]> {
+export async function getAllFaqs(): Promise<Faq[]> {
   return client.fetch(
     groq`*[_type == 'faq']{
       _id,
-        question,
-        answer,
-        category,
-     }`,
-
+      question,
+      answer,
+      category,
+      _createdAt,
+      _updatedAt
+    }`
   );
 }
 
