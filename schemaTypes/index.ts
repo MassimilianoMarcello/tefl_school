@@ -5,8 +5,9 @@ import testimonial from './testimonial';
 import teachers from './teachers';
 import commonPageTop from './commonTopPage';
 import universalSchema from './universalSchema';
+import faq from './faq';
 
 
 import slideItem from './slideItem';
 
-export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial,teachers,commonPageTop,universalSchema]
+export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial,teachers,commonPageTop,universalSchema,faq]

@@ -7,6 +7,7 @@ import { Course } from "@/Types/Course";
 import { Testimonial } from "@/Types/Testimonials";
 import {Teachers} from '@/Types/Teachers';
 import {CommonTop} from '@/Types/CommonTop';
+import {Faq} from '@/Types/Faq'
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -229,21 +230,17 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
 //   );
 // }
 
-// export async function getAboutMe(): Promise<AboutMe[]> {
-//   return client.fetch(
-//     groq`*[_type == 'aboutMe' ]{
-//       _id,
-//       _type,
-//       description,
-//       "skillsName":skills[]{"skillIconImage":icon.asset->url,name},
-//     }`,
-//     {
-//       next: {
-//         revalidate: 67,
-//       },
-//     }
-//   );
-// }
+export async function getFaq(): Promise<Faq[]> {
+  return client.fetch(
+    groq`*[_type == 'faq']{
+      _id,
+        question,
+        answer,
+        category,
+     }`,
+
+  );
+}
 
 
 
