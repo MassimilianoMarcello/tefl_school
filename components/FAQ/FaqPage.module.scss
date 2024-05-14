@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -10,7 +11,7 @@
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 30%;
+  width: 70%;
   margin: 10px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -41,7 +42,9 @@
       .answerWrapper {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
+        transition:
+          max-height 0.3s ease,
+          padding 0.3s ease;
       }
 
       .answer {
@@ -63,3 +66,46 @@
     }
   }
 }
+
+// SIDE BAR
+
+.rightBarApplyNow {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  margin-left: 1rem;
+}
+
+.sidebarList {
+  padding: 0;
+  margin: 0;
+
+}
+
+.sidebarTitle {
+  margin-bottom: 10px;
+  
+}
+
+.sidebarItem {
+  margin-bottom: 10px;
+
+}
+
+.sidebarLink {
+  text-decoration: none !important;
+}
+
+.courseName {
+  margin: 0;
+  color: black;
+}
+
+.applyButton{
+  width: 90%;
+  font-size: 2rem;
+  padding: 2rem;
+
+
+}
+

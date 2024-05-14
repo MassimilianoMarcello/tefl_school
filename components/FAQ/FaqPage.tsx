@@ -4,6 +4,7 @@
 import React, {useState} from 'react';
 import styles from './FaqPage.module.scss'; 
 import {Faq} from '@/Types/Faq'; 
+import ApplyNowBar from './ApplyNowBar';
 
 
 
@@ -62,6 +63,10 @@ const FaqPage: React.FC<FaqPageProps> = ({ faqs }) => {
         <h2>Questions about Florence: Living in Italy</h2>
         {renderFaqs(livingCostsFaqs)}
       </div>
+    <div className={styles.rightBarApplyNow}>
+    <ApplyNowBar/>
+    </div>
+   
     </div>
   );
 };
