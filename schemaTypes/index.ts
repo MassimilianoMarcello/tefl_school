@@ -6,9 +6,12 @@ import teachers from './teachers';
 import commonPageTop from './commonTopPage';
 import universalSchema from './universalSchema';
 import faq from './faq';
-import gallery from './imagesGallery';
-
-
+import imagesGallery from './imagesGallery';
+import blogPost from './blogPost'
 import slideItem from './slideItem';
+import author from './author';
 
-export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial,teachers,commonPageTop,universalSchema,faq,gallery]
+
+
+
+export const schemaTypes = [course,homepage,componentPrototype,slideItem,testimonial,teachers,commonPageTop,universalSchema,faq,imagesGallery,blogPost,author]
