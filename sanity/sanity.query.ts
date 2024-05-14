@@ -87,7 +87,16 @@ export async function getTestimonials(): Promise<Testimonial[]> {
         review,
         state,
         title,
-        "image":image.asset->url,
+        // "image":image.asset->url,
+        image{
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot,
+        alt
+      }
   }`
     // ,{
     //   next: {

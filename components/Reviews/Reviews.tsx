@@ -2,6 +2,7 @@ import { Testimonial } from "@/Types/Testimonials";
 import Image from "next/image";
 import styles from "./reviews.module.scss";
 import Link from "next/link";
+import { urlFor } from "@/sanity/sanity.client";
 
 interface TestimonialProps {
   data: Testimonial[]; // Accetta i dati come prop
@@ -24,7 +25,8 @@ export default function E_Testimonials({ data }: TestimonialProps) {
             <div key={testimonial._id} className={styles.testimonialBox}>
               <Image
                 className={styles.testimonialImage}
-                src={testimonial.image}
+                src={urlFor(testimonial.image).width(300).height(300).url()}
+                // src={testimonial.image}
                 alt={testimonial.name}
                 width={160}
                 height={200}
