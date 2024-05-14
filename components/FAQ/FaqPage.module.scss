@@ -1,37 +1,65 @@
-// components/Faq.module.scss
 .container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
   }
-  
-  .box {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 30%;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-  
-    ul {
-      list-style: none;
-      padding: 0;
-  
-      li {
-        margin-bottom: 15px;
-  
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 15px;
+
+      .question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
         strong {
-          display: block;
-          margin-bottom: 5px;
+          margin-right: 10px;
         }
+      }
+
+      .answerWrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      .answer {
+        padding: 0;
+        margin: 0;
+      }
+
+      &.open .answerWrapper {
+        max-height: 1000px; /* Set a high enough value to accommodate the answer */
+        padding: 10px 0; /* Adding padding to create space when expanded */
+      }
+
+      .toggleButton {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
       }
     }
   }
-  
+}
