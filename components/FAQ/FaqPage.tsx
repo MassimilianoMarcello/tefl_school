@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Faq.module.scss'; 
+import styles from './FaqPage.module.scss'; 
 import {Faq} from '@/Types/Faq'; 
 
 
