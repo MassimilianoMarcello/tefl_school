@@ -59,8 +59,8 @@ const BottomNavbar = () => {
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/testimonials"} className={s.linkTag}>
-              <p className={s.navNames}>testimonials</p>
+              <Link href={"/reviews"} className={s.linkTag}>
+              <p className={s.navNames}>reviews</p>
               </Link>
             </li>
             <li className={s.navItem}>
