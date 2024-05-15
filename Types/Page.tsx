@@ -1,52 +1,21 @@
-export interface Page {
-    _id: string;
-    mainTitle: string;
-    sections: Section[];
-  }
-  
-  interface Section {
-    _key:string;
+// Esempio di definizione del tipo PageType
+export interface PageType {
+  _id: string;
+  mainTitle: string;
+  sections: {
+    _key: string;
     order: number;
     title: string;
     subtitle: string;
-    image?: Image;
-    content: Content[];
-    richText: RichTextItem[];
-  }
-  
-  interface Image {
-    asset: {
-      url: string;
-      metadata: {
-        crop: Crop;
-        hotspot: Hotspot;
+    image: {
+      asset: {
+        url: string;
       };
+      crop?: any;
+      hotspot?: any;
     };
-  }
-  
-  interface Crop {
-    top: number;
-    bottom: number;
-    left: number;
-    right: number;
-  }
-  
-  interface Hotspot {
-    x: number;
-    y: number;
-    height: number;
-    width: number;
-  }
-  
-  interface Content {
-    // Definisci la struttura per altri tipi di contenuto se necessario
-  }
-  
-  interface RichTextItem {
-    // Definisci la struttura degli elementi del testo ricco se necessario
-  }
-  
-  // Definizione dei tipi per gli array
-  type ContentArray = Content[];
-  type RichTextArray = RichTextItem[];
+    content: any[];
+  }[];
+}
+
   

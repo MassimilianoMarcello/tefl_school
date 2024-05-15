@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-import { Page } from "@/Types/Page";
+import { PageType } from "@/Types/Page";
 import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
@@ -176,21 +176,25 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
   );
 }
 
-export async function getPage(): Promise<Page[]> {
+export async function getPage(): Promise<PageType> {
   return client.fetch(
-    groq`*[_type == 'page']{
+    groq`*[_type == 'page'][0]{
       _id,
-        mainTitle,
-        sections[]{
-          _key,
-          order,title,subtitle,
-          image{asset->{
-                url},crop,hotspot},
-        content[],
-        'richText':content[].children[]
-     
-        }
-    
+      mainTitle,
+      sections[]{
+        _key,
+        order,
+        title,
+        subtitle,
+        image{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+        content[]
+      }
     }`
   );
 }
