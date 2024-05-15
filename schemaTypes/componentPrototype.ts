@@ -3,7 +3,7 @@
 export default {
     name: 'componentPrototype',
     title: 'Componente Prototipo',
-    type: 'object',
+    type: 'document',
     fields: [
       {
         name: 'title',

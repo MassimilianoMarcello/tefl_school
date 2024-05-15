@@ -1,66 +1,54 @@
-import styles from "./teachers.module.scss";
-import { getTeachers } from "@/sanity/sanity.query";
-import { urlFor } from "@/sanity/sanity.client";
+// import styles from "./teachers.module.scss";
+// import styles from "./teachers.module.scss";
+// import { getCommonTopPage } from "@/sanity/sanity.query";
+// import { urlFor } from "@/sanity/sanity.client";
+// import Image from "next/image";
+// import { CommonTop as CommonTopType } from "@/Types/CommonTop";
+// import Link from "next/link";
+// import { revalidateTag } from "next/cache";
 
-import Image from "next/image";
-import { Teachers as TeachersType } from "@/Types/Teachers";
-import Link from "next/dist/client/link";
-import { revalidateTag } from "next/cache";
+// interface CommonTopTypeProps {
+//   data: CommonTopType[]; // Accetta i dati come prop
+// }
 
-interface TeachersTypeProps {
-  data: TeachersType[]; // Accetta i dati come prop
-}
+// export default function WhyFlorence({ data }: CommonTopTypeProps) {
+//   revalidateTag("collection");
 
-export default function WhyFlorence({ data }: TeachersTypeProps) {
-  revalidateTag("collection");
+//   // Filtra i dati per trovare solo l'elemento desiderato
+//   const specificItem = data.find(
+//     (item) => item._id === "4de53a64-8b97-4bf2-af32-a7bc7f273126"
+//   );
 
-  return (
-    <main className={styles.mainContainer}>
-      <section className={styles.coursesTextContainer}>
-        <span className={styles.square3}></span>
-        <span className={styles.square4}></span>
+//   if (!specificItem) {
+//     return null; // Se l'elemento specifico non esiste, ritorna null o gestisci di conseguenza
+//   }
 
-        <div className={styles.courseCardsBox}>
-          {data &&
-            data.map((teacher, index) => (
-              <div
-                key={teacher._id}
-                className={`${styles.cardContainer} ${styles[`cardContainer${index}`]}`}
-              >
-                <div className={styles.cardImageContainer}>
-                  {/* <Image
-                    className={styles.cardImage}
-                    src={teacher.idPhoto}
-                    alt={teacher.alt}
-                    width={500}
-                    height={300}
-                  /> */}
-                  <Image
-                    src={urlFor(teacher.idPhoto).width(300).height(300).url()}
-                    width={200}
-                    height={200}
-                    alt={teacher.alt}
-                    className={styles.cardImage}
-                  />
+//   const imageUrl = urlFor(specificItem.backgroundImage).url();
 
-                  <div className={styles.courseLevelContainer}>
-                    {/* <p className={styles.courseLevel}>
-                      {teacher.infoParagraph}
-                    </p> */}
-                  </div>
-                  <div className={styles.cardNameContainer}>
-                    <p className={styles.cardName}>{teacher.name}</p>
-                    <p className={styles.cardRole}>{teacher.role}</p>
-                  </div>
-                </div>
+//   const { title, subtitle } = specificItem;
 
-                {/* <Link href={`/`} className={styles.detailsLink}>
-                  Details
-                </Link> */}
-              </div>
-            ))}
-        </div>
-      </section>
-    </main>
-  );
-}
+//   return (
+//     <div className={styles.topMainContainer}>
+//       {/* Utilizza l'URL dell'immagine nell'elemento Image */}
+//       <Image
+//         className={styles.imageBackground}
+//         src={imageUrl}
+//         // src={imageUrl}
+//         alt={title}
+//         sizes="100vw"
+//         style={{
+//           width: "100%",
+//           height: "auto",
+//         }}
+//         width={1000}
+//         height={400}
+//       />
+//       <div className={styles.topTextContainer}>
+//         <h1 className={styles.mainTitle}>{title}</h1>
+//         <p className={styles.mainText}>{subtitle}</p>
+//       </div>
+//       <span className={styles.square1}></span>
+//       <span className={styles.square2}></span>
+//     </div>
+//   );
+// }

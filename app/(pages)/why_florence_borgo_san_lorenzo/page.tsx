@@ -15,18 +15,18 @@ const WhyFlorencePageWrapper = async () => {
   revalidateTag('collection')
   try {
     const [
-      reviewsData,
+      whyFlorenceData,
       commonTopPageData,
   
     ] = await Promise.all([
-      getTestimonials(),
+      // getTestimonials(),
       getCommonTopPage(),
 
     ]);
 
     // Verifica che entrambi i set di dati non siano nulli
     if (
-      ! whyFlorenceData ||
+    //  ! whyFlorenceData ||
       ! commonTopPageData 
 
     ) {
@@ -40,7 +40,7 @@ const WhyFlorencePageWrapper = async () => {
       <>
         {/* Passa i dati come props ai componenti figlio */}
         <CommonTopPageWhyFlorence data={commonTopPageData  } />
-       <WhyFlorence data={whyFlorenceData} />
+       {/* <WhyFlorence data={whyFlorenceData} /> */}
    
    
         {/* <CommonTopPage data={commonTopPageData } />  */}
