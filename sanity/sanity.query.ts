@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-import { Page } from '@/Types/Page'
+import { Page } from "@/Types/Page";
 import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
@@ -51,11 +51,7 @@ export async function getCourse(): Promise<Course[]> {
         
       
   }`
-    // {
-    //   next: {
-    //     revalidate: 63,
-    //   },
-    // }
+
   );
 }
 
@@ -98,11 +94,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
         alt
       }
   }`
-    // ,{
-    //   next: {
-    //     revalidate: 62,
-    //   },
-    // }
+
   );
 }
 
@@ -190,6 +182,7 @@ export async function getPage(): Promise<Page[]> {
       _id,
         mainTitle,
         sections[]{
+          _key,
           order,title,subtitle,
           image{asset->{
                 url},crop,hotspot},
@@ -263,6 +256,7 @@ export async function getAllFaqs(): Promise<Faq[]> {
   );
 }
 
+// export { Page };
 // test query
 
 // export async function getCourse(name:string)Promise<Course> {

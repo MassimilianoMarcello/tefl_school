@@ -1,8 +1,8 @@
 'use server'
 
-import { getTestimonials, getCommonTopPage } from "@/sanity/sanity.query";
-import WhyFlorence from "@/components/WhyFlorence/WhyFlorence";
-import CommonTopPageWhyFlorence from '@/components/WhyFlorence/CommonTopPageWhyFlorence';
+import { getPage } from "@/sanity/sanity.query";
+// import WhyFlorence from "@/components/WhyFlorence/WhyFlorence";
+import WhyFlorence from '@/components/WhyFlorence/WhyFlorence';
 
 
 
@@ -15,19 +15,19 @@ const WhyFlorencePageWrapper = async () => {
   revalidateTag('collection')
   try {
     const [
-      whyFlorenceData,
-      commonTopPageData,
+      // whyFlorenceData,
+      PageData,
   
     ] = await Promise.all([
       // getTestimonials(),
-      getCommonTopPage(),
+      getPage(),
 
     ]);
 
     // Verifica che entrambi i set di dati non siano nulli
     if (
     //  ! whyFlorenceData ||
-      ! commonTopPageData 
+      PageData 
 
     ) {
       console.error(
@@ -39,7 +39,7 @@ const WhyFlorencePageWrapper = async () => {
     return (
       <>
         {/* Passa i dati come props ai componenti figlio */}
-        <CommonTopPageWhyFlorence data={commonTopPageData  } />
+        <WhyFlorence data={PageData  } />
        {/* <WhyFlorence data={whyFlorenceData} /> */}
    
    

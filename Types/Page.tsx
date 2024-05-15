@@ -5,6 +5,7 @@ export interface Page {
   }
   
   interface Section {
+    _key:string;
     order: number;
     title: string;
     subtitle: string;
