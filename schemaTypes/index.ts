@@ -6,8 +6,7 @@ import teachers from "./teachers";
 import commonPageTop from "./commonTopPage";
 import universalSchema from "./universalSchema";
 import faq from "./faq";
-import imagesGallery from "./imagesGallery";
-import blogPost from "./blogPost";
+
 import slideItem from "./slideItem";
 import author from "./author";
 import page from "./page";
@@ -23,9 +22,8 @@ export const schemaTypes = [
   commonPageTop,
   universalSchema,
   faq,
-  imagesGallery,
-  blogPost,
+
   author,
   page,
-  pageSection
+  pageSection,
 ];

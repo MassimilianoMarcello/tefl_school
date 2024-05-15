@@ -1,13 +1,13 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-
+import { Page } from '@/Types/Page'
 import { SlideItem } from "@/Types/SlideItem";
 import { HomePage } from "@/Types/Homepage";
 import { Course } from "@/Types/Course";
 import { Testimonial } from "@/Types/Testimonials";
-import {Teachers} from '@/Types/Teachers';
-import {CommonTop} from '@/Types/CommonTop';
-import {Faq} from '@/Types/Faq'
+import { Teachers } from "@/Types/Teachers";
+import { CommonTop } from "@/Types/CommonTop";
+import { Faq } from "@/Types/Faq";
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -74,7 +74,7 @@ export async function getCourses(slug: string): Promise<Course> {
         level,
        "photo":photo.asset->url,
 }`,
- { slug },
+    { slug }
   );
 }
 
@@ -143,8 +143,7 @@ export async function getHomePage(): Promise<HomePage[]> {
        }
        
           
-    }`,
-
+    }`
   );
 }
 
@@ -161,7 +160,6 @@ export async function getTeachers(): Promise<Teachers[]> {
         "slug": slug.current
 
    }`
-
   );
 }
 
@@ -183,7 +181,24 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
       }
 
    }`
+  );
+}
 
+export async function getPage(): Promise<Page[]> {
+  return client.fetch(
+    groq`*[_type == 'page']{
+      _id,
+        mainTitle,
+        sections[]{
+          order,title,subtitle,
+          image{asset->{
+                url},crop,hotspot},
+        content[],
+        'richText':content[].children[]
+     
+        }
+    
+    }`
   );
 }
 
@@ -248,8 +263,6 @@ export async function getAllFaqs(): Promise<Faq[]> {
   );
 }
 
-
-
 // test query
 
 // export async function getCourse(name:string)Promise<Course> {
@@ -271,9 +284,7 @@ export async function getAllFaqs(): Promise<Faq[]> {
 //   );
 // }
 
-
 // componente in cui mettiamo come argomento il nome del corso "computer"
-
 
 // import { getHomePage, getTestimonials, getCourse } from "@/sanity/sanity.query";
 // import FirstComponent from "./A_FirstComponent.tsx";
@@ -333,5 +344,3 @@ export async function getAllFaqs(): Promise<Faq[]> {
 // };
 
 // export default MainPageWrapper;
-
-

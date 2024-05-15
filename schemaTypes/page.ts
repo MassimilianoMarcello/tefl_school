@@ -5,8 +5,8 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
+      name: 'mainTitle',
+      title: 'Main Title',
       type: 'string',
     },
     {
@@ -15,6 +15,6 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
       type: 'array',
       of: [{ type: 'pageSection' }], // Utilizza lo schema delle sezioni polimorfiche
     },
-    // Altri campi specifici della pagina, come autore, data di creazione, etc.
+
   ],
 }

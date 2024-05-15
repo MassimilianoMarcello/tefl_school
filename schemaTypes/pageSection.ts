@@ -3,6 +3,11 @@ export default{
     title: 'Page Section',
     type: 'object',
     fields: [
+        {
+            name: 'order',
+            title: 'Order',
+            type: 'number'
+          },
       {
         name: 'title',
         title: 'Title',
@@ -25,16 +30,49 @@ export default{
         options: {
           hotspot: true, // Abilita l'hotspot per l'immagine
         }
+        
       },
       {
-        name: 'video',
-        title: 'Video URL',
-        type: 'url'
-      }
+        name: 'content',
+        type: 'array',
+        title: 'Content',
+        of: [
+          {
+            type: 'block'
+          }
+        ]
+      },
+
+
+
+    //   add video
+
+    //   {
+    //     name: 'video',
+    //     title: 'Video URL',
+    //     type: 'url'
+    //   },
+
+
+    //   add  list
+
+
+    //   {
+    //     name: 'list',
+    //     title: 'List',
+    //     type: 'array',
+    //     of: [{ type: 'string' }], 
+    //   },
+
+
+    //   add link
+
+
+    //   {
+    //     name: 'link',
+    //     title: 'Link',
+    //     type: 'url' 
+    //   }
     ]
   }
-  
-  
-  
-  
   
