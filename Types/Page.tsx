@@ -1,8 +1,8 @@
-// Esempio di definizione del tipo PageType
+// File: Types/Page.ts
 export interface PageType {
   _id: string;
   mainTitle: string;
-  sections: {
+  sections: Array<{
     _key: string;
     order: number;
     title: string;
@@ -11,11 +11,12 @@ export interface PageType {
       asset: {
         url: string;
       };
-      crop?: any;
-      hotspot?: any;
+      crop?: object;
+      hotspot?: object;
     };
     content: any[];
-  }[];
+  }>;
 }
+
 
   

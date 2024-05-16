@@ -12,7 +12,7 @@ interface TeachersTypeProps {
 }
 
 export default function OurTeachers({ data }: TeachersTypeProps) {
-  revalidateTag("collection");
+revalidateTag("collection");
 
   return (
     <main className={styles.mainContainer}>

@@ -1,12 +1,12 @@
+
 'use server'
 
 import { getPage } from "@/sanity/sanity.query";
 import WhyFlorence from '@/components/WhyFlorence/WhyFlorence';
 
-
 const WhyFlorencePageWrapper = async () => {
   try {
-    const pageData = await getPage();
+    const pageData = await getPage(0); // Passa l'indice corretto
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
@@ -16,9 +16,7 @@ const WhyFlorencePageWrapper = async () => {
 
     return (
       <>
-        {/* Passa i dati come props ai componenti figlio */}
         <WhyFlorence data={pageData} />
-     
       </>
     );
   } catch (error) {

@@ -176,9 +176,11 @@ export async function getCommonTopPage(): Promise<CommonTop[]> {
   );
 }
 
-export async function getPage(): Promise<PageType> {
+
+
+export async function getPage(index: number): Promise<PageType> {
   return client.fetch(
-    groq`*[_type == 'page'][0]{
+    groq`*[_type == 'page'] | order(_createdAt) [${index}...${index + 1}]{
       _id,
       mainTitle,
       sections[]{
@@ -195,9 +197,17 @@ export async function getPage(): Promise<PageType> {
         },
         content[]
       }
-    }`
+    }
+    // {
+    //   next: {
+    //     revalidate: 63,
+    //   },
+    // }
+    
+    [0]`
   );
 }
+
 
 // export async function getPosts(slug: string): Promise<Post> {
 //   return client.fetch(
