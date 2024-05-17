@@ -1,11 +1,12 @@
 "use server";
 
 import { getPage } from "@/sanity/sanity.query";
-import Page from "@/components/Commo_Page/Page";
+import Page from "@/components/Common_Page/Page";
+import styles from './workInItaly.module.scss';
 
 const WorkInItalyPageWrapper = async () => {
   try {
-    const pageData = await getPage(3); // Passa l'indice corretto
+    const pageData = await getPage(4); // Passa l'indice corretto
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
@@ -17,7 +18,10 @@ const WorkInItalyPageWrapper = async () => {
 
     return (
       <>
-        <Page data={pageData} pageType={pageData.pageType.current} />
+      <div className={styles.wrapperToCommonPage}>
+      <Page data={pageData} pageType={pageData.pageType.current} />
+      </div>
+     
       </>
     );
   } catch (error) {

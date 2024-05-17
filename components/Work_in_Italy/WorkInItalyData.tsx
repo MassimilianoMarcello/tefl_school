@@ -3,7 +3,7 @@
 
 
 import { getPage } from "@/sanity/sanity.query";
-import Page from "@/components/Commo_Page/Page";
+import Page from "@/components/Common_Page/Page";
 
 const WorkInItalyPageWrapper = async () => {
   try {
