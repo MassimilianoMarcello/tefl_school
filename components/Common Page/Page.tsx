@@ -1,38 +1,41 @@
-// File: WhyFlorence.tsx
-
 import styles from "./WhyFlorence.module.scss";
 import { urlFor } from "@/sanity/sanity.client";
 import Image from "next/image";
 import { PageType } from "@/Types/Page";
 import { PortableText } from "@portabletext/react";
-import { revalidateTag } from "next/cache";
-interface PageProps {
-  data: PageType;
-}
 
-export default function WhyFlorence({ data }: PageProps) {
-  revalidateTag("collection");
+interface PageProps {
+    data: PageType;
+    pageType: string;
+  }
+  
+// from schema Page
+
+export default function CommonPage({ data, pageType }: PageProps) {
   const { mainTitle, sections } = data;
 
-
   return (
-    <div className={styles.topMainContainer}>
+    <div className={`${styles.topMainContainer} ${styles[pageType]}`}>
       <h1>{mainTitle}</h1>
-      {sections.map((section) => {
+      {sections.map((section, index) => {
         const { title, subtitle, image, content, _key } = section;
-        const imageUrl = image?.asset ? urlFor(image).width(1150).height(400).url() : null;
+        const imageUrl = image?.asset ? urlFor(image).width(1400).height(500).url() : null;
+        const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
+        const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
 
         return (
-          <div key={_key} className={styles.sectionContainer}>
-            {imageUrl && (
+          <div key={_key} className={sectionClassName}>
+            {imageUrl ? (
               <Image
-                className={styles.imageBackground}
+                className={imageClassName}
                 src={imageUrl}
                 alt={title}
                 sizes="100vw"
-                width={1150}
-                height={400}
+                width={1400}
+                height={500}
               />
+            ) : (
+              <div className={styles.placeholderImage}>No Image Available</div>
             )}
             <div className={styles.topTextContainer}>
               <h2 className={styles.mainTitle}>{title}</h2>
@@ -47,5 +50,4 @@ export default function WhyFlorence({ data }: PageProps) {
         );
       })}
     </div>
-  );
-}
+  );}
