@@ -1,8 +1,7 @@
-
-'use server'
+"use server";
 
 import { getPage } from "@/sanity/sanity.query";
-import WhyFlorence from '@/components/WhyFlorence/WhyFlorence';
+import Page from "@/components/Commo_Page/Page";
 
 const WhyFlorencePageWrapper = async () => {
   try {
@@ -10,13 +9,15 @@ const WhyFlorencePageWrapper = async () => {
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
-      console.error("Errore nel recupero dei dati: i dati della pagina sono nulli");
+      console.error(
+        "Errore nel recupero dei dati: i dati della pagina sono nulli"
+      );
       return null;
     }
 
     return (
       <>
-        <WhyFlorence data={pageData} />
+        <Page data={pageData} pageType={pageData.pageType.current} />
       </>
     );
   } catch (error) {

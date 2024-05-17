@@ -1,4 +1,4 @@
-import styles from "./WhyFlorence.module.scss";
+import styles from "./page.module.scss";
 import { urlFor } from "@/sanity/sanity.client";
 import Image from "next/image";
 import { PageType } from "@/Types/Page";
