@@ -183,6 +183,7 @@ export async function getPage(index: number): Promise<PageType> {
     groq`*[_type == 'page'] | order(_createdAt) [${index}...${index + 1}]{
       _id,
       mainTitle,
+      pageType,
       sections[]{
         _key,
         order,

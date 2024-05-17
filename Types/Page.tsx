@@ -2,6 +2,9 @@
 export interface PageType {
   _id: string;
   mainTitle: string;
+  pageType: {
+    current: string;
+  };
   sections: Array<{
     _key: string;
     order: number;

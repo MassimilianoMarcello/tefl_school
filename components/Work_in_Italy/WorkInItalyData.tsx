@@ -1,8 +1,7 @@
-
 'use server'
 
 import { getPage } from "@/sanity/sanity.query";
-import WhyFlorence from '@/components/WhyFlorence/WhyFlorence';
+import WhyFlorence from '@/components/Work_in_Italy/WorkInItaly';
 
 const WorkInItalyPageWrapper = async () => {
   try {
@@ -16,7 +15,7 @@ const WorkInItalyPageWrapper = async () => {
 
     return (
       <>
-        <WhyFlorence data={pageData} />
+        <WhyFlorence data={pageData} pageType={pageData.pageType.current} /> 
       </>
     );
   } catch (error) {
