@@ -11,20 +11,21 @@ interface PageProps {
   
 // from schema Page
 
-export default function CommonPage({ data, pageType }: PageProps) {
+export default function CommonPage({ data }: PageProps) {
   const { mainTitle, sections } = data;
 
   return (
-    <div className={`${styles.topMainContainer} ${styles[pageType]}`}>
+    <div className={styles.topMainContainer} >
       <h1>{mainTitle}</h1>
       {sections.map((section, index) => {
-        const { title, subtitle, image, content, _key } = section;
+        const { title, subtitle, image, content, _key,order } = section;
         const imageUrl = image?.asset ? urlFor(image).width(1400).height(500).url() : null;
         const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
         const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
 
         return (
           <div key={_key} className={sectionClassName}>
+            <p>{order}</p>
             {imageUrl ? (
               <Image
                 className={imageClassName}

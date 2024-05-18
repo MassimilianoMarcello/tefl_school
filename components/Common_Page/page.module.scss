@@ -1,0 +1,73 @@
+@import '../../app/page.module.scss';
+// page.module.scss
+
+.portableTextContainer {
+   
+    margin: 1.25rem 0; 
+    // font-family: $fontFirst;
+    font-family: "Zeitung WebFont";
+   
+    // $fontSecond: "Zeitung Pro Regular";
+    // $fontThird: "Zeitung Pro Black";;
+    
+    p {
+     
+      font-size: .8rem; 
+      font-weight: 900;
+      line-height: 1.5rem; 
+      color: #333;
+    
+    }
+  
+    h2 {
+      
+      font-size: 1.5rem; 
+      margin-top: 1.25rem;
+      color: #000;
+    }
+  
+    h3 {
+     
+      font-size: 1.25rem; 
+      margin-top: 0.9375rem; 
+      color: #555;
+    }
+  
+    ul, ol {
+    
+      padding-left: 1.25rem; 
+      margin: 0.625rem 0; 
+      
+      li {
+       
+        margin-bottom: 0.3125rem; 
+      }
+    }
+  
+    a {
+      // Stili per i link
+      color: #0070f3;
+      text-decoration: underline;
+      
+      &:hover {
+        color: #005bb5;
+      }
+    }
+  
+    img {
+   
+      max-width: 100%;
+      height: auto;
+      margin: 0.625rem 0; 
+    }
+  
+    blockquote {
+      // Stili per i blockquote
+      padding: 0.625rem 1.25rem; 
+      margin: 1.25rem 0; 
+      border-left: 0.3125rem solid #ccc; 
+      background: #f9f9f9;
+      font-style: italic;
+    }
+  }
+  
