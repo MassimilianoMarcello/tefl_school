@@ -3,10 +3,12 @@
 import { getPage } from "@/sanity/sanity.query";
 import Page from "@/components/Common_Page/Page";
 import styles from './workInItaly.module.scss';
+import { revalidateTag } from 'next/cache'
 
 const WorkInItalyPageWrapper = async () => {
+  revalidateTag('collection')
   try {
-    const pageData = await getPage(4); // Passa l'indice corretto
+    const pageData = await getPage(2); // Passa l'indice corretto
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
