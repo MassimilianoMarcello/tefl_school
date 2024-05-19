@@ -1,0 +1,78 @@
+@import "../../page.module.scss";
+.topMainContainer{
+position: relative;
+.square1 {
+    position: absolute;
+    left: 0rem;
+    top: 45rem;
+    height: 25rem;
+    width: 15rem;
+
+    background-color: gold;
+
+    z-index: 2;
+  }
+
+  .square2 {
+    position: absolute;
+    height: 5rem;
+    padding: 5rem;
+    background-color: lightblue;
+    left: 0rem;
+    top: 0rem;
+    z-index: 12;
+  }
+
+// }
+.wrapperToCommonPage {
+  background-color: #fff;
+
+ 
+
+  .titleSquareContainer {
+    position: relative;
+
+    }
+
+    // h1 {
+    //     font-size: 3rem;
+    //     position: absolute;
+    //     top: 20rem;
+    //     left: 0rem;
+    //     height: auto;
+    //     width: 34rem;
+    //     background-color: $bgColor;
+    //     padding: 3rem 2rem;
+    //     z-index: 4;
+    //   }
+
+      
+  // .topMainContainer{
+  //     position: relative;
+  // }
+
+  // .workInItaly{
+
+  // }
+
+  .sectionContainer {
+  }
+
+  .section-0 {
+  }
+  // general image settings
+  .imageBackground {
+  }
+
+  //    image by index
+  .image-0 {
+  }
+
+  .topTextContainer {
+  }
+  .mainTitle {
+  }
+  .mainText {
+  }
+}}
+

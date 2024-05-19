@@ -31,7 +31,7 @@ export default function SecondComponent({ data }: SecondComponentProps) {
             friends to take part in its offerings.
            
           </p>
-          <Link href={""} className={styles.readMoreLink}>Who we are </Link>  
+          <Link href={'./What_Sets_Our_Center_Apart'} className={styles.readMoreLink}>What Sets Our Center Apart?</Link>  
             </div>
        
            

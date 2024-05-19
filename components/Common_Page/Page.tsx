@@ -16,15 +16,21 @@ export default function CommonPage({ data }: PageProps) {
 
   return (
     <div className={styles.topMainContainer} >
-      <h1>{mainTitle}</h1>
+        <h1>{mainTitle}</h1>
+           <span className={styles.square1}>sdffsdfsdfs</span>
+            
+            <span className={styles.square2}>aaaaaaaaaaaaa</span>
       {sections.map((section, index) => {
         const { title, subtitle, image, content, _key,order } = section;
-        const imageUrl = image?.asset ? urlFor(image).width(1400).height(500).url() : null;
+        const imageUrl = image?.asset ? urlFor(image).width(1150).height(400).url() : null;
         const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
         const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
 
         return (
           <div key={_key} className={sectionClassName}>
+            <div className={styles.titleSquareContainer}></div>
+             
+   
             <p>{order}</p>
             {imageUrl ? (
               <Image
@@ -32,8 +38,8 @@ export default function CommonPage({ data }: PageProps) {
                 src={imageUrl}
                 alt={title}
                 sizes="100vw"
-                width={1400}
-                height={500}
+                width={1150}
+                height={400}
               />
             ) : (
               <div className={styles.placeholderImage}>No Image Available</div>
@@ -45,8 +51,7 @@ export default function CommonPage({ data }: PageProps) {
                 <PortableText value={content} />
               </div>
             </div>
-            <span className={styles.square1}></span>
-            <span className={styles.square2}></span>
+         
           </div>
         );
       })}
