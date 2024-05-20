@@ -1,5 +1,14 @@
 @import '../../app/page.module.scss';
 
+.mainImage{
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+// section general image settings
 .imageBackground {
   max-width: 100%;
   height: auto;
@@ -43,9 +52,15 @@
       top: 2rem;
       z-index: 2;
     }
+
+    .section-0{
+
+    }
 }
 
 // WHY FLORENCE
+
+
 .page-1 {
   position: relative;
   h1 {
@@ -80,6 +95,13 @@
       left:25rem;
       top: 12rem;
       z-index: 2;
+    }
+
+    .section-0{
+      .imageBackground {
+        width:50% ;
+        height: auto;
+      }
     }
 }
 // WORK IN ITALY
