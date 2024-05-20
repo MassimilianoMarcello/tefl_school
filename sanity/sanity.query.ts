@@ -182,6 +182,13 @@ export async function getPage(index: number): Promise<PageType> {
   return client.fetch(
     groq`*[_type == 'page'] | order(_createdAt) [${index}...${index + 1}]{
       _id,
+      mainImage{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
       mainTitle,
       pageType,
       sections[]{

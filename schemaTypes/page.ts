@@ -5,6 +5,15 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
   type: 'document',
   fields: [
     {
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      options: {
+        hotspot: true, 
+      }
+      
+    },
+    {
       name: 'mainTitle',
       title: 'Main Title',
       type: 'string',

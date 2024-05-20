@@ -1,6 +1,13 @@
 // File: Types/Page.ts
 export interface PageType {
   _id: string;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+    crop?: object;
+    hotspot?: object;
+  };
   mainTitle: string;
   pageType: {
     current: string;
