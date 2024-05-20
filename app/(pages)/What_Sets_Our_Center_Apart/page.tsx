@@ -11,7 +11,8 @@ import { revalidateTag } from 'next/cache'
 const WhatSetsOurCenterApartWrapper = async () => {
   revalidateTag('collection')
   try {
-    const pageData = await getPage(3); 
+    const pageIndex = 3;
+    const pageData = await getPage(pageIndex); 
 
    
     if (!pageData) {
@@ -24,7 +25,7 @@ const WhatSetsOurCenterApartWrapper = async () => {
     return (
       <>
       <div className={styles.wrapperToCommonPage}>
-      <Page data={pageData} pageType={pageData.pageType.current} />
+      <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex} />
       </div>
      
       </>

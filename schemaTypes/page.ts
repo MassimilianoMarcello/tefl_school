@@ -9,15 +9,7 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
       title: 'Main Title',
       type: 'string',
     },
-    // {
-    //   name: 'pageType',
-    //   type: 'slug',
-    //   title: 'Page Type',
-    //   options: {
-    //     source: 'mainTitle',
-    //     maxLength: 96
-    //   }
-    // },
+
     {
       name: 'pageType',
       type: 'slug', // Cambia il tipo da "string" a "slug"

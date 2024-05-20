@@ -8,7 +8,8 @@ import { revalidateTag } from 'next/cache'
 const WhyFlorencePageWrapper = async () => {
   revalidateTag('collection')
   try {
-    const pageData = await getPage(1); // Passa l'indice corretto
+    const pageIndex = 1;
+    const pageData = await getPage(pageIndex); // Passa l'indice corretto
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
@@ -20,7 +21,7 @@ const WhyFlorencePageWrapper = async () => {
 
     return (
       <>
-        <Page data={pageData} pageType={pageData.pageType.current} />
+        <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex}/>
       </>
     );
   } catch (error) {

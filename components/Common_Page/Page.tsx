@@ -4,22 +4,24 @@ import Image from "next/image";
 import { PageType } from "@/Types/Page";
 import { PortableText } from "@portabletext/react";
 
+
 interface PageProps {
     data: PageType;
     pageType: string;
+    pageIndex: number;
+   
   }
   
 // from schema Page
 
-export default function CommonPage({ data }: PageProps) {
+export default function CommonPage({ data,pageIndex }: PageProps) {
   const { mainTitle, sections } = data;
 
+  const topMainContainerClass = `${styles.topMainContainer} ${styles[`page-${pageIndex}`]}`;
+
   return (
-    <div className={styles.topMainContainer} >
-        <h1>{mainTitle}</h1>
-           <span className={styles.square1}>sdffsdfsdfs</span>
-            
-            <span className={styles.square2}>aaaaaaaaaaaaa</span>
+    <div className={topMainContainerClass}>
+  
       {sections.map((section, index) => {
         const { title, subtitle, image, content, _key,order } = section;
         const imageUrl = image?.asset ? urlFor(image).width(1150).height(400).url() : null;
@@ -28,8 +30,12 @@ export default function CommonPage({ data }: PageProps) {
 
         return (
           <div key={_key} className={sectionClassName}>
-            <div className={styles.titleSquareContainer}></div>
-             
+            {/* <div className={styles.titleSquareContainer}></div> */}
+            <div className={styles[`section-${index}`]}></div>
+            <h1>{mainTitle}</h1>
+           <span className={styles.square1}>sdffsdfsdfs</span>
+            
+            <span className={styles.square2}>aaaaaaaaaaaaa</span>
    
             <p>{order}</p>
             {imageUrl ? (

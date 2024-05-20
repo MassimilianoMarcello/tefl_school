@@ -1,34 +1,78 @@
 @import '../../app/page.module.scss';
+
 // page.module.scss
-.topMainContainer {
+// .topMainContainer {
+//   position: relative;
+//   h1 {
+//     font-size: 3rem;
+//     position: absolute;
+//     top: 10rem;
+//     left: 0rem;
+//     height: auto;
+//     width: 34rem;
+//     background-color: $bgColor;
+//     padding: 3rem 2rem;
+//     z-index: 4;
+//   }
+//   .square1 {
+//     position: absolute;
+//     height: 25rem;
+//     width: 15rem;
+//     background-color: gold;
+//     z-index: 2;
+//   }
+
+//   .square2 {
+//     position: absolute;
+//     height: 5rem;
+//     padding: 5rem;
+//     background-color: lightblue;
+//     z-index: 12;
+//   }
+// }
+.page-3 {
   position: relative;
   h1 {
-    font-size: 3rem;
-    position: absolute;
-    top: 10rem;
-    left: 0rem;
-    height: auto;
-    width: 34rem;
-    background-color: $bgColor;
-    padding: 3rem 2rem;
-    z-index: 4;
-  }
-  .square1 {
-    position: absolute;
-    height: 25rem;
-    width: 15rem;
-    background-color: gold;
-    z-index: 2;
-  }
+      font-size: 2rem;
+      position: absolute;
+      top: 10rem;
+      left: 0rem;
+      height: auto;
+      width: 34rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
 
-  .square2 {
-    position: absolute;
-    height: 5rem;
-    padding: 5rem;
-    background-color: lightblue;
-    z-index: 12;
-  }
+  .square1 {
+      position: absolute;
+      left: 0rem;
+      top: 45rem;
+      height: 25rem;
+      width: 15rem;
+  
+      background-color: gold;
+  
+      z-index: 2;
+    }
+  
+    .square2 {
+      position: absolute;
+      height: 5rem;
+      padding: 5rem;
+      background-color: lightblue;
+      left: 0rem;
+      top: 0rem;
+      z-index: 12;
+    }
 }
+
+// }
+
+
+
+
+
 .portableTextContainer {
    
     margin: 1.25rem 0; 
@@ -98,4 +142,41 @@
       font-style: italic;
     }
   }
+
+
+  // .page-3 {
+  //   h1 {
+  //       font-size: 2rem;
+  //       position: absolute;
+  //       top: 10rem;
+  //       left: 0rem;
+  //       height: auto;
+  //       width: 34rem;
+  //       background-color: $bgColor;
+  //       padding: 3rem 2rem;
+  //       z-index: 4;
+  //     }
+
+  //   .square1 {
+  //       position: absolute;
+  //       left: 0rem;
+  //       top: 45rem;
+  //       height: 25rem;
+  //       width: 15rem;
+    
+  //       background-color: gold;
+    
+  //       z-index: 2;
+  //     }
+    
+  //     .square2 {
+  //       position: absolute;
+  //       height: 5rem;
+  //       padding: 5rem;
+  //       background-color: lightblue;
+  //       left: 0rem;
+  //       top: 0rem;
+  //       z-index: 12;
+  //     }
+  // }
   

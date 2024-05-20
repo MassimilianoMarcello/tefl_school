@@ -9,7 +9,7 @@ const WorkInItalyPageWrapper = async () => {
   revalidateTag('collection')
   try {
     const pageData = await getPage(2); // Passa l'indice corretto
-
+const pageIndex = 2;
     // Verifica che i dati non siano nulli
     if (!pageData) {
       console.error(
@@ -21,7 +21,7 @@ const WorkInItalyPageWrapper = async () => {
     return (
       <>
       <div className={styles.wrapperToCommonPage}>
-      <Page data={pageData} pageType={pageData.pageType.current} />
+      <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex} />
       </div>
      
       </>
