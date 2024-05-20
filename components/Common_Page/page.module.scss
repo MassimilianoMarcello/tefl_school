@@ -4,6 +4,124 @@
   max-width: 100%;
   height: auto;
 }
+
+
+// FAQ TOP PAGE
+
+.page-0 {
+  position: relative;
+  h1 {
+      font-size: 2rem;
+      position: absolute;
+      top: 5rem;
+      right: 3rem;
+      height: auto;
+      width: 34rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
+
+  .square1 {
+      position: absolute;
+      right: 35rem;
+      top: 4rem;
+      height: 12rem;
+      width: 8rem;
+  
+      background-color: gold;
+  
+      z-index: 2;
+    }
+  
+    .square2 {
+      position: absolute;
+      height: 12rem;
+      padding: 4rem;
+      background-color: lightblue;
+      right: 0rem;
+      top: 2rem;
+      z-index: 2;
+    }
+}
+
+// WHY FLORENCE
+.page-1 {
+  position: relative;
+  h1 {
+      font-size: 2rem;
+      position: absolute;
+      top: 8rem;
+      left: 6rem;
+      height: auto;
+      width: 24rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
+
+  .square1 {
+      position: absolute;
+      left: 2rem;
+      top: 4rem;
+      height: 12rem;
+      width: 8rem;
+  
+      background-color: gold;
+  
+      z-index: 2;
+    }
+  
+    .square2 {
+      position: absolute;
+      height: 12rem;
+      padding: 4rem;
+      background-color: lightblue;
+      left:25rem;
+      top: 12rem;
+      z-index: 2;
+    }
+}
+// WORK IN ITALY
+.page-2 {
+  position: relative;
+  h1 {
+      font-size: 2rem;
+      position: absolute;
+      top: 5rem;
+      right: 3rem;
+      height: auto;
+      width: 34rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
+
+  .square1 {
+      position: absolute;
+      right: 35rem;
+      top: 4rem;
+      height: 12rem;
+      width: 8rem;
+  
+      background-color: gold;
+  
+      z-index: 2;
+    }
+  
+    .square2 {
+      position: absolute;
+      height: 12rem;
+      padding: 4rem;
+      background-color: lightblue;
+      right: 0rem;
+      top: 2rem;
+      z-index: 2;
+    }
+}
+
+// What Sets Our Center Apart 
+
 .page-3 {
   position: relative;
   h1 {
@@ -43,45 +161,6 @@
 
 
 
-.page-0 {
-  position: relative;
-  h1 {
-      font-size: 2rem;
-      position: absolute;
-      top: 5rem;
-      right: 3rem;
-      height: auto;
-      width: 34rem;
-      background-color: $bgColor;
-      padding: 3rem 2rem;
-      z-index: 4;
-    }
-
-  .square1 {
-      position: absolute;
-      right: 35rem;
-      top: 4rem;
-      height: 12rem;
-      width: 8rem;
-  
-      background-color: gold;
-  
-      z-index: 2;
-    }
-  
-    .square2 {
-      position: absolute;
-      height: 12rem;
-      padding: 4rem;
-      background-color: lightblue;
-      right: 0rem;
-      top: 2rem;
-      z-index: 2;
-    }
-}
-
-
-// }
 
 
 
