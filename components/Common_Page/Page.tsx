@@ -27,7 +27,7 @@ export default function CommonPage({ data,pageIndex }: PageProps) {
             <span className={styles.square2}></span>
       {sections.map((section, index) => {
         const { title, subtitle, image, content, _key,order } = section;
-        const imageUrl = image?.asset ? urlFor(image).width(1150).height(400).url() : null;
+        const imageUrl = image?.asset ? urlFor(image).width(1400).height(500).url() : null;
         const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
         const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
 
@@ -44,8 +44,9 @@ export default function CommonPage({ data,pageIndex }: PageProps) {
                 src={imageUrl}
                 alt={title}
                 sizes="100vw"
-                width={1150}
-                height={400}
+                width={1400}
+                height={500}
+         
               />
             ) : (
               <div className={styles.placeholderImage}>No Image Available</div>

@@ -1,35 +1,9 @@
 @import '../../app/page.module.scss';
 
-// page.module.scss
-// .topMainContainer {
-//   position: relative;
-//   h1 {
-//     font-size: 3rem;
-//     position: absolute;
-//     top: 10rem;
-//     left: 0rem;
-//     height: auto;
-//     width: 34rem;
-//     background-color: $bgColor;
-//     padding: 3rem 2rem;
-//     z-index: 4;
-//   }
-//   .square1 {
-//     position: absolute;
-//     height: 25rem;
-//     width: 15rem;
-//     background-color: gold;
-//     z-index: 2;
-//   }
-
-//   .square2 {
-//     position: absolute;
-//     height: 5rem;
-//     padding: 5rem;
-//     background-color: lightblue;
-//     z-index: 12;
-//   }
-// }
+.imageBackground {
+  max-width: 100%;
+  height: auto;
+}
 .page-3 {
   position: relative;
   h1 {
