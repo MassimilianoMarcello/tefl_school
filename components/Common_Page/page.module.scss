@@ -35,8 +35,8 @@
   h1 {
       font-size: 2rem;
       position: absolute;
-      top: 10rem;
-      left: 0rem;
+      top: 5rem;
+      left: 3rem;
       height: auto;
       width: 34rem;
       background-color: $bgColor;
@@ -46,10 +46,10 @@
 
   .square1 {
       position: absolute;
-      left: 0rem;
-      top: 45rem;
-      height: 25rem;
-      width: 15rem;
+      left: 35rem;
+      top: 4rem;
+      height: 12rem;
+      width: 8rem;
   
       background-color: gold;
   
@@ -58,14 +58,54 @@
   
     .square2 {
       position: absolute;
-      height: 5rem;
-      padding: 5rem;
+      height: 12rem;
+      padding: 4rem;
       background-color: lightblue;
       left: 0rem;
-      top: 0rem;
-      z-index: 12;
+      top: 2rem;
+      z-index: 2;
     }
 }
+
+
+
+.page-0 {
+  position: relative;
+  h1 {
+      font-size: 2rem;
+      position: absolute;
+      top: 5rem;
+      right: 3rem;
+      height: auto;
+      width: 34rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
+
+  .square1 {
+      position: absolute;
+      right: 35rem;
+      top: 4rem;
+      height: 12rem;
+      width: 8rem;
+  
+      background-color: gold;
+  
+      z-index: 2;
+    }
+  
+    .square2 {
+      position: absolute;
+      height: 12rem;
+      padding: 4rem;
+      background-color: lightblue;
+      right: 0rem;
+      top: 2rem;
+      z-index: 2;
+    }
+}
+
 
 // }
 

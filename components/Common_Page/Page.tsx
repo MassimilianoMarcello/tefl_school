@@ -21,7 +21,10 @@ export default function CommonPage({ data,pageIndex }: PageProps) {
 
   return (
     <div className={topMainContainerClass}>
-  
+     <h1>{mainTitle}</h1>
+           <span className={styles.square1}></span>
+            
+            <span className={styles.square2}></span>
       {sections.map((section, index) => {
         const { title, subtitle, image, content, _key,order } = section;
         const imageUrl = image?.asset ? urlFor(image).width(1150).height(400).url() : null;
@@ -32,10 +35,7 @@ export default function CommonPage({ data,pageIndex }: PageProps) {
           <div key={_key} className={sectionClassName}>
             {/* <div className={styles.titleSquareContainer}></div> */}
             <div className={styles[`section-${index}`]}></div>
-            <h1>{mainTitle}</h1>
-           <span className={styles.square1}>sdffsdfsdfs</span>
-            
-            <span className={styles.square2}>aaaaaaaaaaaaa</span>
+         
    
             <p>{order}</p>
             {imageUrl ? (

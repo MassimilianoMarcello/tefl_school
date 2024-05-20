@@ -2,10 +2,14 @@
 
 import { getPage } from "@/sanity/sanity.query";
 import Page from "@/components/Common_Page/Page";
+import { revalidateTag } from 'next/cache'
+
 
 const FaqTopPageData = async () => {
+  revalidateTag('collection')
   try {
-    const pageData = await getPage(1); // Passa l'indice corretto
+    const pageIndex = 0;
+    const pageData = await getPage(pageIndex); // Passa l'indice corretto
 
     // Verifica che i dati non siano nulli
     if (!pageData) {
@@ -17,7 +21,7 @@ const FaqTopPageData = async () => {
 
     return (
       <>
-        <Page data={pageData} pageType={pageData.pageType.current} />
+        <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex} />
       </>
     );
   } catch (error) {

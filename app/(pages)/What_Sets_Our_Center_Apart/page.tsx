@@ -9,6 +9,7 @@ import styles from './WhatSetsOurCenterApart.module.scss';
 import { revalidateTag } from 'next/cache'
 
 const WhatSetsOurCenterApartWrapper = async () => {
+   
   revalidateTag('collection')
   try {
     const pageIndex = 3;
