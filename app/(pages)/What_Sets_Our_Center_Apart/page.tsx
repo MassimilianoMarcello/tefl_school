@@ -5,7 +5,7 @@
 
 import { getPage } from "@/sanity/sanity.query";
 import Page from "@/components/Common_Page/Page";
-import styles from './WhatSetsOurCenterApart.module.scss';
+// import styles from './WhatSetsOurCenterApart.module.scss';
 import { revalidateTag } from 'next/cache'
 
 const WhatSetsOurCenterApartWrapper = async () => {
@@ -25,9 +25,9 @@ const WhatSetsOurCenterApartWrapper = async () => {
 
     return (
       <>
-      <div className={styles.wrapperToCommonPage}>
+   
       <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex} />
-      </div>
+   
      
       </>
     );
