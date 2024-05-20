@@ -1,9 +1,11 @@
-import styles from "./page.module.scss";
+import styles from "./commonPage.module.scss";
 import { urlFor } from "@/sanity/sanity.client";
 import Image from "next/image";
 import { PageType } from "@/Types/Page";
 import { PortableText } from "@portabletext/react";
 import { title } from "node:process";
+import ApplyTodayButton from "../Buttons/ApplyToday";
+import EnrollNowButton from "../Buttons/EnrollNow";
 
 
 
@@ -35,11 +37,16 @@ import { title } from "node:process";
             height={500}
           />
         )}
+           <div className={styles.applyButton}>
+           <ApplyTodayButton/>
+           </div>
+     
         <span className={styles.square1}></span>
         <span className={styles.square2}></span>
+        <div className={styles[`gridContainer-${pageIndex}`]}>
         {sections.map((section, index) => {
           const { title, subtitle, image, content, _key, order } = section;
-          const imageUrl = image?.asset ? urlFor(image).width(1400).height(500).url() : null;
+          const imageUrl = image?.asset ? urlFor(image).width(1400).height(800).url() : null;
           const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
           const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
   
@@ -54,7 +61,7 @@ import { title } from "node:process";
                   alt={title}
                   sizes="100vw"
                   width={1400}
-                  height={500}
+                  height={800}
                 />
               ) : (
                 <div className={styles.placeholderImage}>No Image Available</div>
@@ -69,6 +76,11 @@ import { title } from "node:process";
             </div>
           );
         })}
+        <div className={styles.enrollButton}>
+        <EnrollNowButton/>
+        </div>
+      
+        </div>
       </div>
     );
   }

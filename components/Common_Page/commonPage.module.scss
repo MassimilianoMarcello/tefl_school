@@ -1,18 +1,24 @@
 @import '../../app/page.module.scss';
 
+// general styles
 .mainImage{
   max-width: 100%;
   height: auto;
+  padding: 1rem;
 }
-
-
-
-
 // section general image settings
 .imageBackground {
   max-width: 100%;
   height: auto;
 }
+
+.applyButton{
+  position: absolute;
+  right: 8rem;
+  top: 14rem;
+}
+
+.enrollButton{}
 
 
 // FAQ TOP PAGE
@@ -58,15 +64,15 @@
     }
 }
 
-// WHY FLORENCE
+// WHY FLORENCE BORGON SAN LORENZO
 
 
 .page-1 {
   position: relative;
   h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       position: absolute;
-      top: 8rem;
+      top: 6rem;
       left: 6rem;
       height: auto;
       width: 24rem;
@@ -96,15 +102,57 @@
       top: 12rem;
       z-index: 2;
     }
+    .gridContainer-1{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,auto);
+    }
 
     .section-0{
+      grid-column: 1/4;
+      grid-row: 2/3;
+      position: relative;
       .imageBackground {
-        width:50% ;
+        width:70% ;
         height: auto;
       }
+      .topTextContainer{
+        background-color: #fff;
+        width: 35%;
+        height: auto;
+        padding: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 10rem;
+
+      }
+      h2{
+        font-size: 2rem;
+
+      
+
+      }
     }
+    .section-1{
+grid-column: 1/4;
+grid-row: 1/2;
+display: flex;
+flex-direction: column-reverse;
+margin: 2rem;
+    }
+    h2{
+      font-size: 3rem;
+      background-color: #add8e6 ;
+    }
+    p{
+      font-size: 1.5rem;
+      padding-top: 1rem;
+  
+    }
+
 }
 // WORK IN ITALY
+
 .page-2 {
   position: relative;
   h1 {
@@ -115,7 +163,7 @@
       height: auto;
       width: 34rem;
       background-color: $bgColor;
-      padding: 3rem 2rem;
+      padding: 3rem 3rem;
       z-index: 4;
     }
 
@@ -136,6 +184,7 @@
       height: 12rem;
       padding: 4rem;
       background-color: lightblue;
+    
       right: 0rem;
       top: 2rem;
       z-index: 2;
@@ -192,7 +241,8 @@
    
     margin: 1.25rem 0; 
     // font-family: $fontFirst;
-    font-family: "Zeitung WebFont";
+    // font-family: $fontSecond;
+    font-family: "Zeitung Micro Pro";
    
     // $fontSecond: "Zeitung Pro Regular";
     // $fontThird: "Zeitung Pro Black";;
@@ -200,8 +250,9 @@
     p {
      
       font-size: .8rem; 
-      font-weight: 900;
-      line-height: 1.5rem; 
+    
+      font-weight: 400;
+      line-height: 1rem; 
       color: #333;
     
     }
