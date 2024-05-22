@@ -45,7 +45,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
         <span className={styles.square2}></span>
         <div className={styles[`gridContainer-${pageIndex}`]}>
         {sections.map((section, index) => {
-          const { title, subtitle, image, content, _key, order } = section;
+          const { title, subtitle,text, image, content, _key, order } = section;
           const imageUrl = image?.asset ? urlFor(image).width(1400).height(800).url() : null;
           const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
           const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
@@ -69,6 +69,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
               <div className={styles.topTextContainer}>
                 <h2 className={styles.mainTitle}>{title}</h2>
                 <p className={styles.mainText}>{subtitle}</p>
+                <p className={styles.mainText}>{text}</p>
                 <div className={styles.portableTextContainer}>
                   <PortableText value={content} />
                 </div>

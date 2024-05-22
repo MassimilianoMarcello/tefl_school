@@ -1,0 +1,237 @@
+@import "@/components/OurCourses/OurCourses.module.scss";
+
+.mainContainer{
+    display: none;
+}
+// Sovrascrivi gli stili desiderati all'interno di un nuovo selettore
+.customOurCourses {
+    .mainContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; // Spazio tra le due colonne
+        padding: 2rem;
+      
+        letter-spacing: 1px;
+        font-family: "Zeitung Micro Pro";
+        font-weight: 700;
+        overflow-x: auto;
+      
+      }
+      .imageBackground {
+   display: none;
+      }
+      
+      .coursesTextContainer {
+        display: none;
+      }
+          
+        .courseCardsBox {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          grid-column: 1/4;
+          grid-row: 5/6;
+          width: 100%;
+        }
+      }
+      
+      .square1 {
+        position: absolute;
+        right: 4rem;
+        top: 1rem;
+        height: 15rem;
+        width: 15rem;
+      
+        background-color: gold;
+      
+        z-index: 2;
+      }
+      
+      .square2 {
+        position: absolute;
+        height: 20rem;
+        padding: 5rem;
+        background-color: lightblue;
+        right: 30rem;
+        top: 15rem;
+        z-index: 2;
+      }
+      
+      .square3 {
+        position: absolute;
+        right: 0rem;
+        top: 40rem;
+        height: 28rem;
+        width: 6rem;
+      
+        background-color: gold;
+      
+        z-index: 2;
+      }
+      
+      .square4 {
+          position: absolute;
+          left: 0rem;
+          top: 50rem;
+          height: 18rem;
+          width: 6rem;
+        
+          background-color: lightblue;
+        
+          z-index: 2;
+        }
+      
+      // card courses style
+      
+      .coursesSection {
+        padding: 0;
+        padding-right: 2rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        width: 100%;
+      }
+      
+      .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, auto);
+      
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+        margin: 2rem auto; /* Centra le carte */
+      
+        overflow: hidden;
+      
+        max-width: 35rem;
+      }
+      
+      // image
+      
+      .cardImageContainer {
+        position: relative;
+        overflow: hidden;
+        grid-row: 1/3;
+        grid-column: 1/4;
+      }
+      
+      .cardImage {
+        width: 100%;
+        height: 25rem;
+        display: block;
+      }
+      
+      .cardTextContainer {
+        grid-row: 3/4;
+        grid-column: 1/4;
+        padding: 2rem;
+      }
+      
+      .cardTitle {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .cardDescription {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      
+      .courseDetails {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .courseDetail {
+        font-size: 14px;
+        color: #888;
+        margin-right: 10px;
+      }
+      // link more details
+      .detailsLink {
+        display: inline-block;
+        grid-row: 4/5;
+        grid-column: 1/3;
+      
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        z-index: 12;
+      }
+      
+      .detailsLink:hover {
+        background-color: #0056b3;
+      }
+      
+      // level course
+      .courseLevelContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(45%) rotate(45deg) translatex(17%);
+        // transform-origin: top right;
+      }
+      
+      .courseLevel {
+        margin-top: -3rem;
+        margin-left: 5rem;
+        padding: 0.5rem 0;
+        padding-left: 4rem;
+        padding-right: 2.5rem;
+        font-size: 0.8rem;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+      }
+      
+      // hours card
+      
+      .cardHours {
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        text-align: center;
+        // transform: translateX(-50%);
+        background-color: #1a3847; /* Colore blu notte */
+        color: #d2d8da; /* Testo bianco */
+        padding: 1.5rem; /* Padding */
+        height: 8rem;
+        width: 8rem;
+        border: 2px solid #ddb239; /* Bordo dorato */
+        border-radius: 25px; /* Bordi arrotondati */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
+        font-weight: 700;
+      }
+      
+      .cardHoursText {
+        font-size: 2.8rem; /* Dimensione del testo grande */
+        color: #ddb239;
+        margin-top: -2.8rem;
+        margin-bottom: -1.8rem;
+        margin-left: -1.4rem;
+        letter-spacing: 2px;
+        padding: 1rem;
+      }
+      .hourSpan {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-left: -0.2rem;
+        font-weight: 200;
+      }
+    
+  

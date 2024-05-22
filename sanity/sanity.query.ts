@@ -196,6 +196,7 @@ export async function getPage(index: number): Promise<PageType> {
         order,
         title,
         subtitle,
+        text,
         image{
           asset->{
             url

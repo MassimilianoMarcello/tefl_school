@@ -17,6 +17,7 @@ export interface PageType {
     order: number;
     title: string;
     subtitle: string;
+    text:string;
     image: {
       asset: {
         url: string;
