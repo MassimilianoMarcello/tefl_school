@@ -1,9 +1,17 @@
 import React from 'react'
 import s from "../../page.module.scss";
+import ConsultationSessionsData from '@/components/ConsultationSessions/ConsultationSessionsData';
 
 const ConsultationSessions = () => {
   return (
-    <div className={s.samplePage}>Consultation Sessions</div>
+   <>
+   <ConsultationSessionsData/>
+   <div>
+    <h2>related products</h2>
+    
+
+   </div>
+   </>
   )
 }
 

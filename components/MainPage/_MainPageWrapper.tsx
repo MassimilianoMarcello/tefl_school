@@ -63,7 +63,7 @@ const MainPageWrapper = async () => {
         <FeaturedCourseTitle/>
         <D_CoursesPreview data={courseData} />
         <E_Testimonials data={testimonialData} />
-        
+      
         <F_Parallax/>
         {/* <RenameComponent data={renameComponentData}  />    */}
       </>
