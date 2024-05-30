@@ -6,8 +6,9 @@ import OurCoursesExport from '@/components/OurCourses/OurCoursesExport';
 const ConsultationSessions = () => {
   return (
    <>
+      <div>
    <ConsultationSessionsData/>
-   <div>
+
     <h2>related products</h2>
     <OurCoursesExport/>
     

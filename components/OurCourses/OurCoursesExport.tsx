@@ -10,54 +10,10 @@ import { revalidateTag } from 'next/cache'
 export default async function OurCoursesExport() {
   revalidateTag('collection')
   const courseCard: CourseType[] = await getCourse();
-  const imageBackgorund = "/assets/girl_right_space 3.webp";
+
   return (
     <main className={styles.mainContainer}>
-      <Image
-        className={styles.imageBackground}
-        src={imageBackgorund}
-        alt={"girl background"}
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-        width={1250}
-        height={600}
-      />
-      <section className={styles.coursesTextContainer}>
-        <h1     className={styles.coursesTitle}>About Our TEFL Courses In Tuscany, Italy</h1>
-        <p className={styles.coursesIntroductionOne}>
-          Our aspiring English as a Foreign Language TEFL teachers hail from
-          diverse professional backgrounds, each with their unique needs and
-          aspirations. To accommodate this diversity, our TEFL programs in
-          Tuscany, Italy, are tailored to be beginner-friendly, welcoming
-          individuals with minimal or no prior teaching experience. </p>
-          <p className={styles.coursesIntroductionTwo}>We
-          prioritize intimate learning environments, limiting class sizes to a
-          maximum of 12 trainees. This ensures personalized attention and
-          guidance for everyone. At TEFL Tuscany learning center, we emphasize
-          practical teaching experience, offering a minimum of 7 hours of
-          in-person teaching practice with real English learners. Our objective
-          is to address the developmental requirements of our trainees
-          comprehensively, enhancing their teaching abilities and employability.
-          To achieve this, we've forged partnerships with several educational
-          institutions across Firenze, enabling us to offer a wide array of TEFL
-          courses.
-        </p>
-              <span className={styles.square1}></span>
-              <span className={styles.square2}></span>
-               <span className={styles.square3}></span>
-               <span className={styles.square4}></span>
-
-        <div className={styles.titleBox}>
-
-<h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
-      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
-
-
-</div>
-<div className={styles.courseCardsBox}>
+     <div className={styles.courseCardsBox}>
 {courseCard &&
         courseCard.map((course) => (
           <div key={course._id} className={styles.cardContainer}>
@@ -116,8 +72,6 @@ export default async function OurCoursesExport() {
           </div>
         ))}
 </div>
-      </section>
-     
     </main>
   );
 }
