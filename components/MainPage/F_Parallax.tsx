@@ -23,10 +23,8 @@ const F_Parallax = () => {
             </p>
 
             <h2>Ready to become a part of Tuscany Tefl Learning Center?</h2>
-            <a href="./">apply now</a>
-            <div>
-            <Link href={'/why_florence_borgo_san_lorenzo'}>Why Florence/Borgo San Lorenzo?</Link> 
-            </div>
+            <Link href="./">apply now</Link>
+      
        
           </div>
         </div>
