@@ -3,9 +3,11 @@
 .OneMainContainer {
   background-color: #fff;
 
+
 }
 .TwoSectionContainer {
   background-color: #fff;
+  
 
 }
 
@@ -14,31 +16,51 @@
   background-color: #fff;
 
   margin-bottom: 8rem;
+  @include respond-to(sm, max) {
+    margin-top: 4rem;
+  }
 }
 .textContainer {
-    
-  @include posAbsoluteTopLeft;
+    @include posAbsoluteTopLeft;
   top: 9.5rem;
   left: 8.5rem;
   height: auto;
   width: 31rem;
-
-  background-color: $bgColor;
+background-color: $bgColor;
   padding:3rem 2rem;
   z-index: 4;
+  @include respond-to(sm, max) {
+    top: 6rem;
+    left: 1rem;
+    right: 10rem;
+    width: auto;
+    padding: .5rem 1rem;
+    
+  }
 }
 
 .mainTitle {
   font-size: 3rem;
   color: $blueColor;
-}
+  @include respond-to(sm, max) {
+  padding: .8rem .1rem;
+      font-size: 1.3rem;
+      color: $blueColor;
+   
+    
+}}
 .mainText {
+
   margin-top: 2rem;
   color: $blueColor;
   // background-color:$generic1;
   font-weight: 500;
   pointer-events: none;
   opacity: 0.5;
+  @include respond-to (sm, max) {
+  display: none;
+
+  }
 }
 .backgroundImage {
 
@@ -49,9 +71,14 @@ height: auto;
 
   padding: 2rem;
 
+  @include respond-to (sm, max) {
+  padding: 0;
+  
+    }
+
+  }
 
 
-}
 
 .square1 {
 position: absolute;
@@ -59,18 +86,31 @@ position: absolute;
   top: 22rem;
   height: 15rem;
   width: 15rem;
+background-color: gold;
+ z-index: 2;
+ @include respond-to (sm, max) {
+  height: 2rem;
+  width: 5rem;
+  top: 16.5rem;
+  left: 10.5rem;
 
- background-color: gold;
- 
-  z-index: 2;
+  }
 }
 
 .square2 {
 position: absolute;
-  height: 5rem;
-  padding: 5rem;
+height: 15rem;
+width: 15rem;
   background-color:lightblue;
   left: 31rem;
   top: 34rem;
   z-index: 2;
+  @include respond-to (sm, max) {
+  padding: 0;
+    height: 2rem;
+    width: 2rem;
+    top: 11.5rem;
+    left: .6rem;
+  
+    }
 }
