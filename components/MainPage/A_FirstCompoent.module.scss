@@ -26,15 +26,15 @@
   left: 8.5rem;
   height: auto;
   width: 31rem;
-background-color: $bgColor;
+
   padding:3rem 2rem;
   z-index: 4;
   @include respond-to(sm, max) {
-    top: 6rem;
-    left: 1rem;
-    right: 10rem;
+    top: 3rem;
+    left: -1rem;
+    right: 8rem;
     width: auto;
-    padding: .5rem 1rem;
+
     
   }
 }
@@ -43,9 +43,11 @@ background-color: $bgColor;
   font-size: 3rem;
   color: $blueColor;
   @include respond-to(sm, max) {
-  padding: .8rem .1rem;
+  padding: 1.3rem 0rem ;
       font-size: 1.3rem;
       color: $blueColor;
+      background-color: $bgColor;
+      text-align: center;
    
     
 }}
@@ -58,7 +60,13 @@ background-color: $bgColor;
   pointer-events: none;
   opacity: 0.5;
   @include respond-to (sm, max) {
-  display: none;
+  // display: none;
+  background-color: $generic6;
+  padding: 1rem;
+  margin-top: 6rem;
+  margin-left: -1rem;
+  width: 25rem;
+  color: #fff;
 
   }
 }
@@ -73,6 +81,7 @@ height: auto;
 
   @include respond-to (sm, max) {
   padding: 0;
+ 
   
     }
 
@@ -99,8 +108,8 @@ background-color: gold;
 
 .square2 {
 position: absolute;
-height: 15rem;
-width: 15rem;
+height: 10rem;
+width: 10rem;
   background-color:lightblue;
   left: 31rem;
   top: 34rem;
