@@ -41,6 +41,7 @@
 
 .mainTitle {
   font-size: 3rem;
+  background-color: $bgColor;
   color: $blueColor;
   @include respond-to(sm, max) {
   padding: 1.3rem 0rem ;
@@ -52,13 +53,13 @@
     
 }}
 .mainText {
-
+  background-color: $bgColor;
   margin-top: 2rem;
   color: $blueColor;
   // background-color:$generic1;
   font-weight: 500;
   pointer-events: none;
-  opacity: 0.5;
+  // opacity: 0.5;
   @include respond-to (sm, max) {
   // display: none;
   background-color: $generic6;
