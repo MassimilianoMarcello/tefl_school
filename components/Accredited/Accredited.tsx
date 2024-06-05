@@ -1,9 +1,33 @@
-import React from 'react'
+"use server";
 
-const Accredited = () => {
-  return (
-    <div>Accredited</div>
-  )
-}
+import { getPage } from "@/sanity/sanity.query";
+import Page from "@/components/Common_Page/Page";
+import { revalidateTag } from 'next/cache'
 
-export default Accredited
+
+const Accredited = async () => {
+  revalidateTag('collection')
+  try {
+    const pageIndex = 5;
+    const pageData = await getPage(pageIndex); // Passa l'indice corretto
+
+    // Verifica che i dati non siano nulli
+    if (!pageData) {
+      console.error(
+        "Errore nel recupero dei dati: i dati della pagina sono nulli"
+      );
+      return null;
+    }
+
+    return (
+      <>
+        <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex}/>
+      </>
+    );
+  } catch (error) {
+    console.error("Errore nel recupero dei dati:", error);
+    return null;
+  }
+};
+
+export default Accredited;
