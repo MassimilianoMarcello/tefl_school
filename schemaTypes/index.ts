@@ -6,7 +6,7 @@ import teachers from "./teachers";
 import commonPageTop from "./commonTopPage";
 import universalSchema from "./universalSchema";
 import faq from "./faq";
-
+import accredited from './accredited';
 import slideItem from "./slideItem";
 import author from "./author";
 import page from "./page";
@@ -22,7 +22,7 @@ export const schemaTypes = [
   commonPageTop,
   universalSchema,
   faq,
-
+  accredited,
   author,
   page,
   pageSection,

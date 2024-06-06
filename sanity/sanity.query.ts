@@ -8,6 +8,7 @@ import { Testimonial } from "@/Types/Testimonials";
 import { Teachers } from "@/Types/Teachers";
 import { CommonTop } from "@/Types/CommonTop";
 import { Faq } from "@/Types/Faq";
+import {AccreditedType} from '@/Types/Accredited';
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -24,11 +25,7 @@ export async function getSlideItem(): Promise<SlideItem[]> {
           alt,
           
       }`
-    // {
-    //   next: {
-    //     revalidate: 63,
-    //   },
-    // }
+
   );
 }
 
@@ -207,17 +204,46 @@ export async function getPage(index: number): Promise<PageType> {
         content[]
       }
     }
-    // {
-    //   next: {
-    //     revalidate: 63,
-    //   },
-    // }
+
     
     [0]`
   );
 }
 
+export async function getAccredited(index: number): Promise<AccreditedType> {
+  return client.fetch(
+    groq`*[_type == 'accredited'] | order(_createdAt) [${index}...${index + 1}]{
+      _id,
+      mainImage{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+      mainTitle,
+      pageType,
+      sections[]{
+        _key,
+        order,
+        title,
+        subtitle,
+        text,
+        image{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+        content[]
+      }
+    }
 
+    
+    [0]`
+  );
+}
 // export async function getPosts(slug: string): Promise<Post> {
 //   return client.fetch(
 //     groq`*[_type == 'post' && slug.current == $slug][0]{
@@ -279,85 +305,3 @@ export async function getAllFaqs(): Promise<Faq[]> {
   );
 }
 
-// export { Page };
-// test query
-
-// export async function getCourse(name:string)Promise<Course> {
-//   return client.fetch(
-//     groq`*[_type == 'course' && name == $name][0] {
-//       _id,
-//       name,
-//       startDate,
-//       endDate,
-//       price,
-//       completionTimeWeeks,
-//       "slug": slug.current,
-//       description,
-//       hours,
-//       level,
-//       "photo": photo.asset->url
-//     }`,
-//     { name } // Utilizza il titolo passato come argomento
-//   );
-// }
-
-// componente in cui mettiamo come argomento il nome del corso "computer"
-
-// import { getHomePage, getTestimonials, getCourse } from "@/sanity/sanity.query";
-// import FirstComponent from "./A_FirstComponent.tsx";
-// import SecondComponent from "./B_SecondComponent";
-// import ThirdComponent from "./C_ThirdComponent";
-// import D_CoursesPreview from "./D_CoursesPreview";
-// import E_Testimonials from "./E_Testimonials";
-// import SlideItem from "../SlideItem/SlideItem";
-// import OurCourses from "../OurCourses/OurCourses";
-
-// const MainPageWrapper = async () => {
-//   try {
-//     const [
-//       firstComponentData,
-//       secondComponentData,
-//       thirdComponentData,
-//       courseData,
-//       testimonialData,
-//     ] = await Promise.all([
-//       getHomePage(),
-//       getHomePage(),
-//       getHomePage(),
-//       getCourse("computer"), // Chiamata per recuperare i dati del corso filtrando per il titolo "computer"
-//       getTestimonials(),
-//     ]);
-
-//     // Verifica che tutti i set di dati non siano nulli
-//     if (
-//       !firstComponentData ||
-//       !secondComponentData ||
-//       !thirdComponentData ||
-//       !courseData ||
-//       !testimonialData
-//     ) {
-//       console.error(
-//         "Errore nel recupero dei dati: uno o più set di dati sono nulli"
-//       );
-//       return null;
-//     }
-
-//     return (
-//       <>
-//         {/* Passa i dati come props ai componenti figlio */}
-//         {/* <FirstComponent data={firstComponentData} /> */}
-//         {/* <SlideItem/> */}
-//         {/* <SecondComponent data={secondComponentData} /> */}
-//         {/* <OurCourses/> */}
-//         {/* <ThirdComponent data={thirdComponentData} /> */}
-//         <D_CoursesPreview data={courseData} />
-//         {/* <E_Testimonials data={testimonialData} /> */}
-//       </>
-//     );
-//   } catch (error) {
-//     console.error("Errore nel recupero dei dati:", error);
-//     return null;
-//   }
-// };
-
-// export default MainPageWrapper;
