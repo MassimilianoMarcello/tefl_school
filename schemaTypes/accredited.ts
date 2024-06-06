@@ -4,15 +4,7 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
   title: 'Accredited',
   type: 'document',
   fields: [
-    {
-      name: 'mainImage',
-      title: 'Main Image',
-      type: 'image',
-      options: {
-        hotspot: true, 
-      }
-      
-    },
+
     {
       name: 'mainTitle',
       title: 'Main Title',
@@ -31,6 +23,15 @@ export default // Definizione dello schema per una pagina che utilizza sezioni p
         }
       }
     },
+    {
+        name: 'mainImage',
+        title: 'Main Image',
+        type: 'image',
+        options: {
+          hotspot: true, 
+        }
+        
+      },
     {
       name: 'sections',
       title: 'Sections',

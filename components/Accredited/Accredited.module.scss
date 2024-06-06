@@ -1,38 +1,16 @@
 @import '../../app/page.module.scss';
 
-// .page-0 {
 
-//     h1 {
-//         font-size: 2rem;
 
-//       }
-  
-//     .square1 {
-       
-//       }
-    
-//       .square2 {
-       
-//       }
-  
-//       .section-0{
-  
-//       }
-//       .image-0{
-//         width:100%;
-//       }
-//   }
-  
-
-  
-
-/// Accredited.module.scss
 
 .topMainContainer {
+
     padding: 1rem;
     display: flex;
-    flex-direction: column;
+flex-direction: column;
     align-items: center;
+
+
   
     h1 {
       font-size: 2rem;
@@ -46,6 +24,29 @@
       }
     }
   }
+  .imageTextContainer{
+
+    display: flex;
+    flex-direction: row-reverse;
+    p{
+        background-color: $bgColor;
+        width: 80%;
+        margin: 2rem;
+        padding: 4rem;
+    }
+    }
+
+    .imageTextContainer2{
+
+        display: flex;
+        flex-direction: row;
+        p{
+            // background-color: $bgColor;
+            // width: 80%;
+            margin-left: 2rem;
+            // padding: 4rem;
+        }
+        }
   
   .imageContainer, .imageWrapper {
     width: 100%;
@@ -55,9 +56,11 @@
   }
   
   .mainImage {
-    width: 100%;
+    background-color: #f9f9f9;
+    width: 50%;
     height: auto;
-    margin-bottom: 1rem;
+    margin: 4rem;
+    padding: 1rem;
     object-fit: cover;
   
     @media (max-width: 600px) {
@@ -65,19 +68,7 @@
     }
   }
   
-  .gridContainer-0, .gridContainer-1, .gridContainer-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  
-    @media (min-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    @media (min-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+
   
   .sectionContainer {
     padding: 1rem;
