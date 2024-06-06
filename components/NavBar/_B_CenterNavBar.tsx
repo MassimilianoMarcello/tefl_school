@@ -26,7 +26,7 @@ const CenterNavBar = () => {
         <div className={s.allLinksDesktop}>
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
-              <Link href={"/accreditated"} className={s.linkTag}>
+              <Link href={"/accredited"} className={s.linkTag}>
               <p className={s.navNamesCenter}>accredited</p>
               </Link>
             </li>

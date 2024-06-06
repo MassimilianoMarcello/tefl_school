@@ -1,41 +1,111 @@
 @import '../../app/page.module.scss';
 
-.page-0 {
+// .page-0 {
 
+//     h1 {
+//         font-size: 2rem;
+
+//       }
+  
+//     .square1 {
+       
+//       }
+    
+//       .square2 {
+       
+//       }
+  
+//       .section-0{
+  
+//       }
+//       .image-0{
+//         width:100%;
+//       }
+//   }
+  
+
+  
+
+/// Accredited.module.scss
+
+.topMainContainer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     h1 {
-        font-size: 2rem;
-
-      }
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
   
-    .square1 {
-        // position: absolute;
-        // right: 35rem;
-        // top: 4rem;
-        // height: 12rem;
-        // width: 8rem;
-    
-        // background-color: gold;
-    
-        // z-index: 2;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
       }
-    
-      .square2 {
-        // position: absolute;
-        // height: 12rem;
-        // padding: 4rem;
-        // background-color: lightblue;
-        // right: 0rem;
-        // top: 2rem;
-        // z-index: 2;
-      }
-  
-      .section-0{
-  
-      }
-      .image-0{
-        width:100%;
-      }
+    }
   }
   
-  // WHY FLORENCE BORGON SAN LORENZO
+  .imageContainer, .imageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  
+    @media (max-width: 600px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .gridContainer-0, .gridContainer-1, .gridContainer-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .sectionContainer {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .imageBackground {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  
+    @media (max-width: 600px) {
+      aspect-ratio: 3 / 2;
+    }
+  }
   
