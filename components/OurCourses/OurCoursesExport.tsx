@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import Image from "next/image";
 import { Course as CourseType } from "@/Types/Course";
 import Link from "next/dist/client/link";
-import styles from "./OurCourses.module.scss";
+import styles from "./OurCoursesExport.module.scss";
 import { revalidateTag } from 'next/cache'
 
 export default async function OurCoursesExport() {
@@ -13,6 +13,13 @@ export default async function OurCoursesExport() {
 
   return (
     <main className={styles.mainContainer}>
+      <div className={styles.titleBox}>
+
+<h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
+      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
+
+
+</div>
      <div className={styles.courseCardsBox}>
 {courseCard &&
         courseCard.map((course) => (
