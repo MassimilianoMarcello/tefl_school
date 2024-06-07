@@ -18,7 +18,7 @@
   top: 14rem;
 }
 
-.enrollButton{}
+// .enrollButton{}
 
 
 // FAQ TOP PAGE
@@ -59,9 +59,9 @@
       z-index: 2;
     }
 
-    .section-0{
+    // .section-0{
 
-    }
+    // }
 }
 
 // WHY FLORENCE BORGON SAN LORENZO
@@ -190,6 +190,81 @@ margin: 2rem;
       z-index: 2;
     }
 }
+
+// Consultation Sessions
+
+.page-4 {
+  position: relative;
+  h1 {
+      font-size: 2.5rem;
+      // position: absolute;
+      // top: 6rem;
+      // left: 6rem;
+      // height: auto;
+      // width: 24rem;
+      background-color: $bgColor;
+      padding: 3rem 2rem;
+      z-index: 4;
+    }
+
+
+  
+
+    .gridContainer-1{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,auto);
+    }
+
+    .section-0{
+      grid-column: 1/4;
+      grid-row: 2/3;
+      position: relative;
+      .imageBackground {
+        width:70% ;
+        height: auto;
+      }
+      .topTextContainer{
+        background-color: #fff;
+        width: 35%;
+        height: auto;
+        padding: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 10rem;
+
+      }
+      h2{
+        font-size: 2rem;
+
+      
+
+      }
+    }
+    .section-1{
+grid-column: 1/4;
+grid-row: 1/2;
+display: flex;
+flex-direction: column-reverse;
+margin: 2rem;
+    }
+    h2{
+      font-size: 3rem;
+      background-color: #add8e6 ;
+    }
+    p{
+      font-size: 1.5rem;
+      padding-top: 1rem;
+  
+    }
+
+}
+
+
+
+
+
+
 
 // What Sets Our Center Apart 
 

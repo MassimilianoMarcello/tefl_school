@@ -10,7 +10,7 @@ interface AccreditedProps {
   data: AccreditedType;
   pageType: string;
   pageIndex: number;
-}
+}const accreditatLogo = '/assets/accreditat_logo.webp'
 
 export default function AccreditedPage({ data, pageIndex }: AccreditedProps) {
   const { mainTitle, sections, mainImage } = data;
@@ -39,6 +39,15 @@ export default function AccreditedPage({ data, pageIndex }: AccreditedProps) {
             height={150}
           />
         )}
+        <div>
+               <Image
+                      className={styles.accreditatImage}
+                      src={accreditatLogo}
+                      alt='accreditat logo'
+                      sizes="100vw"
+                      width={200}
+                      height={50}
+                    />
         <p>
           Our course has been in operation in the Florence city center and most
           recently in Borgo San Lorenzo since 2006, and we have trained over a
@@ -49,6 +58,7 @@ export default function AccreditedPage({ data, pageIndex }: AccreditedProps) {
           are consistently ready to take on any teaching challenge and thrive
           while doing so!
         </p>
+        </div>
       </div>
       {/* <div className={styles.applyButton}>
            <ApplyTodayButton/>
@@ -98,6 +108,7 @@ export default function AccreditedPage({ data, pageIndex }: AccreditedProps) {
                       Learning</i> (Wiley, 2018) and <i>SLA Applied: Connecting Theory and
                       Practice</i> (Cambridge University Press, 2021).
                     </p>
+                 
                   </div>
                 </div>
               </div>

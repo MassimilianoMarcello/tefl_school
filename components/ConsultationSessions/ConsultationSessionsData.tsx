@@ -2,7 +2,9 @@
 
 import { getPage } from "@/sanity/sanity.query";
 import Page from "@/components/Common_Page/Page";
+//        1§1§
 import { revalidateTag } from 'next/cache'
+
 
 
 const ConsultationSessionsData = async () => {

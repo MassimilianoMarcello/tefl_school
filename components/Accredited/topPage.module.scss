@@ -8,7 +8,7 @@
 .topTextContainer{
   position: absolute;
   left: 5rem;
-  top: 5rem;
+  top: 15rem;
   background-color: $bgColor;
   padding: 3rem;
   text-transform: capitalize;
@@ -32,7 +32,7 @@
 .square1 {
   position: absolute;
     left: 3rem;
-    top: 15rem;
+    top: 25rem;
     height: 5rem;
     width: 5rem;
   
@@ -47,7 +47,7 @@
     padding: 5rem;
     background-color:lightblue;
     left: 26rem;
-    top: 3rem;
+    top: 13rem;
     z-index: 1;
   }
 
@@ -55,123 +55,7 @@
 
 
 
-// teachers section
 
-// .mainContainer {
-//   /* Stile per il contenitore principale */
-// }
-
-// .coursesTextContainer {
-//   /* Stile per il contenitore del testo del corso */
-// }
-
-// .square1 {
-//   /* Stile per il quadrato 1 */
-// }
-
-// .square2 {
-//   /* Stile per il quadrato 2 */
-// }
-
-// .square3 {
-//   /* Stile per il quadrato 3 */
-// }
-
-// .square4 {
-//   /* Stile per il quadrato 4 */
-// }
-
-// .courseCardsBox {
-//   /* Stile per il contenitore delle card del corso */
-// }
-
-// .cardContainer {
-// }
-
-// .cardContainer0 {
-//   background-color: aqua;
-// }
-
-
-
-// .cardContainer5 {
-//   background-color: pink;
-// }
-
-// .cardImageContainer {
-//   /* Stile per il contenitore dell'immagine della card */
-// }
-
-// .cardImage {
-//   /* Stile per l'immagine della card */
-// }
-
-// .courseLevelContainer {
-//   /* Stile per il contenitore del livello del corso */
-// }
-
-// .courseLevel {
-//   /* Stile per il livello del corso */
-// }
-
-// .cardNameContainer {
-//   /* Stile per il contenitore del nome della card */
-// }
-
-// .cardName {
-//   /* Stile per il nome della card */
-// }
-
-// .detailsLink {
-//   /* Stile per il link dei dettagli */
-// }
-
-
-.mainContainer {
-  /* Stile per il contenitore principale */
-}
-
-.coursesTextContainer {
-  /* Stile per il contenitore del testo del corso */
-  position: relative; /* Per permettere il posizionamento assoluto degli elementi interni */
-}
-
-// .square1,
-// .square2,
-// .square3,
-// .square4 {
-//   /* Stile per i quadrati */
-//   position: absolute;
-//   background-color: #f0f0f0; /* Colore di sfondo dei quadrati */
-// }
-
-// .square1 {
-//   top: 0;
-//   left: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square2 {
-//   top: 0;
-//   right: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square3 {
-//   bottom: 0;
-//   left: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square4 {
-//   bottom: 0;
-//   right: 0;
-//   width: 50px;
-//   height: 50px;
-// }
 
 .courseCardsBox {
   /* Stile per il contenitore delle card del corso */
@@ -270,6 +154,6 @@ gap: 1rem;
   margin: 0;
 }
 
-.detailsLink {
-  /* Stile per il link dei dettagli */
-}
+// .detailsLink {
+//   /* Stile per il link dei dettagli */
+// }

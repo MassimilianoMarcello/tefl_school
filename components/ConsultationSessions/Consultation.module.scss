@@ -1,0 +1,53 @@
+@import "../../app/page.module.scss";
+
+// top page image and titles
+.topMainContainer {
+  position: relative;
+}
+
+.topTextContainer{
+  position: absolute;
+  left: 34rem;
+  right: 6rem;
+  top: 5rem;
+  background-color: $bgColor;
+  padding: 3rem;
+  text-transform: capitalize;
+  z-index: 4;
+
+}
+.mainTitle {
+  font-size: 4rem;
+  color: $blueColor;
+  font-weight: 900;
+}
+.mainText {
+  margin-top: 2rem;
+  color: $blueColor;
+  // background-color:$generic1;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.square1 {
+  position: absolute;
+    right: 5rem;
+    top: 20rem;
+    height: 5rem;
+    width: 5rem;
+  
+   background-color: gold;
+   
+   z-index: 1;
+  }
+  
+  .square2 {
+  position: absolute;
+    // height: 2rem;
+    padding: 5rem;
+    background-color:lightblue;
+    left: 32rem;
+    top: 3rem;
+    z-index: 1;
+  }
