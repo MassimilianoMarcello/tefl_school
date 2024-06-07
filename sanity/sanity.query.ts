@@ -9,6 +9,7 @@ import { Teachers } from "@/Types/Teachers";
 import { CommonTop } from "@/Types/CommonTop";
 import { Faq } from "@/Types/Faq";
 import {AccreditedType} from '@/Types/Accredited';
+import {AboutUsType} from '@/Types/AboutUs';
 
 export async function getSlideItem(): Promise<SlideItem[]> {
   return client.fetch(
@@ -213,6 +214,41 @@ export async function getPage(index: number): Promise<PageType> {
 export async function getAccredited(index: number): Promise<AccreditedType> {
   return client.fetch(
     groq`*[_type == 'accredited'] | order(_createdAt) [${index}...${index + 1}]{
+      _id,
+      mainImage{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+      mainTitle,
+      pageType,
+      sections[]{
+        _key,
+        order,
+        title,
+        subtitle,
+        text,
+        image{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+        content[]
+      }
+    }
+
+    
+    [0]`
+  );
+}
+
+export async function getAboutUs(index: number): Promise<AboutUsType> {
+  return client.fetch(
+    groq`*[_type == 'aboutUs'] | order(_createdAt) [${index}...${index + 1}]{
       _id,
       mainImage{
           asset->{

@@ -1,28 +1,3 @@
-// import React from 'react'
-// import s from "../../page.module.scss";
-// import ConsultationSessionsData from '@/components/ConsultationSessions/ConsultationSessionsData';
-// import OurCoursesExport from '@/components/OurCourses/OurCoursesExport';
-// import ConsultationTopPage from '@/components/ConsultationSessions/ConstultationsTopPage';
-
-// const ConsultationSessions = () => {
-//   return (
-//    <>
-//       <div>
-//         <ConsultationTopPage data={commonTopPageData  }/>
-//    <ConsultationSessionsData/>
-
-//     <h2>related products</h2>
-//     <OurCoursesExport/>
-    
-
-//    </div>
-//    </>
-//   )
-// }
-
-// export default ConsultationSessions
-
-
 'use server'
 
 import { getTeachers, getCommonTopPage } from "@/sanity/sanity.query";

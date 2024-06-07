@@ -1,6 +1,5 @@
-// File: Types/Accredited.ts
-
-export interface AccreditedType {
+// File: Types/Page.ts
+export interface AboutUsType {
     _id: string;
     mainImage: {
       asset: {
@@ -29,6 +28,3 @@ export interface AccreditedType {
       content: any[];
     }>;
   }
-  
-  
-    

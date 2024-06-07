@@ -11,8 +11,10 @@ import slideItem from "./slideItem";
 import author from "./author";
 import page from "./page";
 import pageSection from "./pageSection";
+import aboutUs from "./aboutUs";
 
 export const schemaTypes = [
+  aboutUs,
   course,
   homepage,
   componentPrototype,
