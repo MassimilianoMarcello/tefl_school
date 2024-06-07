@@ -64,7 +64,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
                   height={800}
                 />
               ) : (
-                <div className={styles.placeholderImage}>No Image Available</div>
+                <div className={styles.placeholderImage}></div>
               )}
               <div className={styles.topTextContainer}>
                 <h2 className={styles.mainTitle}>{title}</h2>

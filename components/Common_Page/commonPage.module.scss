@@ -194,7 +194,8 @@ margin: 2rem;
 // Consultation Sessions
 
 .page-4 {
-  position: relative;
+  display: flex;
+  flex-direction:column-reverse;
   h1 {
       font-size: 2.5rem;
       // position: absolute;
@@ -211,27 +212,28 @@ margin: 2rem;
   
 
     .gridContainer-1{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows: repeat(3,auto);
+      // display: grid;
+      // grid-template-columns: repeat(3,1fr);
+      // grid-template-rows: repeat(3,auto);
+  
     }
 
     .section-0{
-      grid-column: 1/4;
-      grid-row: 2/3;
-      position: relative;
+      // grid-column: 3/4;
+      // grid-row: 1/2;
+      // position: relative;
       .imageBackground {
         width:70% ;
         height: auto;
       }
       .topTextContainer{
         background-color: #fff;
-        width: 35%;
+        width: 90%;
         height: auto;
         padding: 2rem;
-        position: absolute;
-        bottom: 0;
-        left: 10rem;
+        // position: absolute;
+        // bottom: 0;
+        // left: 10rem;
 
       }
       h2{
@@ -242,7 +244,7 @@ margin: 2rem;
       }
     }
     .section-1{
-grid-column: 1/4;
+grid-column: 1/2;
 grid-row: 1/2;
 display: flex;
 flex-direction: column-reverse;
