@@ -34,6 +34,7 @@ import ConsulationTopPage from '@/components/ConsultationSessions/Constultations
  
 import { revalidateTag } from 'next/cache'
 import ConsultationSessionsData from "@/components/ConsultationSessions/ConsultationSessionsData";
+import OurCourses from "../our_courses/page";
 
 
 
@@ -67,6 +68,7 @@ const TeacherPageWrapper = async () => {
         {/* Passa i dati come props ai componenti figlio */}
         <ConsulationTopPage data={commonTopPageData  }/>
         <ConsultationSessionsData/>
+        <OurCourses/>
     
    
    

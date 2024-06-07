@@ -53,7 +53,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
           return (
             <div key={_key} className={sectionClassName}>
               <div className={styles[`section-${index}`]}></div>
-              <p>{order}</p>
+              {/* <p>{order}</p> */}
               {imageUrl ? (
                 <Image
                   className={imageClassName}
@@ -68,7 +68,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
               )}
               <div className={styles.topTextContainer}>
                 <h2 className={styles.mainTitle}>{title}</h2>
-                <p className={styles.mainText}>{subtitle}</p>
+                <p className={styles.mainSubtitle}>{subtitle}</p>
                 <p className={styles.mainText}>{text}</p>
                 <div className={styles.portableTextContainer}>
                   <PortableText value={content} />

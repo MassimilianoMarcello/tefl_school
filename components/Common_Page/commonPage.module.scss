@@ -197,15 +197,7 @@ margin: 2rem;
   display: flex;
   flex-direction:column-reverse;
   h1 {
-      font-size: 2.5rem;
-      // position: absolute;
-      // top: 6rem;
-      // left: 6rem;
-      // height: auto;
-      // width: 24rem;
-      background-color: $bgColor;
-      padding: 3rem 2rem;
-      z-index: 4;
+    display: none;
     }
 
 
@@ -227,10 +219,12 @@ margin: 2rem;
         height: auto;
       }
       .topTextContainer{
+        position: relative;
         background-color: #fff;
-        width: 90%;
+        width: 100%;
         height: auto;
         padding: 2rem;
+      
         // position: absolute;
         // bottom: 0;
         // left: 10rem;
@@ -238,21 +232,45 @@ margin: 2rem;
       }
       h2{
         font-size: 2rem;
+        text-align: center;
+      }
+      .mainSubtitle{
+        text-align: center;
+        background-color: gold;
+      margin:  auto 15.5rem;
+      padding-bottom: 1rem;
+        position: absolute;
+        left: 2rem;
+        top: 12rem;
+        right: 2rem;
+      }
+      .mainText{
+        position: absolute;
+        left: 2rem;
+        top: 13.9rem;
+        right: 2rem;
+        font-size: 1.325rem; /* Dimensione del testo (18px / 16 = 1.125rem) */
+    line-height: 1.6; /* Altezza della linea per migliorare la leggibilità */
+    color: #333; /* Colore del testo, un grigio scuro */
+    background-color: #f9f9f9; /* Colore di sfondo, un grigio molto chiaro */
+    padding: 1.5rem; /* Spazio interno attorno al testo (16px = 1rem) */
+   margin: 1.25rem 0; /* Margine superiore e inferiore (20px / 16 = 1.25rem) */
 
-      
-
+        width: 37rem; /* Larghezza massima per evitare paragrafi troppo lunghi (600px / 16 = 37.5rem) */
+    margin-left: auto; /* Centra il paragrafo orizzontalmente */
+    margin-right: auto; /* Centra il paragrafo orizzontalmente */
       }
     }
     .section-1{
-grid-column: 1/2;
-grid-row: 1/2;
-display: flex;
-flex-direction: column-reverse;
+// grid-column: 1/2;
+// grid-row: 1/2;
+// display: flex;
+// flex-direction: column-reverse;
 margin: 2rem;
     }
     h2{
       font-size: 3rem;
-      background-color: #add8e6 ;
+      // background-color: #add8e6 ;
     }
     p{
       font-size: 1.5rem;
@@ -260,6 +278,13 @@ margin: 2rem;
   
     }
 
+}
+
+.enrollButton{
+  position: absolute;
+  top: 82rem;
+  right: 2rem;
+  left: 32rem;
 }
 
 
