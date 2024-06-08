@@ -23,7 +23,9 @@ export default function AboutUsPage({ data, pageIndex }: AboutUsProps) {
   
     return (
       <div className={topMainContainerClass}>
+         <div className={styles.titleBox}>
         <h1>{mainTitle}</h1>
+        </div>
         {mainImageUrl && (
           <Image
             className={styles.mainImage}
