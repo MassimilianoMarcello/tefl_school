@@ -34,9 +34,9 @@ export default function AboutUsPage({ data, pageIndex }: AboutUsProps) {
             height={500}
           />
         )}
-           <div className={styles.applyButton}>
+           {/* <div className={styles.applyButton}>
            <ApplyTodayButton/>
-           </div>
+           </div> */}
      
         <span className={styles.square1}></span>
         <span className={styles.square2}></span>
@@ -63,20 +63,20 @@ export default function AboutUsPage({ data, pageIndex }: AboutUsProps) {
               ) : (
                 <div className={styles.placeholderImage}></div>
               )}
+           
               <div className={styles.topTextContainer}>
                 <h2 className={styles.mainTitle}>{title}</h2>
                 <p className={styles.mainSubtitle}>{subtitle}</p>
                 <p className={styles.mainText}>{text}</p>
-                <div className={styles.portableTextContainer}>
-                  <PortableText value={content} />
-                </div>
+          
+            
               </div>
             </div>
           );
         })}
-        <div className={styles.enrollButton}>
+        {/* <div className={styles.enrollButton}>
         <EnrollNowButton/>
-        </div>
+        </div> */}
       
         </div>
       </div>

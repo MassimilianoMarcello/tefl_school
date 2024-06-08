@@ -1,0 +1,102 @@
+// top page
+
+@import "../../app/page.module.scss";
+
+// top page image and titles
+.topMainContainerAboutUs {
+  position: relative;
+}
+
+.topTextContainerAboutUs{
+  position: absolute;
+  left: 25rem;
+  top: 5rem;
+  background-color: $bgColor;
+  padding: 3rem;
+  text-transform: capitalize;
+  z-index: 4;
+
+}
+.mainTitleAboutUs {
+  font-size: 4rem;
+  color: $blueColor;
+  font-weight: 900;
+}
+.mainTextAboutUs {
+  margin-top: 2rem;
+  color: $blueColor;
+  // background-color:$generic1;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.square1AboutUs {
+  position: absolute;
+    right: 20rem;
+    top: 15rem;
+    height: 5rem;
+    width: 5rem;
+  
+   background-color: gold;
+   
+   z-index: 1;
+  }
+  
+  .square2AboutUs {
+  position: absolute;
+    // height: 2rem;
+    padding: 5rem;
+    background-color:lightblue;
+    left: 23rem;
+    top: 3rem;
+    z-index: 1;
+  }
+
+
+
+
+
+
+
+
+
+// about us text
+
+.gridContainer-0{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+  
+}
+
+.topTextContainer{
+margin: 2rem;
+}
+
+
+.section-0{
+ grid-column: 1/2;
+ grid-row: 1/2;
+
+}
+
+.section-1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  
+}
+
+.section-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+}
+
+
+
+
+
+    .mainTitle{margin-bottom: .5rem;}
+    .mainSubtitle{margin-bottom: .5rem;}
+    .mainText{margin-bottom: .5rem;}

@@ -28,10 +28,10 @@ export default function TopPageAboutUs({ data }: CommonTopTypeProps) {
   const { title, subtitle } = specificItem;
 
   return (
-    <div className={styles.topMainContainer} >
+    <div className={styles.topMainContainerAboutUs} >
       {/* Utilizza l'URL dell'immagine nell'elemento Image */}
       <Image
-        className={styles.imageBackground}
+        className={styles.imageBackgroundAboutUs}
         src={imageUrl}
         // src={imageUrl}
         alt={title}
@@ -43,12 +43,13 @@ export default function TopPageAboutUs({ data }: CommonTopTypeProps) {
         width={1000}
         height={400}
       />
-      <div className={styles.topTextContainer}>
-      <h1 className={styles.mainTitle}>{title}</h1>
-      <p className={styles.mainText}>{subtitle}</p>
+      <div className={styles.topWrapperAboutUs}>
+      <div className={styles.topTextContainerAboutUs}>
+      <h1 className={styles.mainTitleAboutUs}>{title}</h1>
+      <p className={styles.mainTextAboutUs}>{subtitle}</p>
       </div>
-      <span className={styles.square1}></span>
-        <span className={styles.square2}></span>
-
+      <span className={styles.square1AboutUs}></span>
+        <span className={styles.square2AboutUs}></span>
+        </div>
     </div>
   )};

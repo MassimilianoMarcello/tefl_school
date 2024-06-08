@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Teachers as TeachersType } from "@/Types/Teachers";
 import Link from "next/dist/client/link";
 import { revalidateTag } from "next/cache";
+import ButtonAzure from "../Buttons/ButtonAzure";
 
 interface TeachersTypeProps {
   data: TeachersType[]; // Accetta i dati come prop
@@ -42,6 +43,8 @@ revalidateTag("collection");
                     alt={teacher.alt}
                     className={styles.cardImage}
                   />
+                   <span className={styles.squareBoss}></span>
+
 
                   <div className={styles.courseLevelContainer}>
                     {/* <p className={styles.courseLevel}>
@@ -49,7 +52,7 @@ revalidateTag("collection");
                     </p> */}
                   </div>
                   <div className={styles.cardNameContainer}>
-                    <p className={styles.cardName}>{teacher.name}</p>
+                    <h3 className={styles.cardName}>{teacher.name}</h3>
                     <p className={styles.cardRole}>{teacher.role}</p>
                   </div>
                 </div>
@@ -57,9 +60,16 @@ revalidateTag("collection");
                 {/* <Link href={`/`} className={styles.detailsLink}>
                   Details
                 </Link> */}
+           
+              
               </div>
             ))}
+          
         </div>
+        <div className={styles.buttonApplication}>
+                <ButtonAzure text={"Join The Team"}/>
+                <p>We’re always looking for talented teachers to join our team.</p>
+                </div>
       </section>
     </main>
   );

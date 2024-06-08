@@ -55,123 +55,16 @@
 
 
 
-// teachers section
-
-// .mainContainer {
-//   /* Stile per il contenitore principale */
-// }
-
-// .coursesTextContainer {
-//   /* Stile per il contenitore del testo del corso */
-// }
-
-// .square1 {
-//   /* Stile per il quadrato 1 */
-// }
-
-// .square2 {
-//   /* Stile per il quadrato 2 */
-// }
-
-// .square3 {
-//   /* Stile per il quadrato 3 */
-// }
-
-// .square4 {
-//   /* Stile per il quadrato 4 */
-// }
-
-// .courseCardsBox {
-//   /* Stile per il contenitore delle card del corso */
-// }
-
-// .cardContainer {
-// }
-
-// .cardContainer0 {
-//   background-color: aqua;
-// }
 
 
 
-// .cardContainer5 {
-//   background-color: pink;
-// }
-
-// .cardImageContainer {
-//   /* Stile per il contenitore dell'immagine della card */
-// }
-
-// .cardImage {
-//   /* Stile per l'immagine della card */
-// }
-
-// .courseLevelContainer {
-//   /* Stile per il contenitore del livello del corso */
-// }
-
-// .courseLevel {
-//   /* Stile per il livello del corso */
-// }
-
-// .cardNameContainer {
-//   /* Stile per il contenitore del nome della card */
-// }
-
-// .cardName {
-//   /* Stile per il nome della card */
-// }
-
-// .detailsLink {
-//   /* Stile per il link dei dettagli */
-// }
-
-
-.mainContainer {
-  /* Stile per il contenitore principale */
-}
 
 .coursesTextContainer {
-  /* Stile per il contenitore del testo del corso */
+
   position: relative; /* Per permettere il posizionamento assoluto degli elementi interni */
 }
 
-// .square1,
-// .square2,
-// .square3,
-// .square4 {
-//   /* Stile per i quadrati */
-//   position: absolute;
-//   background-color: #f0f0f0; /* Colore di sfondo dei quadrati */
-// }
 
-// .square1 {
-//   top: 0;
-//   left: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square2 {
-//   top: 0;
-//   right: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square3 {
-//   bottom: 0;
-//   left: 0;
-//   width: 50px;
-//   height: 50px;
-// }
-
-// .square4 {
-//   bottom: 0;
-//   right: 0;
-//   width: 50px;
-//   height: 50px;
-// }
 
 .courseCardsBox {
   /* Stile per il contenitore delle card del corso */
@@ -221,16 +114,26 @@ gap: 1rem;
   grid-column: 1/5;
   grid-row: 1/2;
   margin: 3rem;
- 
-
+  background-color:#e2e9eb ;
+.squareBoss{
+  position: absolute;
+  // height: 2rem;
+  padding: 5rem;
+  background-color:gold;
+  left: -2rem;
+  top: -2rem;
+  z-index: -4;
+}
   .cardImage {
     width: 259px;
     border-radius: 50%;
-    padding: 1rem;
+    border: solid #add8e6 .3rem;
+    margin: 1.5rem;
+    padding: 0rem;
   }
   .cardNameContainer{
     position: absolute;
-    left: 16rem ;
+    left: 18rem ;
     top: 3rem;
 }
 .cardName{
@@ -270,6 +173,20 @@ gap: 1rem;
   margin: 0;
 }
 
-.detailsLink {
-  /* Stile per il link dei dettagli */
+.buttonApplication {
+  text-align: center;
+  background-color: #add8e6 ;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+border-top: solid 1rem gold;
+p{
+  margin-top: 1rem;
+  color: #fff;
 }
+}
+
+
+

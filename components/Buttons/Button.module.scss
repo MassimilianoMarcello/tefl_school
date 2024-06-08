@@ -37,4 +37,10 @@
       background-color:$generic4;
     }
   }
+
+  .buttonAzure{
+    @extend .button;
+    background-color: azure;
+    color: #687188 ;
+  }
   

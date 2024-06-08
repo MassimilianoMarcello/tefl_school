@@ -14,7 +14,7 @@
 
 'use server'
 
-import { getAboutUs, getCommonTopPage } from "@/sanity/sanity.query";
+import { getAboutUs, getCommonTopPage,getTeachers } from "@/sanity/sanity.query";
 import AboutUs from "@/components/About_Us/AboutUs";
 import TopPageAboutUs from '@/components/About_Us/TopPageAboutUS';
 
@@ -22,6 +22,7 @@ import TopPageAboutUs from '@/components/About_Us/TopPageAboutUS';
 
  
 import { revalidateTag } from 'next/cache'
+import OurTeachers from "@/components/Our teachers/OurTeachers";
 
 
 
@@ -31,17 +32,20 @@ const AboutUsPageWrapper = async () => {
     const [
       aboutUsData,
       commonTopPageData,
+      teachersData,
   
     ] = await Promise.all([
       getAboutUs(0),
       getCommonTopPage(),
+      getTeachers(),
 
     ]);
 
     // Verifica che entrambi i set di dati non siano nulli
     if (
       !aboutUsData ||
-      ! commonTopPageData 
+      ! commonTopPageData ||
+      ! teachersData
 
     ) {
       console.error(
@@ -55,6 +59,7 @@ const AboutUsPageWrapper = async () => {
         {/* Passa i dati come props ai componenti figlio */}
         <TopPageAboutUs data={commonTopPageData  } />
        <AboutUs data={aboutUsData} pageType={""} pageIndex={0} />
+       <OurTeachers data={teachersData}/>
    
    
         {/* <CommonTopPage data={commonTopPageData } />  */}
