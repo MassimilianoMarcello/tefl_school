@@ -52,8 +52,8 @@ export default async function OurCourses() {
 
         <div className={styles.titleBox}>
 
-<h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
-      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
+<h1>Specialize in TESOL with TEFL Tuscany in beautiful Italy </h1>
+      <p>Our extensive TEFL courses are tailored to empower both seasoned teachers and those who are just starting out, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
 
 
 </div>
