@@ -39,7 +39,7 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
         <div className={styles.blueBack}>
           <div className={styles.parallax1Inner}>
             
-            <Link href="./">apply now</Link>
+            <Link href="./">Book a call</Link>
           </div>
         </div>
       </section>

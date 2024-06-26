@@ -23,7 +23,7 @@
 .textContainer {
     @include posAbsoluteTopLeft;
   top: 9.5rem;
-  left: 8.5rem;
+  left: 6.5rem;
   height: auto;
   width: 31rem;
 
@@ -43,6 +43,8 @@
   font-size: 3rem;
   background-color: $bgColor;
   color: $blueColor;
+  padding: 1rem;
+
   @include respond-to(sm, max) {
   padding: 1.3rem 0rem ;
       font-size: 1.3rem;
@@ -54,8 +56,9 @@
 }}
 .mainText {
   background-color: $bgColor;
-  margin-top: 2rem;
+  margin-top:0rem;
   color: $blueColor;
+  padding: 1rem;
   // background-color:$generic1;
   font-weight: 500;
   pointer-events: none;
@@ -92,8 +95,8 @@ height: auto;
 
 .square1 {
 position: absolute;
-  left: 7rem;
-  top: 22rem;
+  left: 6rem;
+  top: 23.5rem;
   height: 15rem;
   width: 15rem;
 background-color: gold;
@@ -112,8 +115,8 @@ position: absolute;
 height: 10rem;
 width: 10rem;
   background-color:lightblue;
-  left: 31rem;
-  top: 34rem;
+  left: 27rem;
+  top: 36.5rem;
   z-index: 2;
   @include respond-to (sm, max) {
   padding: 0;

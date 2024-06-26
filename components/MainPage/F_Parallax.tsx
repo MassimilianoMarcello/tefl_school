@@ -8,7 +8,9 @@ const F_Parallax = () => {
         <div className={styles.blueBack}>
           <div className={styles.parallax1Inner}>
             <h1>
-            From 2006, our school in Tuscany, located in the heart of Florence, has served as a hub for aspiring TEFL teachers.
+              Since 2006, our school in Tuscany, located in the heart of
+              Florence and in the Tuscany countryside, has served as a hub for
+              aspiring TEFL teachers.
             </h1>
 
             <p>
@@ -22,10 +24,8 @@ const F_Parallax = () => {
               to walk in the footsteps of history's greatest minds.{" "}
             </p>
 
-            <h2>Ready to become a part of Tuscany Tefl Learning Center?</h2>
+            <h2>Ready to become a part of the TEFL Tuscany tradition?</h2>
             <Link href="./">apply now</Link>
-      
-       
           </div>
         </div>
       </section>
