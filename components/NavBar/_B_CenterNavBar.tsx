@@ -36,8 +36,8 @@ const CenterNavBar = () => {
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/blog"} className={s.linkTag}>
-              <p className={s.navNamesCenter}>blog</p>
+              <Link href={"/podcast"} className={s.linkTag}>
+              <p className={s.navNamesCenter}>podcast</p>
               </Link>
             </li>
             <li className={s.navItem}>
