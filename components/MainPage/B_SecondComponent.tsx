@@ -36,7 +36,7 @@ export default function SecondComponent({ data }: SecondComponentProps) {
                 href={"./What_Sets_Our_Center_Apart"}
                 className={styles.readMoreLink}
               >
-                What Sets Our Center Apart?
+                What Sets Our Center Apart? &gt;
               </Link>
             </div>
 
