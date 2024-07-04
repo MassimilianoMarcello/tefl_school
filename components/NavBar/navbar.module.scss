@@ -149,7 +149,7 @@
     width: 20rem;
     height: 5rem;
     display: block;
-    margin:  .2rem ;
+    margin-top:  1.5rem ;
     margin-left: -1rem;
   // padding-top: 1rem;
   // padding-bottom: .5rem;
@@ -249,7 +249,7 @@ display: none;
 .hamburgerIcon {
 // margin: 0rem 4rem;
   position: absolute;
-  bottom: 2rem;
+  bottom: 0rem;
   right: 4rem;
 
   background: none;
@@ -264,7 +264,7 @@ display: none;
 
 .menuMobile {
   position: fixed;
-  top: 0;
+  top: 6rem;
   right: 0;
   height: 100%;
   width: 100%;
@@ -344,15 +344,7 @@ p{
 
   }
 
-  // .navdropNames{
-  //   font-family: $fontSecond;
-  // // color: red;
-  // // background-color: #748b67;
-  // padding: 1rem 2rem;
-  // &:hover{
-  //   color:fuchsia ;
-  // }
-  // }
+
 
   .testButton {
     font-family: $fontSecond;
