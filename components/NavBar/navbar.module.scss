@@ -247,10 +247,11 @@ display: none;
 }
 
 .hamburgerIcon {
-margin: .45rem 2rem;
+// margin: 0rem 4rem;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2rem;
+  right: 4rem;
+
   background: none;
   border: none;
   cursor: pointer;

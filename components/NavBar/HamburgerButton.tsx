@@ -25,10 +25,11 @@ const HamburgerButton = () => {
     <div className={s.hamburgerMenu}>
      <button className={s.hamburgerIcon} onClick={toggleMenu}>
         {isOpen ? (
-          <IconOpen color="#FF0000" /> // Imposta il colore dell'icona due quando il menu è aperto
-        ) : (
           <IconClose color="#000000" /> // Imposta il colore dell'icona uno quando il menu è chiuso
-        )}
+   
+        ) : (
+          <IconOpen color="#FF0000" /> // Imposta il colore dell'icona due quando il menu è aperto
+               )}
       </button>
       {isOpen && (
         <div className={s.menuMobile}>
