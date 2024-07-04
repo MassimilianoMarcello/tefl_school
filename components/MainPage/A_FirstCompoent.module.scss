@@ -55,16 +55,20 @@
   // display: none;
   background-color: $generic6;
   padding: 1.5rem;
-  margin-top: 4rem;
+  margin-top: 10rem;
   margin-left: -2rem;
   width: 35rem;
   color: #fff;
+  font-size: 2rem;
+  opacity: .9;
 
   @include respond-to(md, min) {
     background-color: $bgColor;
     margin-top: 0rem;
     color: $blueColor;
     padding: 1rem;
+    font-size: 1rem;
+ 
     // background-color:$generic1;
     font-weight: 500;
     pointer-events: none;
@@ -92,8 +96,8 @@ position: relative;
 
 
   height: 8rem;
-  width: 8rem;
-  background-color: gold;
+  width: 100%;
+  background-color: lightblue;
   z-index: 1;
   @include respond-to(md, min) {
     left: 6rem;
@@ -108,11 +112,12 @@ position: relative;
   position: absolute;
   right: 0rem;
   bottom: 23rem;
-  height: 10.5rem;
+  height: 14.5rem;
   width: 10rem;
-  background-color: lightblue;
 
-  z-index: -1;
+  background-color: gold;
+
+  z-index: 1;
   @include respond-to(md, min) {
     padding: 0;
     height: 2rem;

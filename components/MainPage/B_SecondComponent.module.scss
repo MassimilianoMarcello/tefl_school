@@ -20,7 +20,7 @@ $dark-blue: #1a3847;
   font-size: 3rem;
 margin-bottom: 10px;
 margin-top: 25rem;
- margin-left: 2rem;
+ margin-left: 6rem;
  @include respond-to (sm, max) {
   font-size: 2rem;
  }
@@ -33,9 +33,10 @@ margin-top: 25rem;
   background-color: #add8e6 ;
   color: #1a3847;
   padding: 0.5rem 1rem;
+ 
   text-transform: capitalize;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  @include respond-to (sm, max) {
+  @include respond-to (md, min) {
 
   }
 
