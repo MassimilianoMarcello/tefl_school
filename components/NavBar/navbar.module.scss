@@ -160,6 +160,7 @@
     @include respond-to(md, min) {
       width: 25rem;
       height: 6rem;
+      margin-top:  -.5rem ;
       margin-left: 1rem;
     }
   
@@ -249,14 +250,16 @@ display: none;
 .hamburgerIcon {
 // margin: 0rem 4rem;
   position: absolute;
-  bottom: 0rem;
+  bottom: .6rem;
   right: 4rem;
 
   background: none;
   border: none;
   cursor: pointer;
+  @include respond-to(md, min) {
 
-}
+    display: none;
+}}
 // .iconMenuClose {
 //   fill: red; 
 // }

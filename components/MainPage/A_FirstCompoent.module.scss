@@ -2,13 +2,9 @@
 
 .OneMainContainer {
   background-color: #fff;
-
-
 }
 .TwoSectionContainer {
   background-color: #fff;
-  
-
 }
 
 .threeMapContainer {
@@ -21,109 +17,108 @@
   }
 }
 .textContainer {
-    @include posAbsoluteTopLeft;
-  top: 9.5rem;
-  left: 6.5rem;
-  height: auto;
-  width: 31rem;
+  @include posAbsoluteTopLeft;
+  top: 5rem;
+  left: 2rem;
+  right: 8rem;
+  width: auto;
+ 
 
-  padding:3rem 2rem;
+  padding: 3rem 2rem;
   z-index: 4;
-  @include respond-to(sm, max) {
-    top: 3rem;
-    left: -1rem;
-    right: 8rem;
-    width: auto;
-
-    
+  @include respond-to(md, min) {
+    top: 9.5rem;
+    left: 6.5rem;
+    height: auto;
+    width: 31rem;
   }
 }
 
 .mainTitle {
-  font-size: 3rem;
-  background-color: $bgColor;
-  color: $blueColor;
-  padding: 1rem;
+  padding: 1.3rem 0rem;
 
-  @include respond-to(sm, max) {
-  padding: 1.3rem 0rem ;
-      font-size: 1.3rem;
-      color: $blueColor;
-      background-color: $bgColor;
-      text-align: center;
-   
-    
-}}
-.mainText {
-  background-color: $bgColor;
-  margin-top:0rem;
   color: $blueColor;
-  padding: 1rem;
-  // background-color:$generic1;
-  font-weight: 500;
-  pointer-events: none;
-  // opacity: 0.5;
-  @include respond-to (sm, max) {
+  background-color: $bgColor;
+  text-align: center;
+  width: 18rem;
+ padding: 2rem;
+  font-size: 2.5rem;
+
+  @include respond-to(md, min) {
+    font-size: 3rem;
+    background-color: $bgColor;
+    color: $blueColor;
+    padding: 1rem;
+  }
+}
+.mainText {
   // display: none;
   background-color: $generic6;
-  padding: 1rem;
-  margin-top: 6rem;
-  margin-left: -1rem;
-  width: 25rem;
+  padding: 1.5rem;
+  margin-top: 4rem;
+  margin-left: -2rem;
+  width: 35rem;
   color: #fff;
 
+  @include respond-to(md, min) {
+    background-color: $bgColor;
+    margin-top: 0rem;
+    color: $blueColor;
+    padding: 1rem;
+    // background-color:$generic1;
+    font-weight: 500;
+    pointer-events: none;
+    // opacity: 0.5;
   }
 }
 .backgroundImage {
-
-max-width: 100%;
-overflow: hidden;
-height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
   margin-top: 2rem;
-
+position: relative;
   padding: 2rem;
+  z-index: 2;
 
-  @include respond-to (sm, max) {
-  padding: 0;
- 
-  
-    }
-
+  @include respond-to(sm, max) {
+    padding: 0;
   }
-
-
+}
 
 .square1 {
-position: absolute;
-  left: 6rem;
-  top: 23.5rem;
-  height: 15rem;
-  width: 15rem;
-background-color: gold;
- z-index: 2;
- @include respond-to (sm, max) {
-  height: 2rem;
-  width: 5rem;
-  top: 16.5rem;
-  left: 10.5rem;
+  position: absolute;
+  top: 9rem;
+  left: 0rem;
 
+
+  height: 8rem;
+  width: 8rem;
+  background-color: gold;
+  z-index: 1;
+  @include respond-to(md, min) {
+    left: 6rem;
+    top: 23.5rem;
+    height: 15rem;
+    width: 15rem;
+    z-index: 2;
   }
 }
 
 .square2 {
-position: absolute;
-height: 10rem;
-width: 10rem;
-  background-color:lightblue;
-  left: 27rem;
-  top: 36.5rem;
-  z-index: 2;
-  @include respond-to (sm, max) {
-  padding: 0;
+  position: absolute;
+  right: 0rem;
+  bottom: 23rem;
+  height: 10.5rem;
+  width: 10rem;
+  background-color: lightblue;
+
+  z-index: -1;
+  @include respond-to(md, min) {
+    padding: 0;
     height: 2rem;
     width: 2rem;
     top: 11.5rem;
-    left: .6rem;
-  
-    }
+    left: 0.6rem;
+    z-index: 2;
+  }
 }
