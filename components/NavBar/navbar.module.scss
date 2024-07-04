@@ -110,7 +110,7 @@
 // CENTER NAVBAR
 
   .navTwo{
-
+    background-color:white;
     @include respond-to(md,min){
     font-family: "ZeitungPro Regular";
     text-transform: uppercase;
@@ -146,28 +146,35 @@
  
   }
   .logoImage{
-    margin-left: 1rem;
+    width: 20rem;
+    height: 5rem;
+    display: block;
+    margin:  .2rem ;
+    margin-left: -1rem;
   // padding-top: 1rem;
   // padding-bottom: .5rem;
   // margin-top: -3rem;
   // margin-bottom: -3rem;
   margin-left: 2rem;
-    width: 25rem;
-    height: 6rem;
-    @include respond-to(sm, max) {
-      width: 200px;
-      height: 40px;
-      margin:  .2rem ;
+  
+    @include respond-to(md, min) {
+      width: 25rem;
+      height: 6rem;
+      margin-left: 1rem;
     }
   
   }
 
   .navNamesCenter{
+    display: none;
+    @include respond-to(md, min) {
+      display: block;
     @include navNames;
     margin-left: -.5rem;
 &:hover{
   color:$generic12;
 }
+    }
       }
 
 
