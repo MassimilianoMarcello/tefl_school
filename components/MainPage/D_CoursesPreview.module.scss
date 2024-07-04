@@ -51,7 +51,7 @@
 
 .stickyComponent {
   @include stickyComponent ;
-  background-color: $generic6;
+  background-color: $generic3;
 border-radius:25px;
 border: solid .2rem $generic11;
 color: #fff;
@@ -240,7 +240,7 @@ width: 90%;
      left: 2rem; 
 text-align: center;
     // transform: translateX(-50%); 
-    background-color: #1a3847 ; /* Colore blu notte */
+    background-color: #1a3847 ; 
     color: #d2d8da ; /* Testo bianco */
     padding: 1.5rem; /* Padding */
     height: 8rem;

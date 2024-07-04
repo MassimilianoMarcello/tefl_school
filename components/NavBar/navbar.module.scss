@@ -9,44 +9,10 @@
   margin-top: 2rem;
 }
 
-// @import  '/styles/mediaqueries.module.scss;';
 
-// mediaqueries
 
-// Definizione dei breakpoint come mappa
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
 
-// Mixin per rispondere ai breakpoint
-@mixin respond-to($breakpoint, $type: min) {
-  // Controlla se il breakpoint è definito nella mappa
-  @if map-has-key($breakpoints, $breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
-    // Costruisci la query media
-    $query: if($type == min, min-width, max-width);
-    @media (#{$query}: $value) {
-      @content;
-    }
-  } @else {
-    // Se il breakpoint non è definito, emetti un avviso
-    @warn "Breakpoint #{$breakpoint} non definito nella mappa dei breakpoint.";
-  }
-}
 
-// Esempio di utilizzo del mixin
-// .container {
-//   width: 100%;
-//   @include respond-to(sm) {
-//     width: 90%;
-//   }
-//   @include respond-to(md, max) {
-//     width: 80%;
-//   }
-// }
 
 
 
@@ -101,15 +67,26 @@ $breakpoints: (
 
 // TOPNAVABAR
   .navOne{
-    font-family: "ZeitungPro Regular";
-    text-transform: uppercase;
-  
-    @include flexProperties; 
-    background-color: rgba(116, 139, 103, 0.8);
-    color: $genericNuances2;
-    height: 2rem;
-    cursor: pointer;
-    z-index: 10000;
+    display: none;
+
+   
+
+    @include respond-to(md,min){
+      display: block;
+      font-family: "ZeitungPro Regular";
+      text-transform: uppercase;
+    
+      @include flexProperties; 
+      background-color: rgba(116, 139, 103, 0.8);
+   color: $genericNuances2;
+      height: 2rem;
+      cursor: pointer;
+      z-index: 10000;
+
+    }
+ 
+
+
   }
 
 
@@ -133,6 +110,8 @@ $breakpoints: (
 // CENTER NAVBAR
 
   .navTwo{
+
+    @include respond-to(md,min){
     font-family: "ZeitungPro Regular";
     text-transform: uppercase;
     position: sticky;
@@ -144,7 +123,7 @@ $breakpoints: (
     margin-left: 0rem;
     margin-bottom: .5rem;
     color: black;
-    cursor: pointer;
+    cursor: pointer;}
  
     @include respond-to(sm, max) {
       position: fixed;
@@ -200,13 +179,16 @@ $breakpoints: (
   // BOTTOM NAVBAR
 
   .bottomNavContainer{
+display: none;
+    @include respond-to(md,min){
+      display: block;
     font-family: "ZeitungPro Regular";
  text-transform: uppercase;
     background-color: #fff;
     position: sticky;
     top: 0;
   
-    z-index: 10000;
+    z-index: 10000;}
   }
 
   .fixed{
@@ -235,29 +217,7 @@ $breakpoints: (
 
 // mediaqueries
 
-// Definizione dei breakpoint come mappa
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
 
-// Mixin per rispondere ai breakpoint
-@mixin respond-to($breakpoint, $type: min) {
-  // Controlla se il breakpoint è definito nella mappa
-  @if map-has-key($breakpoints, $breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
-    // Costruisci la query media
-    $query: if($type == min, min-width, max-width);
-    @media (#{$query}: $value) {
-      @content;
-    }
-  } @else {
-    // Se il breakpoint non è definito, emetti un avviso
-    @warn "Breakpoint #{$breakpoint} non definito nella mappa dei breakpoint.";
-  }
-}
 
 // Esempio di utilizzo del mixin
 // .container {
@@ -311,11 +271,10 @@ margin: .45rem 2rem;
   z-index: 10;
 }
 
-@media (min-width: 768px) {
-  .hamburgerMenu {
-    display: none; // Nascondi il menu hamburger su schermi più grandi
-  }
-}
+// @media (min-width: 768px) {
+//   .hamburgerMenu {
+//     display: none; 
+// }
 
 // dropdownmenu
 
