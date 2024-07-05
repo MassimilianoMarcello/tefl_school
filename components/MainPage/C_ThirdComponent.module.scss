@@ -15,6 +15,17 @@
   
   }
   .textContainer {
+ 
+    position: absolute;
+    top:6rem;
+    right:2rem;
+      height: auto;
+      width: 20rem;
+    
+      // background-color: $bgColor;
+      padding: 1.5rem;
+      z-index: 4;
+    @include respond-to (md, min) {
   position: absolute;
   top:16rem;
   right:6rem;
@@ -23,81 +34,141 @@
   
     background-color: $bgColor;
     padding: 1.5rem;
-    z-index: 1;
+    z-index: 4;}
   }
   
   .mainTitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $blueColor;
+    background-color:$bgColor;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    @include respond-to (md, min) {
+      font-size: 3rem;
+      padding: 0;
+    }
+    
   }
   .mainText {
-    margin-top: 1rem;
+    // display: none;
+  width: 30rem;
+  margin-left: -16.5rem;
+ 
+    margin-top: 5rem;
+    padding: 4rem;
+    padding-left: 2rem;
+ 
     color: $blueColor;
-    // background-color:$generic1;
-    font-weight: 500;
+    background-color:$bgColor;
+    font-weight: 200;
+    line-height: 2;
     pointer-events: none;
-    opacity: 0.5;
+    // opacity: 0.8;
+    @include respond-to (md, min) {
+      width: auto;
+      margin-left: auto;
+      margin-top: 1rem;
+    }
   }
   .backgroundImageContainer{
  position: relative;
  
   }
   .backgroundImage {
-
+position: relative;
+z-index: 3;
     max-width: 100%;
     overflow: hidden;
 height: auto;
       margin-top: 2rem;
       padding: 2rem;
-  
+      @include respond-to (md, min) {
+     
+      }
     
     }
   
-  .squareOne {
+  .squareOneC {
+  
     position: absolute;
-   right: 4rem;
-    top:14rem;
+   right: 2rem;
+    top:4rem;
     height: 15rem;
     width: 12rem;
     padding: 5rem;
     background-color: gold;
   
-    z-index: 1;
+    z-index: 4;
+    @include respond-to (md, min) {
+      right: 4rem;
+    top:14rem;
+    height: 15rem;
+    width: 12rem;
+    padding: 5rem;
+    }
   }
   
-  .squareTwo {
+  .squareTwoC {
+  
   position: absolute;
-  right: 30rem;
-  bottom: 16rem;
-    height: 5rem;
-    padding: 5rem;
+  right: 2rem;
+  bottom:2rem;
+    height: 37rem;
+    padding: 4rem;
     background-color: lightblue;
   
     z-index: 1;
+    @include respond-to (md, min) {
+      right: 30rem;
+  bottom: 16rem;
+    height: 5rem;
+    padding: 5rem;
+    }
+  }
+
+  .squareThreeC{
+    position: absolute;
+    left: 0rem;
+    top: 4rem;
+      height: 48rem;
+      padding: 4rem;
+      background-color: lightblue;
+    
+      z-index: 1;
+      @include respond-to (md, min) {
+        display: none;
+    //     right: 30rem;
+    // bottom: 16rem;
+    //   height: 5rem;
+    //   padding: 5rem;
+      }
   }
 
 
   .parallax1 {
-
+    margin-top: 22rem;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+    @include respond-to (md, min) {
     margin-top: -12rem;
-    background-position: left;
+    // background-position: left;
  
     padding-bottom: 0rem;
-    background-size: cover;
+   
 
   }
   .blueBack {
     background-color: rgb(26, 96, 215, 0.3);
-    // background-color: rgba(116, 139, 103, 0.8);
+   
     padding-bottom:10rem;
     // border-radius: 0% 0% 15% 15%;
   }
   .parallax1Inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: auto auto auto auto;
+    // gap: 10px;
+    // align-items: center;
     a{
         @include listItem;
         @include Link;
@@ -109,9 +180,11 @@ height: auto;
         border-radius: 5%;
         text-align: left;
         position: absolute;
-        right: 10rem;
-        bottom: 6rem;
+        right: 12rem;
+        bottom: 2rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    }
+
+     
+    }}
   }
   
