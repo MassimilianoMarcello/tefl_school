@@ -1,4 +1,4 @@
-
+@import "./mixin.module";
 
 
 
@@ -14,6 +14,22 @@ body {
   height: 100vh;
   font-family: "Zeitung Micro Pro", Arial, sans-serif;
   background-color: #eceff0;
+
+  // @include respond-to (md, min) {
+  //   background-color: blue;
+  // }
+  // @include respond-to (lg, min) {
+  //   background-color: orange;
+  // }
+  // @include respond-to (xl, min) {
+  //   background-color: green;
+  // }
+  // @include respond-to (xxl, min) {
+  //   background-color: yellow;
+  // }
+  // @include respond-to (xxxl, min) {
+  //   background-color: purple;
+  // }
 
 }
 p{

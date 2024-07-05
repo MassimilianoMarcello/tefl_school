@@ -26,27 +26,43 @@
 // divider in two containers
 .mainContainer {
   display: flex;
-  justify-content: space-between; // Spazio tra le due colonne
+  flex-direction: column;
   padding: 2.5rem;
-  letter-spacing: 1px;
+  justify-content: space-between; 
   font-family: "Zeitung Micro Pro";
+  letter-spacing: 1px;
+
   font-weight: 700;
-  
+  @include respond-to (md, min) {
+    flex-direction: row;
+  }
 }
 // right container
 .coursesColumn {
-  width: 50%; 
+  width: 100%; 
+  @include respond-to (md, min) {
+
+    width: 50%; 
+
+
+  }
+
 
 }
 
 
 // boxes sticky on the right
 @mixin stickyComponent {
+  position:relative;
+  top: 4rem;
+  width: 50%;
+  @include respond-to (md, min) {
   position: sticky;
   top: 4rem;
   height: calc(90vh - 4rem);
   // overflow-y: auto;
-  width: 50%;
+  width: 50%;}
+
 }
 
 .stickyComponent {
@@ -63,39 +79,55 @@ font-size: 3rem;
 
 
 .container1 {
-  border-radius:25px;
-  max-height: 100%;
-  // overflow-y: auto;
-  background-color: $generic6;
-  color: $generic11;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  height: auto;
+}
 
-
-
-h1{
-
-  font-size: 1.8rem;
+.container1 h1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 1.6rem;
   color: #fff;
   padding: 1rem;
-  margin: 0 auto;
+  width: 15rem;
+
+  height: auto;
+  box-sizing: border-box; /* Assicura che padding e bordi vengano inclusi nelle dimensioni totali */
+  overflow-wrap: break-word; /* Gestisce le parole lunghe */
+  word-wrap: break-word; /* Per compatibilità */
 }
-p{
+
+.container1 p {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   font-size: 1rem;
   background-color: $genericLight2;
-  padding: 1rem;
-padding-top: 1rem;
-padding-bottom: 2rem;
-border-radius:25px;
-margin: 0 auto;
-margin-top: 2rem;
-width: 90%;
+  padding: 1rem 2rem; /* Ridotto padding per evitare overflow */
+  border-radius: 25px;
+  height: auto;
+  margin: 2rem 2rem 2rem 2rem;
+  width:18rem;
+  box-sizing: border-box; /* Assicura che padding e bordi vengano inclusi nelle dimensioni totali */
+}
+
+@include respond-to (md, min) {
+ 
+  .container1 {
+    border-radius: 25px;
+    max-height: 100%;
+    background-color: $generic6;
+    color: $generic11;
+  }
 
 
 }
-}
+
 
 
 .testimonialsLink{
-  margin-top: orem;
+  margin-top: -2rem;
   font-size: 1rem;
   text-align: center;
   margin-left: 2rem;
@@ -103,6 +135,7 @@ width: 90%;
   text-transform: uppercase;
   text-decoration: none; 
   color:#fff  ;
+  background-color: #ccc;
   border-bottom:.2rem solid #90cee3 ;
   padding-bottom: .5rem;
 }
