@@ -14,7 +14,9 @@ body {
   height: 100vh;
   font-family: "Zeitung Micro Pro", Arial, sans-serif;
   background-color: #eceff0;
-
+  @include respond-to (sm, min) {
+    background-color: red;
+  }
   @include respond-to (md, min) {
     background-color: blue;
   }

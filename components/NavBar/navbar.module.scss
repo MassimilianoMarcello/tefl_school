@@ -45,22 +45,29 @@
 
 
   // NAVBAR WRAPPER
-  .topNavBar {
-    @include respond-to(sm, max) {
-      display: none;
-    }
-  }
+  // .topNavBar {
+  //   display: none;
+  //   @include respond-to(sm, max) {
+  //     display: none;
+  //   }
+  //   @include respond-to(md, max) {
+  //     display: none;
+  //   }
+  //   @include respond-to(lg, max) {
+  //     display: none;
+  //   }
+  // }
 
     
  
 
   
   
-  .bottomNavBar {
-    @include respond-to(sm, max) {
-      display: none;
-    }
-  }
+  // .bottomNavBar {
+  //   @include respond-to(sm, max) {
+  //     display: none;
+  //   }
+  // }
 
 
 
@@ -71,8 +78,8 @@
 
    
 
-    @include respond-to(md,min){
-      display: block;
+    @include respond-to(lg,min){
+    display: block;
       font-family: "ZeitungPro Regular";
       text-transform: uppercase;
     
@@ -156,18 +163,26 @@
     display: block;
      margin-top:  .5rem ;
     margin-left: 1rem;
-@include respond-to(md, min) {
-      width: 25rem;
-      height: 6rem;
+@include respond-to(lg, min) {
+      width: 15rem;
+      height: 2.5rem;
+      margin-top:  1.5rem ;
+      margin-left: 1rem;
+    }
+
+    @include respond-to(lg, min) {
+      width: 20rem;
+      height: 5rem;
       margin-top:  -.5rem ;
       margin-left: 1rem;
+      
     }
   
   }
 
   .navNamesCenter{
     display: none;
-    @include respond-to(md, min) {
+    @include respond-to(lg, min) {
       display: block;
     @include navNames;
     margin-left: -.5rem;
@@ -187,16 +202,17 @@
 
   .bottomNavContainer{
 display: none;
-    @include respond-to(md,min){
+ 
+    @include respond-to(lg,min){
       display: block;
-    font-family: "ZeitungPro Regular";
- text-transform: uppercase;
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-  
-    z-index: 10000;}
-  }
+      font-family: "ZeitungPro Regular";
+   text-transform: uppercase;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+    
+      z-index: 10000;
+  }}
 
   .fixed{
     background-color: #eceff0 ;
@@ -255,7 +271,7 @@ display: none;
   background: none;
   border: none;
   cursor: pointer;
-  @include respond-to(md, min) {
+  @include respond-to(lg, min) {
 
     display: none;
 }}

@@ -17,27 +17,32 @@
   }
 }
 .textContainer {
-position: absolute;
+  position: absolute;
   top: 0rem;
   right: 0rem;
-width: auto;
- padding: 3rem 2rem;
+  width: auto;
+  padding: 3rem 2rem;
   z-index: 4;
+  @include respond-to(sm, min) {
+    top: 4.5rem;
+    left: 1.5rem;
+  }
   @include respond-to(md, min) {
-    top: 9.5rem;
-    left: 6.5rem;
-    height: auto;
+    top: .5rem;
+    left: 2.5rem;
+    
+  
     width: 31rem;
   }
 }
 
 .mainTitle {
-
-color: $blueColor;
+  color: $blueColor;
   background-color: $bgColor;
   text-align: center;
   width: 16rem;
- padding:1rem 2rem;
+  min-width: 16rem;
+  padding: 1rem 2rem;
   font-size: 2rem;
   margin-top: 2.5rem;
 
@@ -46,26 +51,33 @@ color: $blueColor;
     background-color: $bgColor;
     color: $blueColor;
     padding: 1rem;
+    width: auto;
+    min-width: 16rem;
   }
 }
 .mainText {
   // display: none;
   background-color: $generic6;
+  background-color: $bgColor;
   padding: 1.5rem;
   margin-top: 8rem;
   // margin-left: -2rem;
   width: 25rem;
-  color: #fff;
+  color:$generic6;
   font-size: 1rem;
-  opacity: .9;
+  // opacity: 0.9;
+  @include respond-to(sm, min) {
+    width: 30rem;
+
+  }
 
   @include respond-to(md, min) {
     background-color: $bgColor;
-    margin-top: 0rem;
+    margin-top: 16rem;
     color: $blueColor;
     padding: 1rem;
     font-size: 1rem;
- 
+
     // background-color:$generic1;
     font-weight: 500;
     pointer-events: none;
@@ -77,13 +89,11 @@ color: $blueColor;
   overflow: hidden;
   height: auto;
   margin-top: 2rem;
-position: relative;
+  position: relative;
   padding: 2rem;
   z-index: 2;
 
-  @include respond-to(sm, max) {
-    padding: 0;
-  }
+
 }
 
 .square1A {
@@ -91,16 +101,20 @@ position: relative;
   top: 8rem;
   left: 0rem;
 
-
   height: 4rem;
   width: 4rem;
   background-color: lightblue;
   z-index: 3;
+  @include respond-to(sm, min) {
+    top: 8.5rem;
+    left: 2rem;
+    height: 31rem;
+  }
   @include respond-to(md, min) {
-    left: 6rem;
+    left: 8rem;
     top: 23.5rem;
-    height: 15rem;
-    width: 15rem;
+    height: 35rem;
+    width: 35rem;
     z-index: 2;
   }
 }
