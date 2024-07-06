@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HomePage } from '@/Types/Homepage';
 
 interface FirstComponentProps {
-  data: HomePage[]; // Accetta i dati come prop
+  data: HomePage[]; 
 }
 
 export default function FirstComponent({ data }: FirstComponentProps) {

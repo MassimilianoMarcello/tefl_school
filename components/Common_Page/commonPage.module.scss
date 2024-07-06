@@ -346,76 +346,73 @@ margin: 2rem;
 
 
 .portableTextContainer {
-   
-    margin: 1.25rem 0; 
-    // font-family: $fontFirst;
-    // font-family: $fontSecond;
-    font-family: "Zeitung Micro Pro";
-   
-    // $fontSecond: "Zeitung Pro Regular";
-    // $fontThird: "Zeitung Pro Black";;
+  margin: 1.25rem 10rem;
+  font-family: "Zeitung Micro Pro", sans-serif;
+
+  p {
+    font-size: 1rem; /* Aumentato */
+    font-weight: 400;
+    line-height: 1.6rem; /* Migliorata leggibilità */
+    margin-bottom: 1.5rem; /* Aumentato margine inferiore */
+}
+
+h2 {
+    font-size: 2rem; /* Aumentato */
+    margin-top: 2rem; /* Aumentato */
+    margin-bottom: 1rem; /* Aumentato margine inferiore */
+    color: #34495e; /* Colore più scuro */
+    font-weight: 700; /* Maggiore peso del font */
+    border-bottom: 2px solid #e74c3c; /* Bordo inferiore rosso elegante */
+    padding-bottom: 0.5rem; /* Padding per il bordo inferiore */
+}
+
+h3 {
+    font-size: 1.75rem; /* Aumentato */
+    margin-top: 1.5rem; /* Aumentato */
+    margin-bottom: 1rem; /* Aumentato margine inferiore */
+    color: #7f8c8d; /* Colore più chiaro */
+    font-weight: 600; /* Maggiore peso del font */
+}
+
+ul, ol {
+    padding-left: 2rem; /* Aumentato */
+    margin: 1rem 0; /* Aumentato */
     
-    p {
-     
-      font-size: .8rem; 
-    
-      font-weight: 400;
-      line-height: 1rem; 
-      color: #333;
-    
+    li {
+        margin-bottom: 0.75rem; /* Aumentato */
     }
-  
-    h2 {
-      
-      font-size: 1.5rem; 
-      margin-top: 1.25rem;
-      color: #000;
+}
+
+a {
+    color: #e74c3c; /* Colore rosso elegante */
+    text-decoration: none; /* Rimosso sottolineatura */
+    border-bottom: 1px solid #e74c3c; /* Aggiunto bordo inferiore */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Aggiunta transizione per un effetto di hover più fluido */
+
+    &:hover {
+        color: #c0392b; /* Colore più scuro al passaggio del mouse */
+        border-bottom-color: #c0392b; /* Cambia anche il colore del bordo inferiore */
     }
-  
-    h3 {
-     
-      font-size: 1.25rem; 
-      margin-top: 0.9375rem; 
-      color: #555;
-    }
-  
-    ul, ol {
-    
-      padding-left: 1.25rem; 
-      margin: 0.625rem 0; 
-      
-      li {
-       
-        margin-bottom: 0.3125rem; 
-      }
-    }
-  
-    a {
-      // Stili per i link
-      color: #0070f3;
-      text-decoration: underline;
-      
-      &:hover {
-        color: #005bb5;
-      }
-    }
-  
-    img {
-   
-      max-width: 100%;
-      height: auto;
-      margin: 0.625rem 0; 
-    }
-  
-    blockquote {
-      // Stili per i blockquote
-      padding: 0.625rem 1.25rem; 
-      margin: 1.25rem 0; 
-      border-left: 0.3125rem solid #ccc; 
-      background: #f9f9f9;
-      font-style: italic;
-    }
-  }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0; /* Aumentato */
+    border-radius: 0.5rem; /* Bordo arrotondato più evidente */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+}
+
+blockquote {
+    padding: 1rem 2rem; /* Aumentato */
+    margin: 2rem 0; /* Aumentato */
+    border-left: 4px solid #e74c3c; /* Bordo sinistro rosso più grande */
+    background: #ecf0f1; /* Sfondo più chiaro */
+    font-style: italic;
+    font-size: 1.25rem; /* Aumentato */
+    color: #7f8c8d; /* Colore del testo più chiaro */
+}
+}
 
 
   // .page-3 {
