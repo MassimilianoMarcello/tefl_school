@@ -110,7 +110,16 @@
 // CENTER NAVBAR
 
   .navTwo{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3rem;
     background-color:white;
+    z-index: 100;
+    width: 100%;
+    height: 6rem;
+    border-bottom: solid 1rem $generic1;
     @include respond-to(md,min){
     font-family: "ZeitungPro Regular";
     text-transform: uppercase;
@@ -125,12 +134,8 @@
     color: black;
     cursor: pointer;}
  
-    @include respond-to(sm, max) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 3rem;
+    @include respond-to(lg, min) {
+   
       
     }
 
@@ -146,18 +151,12 @@
  
   }
   .logoImage{
-    width: 20rem;
-    height: 5rem;
+    width: 15rem;
+    height: 4rem;
     display: block;
-    margin-top:  1.5rem ;
-    margin-left: -1rem;
-  // padding-top: 1rem;
-  // padding-bottom: .5rem;
-  // margin-top: -3rem;
-  // margin-bottom: -3rem;
-  margin-left: 2rem;
-  
-    @include respond-to(md, min) {
+     margin-top:  .5rem ;
+    margin-left: 1rem;
+@include respond-to(md, min) {
       width: 25rem;
       height: 6rem;
       margin-top:  -.5rem ;
@@ -250,8 +249,8 @@ display: none;
 .hamburgerIcon {
 // margin: 0rem 4rem;
   position: absolute;
-  bottom: .6rem;
-  right: 4rem;
+  bottom: .1rem;
+  right: 2rem;
 
   background: none;
   border: none;
