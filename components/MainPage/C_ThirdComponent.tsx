@@ -25,6 +25,10 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               <span className={styles.squareThreeC}></span>
             <div className={styles.textContainer}>
               <h1 className={styles.mainTitle}>{thirdComponent.title}</h1>
+
+            </div>
+            <div className={styles.ParahContainer}>
+             
               <p className={styles.mainText}>{thirdComponent.text}</p>
             </div>
             <div   className={styles.backgroundImageContainer}>
@@ -36,14 +40,14 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               height={600}
               layout="responsive"
             />
-            <section className={styles.parallax1}>
+            {/* <section className={styles.parallax1}>
         <div className={styles.blueBack}>
           <div className={styles.parallax1Inner}>
             
             <Link href="./">Book a call</Link>
           </div>
         </div>
-      </section>
+      </section> */}
             </div>
           </div>
         )}
