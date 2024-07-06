@@ -13,8 +13,8 @@ export default function FirstComponent({ data }: FirstComponentProps) {
     <main className={styles.oneMainContainer}>
     
       <section className={styles.twoSectionContainer}>
-      <span className={styles.square1}></span>
-              <span className={styles.square2}></span>
+      <span className={styles.square1A}></span>
+              <span className={styles.square2A}></span>
         {/* Verifica se data è definito prima di eseguire l'iterazione */}
         {data && data.map((homePage) => (
           <div key={homePage._id} className={styles.threeMapContainer}>

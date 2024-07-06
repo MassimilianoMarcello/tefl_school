@@ -17,14 +17,11 @@
   }
 }
 .textContainer {
-  @include posAbsoluteTopLeft;
-  top: 5rem;
-  left: 2rem;
-  right: 8rem;
-  width: auto;
- 
-
-  padding: 3rem 2rem;
+position: absolute;
+  top: 0rem;
+  right: 0rem;
+width: auto;
+ padding: 3rem 2rem;
   z-index: 4;
   @include respond-to(md, min) {
     top: 9.5rem;
@@ -35,14 +32,14 @@
 }
 
 .mainTitle {
-  padding: 1.3rem 0rem;
 
-  color: $blueColor;
+color: $blueColor;
   background-color: $bgColor;
   text-align: center;
-  width: 18rem;
- padding: 2rem;
-  font-size: 2.5rem;
+  width: 16rem;
+ padding:1rem 2rem;
+  font-size: 2rem;
+  margin-top: 2.5rem;
 
   @include respond-to(md, min) {
     font-size: 3rem;
@@ -55,11 +52,11 @@
   // display: none;
   background-color: $generic6;
   padding: 1.5rem;
-  margin-top: 10rem;
-  margin-left: -2rem;
-  width: 35rem;
+  margin-top: 8rem;
+  // margin-left: -2rem;
+  width: 25rem;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   opacity: .9;
 
   @include respond-to(md, min) {
@@ -89,16 +86,16 @@ position: relative;
   }
 }
 
-.square1 {
+.square1A {
   position: absolute;
-  top: 9rem;
+  top: 8rem;
   left: 0rem;
 
 
-  height: 8rem;
-  width: 100%;
+  height: 4rem;
+  width: 4rem;
   background-color: lightblue;
-  z-index: 1;
+  z-index: 3;
   @include respond-to(md, min) {
     left: 6rem;
     top: 23.5rem;
@@ -108,16 +105,16 @@ position: relative;
   }
 }
 
-.square2 {
+.square2A {
   position: absolute;
   right: 0rem;
-  bottom: 23rem;
-  height: 14.5rem;
+  bottom: 3rem;
+  height: 4.5rem;
   width: 10rem;
 
   background-color: gold;
 
-  z-index: 1;
+  z-index: 3;
   @include respond-to(md, min) {
     padding: 0;
     height: 2rem;

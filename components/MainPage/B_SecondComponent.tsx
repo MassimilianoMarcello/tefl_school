@@ -17,9 +17,12 @@ export default function SecondComponent({ data }: SecondComponentProps) {
         <div className={styles.three_introContainer}>
           <h1 className={styles.mainTitle}>
             {" "}
+            
             <span className={styles.coloredTeflTitle}> tefl </span>
             <span className={styles.coloredTuscanyTitle}>tuscany</span>
           </h1>
+          {/* subtitle */}
+          <p className={styles.coloredTuscanyTitle} >TEFL Certification in Tuscany: Your Teaching Journey Starts Here</p>
           <div className={styles.textBox}>
             <div className={styles.aboutUs}>
               <p>
