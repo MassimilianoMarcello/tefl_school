@@ -1,204 +1,199 @@
 @import "../../app/page.module.scss";
 
 .One_Main_Container {
-    background-color: #fff;
-  
-  }
-  .Two_Section_Container {
-  
-    background-color: #fff;
-  }
-  
-  .three_Map_Container {
-    display: grid;
-    grid-template-columns:repeat(8,1fr) ;
-    grid-template-rows: repeat(4,auto);
-  
-    background-color: #fff;
-  
-  }
-  .textContainer {
- grid-column: 4/8;
- grid-row: 2/3;
+  background-color: #fff;
+}
+.Two_Section_Container {
+  background-color: #fff;
+}
 
+.three_Map_Container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, auto);
 
-      height: auto;
-      width: auto;
-   
-    
-      // background-color: $bgColor;
-      padding: 1.5rem;
-      z-index: 4;
-    @include respond-to (md, min) {
+  background-color: #fff;
+}
 
+.textContainer {
+  grid-column: 4/8;
+  grid-row: 2/3;
+
+  height: auto;
+  width: auto;
+
+  // background-color: $bgColor;
+  padding: 1.5rem;
+  z-index: 4;
+  @include respond-to(xl, min) {
     height: auto;
     width: 30rem;
-  
+
     background-color: $bgColor;
     padding: 1.5rem;
-    z-index: 4;}
+    z-index: 4;
   }
-  
-  .mainTitle {
-    font-size: 1.6rem;
-    color: $blueColor;
-    background-color:$bgColor;
-    padding: 2rem;
-    margin-top: 4rem;
-    width: 14rem;
-  
-    @include respond-to (md, min) {
-      font-size: 3rem;
-      padding: 0;
-    }
-    
+}
+
+.mainTitle {
+  font-size: 1.6rem;
+  color: $blueColor;
+  background-color: $bgColor;
+  padding: 2rem;
+  margin-top: 4rem;
+  width: 14rem;
+  @include respond-to(sm, min) {
+    font-size: 3rem;
+    width: 20rem;
+    margin-left: 2rem;
   }
 
-  .ParahContainer{
-    grid-column: 1/8;
-    grid-row: 2/3;
-    margin: 1rem;
-    margin-top: 18rem;
-    margin-left: 4rem;
-    margin-bottom: 0rem;
-    z-index: 5;
-    border-bottom: solid 1rem gold;
-   
-
+  @include respond-to(md, min) {
+    font-size: 4rem;
+    width: 25rem;
   }
-  .mainText {
+  @include respond-to(lg, min) {
+    font-size: 5rem;
+    width: 30rem;
+    margin-left: 6rem;
   
+  }
+}
+
+.ParahContainer {
+  grid-column: 1/8;
+  grid-row: 2/3;
+  margin: 1rem;
+  margin-top: 18rem;
+  margin-left: 4rem;
+  margin-bottom: 0rem;
+  z-index: 5;
+  border-bottom: solid 1rem gold;
+}
+.mainText {
   width: auto;
- 
 
+  margin-top: 1.8rem;
+  padding: 1rem 2rem;
 
-
-    margin-top: 1.8rem;
-    padding:1rem 2rem;
-   
- 
-    color: $blueColor;
-    background-color:$bgColor;
-    font-weight: 200;
-    line-height: 2;
-    pointer-events: none;
- 
-    @include respond-to (md, min) {
-   
-      margin-top: 1rem;
-    }
+  color: $blueColor;
+  background-color: $bgColor;
+  font-weight: 200;
+  line-height: 2;
+  pointer-events: none;
+  @include respond-to(sm, min) {
+    margin-top: 15rem;
   }
-  .backgroundImageContainer{
- position: relative;
- grid-column: 1/9;
- grid-row: 1/5;
- 
+  @include respond-to(md, min) {
+   margin-top: 30rem; 
+   margin-bottom: 5rem;
   }
-  .backgroundImage {
-  
-position: relative;
-z-index: 3;
-    max-width: 100%;
-    overflow: hidden;
-height: auto;
-      margin-top: 0rem;
-      padding: 0rem;
-      @include respond-to (md, min) {
-        padding: 2rem;
-      }
-    
-    }
-  
-  .squareOneC {
+  @include respond-to(xl, min) {
+    margin-top: 1rem;
+  }
+}
+.backgroundImageContainer {
+  position: relative;
+  grid-column: 1/9;
+  grid-row: 1/5;
+}
+.backgroundImage {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
+  margin-top: 0rem;
+  padding: 0rem;
+  @include respond-to(xl, min) {
+    padding: 2rem;
+  }
+}
+
+.squareOneC {
   grid-column: 5/9;
   grid-row: 1/3;
-
-
-    height: 15rem;
-    width: 12rem;
-    padding: 5rem;
-    background-color: gold;
-  
-    z-index: 4;
-    @include respond-to (md, min) {
-      right: 4rem;
-    top:14rem;
-    height: 15rem;
-    width: 12rem;
-    padding: 5rem;
-    }
-  }
-  
-  .squareTwoC {
-    grid-column: 1/3;
-    grid-row: 1/4;
-
-    height: 37rem;
+height: 15rem;
+  width: 12rem;
  
-    background-color: lightblue;
+  background-color: gold;
+z-index: 4;
+@include respond-to(sm, min) {
+  grid-column: 7/9;
+
+
+}
+  @include respond-to(xl, min) {
+    right: 4rem;
+    top: 14rem;
+    height: 15rem;
+    width: 12rem;
   
-    z-index: 1;
-    @include respond-to (md, min) {
-      right: 30rem;
-  bottom: 16rem;
+  }
+}
+
+.squareTwoC {
+  grid-column: 1/3;
+  grid-row: 1/4;
+
+  height: 37rem;
+
+  background-color: lightblue;
+
+  z-index: 1;
+  @include respond-to(xl, min) {
+    right: 30rem;
+    bottom: 16rem;
     height: 5rem;
     padding: 5rem;
-    }
   }
+}
 
-  .squareThreeC{
-    grid-column: 7/9;
-    grid-row: 2/4;
+.squareThreeC {
+  grid-column: 7/9;
+  grid-row: 2/4;
 
-      height: 60.8rem;
+  height: 60.8rem;
 
-      background-color: lightblue;
-    
-      z-index: 1;
-      @include respond-to (md, min) {
-        display: none;
+  background-color: lightblue;
 
-      }
+  z-index: 1;
+  @include respond-to(xl, min) {
+    display: none;
   }
+}
 
-
-  .parallax1 {
-    margin-top: 22rem;
-    margin-right: 3rem;
-    padding-bottom: 2rem;
-    @include respond-to (md, min) {
+.parallax1 {
+  margin-top: 22rem;
+  margin-right: 3rem;
+  padding-bottom: 2rem;
+  @include respond-to(md, min) {
     margin-top: -12rem;
     // background-position: left;
- 
-    padding-bottom: 0rem;
-   
 
+    padding-bottom: 0rem;
   }
   .blueBack {
-   
-   background-color: $generic12;
-  // background-color: #748b67;
-    padding-bottom:10rem;
+    background-color: $generic12;
+    // background-color: #748b67;
+    padding-bottom: 10rem;
     // border-radius: 0% 0% 15% 15%;
   }
   .parallax1Inner {
-
-    a{
-        @include listItem;
-        @include Link;
-        text-transform: uppercase;
-        color: $genericSkip1;
-        background-color: $blueColor;
-        font-size: 1.5rem;
-        padding: .5rem 1rem;
-        border-radius: 5%;
-        text-align: left;
-        position: absolute;
-        right: 12rem;
-        bottom: 2rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-
-     
-    }}
+    a {
+      @include listItem;
+      @include Link;
+      text-transform: uppercase;
+      color: $genericSkip1;
+      background-color: $blueColor;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5%;
+      text-align: left;
+      position: absolute;
+      right: 12rem;
+      bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
-  
+}

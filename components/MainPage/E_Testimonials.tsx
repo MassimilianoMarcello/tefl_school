@@ -64,7 +64,7 @@ interface TestimonialProps {
 }
 
 export default function E_Testimonials({ data }: TestimonialProps) {
-  const latestReviews = data.slice(0, 2);
+  const latestReviews = data.slice(0, 3);
 
   return (
     <main className={styles.testimonialOneMain}>

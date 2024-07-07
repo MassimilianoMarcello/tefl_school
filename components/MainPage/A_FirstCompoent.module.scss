@@ -164,13 +164,16 @@ top: 43rem;
 .square2A {
   position: absolute;
   right: 0rem;
-  bottom: 3rem;
+  top: 23rem;
   height: 4.5rem;
   width: 10rem;
+background-color: gold;
+z-index: 1;
+@include respond-to(sm, min) {
+  // z-index: 3;
+  top: 26rem;
 
-  background-color: gold;
-
-  z-index: 3;
+}
   @include respond-to(md, min) {
     padding: 0;
     height: 12rem;
@@ -178,6 +181,7 @@ top: 43rem;
     top: 11rem;
     left: 2rem;
     z-index: 3;
+
   }
   @include respond-to(lg, min) {
     top: 25rem;
