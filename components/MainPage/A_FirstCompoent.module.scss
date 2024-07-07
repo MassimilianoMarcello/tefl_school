@@ -28,11 +28,17 @@
     left: 1.5rem;
   }
   @include respond-to(md, min) {
-    top: .5rem;
+    top: 0.5rem;
     left: 2.5rem;
-    
-  
+
     width: 31rem;
+  }
+  @include respond-to(lg, max) {
+
+  }
+  @include respond-to(xl, max) {
+  }
+  @include respond-to(xxl, max) {
   }
 }
 
@@ -48,42 +54,64 @@
 
   @include respond-to(md, min) {
     font-size: 3rem;
-    background-color: $bgColor;
+
     color: $blueColor;
     padding: 1rem;
     width: auto;
     min-width: 16rem;
   }
+  @include respond-to(lg, min) {
+margin-top: 10rem;
+margin-right: -6rem;
+margin-left: 4rem;
+font-size: 3.5rem;
+  }
+  @include respond-to(xl, min) {
+    font-size: 4.5rem;
+    width: 40rem;
+    }
+    @include respond-to(xxl, min) {
+      font-size: 5rem;
+    width: 50rem;
+    }
 }
+
 .mainText {
   // display: none;
-  background-color: $generic6;
+ 
   background-color: $bgColor;
   padding: 1.5rem;
   margin-top: 8rem;
-  // margin-left: -2rem;
+  margin-left: 0rem;
   width: 25rem;
-  color:$generic6;
+  color: $generic6;
   font-size: 1rem;
   // opacity: 0.9;
   @include respond-to(sm, min) {
     width: 30rem;
-
   }
 
   @include respond-to(md, min) {
-    background-color: $bgColor;
-    margin-top: 16rem;
+margin-top: 16rem;
     color: $blueColor;
     padding: 1rem;
     font-size: 2rem;
     font-weight: 300;
-width: 40rem;
-  
-   
-    pointer-events: none;
+    width: 40rem;
+pointer-events: none;
+  }
+  @include respond-to(lg, min) {
 
   }
+  @include respond-to(xl, min) {
+    width: 38rem;
+    margin-left: 4rem;
+  }
+  @include respond-to(xxl, min) {
+    width: 42rem;
+  
+  }
+  
 }
 .backgroundImage {
   max-width: 100%;
@@ -93,8 +121,6 @@ width: 40rem;
   position: relative;
   padding: 2rem;
   z-index: 2;
-
-
 }
 
 .square1A {
@@ -116,9 +142,23 @@ width: 40rem;
     top: 54rem;
     height: 5rem;
     width: 5rem;
-    z-index: 3;
+  
     font-weight: 100;
   }
+  @include respond-to(lg, min) {
+left: 34rem;
+top: 43rem;
+  }
+  @include respond-to(xl, min) {
+    left: 45rem;
+    top: 42rem;
+      }
+      @include respond-to(xxl, min) {
+        left: 55rem;
+        top: 44rem;
+        height: 6rem;
+        width: 6rem;
+          }
 }
 
 .square2A {
@@ -138,5 +178,9 @@ width: 40rem;
     top: 11rem;
     left: 2rem;
     z-index: 3;
+  }
+  @include respond-to(lg, min) {
+    top: 25rem;
+    left: 6rem;
   }
 }
