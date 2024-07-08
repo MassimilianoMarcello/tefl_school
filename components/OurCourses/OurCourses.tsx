@@ -1,7 +1,7 @@
 import React from "react";
 import { getCourse } from "@/sanity/sanity.query";
 import { format } from "date-fns";
-import Image from "next/image";
+ import Image from "next/image";
 import { Course as CourseType } from "@/Types/Course";
 import Link from "next/dist/client/link";
 import styles from "./OurCourses.module.scss";
@@ -10,10 +10,11 @@ import { revalidateTag } from 'next/cache'
 export default async function OurCourses() {
   revalidateTag('collection')
   const courseCard: CourseType[] = await getCourse();
-  const imageBackgorund = "/assets/girl_right_space 3.webp";
+  //  const imageBackgorund = "/assets/girl_right_space 3.webp";
   return (
     <main className={styles.mainContainer}>
-      <Image
+      <section className={styles.coursesTextContainer}>
+      {/* <Image
         className={styles.imageBackground}
         src={imageBackgorund}
         alt={"girl background"}
@@ -56,7 +57,7 @@ export default async function OurCourses() {
       <p>Our extensive TEFL courses are tailored to empower both seasoned teachers and those who are just starting out, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
 
 
-</div>
+</div> */}
 <div className={styles.courseCardsBox}>
 {courseCard &&
         courseCard.map((course) => (

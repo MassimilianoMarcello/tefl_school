@@ -18,7 +18,8 @@ import { getCommonTopPage, } from "@/sanity/sanity.query";
 
 import TopPageOurCourses from '@/components/OurCourses/TopPageOurCourses';
 import { revalidateTag } from 'next/cache'
-import OurTeachers from "@/components/Our teachers/OurTeachers";
+import OurCourses from "@/components/OurCourses/OurCourses";
+import OurCoursesExport from "@/components/OurCourses/OurCoursesExport";
 
 
 
@@ -52,14 +53,12 @@ const OurCoursesWrapper = async () => {
 
     return (
       <>
-        {/* Passa i dati come props ai componenti figlio */}
+        
         <TopPageOurCourses data={commonTopPageData  } />
-       {/* <AboutUs data={aboutUsData} pageType={""} pageIndex={0} />
-       <OurTeachers data={teachersData}/> */}
+     
+        
    
-   
-        {/* <CommonTopPage data={commonTopPageData } />  */}
- 
+        
        
 
       </>

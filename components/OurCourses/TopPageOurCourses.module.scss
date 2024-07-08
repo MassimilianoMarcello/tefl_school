@@ -1,25 +1,8 @@
 @import "../../app/page.module.scss";
 
 
-// picturest title style
-.mainContainer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between; // Spazio tra le due colonne
-  padding: 2rem;
 
-  letter-spacing: 1px;
-  font-family: "Zeitung Micro Pro";
-  font-weight: 700;
-  overflow-x: auto;
 
-}
-.imageBackground {
-  margin-bottom: 15rem;
-  width: 100%;
-}
 
 .coursesTextContainer {
     display: grid;
@@ -27,10 +10,21 @@
     grid-template-rows: auto auto auto auto;
     gap: 5rem;
   position: absolute;
-  right: 4rem;
-  top: 5rem;
+  right: 0rem;
+  top: 15rem;
+  letter-spacing: 1px;
+  font-family: "Zeitung Micro Pro";
+  font-weight: 700;
+  overflow-x: auto;
 
-
+  .imageBackgroundCourses {
+    margin-bottom: 15rem;
+    width: 100%;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  
+  
+  }
 
   h1 {
     grid-column: 3/4;
@@ -104,6 +98,7 @@ margin-top: 1rem;
     }
   }
   .courseCardsBox {
+    margin-top: 50rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -124,7 +119,11 @@ margin-top: 1rem;
 
   z-index: 2;
 }
+.coursesListCards{
+  grid-column: 1/4;
+  grid-row: 4/5;
 
+}
 .square2 {
   position: absolute;
   height: 20rem;
