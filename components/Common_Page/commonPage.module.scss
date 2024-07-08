@@ -159,9 +159,9 @@ margin: 2rem;
       font-size: 2rem;
       position: absolute;
       top: 5rem;
-      right: 3rem;
+      left: 3rem;
       height: auto;
-      width: 34rem;
+      width: auto;
       background-color: $bgColor;
       padding: 3rem 3rem;
       z-index: 4;
@@ -169,7 +169,7 @@ margin: 2rem;
 
   .square1 {
       position: absolute;
-      right: 35rem;
+      left: 5rem;
       top: 4rem;
       height: 12rem;
       width: 8rem;
@@ -182,12 +182,15 @@ margin: 2rem;
     .square2 {
       position: absolute;
       height: 12rem;
-      padding: 4rem;
+   width: 6rem;
       background-color: lightblue;
     
-      right: 0rem;
+      left: 30rem;
       top: 2rem;
       z-index: 2;
+    }
+    .imageBackground{
+ margin-left: 10rem;
     }
 }
 

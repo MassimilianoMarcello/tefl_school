@@ -22,7 +22,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
     const topMainContainerClass = `${styles.topMainContainer} ${styles[`page-${pageIndex}`]}`;
   
     // Estrai l'URL dell'immagine principale
-    const mainImageUrl = mainImage?.asset?.url ? urlFor(mainImage).width(1400).height(500).url() : null;
+    const mainImageUrl = mainImage?.asset?.url ? urlFor(mainImage).width(1600).height(1000).url() : null;
   
     return (
       <div className={topMainContainerClass}>
@@ -33,20 +33,20 @@ import EnrollNowButton from "../Buttons/EnrollNow";
             src={mainImageUrl}
             alt={mainTitle}
             sizes="100vw"
-            width={1400}
+            width={1600}
             height={500}
           />
         )}
-           <div className={styles.applyButton}>
+           {/* <div className={styles.applyButton}>
            <ApplyTodayButton/>
-           </div>
+           </div> */}
      
         <span className={styles.square1}></span>
         <span className={styles.square2}></span>
         <div className={styles[`gridContainer-${pageIndex}`]}>
         {sections.map((section, index) => {
           const { title, subtitle,text, image, content, _key, order } = section;
-          const imageUrl = image?.asset ? urlFor(image).width(1400).height(800).url() : null;
+          const imageUrl = image?.asset ? urlFor(image).width(1600).height(1000).url() : null;
           const sectionClassName = `${styles.sectionContainer} ${styles[`section-${index}`]}`;
           const imageClassName = `${styles.imageBackground} ${styles[`image-${index}`]}`;
   
@@ -60,8 +60,8 @@ import EnrollNowButton from "../Buttons/EnrollNow";
                   src={imageUrl}
                   alt={title}
                   sizes="100vw"
-                  width={1400}
-                  height={800}
+                  width={1600}
+                  height={1000}
                 />
               ) : (
                 <div className={styles.placeholderImage}></div>
@@ -77,9 +77,9 @@ import EnrollNowButton from "../Buttons/EnrollNow";
             </div>
           );
         })}
-        <div className={styles.enrollButton}>
+        {/* <div className={styles.enrollButton}>
         <EnrollNowButton/>
-        </div>
+        </div> */}
       
         </div>
       </div>
