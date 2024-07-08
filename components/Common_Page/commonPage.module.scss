@@ -155,24 +155,26 @@ margin: 2rem;
 
 .page-2 {
   position: relative;
-  h1 {
-      font-size: 2rem;
+  margin-top: 6rem;
+  .mainTitle {
+    width: 50%;
+      font-size: .9rem;
       position: absolute;
       top: 5rem;
-      left: 3rem;
+      right: 1rem;
       height: auto;
-      width: auto;
+      // width: auto;
       background-color: $bgColor;
-      padding: 3rem 3rem;
+      padding:1rem ;
       z-index: 4;
     }
 
   .square1 {
       position: absolute;
-      left: 5rem;
-      top: 4rem;
-      height: 12rem;
-      width: 8rem;
+      left: 13rem;
+      top: 3rem;
+      height: 4rem;
+      width: 4rem;
   
       background-color: gold;
   
@@ -181,16 +183,46 @@ margin: 2rem;
   
     .square2 {
       position: absolute;
-      height: 12rem;
-   width: 6rem;
+      height: 4rem;
+   width: 4rem;
       background-color: lightblue;
     
-      left: 30rem;
-      top: 2rem;
+      right: 0rem;
+      top: 2.2rem;
       z-index: 2;
     }
     .imageBackground{
- margin-left: 10rem;
+
+    }
+    .topTextContainer{
+     
+      padding: 1rem;
+    }
+    .mainTitle{
+      font-weight: 400;
+      margin: 2rem 0;
+    }
+    .mainSubtitle{
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2rem 0;
+      background: linear-gradient(to right, #d3f6ff 0%, #66d4fd 100%);
+      padding: 1rem;
+    }
+    .mainText{
+      padding: 1rem;
+    }
+    @include respond-to(sm, min) {
+
+    }
+    @include respond-to(md, min) {}
+    @include respond-to(lg, min) {}
+    @include respond-to(xl, min) {}
+    @include respond-to(xxl, min) {
+
+      .imageBackground{
+        margin-left: 10rem;
+           }
     }
 }
 
@@ -349,7 +381,7 @@ margin: 2rem;
 
 
 .portableTextContainer {
-  margin: 1.25rem 10rem;
+  margin: 1.25rem 1rem;
   font-family: "Zeitung Micro Pro", sans-serif;
 
   p {
@@ -358,19 +390,22 @@ margin: 2rem;
     line-height: 1.6rem; /* Migliorata leggibilità */
     margin-bottom: 1.5rem; /* Aumentato margine inferiore */
 }
+h1{
+  color: #007bff;
+}
 
 h2 {
-    font-size: 2rem; /* Aumentato */
+    font-size: 1.4rem; /* Aumentato */
     margin-top: 2rem; /* Aumentato */
     margin-bottom: 1rem; /* Aumentato margine inferiore */
     color: #34495e; /* Colore più scuro */
     font-weight: 700; /* Maggiore peso del font */
-    border-bottom: 2px solid #e74c3c; /* Bordo inferiore rosso elegante */
+    border-bottom: 2px solid #728b66; /* Bordo inferiore rosso elegante */
     padding-bottom: 0.5rem; /* Padding per il bordo inferiore */
 }
 
 h3 {
-    font-size: 1.75rem; /* Aumentato */
+    font-size: 1.25rem; /* Aumentato */
     margin-top: 1.5rem; /* Aumentato */
     margin-bottom: 1rem; /* Aumentato margine inferiore */
     color: #7f8c8d; /* Colore più chiaro */
@@ -387,9 +422,9 @@ ul, ol {
 }
 
 a {
-    color: #e74c3c; /* Colore rosso elegante */
+    color: #728b66; /* Colore rosso elegante */
     text-decoration: none; /* Rimosso sottolineatura */
-    border-bottom: 1px solid #e74c3c; /* Aggiunto bordo inferiore */
+    border-bottom: 1px solid #728b66; /* Aggiunto bordo inferiore */
     transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Aggiunta transizione per un effetto di hover più fluido */
 
     &:hover {
