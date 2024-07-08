@@ -46,6 +46,8 @@ export default function SecondComponent({ data }: SecondComponentProps) {
             <p className={styles.sloganOne}>
               Unlocking Language, Connecting Cultures.{" "}
               <span> Where Communication Transcends Boundaries.</span>
+              <span className={styles.square1B}></span>
+              <span className={styles.square2B}></span>
             </p>
             <div className={styles.sloganTwoBox}>
               <p className={styles.sloganTwo}>
