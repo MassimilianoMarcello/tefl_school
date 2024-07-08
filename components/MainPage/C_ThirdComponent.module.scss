@@ -27,11 +27,12 @@
   z-index: 4;
   @include respond-to(xl, min) {
     height: auto;
-    width: 30rem;
-
-    background-color: $bgColor;
-    padding: 1.5rem;
-    z-index: 4;
+    width: 20rem;
+  }
+  @include respond-to(xxl, min) {
+    height: auto;
+    width: 20rem;
+ 
   }
 }
 
@@ -58,6 +59,13 @@
     margin-left: 6rem;
   
   }
+  @include respond-to(xxl, min) {
+    font-size: 5rem;
+    width: 30rem;
+    margin-left: 20rem;
+    margin-top: 10rem;
+  
+  }
 }
 
 .ParahContainer {
@@ -69,6 +77,11 @@
   margin-bottom: 0rem;
   z-index: 5;
   border-bottom: solid 1rem gold;
+  @include respond-to (xxl,min){
+    grid-column: 5/8;
+    margin:12rem 3rem;
+    border-bottom: none;
+  }
 }
 .mainText {
   width: auto;
@@ -88,8 +101,9 @@
    margin-top: 30rem; 
    margin-bottom: 5rem;
   }
-  @include respond-to(xl, min) {
-    margin-top: 1rem;
+  @include respond-to(xxl, min) {
+font-size: 1.5rem;
+ 
   }
 }
 .backgroundImageContainer {
@@ -141,10 +155,16 @@ z-index: 4;
   background-color: lightblue;
 
   z-index: 1;
-  @include respond-to(xl, min) {
+  @include respond-to(lg, min) {
     right: 30rem;
     bottom: 16rem;
     height: 5rem;
+    padding: 5rem;
+  }
+  @include respond-to(xxl, min) {
+    right: 30rem;
+    bottom: 16rem;
+    height: 85rem;
     padding: 5rem;
   }
 }
@@ -159,7 +179,7 @@ z-index: 4;
 
   z-index: 1;
   @include respond-to(xl, min) {
-    display: none;
+    // display: none;
   }
 }
 
