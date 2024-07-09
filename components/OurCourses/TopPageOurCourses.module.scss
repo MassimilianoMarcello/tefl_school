@@ -8,17 +8,28 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto auto;
-    gap: 5rem;
-  position: absolute;
-  right: 0rem;
-  top: 15rem;
+    row-gap: 5rem;
+  // position: absolute;
+  // right: 0rem;
+  // top: 15rem;
+  position: relative;
+  margin-top: 8rem;
   letter-spacing: 1px;
-  font-family: "Zeitung Micro Pro";
-  font-weight: 700;
+  font-family: $fontFirst;
+  
+  // font-weight: 900;
   overflow-x: auto;
+  @include respond-to(sm, min) {
+
+  }
+  @include respond-to(md, min) {}
+  @include respond-to(lg, min) {}
+  @include respond-to(xl, min) {}
+  @include respond-to(xxl, min) {}
 
   .imageBackgroundCourses {
-    margin-bottom: 15rem;
+  
+    margin-left: 0rem;
     width: 100%;
     grid-column: 1/4;
     grid-row: 1/4;
@@ -27,97 +38,92 @@
   }
 
   h1 {
-    grid-column: 3/4;
+    grid-column: 2/4;
     grid-row: 1/2;
-    // position: absolute;
-    // right: 6rem;
-    // top: 4rem;
-    background-color: $bgColor;
-    padding: 3rem 2rem;
+background-color: $bgColor;
+    padding:1rem;
     z-index: 4;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    
     color: $blueColor;
-    height: 20rem;
-    width: 30rem;
+    height: auto;
+    width: auto;
+    text-transform: uppercase;
     margin-top: 3rem;
-    margin-right: 3rem;
+    margin-right: 0rem;
+    margin-left: 4rem;
+    @include respond-to(sm, min) {
+      font-size: 3rem;
+      width: 30rem;
+      height: 20rem;
+      padding: 3rem 2rem;
+    }
+    @include respond-to(md, min) {}
+    @include respond-to(lg, min) {}
+    @include respond-to(xl, min) {}
+    @include respond-to(xxl, min) {}
   }
 
   .coursesIntroductionOne {
-    grid-column: 3/4;
+    grid-column: 1/4;
     grid-row: 2/3;
-    // position: absolute;
-    // right: 5rem;
-    // bottom: 20rem;
+ 
     background-color: $bgColor;
-    padding: 3rem 2rem;
+    padding: 3rem;
+    margin-left: 1rem;
 
     height: auto;
-    width: 30rem;
+    width: auto;
     z-index: 4;
+
+
+    @include respond-to(sm, min) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      width: 30rem;
+      padding: 3rem 2rem;
+    }
+    @include respond-to(md, min) {}
+    @include respond-to(lg, min) {}
+    @include respond-to(xl, min) {}
+    @include respond-to(xxl, min) {}
+
   }
   .coursesIntroductionTwo {
     grid-column: 1/4;
     grid-row: 3/4;
-font-size: 1.5rem;
+font-size: 1rem;
 font-weight: 100;
 color: #666;
     background-color: $bgColor;
-    padding: 3rem 2rem 3rem 2rem;
-    margin-left: 5rem;
+    padding:1rem;
+    margin-left: -1rem;
     z-index: 4;
     height: auto;
 
-margin-left:4rem;
+margin-left:1rem;
 margin-top: 1rem;
-
-  }
-
-  .titleBox {
-    grid-column: 1/4;
-    grid-row: 4/5;
-
-    h1 {
-      display: block;
-      width: 94%;
-
-      margin: 0 auto;
-      font-size: 4rem;
-      padding: 3rem 0;
-      margin-top: 4rem;
-      color: $blueColor;
-      text-align: center;
-      background-image: #add8e6;
-
-      border: 0.2rem solid #90cee3;
-    }
-    p{
-      margin-left: 2.5rem;
-      padding: 2rem 0;
-      font-size: 1.5rem;
-    }
-  }
-  .courseCardsBox {
-    margin-top: 50rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-column: 1/4;
-    grid-row: 5/6;
-    width: 100%;
-  }
+@include respond-to(sm, min) {
+  grid-column: 1/4;
+  grid-row: 3/4;
 }
+@include respond-to(md, min) {}
+@include respond-to(lg, min) {}
+@include respond-to(xl, min) {}
+@include respond-to(xxl, min) {}
+
+} }
+
+
 
 .square1 {
   position: absolute;
-  right: 1rem;
+  right: 0rem;
   top: 1rem;
   height: 15rem;
-  width: 15rem;
-
-  background-color: gold;
-
-  z-index: 2;
+  width: 12rem;
+background-color: gold;
+z-index: 2;
 }
 .coursesListCards{
   grid-column: 1/4;
@@ -126,19 +132,21 @@ margin-top: 1rem;
 }
 .square2 {
   position: absolute;
-  height: 20rem;
-  padding: 5rem;
+  height: 5rem;
+  width: 15rem;
   background-color: lightblue;
-  right: 30rem;
-  top: 15rem;
+  right: 0rem;
+  top: 70rem;
   z-index: 2;
+  @include respond-to(sm, min) {}
+  
 }
 
 .square3 {
   position: absolute;
-  right: -6rem;
-  top: 40rem;
-  height: 35rem;
+  right: 0rem;
+  top: 25rem;
+  height: 25rem;
   width: 12rem;
 
   background-color: gold;
@@ -149,7 +157,7 @@ margin-top: 1rem;
 .square4 {
     position: absolute;
     left: 0rem;
-    top: 50rem;
+    top: 25rem;
     height: 25rem;
     width: 6rem;
   
@@ -160,160 +168,160 @@ margin-top: 1rem;
 
 // card courses style
 
-.coursesSection {
-  padding: 0;
-  padding-right: 2rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 3rem;
-  width: 100%;
-}
+// .coursesSection {
+//   padding: 0;
+//   padding-right: 2rem;
+//   display: grid;
+//   grid-template-columns: repeat(1, 1fr);
+//   gap: 3rem;
+//   width: 100%;
+// }
 
-.cardContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, auto);
+// .cardContainer {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-template-rows: repeat(6, auto);
 
-  position: relative;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+//   position: relative;
+//   border: 1px solid #ccc;
+//   border-radius: 10px;
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  margin: 2rem auto; /* Centra le carte */
+//   margin: 2rem auto; /* Centra le carte */
 
-  overflow: hidden;
+//   overflow: hidden;
 
-  max-width: 35rem;
-}
+//   max-width: 35rem;
+// }
 
-// image
+// // image
 
-.cardImageContainer {
-  position: relative;
-  overflow: hidden;
-  grid-row: 1/3;
-  grid-column: 1/4;
-}
+// .cardImageContainer {
+//   position: relative;
+//   overflow: hidden;
+//   grid-row: 1/3;
+//   grid-column: 1/4;
+// }
 
-.cardImage {
-  width: 100%;
-  height: 25rem;
-  display: block;
-}
+// .cardImage {
+//   width: 100%;
+//   height: 25rem;
+//   display: block;
+// }
 
-.cardTextContainer {
-  grid-row: 3/4;
-  grid-column: 1/4;
-  padding: 2rem;
-}
+// .cardTextContainer {
+//   grid-row: 3/4;
+//   grid-column: 1/4;
+//   padding: 2rem;
+// }
 
-.cardTitle {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+// .cardTitle {
+//   font-size: 24px;
+//   margin-bottom: 10px;
+//   color: #333;
 
-}
-.cardName{
-  background-color:$generic1;
-  color: #f1f1f1;
-  font-size: 2rem;
-  text-align: center;
-}
+// }
+// .cardName{
+//   background-color:$generic1;
+//   color: #f1f1f1;
+//   font-size: 2rem;
+//   text-align: center;
+// }
 
-.cardDescription {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
+// .cardDescription {
+//   font-size: 16px;
+//   color: #666;
+//   margin-bottom: 20px;
+// }
 
-.courseDetails {
-  display: flex;
-  flex-wrap: wrap;
+// .courseDetails {
+//   display: flex;
+//   flex-wrap: wrap;
   
-}
+// }
 
-.courseDetail {
-  font-size: 14px;
-  color: #888;
-  margin-right: 10px;
+// .courseDetail {
+//   font-size: 14px;
+//   color: #888;
+//   margin-right: 10px;
   
-}
-// link more details
-.detailsLink {
-  display: inline-block;
-  grid-row: 4/5;
-  grid-column: 1/3;
+// }
+// // link more details
+// .detailsLink {
+//   display: inline-block;
+//   grid-row: 4/5;
+//   grid-column: 1/3;
 
-  background-color:$generic1;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  z-index: 12;
-}
+//   background-color:$generic1;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border-radius: 5px;
+//   text-decoration: none;
+//   transition: background-color 0.3s ease;
+//   z-index: 12;
+// }
 
-.detailsLink:hover {
-  background-color:$generic2;
-}
+// .detailsLink:hover {
+//   background-color:$generic2;
+// }
 
-// level course
-.courseLevelContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateY(45%) rotate(45deg) translatex(17%);
-  // transform-origin: top right;
-}
+// // level course
+// .courseLevelContainer {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   transform: translateY(45%) rotate(45deg) translatex(17%);
+//   // transform-origin: top right;
+// }
 
-.courseLevel {
-  margin-top: -3rem;
-  margin-left: 5rem;
-  padding: 0.5rem 0;
-  padding-left: 4rem;
-  padding-right: 2.5rem;
-  font-size: 0.8rem;
-  text-align: center;
-  background-color:$generic1;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
-}
+// .courseLevel {
+//   margin-top: -3rem;
+//   margin-left: 5rem;
+//   padding: 0.5rem 0;
+//   padding-left: 4rem;
+//   padding-right: 2.5rem;
+//   font-size: 0.8rem;
+//   text-align: center;
+//   background-color:$generic1;
+//   color: #fff;
+//   border-radius: 5px;
+//   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+// }
 
-// hours card
+// // hours card
 
-.cardHours {
-  grid-row: 1/1;
-  grid-column: 1/1;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  text-align: center;
-  // transform: translateX(-50%);
-  background-color: #1a3847; /* Colore blu notte */
-  color: #d2d8da; /* Testo bianco */
-  padding: 1.5rem; /* Padding */
-  height: 8rem;
-  width: 8rem;
-  border: 2px solid #ddb239; /* Bordo dorato */
-  border-radius: 25px; /* Bordi arrotondati */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
-  font-weight: 700;
-}
+// .cardHours {
+//   grid-row: 1/1;
+//   grid-column: 1/1;
+//   position: absolute;
+//   top: 2rem;
+//   left: 2rem;
+//   text-align: center;
+//   // transform: translateX(-50%);
+//   background-color: #1a3847; /* Colore blu notte */
+//   color: #d2d8da; /* Testo bianco */
+//   padding: 1.5rem; /* Padding */
+//   height: 8rem;
+//   width: 8rem;
+//   border: 2px solid #ddb239; /* Bordo dorato */
+//   border-radius: 25px; /* Bordi arrotondati */
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
+//   font-weight: 700;
+// }
 
-.cardHoursText {
-  font-size: 2.8rem; /* Dimensione del testo grande */
-  color: #ddb239;
-  margin-top: -2.8rem;
-  margin-bottom: -1.8rem;
-  margin-left: -1.4rem;
-  letter-spacing: 2px;
-  padding: 1rem;
-}
-.hourSpan {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-  margin-left: -0.2rem;
-  font-weight: 200;
-}
+// .cardHoursText {
+//   font-size: 2.8rem; /* Dimensione del testo grande */
+//   color: #ddb239;
+//   margin-top: -2.8rem;
+//   margin-bottom: -1.8rem;
+//   margin-left: -1.4rem;
+//   letter-spacing: 2px;
+//   padding: 1rem;
+// }
+// .hourSpan {
+//   font-size: 1.8rem;
+//   letter-spacing: 1px;
+//   margin-left: -0.2rem;
+//   font-weight: 200;
+// }

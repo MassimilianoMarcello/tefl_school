@@ -6,7 +6,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; // Spazio tra le due colonne
-    padding: 1rem;
+    // padding: 1rem;
   
     letter-spacing: 1px;
     font-family: "Zeitung Micro Pro";
@@ -24,7 +24,7 @@
       width: 94%;
 
       margin: 0 auto;
-      font-size: 4rem;
+      font-size: 1rem;
       padding: 3rem 0;
       margin-top: 4rem;
       color: $blueColor;
@@ -38,6 +38,14 @@
       padding: 2rem 0;
       font-size: 1.5rem;
     }
+
+    @include respond-to(sm, min) {
+h1{      font-size: 4rem;}
+    }
+    @include respond-to(md, min) {}
+    @include respond-to(lg, min) {}
+    @include respond-to(xl, min) {}
+    @include respond-to(xxl, min) {}
   }
   .courseCardsBox {
     display: flex;

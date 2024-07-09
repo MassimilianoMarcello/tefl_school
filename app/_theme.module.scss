@@ -34,55 +34,55 @@
   font-style: normal;
 }
 
-// zeitung mono pro
+// avenir black
 
 @font-face {
-  font-family: "ZeitungMonoPro Thin";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Thin.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Thin.woff") format("woff");
+  font-family: "Avenir-Black";
+  src: url("/font/Avenir/Avenir-Black.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Black.woff") format("woff");
  
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "ZeitungMonoPro SemiBold";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-SemiBold.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-SemiBold.woff") format("woff");
- 
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ZeitungMonoPro Regular";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Regular.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Regular.woff") format("woff");
+  font-family: "Avenir-Book";
+  src: url("/font/Avenir/Avenir-Book.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Book.woff") format("woff");
  
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ZeitungMonoPro Light";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Light.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-Light.woff") format("woff");
+  font-family: "Avenir-Heavy";
+  src: url("/font/Avenir/Avenir-Heavy.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Heavy.woff") format("woff");
  
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ZeitungMonoPro ExtraLight";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-ExtraLight.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-ExtraLight.woff") format("woff");
+  font-family: "Avenir-Light";
+  src: url("/font/Avenir/Avenir-Light.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Light.woff") format("woff");
+ 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("/font/Avenir/Avenir-Medium.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Medium.woff") format("woff");
  
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "ZeitungMonoPro ExtraBold";
-  src: url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-ExtraBold.woff2") format("woff2"),
-    url("/font/Zeitung\ _mono_pro/ZeitungMonoPro-ExtraBold.woff") format("woff");
+  font-family: "Avenir-Roman";
+  src: url("/font/Avenir/Avenir-Roman.woff2") format("woff2"),
+    url("/font/Avenir/Avenir-Roman.woff") format("woff");
  
   font-weight: normal;
   font-style: normal;
@@ -168,6 +168,13 @@ $bg-color: #ffffff; // Puoi sostituire questo con il colore di sfondo desiderato
 $fontFirst: "Zeitung Micro Pro";
 $fontSecond: "Zeitung Pro Regular";
 $fontThird: "Zeitung Pro Black";
+$font4:"Avenir-Black";
+$font5:"Avenir-Book";
+$font6:"Avenir-Heavy";
+$font7:"Avenir-Light";
+$font8:"Avenir-Medium";
+$font9:"Avenir-Roman";
+$font10:"Avenir-";
 $font-size-base: 16px;
 
 // Spacing
