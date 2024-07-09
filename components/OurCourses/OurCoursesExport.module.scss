@@ -24,8 +24,8 @@
       width: 94%;
 
       margin: 0 auto;
-      font-size: 1rem;
-      padding: 3rem 0;
+      font-size: 1.4rem;
+      padding: 3rem 1rem;
       margin-top: 4rem;
       color: $blueColor;
       text-align: center;
@@ -35,8 +35,8 @@
     }
     p{
       margin-left: 2.5rem;
-      padding: 2rem 0;
-      font-size: 1.5rem;
+      padding: 2rem 1rem;
+      font-size: 1.2rem;
     }
 
     @include respond-to(sm, min) {
