@@ -18,7 +18,7 @@ import { getCommonTopPage, } from "@/sanity/sanity.query";
 
 import TopPageOurCourses from '@/components/OurCourses/TopPageOurCourses';
 import { revalidateTag } from 'next/cache'
-import OurCourses from "@/components/OurCourses/OurCourses";
+// import OurCourses from "@/components/OurCourses/OurCourses";
 import OurCoursesExport from "@/components/OurCourses/OurCoursesExport";
 
 
