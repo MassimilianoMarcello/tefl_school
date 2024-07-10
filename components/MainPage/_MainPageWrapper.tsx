@@ -7,7 +7,7 @@ import ThirdComponent from "./C_ThirdComponent";
 import D_CoursesPreview from "./D_CoursesPreview";
 import E_Testimonials from "./E_Testimonials";
 import SlideItem from "../SlideItem/SlideItem";
-import OurCourses from "../OurCourses/OurCourses";
+// import OurCourses from "../OurCourses/OurCourses";
 import F_Parallax from "./F_Parallax";
 
 
