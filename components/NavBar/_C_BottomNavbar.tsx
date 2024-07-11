@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import s from "./navbar.module.scss";
 import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
+import ButtonAzure from "../Buttons/ButtonAzure";
 
 const BottomNavbar = () => {
   const [fix, setFix] = useState(false);
@@ -75,11 +76,12 @@ const BottomNavbar = () => {
           {" "}
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
-              <button className={s.primaryButton}>Dates & Prices </button>
-            </li>
+              {/* <button className={s.primaryButton}>Dates & Prices </button> */}
+              <ButtonAzure text={"Dates & Prices"} />            </li>
 
             <li className={s.navItem}>
-              <button className={s.warningButton}>Apply Now </button>
+              {/* <button className={s.warningButton}>Apply Now </button> */}
+              <ButtonAzure text={"Apply Now"}/>  
             </li>
           </ul>
         </div>
