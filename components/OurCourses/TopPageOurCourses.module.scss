@@ -165,10 +165,8 @@ z-index: 2;
     top: 25rem;
     height: 25rem;
     width: 6rem;
-  
-    background-color: lightblue;
-  
-    z-index: 2;
+  background-color: lightblue;
+  z-index: 2;
     @include respond-to(lg, min) {
       left: 78rem;
       width: 10rem;

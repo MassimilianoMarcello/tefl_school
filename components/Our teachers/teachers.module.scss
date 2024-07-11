@@ -2,23 +2,45 @@
 
 // top page image and titles
 .topMainContainer {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(4,auto);
   position: relative;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
 }
 
 .topTextContainer{
+
   position: absolute;
-  left: 25rem;
-  top: 5rem;
+  left: 8rem;
+  top: 2rem;
   background-color: $bgColor;
-  padding: 3rem;
+  // padding: 3rem;
   text-transform: capitalize;
   z-index: 4;
+  @include respond-to(sm, min) {
+    position: absolute;
+  left: 25rem;
+  top: 5rem;
+        }
+        @include respond-to(md, min) {}
+        @include respond-to(lg, min) {}
+        @include respond-to(xl, min) {}
+        @include respond-to(xxl, min) {}
+
 
 }
 .mainTitle {
-  font-size: 4rem;
+  font-size: 1.5rem;
+  padding:0 1rem;
+  padding-top: 1rem;
   color: $blueColor;
   font-weight: 900;
+  @include respond-to(sm, min) {
+    font-size: 4rem;
+  
+  }
 }
 .mainText {
   margin-top: 2rem;
@@ -29,26 +51,38 @@
   opacity: 0.5;
 }
 
+.imageBackground{
+  grid-column: 1/7;
+grid-row: 1/2;
+}
+
 .square1 {
   position: absolute;
+    left: 7rem;
+    top: 1rem;
+    height: 4rem;
+    width: 4rem;
+  background-color: gold;
+   z-index: 1;
+   @include respond-to(sm, min) {
     right: 23rem;
     top: 15rem;
     height: 5rem;
     width: 5rem;
   
-   background-color: gold;
-   
-   z-index: 1;
+  }
   }
   
   .square2 {
   position: absolute;
-    // height: 2rem;
-    padding: 5rem;
+    height: 4rem;
+    width: 4rem;
+  
     background-color:lightblue;
-    left: 23rem;
-    top: 3rem;
+    left: 17rem;
+    top: 4rem;
     z-index: 1;
+    @include respond-to(sm, min) {}
   }
 
 
