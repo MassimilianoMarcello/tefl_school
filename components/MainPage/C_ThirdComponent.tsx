@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { HomePage } from "@/Types/Homepage";
 import styles from "./C_ThirdComponent.module.scss";
 import Link from "next/link";
+import ButtonAzure from "../Buttons/ButtonAzure";
 
 interface ThirdComponentProps {
   data: HomePage[]; // Accetta i dati come prop
@@ -40,6 +41,9 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               height={600}
               layout="responsive"
             />
+                 <div className={styles.btnBookCall}>
+      <ButtonAzure text={"book a call"}/> 
+      </div> 
             {/* <section className={styles.parallax1}>
         <div className={styles.blueBack}>
           <div className={styles.parallax1Inner}>
@@ -48,7 +52,8 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
           </div>
         </div>
       </section> */}
-            </div>
+           
+      </div>
           </div>
         )}
       </div>
