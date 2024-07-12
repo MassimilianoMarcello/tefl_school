@@ -33,11 +33,12 @@ border: .2rem solid #90cee3;
 //     margin: 2rem ;
 //  overflow: hidden;
 display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
             padding: 1rem 2rem;
  @include respond-to (md, min) {
-
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ 
 }}
 
 
