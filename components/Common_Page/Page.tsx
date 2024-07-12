@@ -26,7 +26,7 @@ import EnrollNowButton from "../Buttons/EnrollNow";
   
     return (
       <div className={topMainContainerClass}>
-        <h1>{mainTitle}</h1>
+        <h1          className={styles.mainTitlePage}>{mainTitle}</h1>
         {mainImageUrl && (
           <Image
             className={styles.mainImage}

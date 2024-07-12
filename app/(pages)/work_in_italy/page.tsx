@@ -2,7 +2,7 @@
 
 import { getPage } from "@/sanity/sanity.query";
 import Page from "@/components/Common_Page/Page";
-import styles from './workInItaly.module.scss';
+// import styles from './workInItaly.module.scss';
 import { revalidateTag } from 'next/cache'
 
 const WorkInItalyPageWrapper = async () => {
@@ -20,9 +20,9 @@ const pageIndex = 2;
 
     return (
       <>
-      <div className={styles.wrapperToCommonPage}>
+      {/* <div className={styles.wrapperToCommonPage}> */}
       <Page data={pageData} pageType={pageData.pageType.current} pageIndex={pageIndex} />
-      </div>
+      {/* </div> */}
      
       </>
     );
