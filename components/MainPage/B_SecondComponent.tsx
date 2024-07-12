@@ -22,7 +22,7 @@ export default function SecondComponent({ data }: SecondComponentProps) {
             <span className={styles.coloredTuscanyTitle}>tuscany</span>
           </h1>
           {/* subtitle */}
-          <p className={styles.coloredTuscanyTitle} >TEFL Certification in Tuscany: Your Teaching Journey Starts Here</p>
+          <p className={styles.coloredTuscanyText} >TEFL Certification in Tuscany. Your Teaching Journey Starts Here:</p>
           <div className={styles.textBox}>
             <div className={styles.aboutUs}>
               <p>

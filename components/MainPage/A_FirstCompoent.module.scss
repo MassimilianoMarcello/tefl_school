@@ -21,7 +21,7 @@
   top: 0rem;
   right: 0rem;
   width: auto;
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
   z-index: 4;
   @include respond-to(sm, min) {
     top: 4.5rem;
@@ -46,12 +46,14 @@
   color: $blueColor;
   background-color: $bgColor;
   text-align: center;
-  width: 16rem;
-  min-width: 16rem;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  margin-top: 2.5rem;
-
+  width: 14rem;
+  min-width: 14rem;
+  padding: 1rem 1rem;
+  font-size: 1.7rem;
+  margin-top: 0rem;
+  @include respond-to(sm, max) {
+    margin-top: 1rem;
+  }
   @include respond-to(md, min) {
     font-size: 3rem;
 
@@ -119,13 +121,13 @@ pointer-events: none;
   height: auto;
   margin-top: 2rem;
   position: relative;
-  padding: 2rem;
+  padding: 0rem;
   z-index: 2;
 }
 
 .square1A {
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   left: 0rem;
 
   height: 4rem;
