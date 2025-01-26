@@ -44,6 +44,9 @@ revalidateTag("collection");
                     className={styles.cardImage}
                   />
                    <span className={styles.squareBoss}></span>
+                   <span className={styles.squareBoss1}></span>
+                   <span className={styles.squareBoss2}></span>
+                   <span className={styles.squareBoss3}></span>
 
 
                   <div className={styles.courseLevelContainer}>

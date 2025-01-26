@@ -17,11 +17,13 @@
   text-transform: capitalize;
   z-index: 4;
 
+
 }
 .mainTitleAboutUs {
   font-size: 4rem;
   color: $blueColor;
   font-weight: 900;
+ 
 }
 .mainTextAboutUs {
   margin-top: 2rem;
@@ -30,12 +32,14 @@
   font-weight: 500;
   pointer-events: none;
   opacity: 0.5;
+  
+
 }
 
 .square1AboutUs {
   position: absolute;
-    left: 2rem;
-    top: 15rem;
+    left: 29rem;
+    top: 16rem;
     height: 5rem;
     width: 5rem;
   
@@ -49,7 +53,7 @@
     // height: 2rem;
     padding: 5rem;
     background-color:lightblue;
-    right: 33rem;
+   left: 3rem;
     top: 3rem;
     z-index: 1;
   }
@@ -100,14 +104,17 @@ margin: 6rem 0 2rem 0;
 }
 
 .topTextContainer{
-margin: 2rem;
 
+margin: 2rem;
+padding:3rem 2rem;
+background-color: rgb(237, 243, 248);
 }
 
 
 .section-0{
  grid-column: 1/2;
  grid-row: 1/2;
+
 
 }
 
@@ -127,6 +134,6 @@ margin: 2rem;
 
 
 
-    .mainTitle{margin-bottom: .5rem;}
+    .mainTitle{margin-bottom: .5rem;  background-color: rgb(91, 146, 93); padding: .5rem; margin-bottom: 2rem;margin-top: -1rem; text-align: center;}
     .mainSubtitle{margin-bottom: .5rem;}
     .mainText{margin-bottom: .5rem;}

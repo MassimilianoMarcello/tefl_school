@@ -26,7 +26,7 @@ export default function AboutUsPage({ data, pageIndex }: AboutUsProps) {
          <div className={styles.titleBox}>
         <h1>{mainTitle}</h1>
         </div>
-        {mainImageUrl && (
+        {/* {mainImageUrl && (
           <Image
             className={styles.mainImage}
             src={mainImageUrl}
@@ -35,13 +35,13 @@ export default function AboutUsPage({ data, pageIndex }: AboutUsProps) {
             width={1400}
             height={500}
           />
-        )}
+        )} */}
            {/* <div className={styles.applyButton}>
            <ApplyTodayButton/>
            </div> */}
-     
+{/*      
         <span className={styles.square1}></span>
-        <span className={styles.square2}></span>
+        <span className={styles.square2}></span> */}
         <div className={styles[`gridContainer-${pageIndex}`]}>
         {sections.map((section, index) => {
           const { title, subtitle,text, image, content, _key, order } = section;
