@@ -39,7 +39,7 @@ export default function ThirdComponent({ data }: ThirdComponentProps) {
               alt="Component Image"
               width={1250}
               height={600}
-              layout="responsive"
+              layout="intrinsic" 
             />
                  <div className={styles.btnBookCall}>
       <ButtonAzure text={"book a call"}/> 

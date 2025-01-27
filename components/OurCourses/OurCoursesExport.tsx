@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Course as CourseType } from "@/Types/Course";
 import Link from "next/dist/client/link";
 import styles from "./OurCoursesExport.module.scss";
-import { revalidateTag } from "next/cache";
+// import { revalidateTag } from "next/cache";
 
 export default async function OurCoursesExport() {
-  revalidateTag("collection");
+  // revalidateTag("collection");
   const courseCard: CourseType[] = await getCourse();
 
   return (
@@ -17,7 +17,7 @@ export default async function OurCoursesExport() {
         <h1>Specialize in TESOL with TEFL Tuscany in beautiful Italy </h1>
         <p>
           Our extensive TEFL courses are tailored to empower both seasoned
-          teachers and those who are just starting out, whether you're aiming to
+          teachers and those who are just starting out, whether you are aiming to
           teach remotely or set off on a globetrotting educational expedition.
         </p>
       </div>
@@ -32,6 +32,7 @@ export default async function OurCoursesExport() {
                   alt={course.name}
                   width={500}
                   height={300}
+                  layout="intrinsic" 
                 />
 
                 <div className={styles.courseLevelContainer}>

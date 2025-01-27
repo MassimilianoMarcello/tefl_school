@@ -29,6 +29,7 @@ export default function FirstComponent({ data }: FirstComponentProps) {
         height: 'auto',
       }}
       width={1250} height={600} 
+      layout="intrinsic" 
      />
           </div>
         ))}

@@ -32,6 +32,8 @@ export default function D_CoursesPreview({ data }: CourseProps) {
                 alt={course.name}
                 width={500}
                 height={300}
+                layout="intrinsic" 
+                
               />
               
               <div className={styles.courseLevelContainer}>
@@ -87,7 +89,7 @@ export default function D_CoursesPreview({ data }: CourseProps) {
         <div className={styles.container1} >
           {/* Primo contenitore */}
   <h1>Elevate your teaching career with TEFL Tuscany learning center </h1>
-      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you're aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
+      <p>Our extensive TEFL courses are tailored to empower instructors from various walks of life, whether you are aiming to teach remotely or set off on a globetrotting educational expedition.</p>  
       <Link href={"/our_courses"} className={styles.testimonialsLink}> all courses &gt;</Link>
 
         </div>

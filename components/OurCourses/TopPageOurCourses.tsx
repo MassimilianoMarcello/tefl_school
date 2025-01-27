@@ -3,7 +3,7 @@ import { getCommonTopPage } from "@/sanity/sanity.query";
 import { urlFor } from "@/sanity/sanity.client";
 import Image from "next/image";
 import { CommonTop as CommonTopType } from "@/Types/CommonTop";
-import { revalidateTag } from "next/cache";
+// import { revalidateTag } from "next/cache";
 import OurCoursesExport from "./OurCoursesExport";
 
 interface CommonTopTypeProps {
@@ -11,7 +11,7 @@ interface CommonTopTypeProps {
 }
 
 export default function TopPageAboutUs({ data }: CommonTopTypeProps) {
-  revalidateTag("collection");
+  // revalidateTag("collection");
 
   // Filtra i dati per trovare solo l'elemento desiderato
   const specificItem = data.find(
@@ -43,6 +43,7 @@ export default function TopPageAboutUs({ data }: CommonTopTypeProps) {
             }}
             width={1000}
             height={400}
+            layout="intrinsic" 
           />
           <h1 className={styles.coursesTitle}>
             About Our TEFL Courses In Tuscany, Italy
@@ -62,7 +63,7 @@ export default function TopPageAboutUs({ data }: CommonTopTypeProps) {
             in-person teaching practice with real English learners. Our
             objective is to address the developmental requirements of our
             trainees comprehensively, enhancing their teaching abilities and
-            employability. To achieve this, we've forged partnerships with
+            employability. To achieve this, we have forged partnerships with
             several educational institutions across Firenze, enabling us to
             offer a wide array of TEFL courses.
           </p>

@@ -21,7 +21,7 @@ const F_Parallax = () => {
               serves as an inspiring backdrop for learning. Florence, the heart
               of Tuscany, is a city where every cobblestone street whispers
               tales of the Renaissance, offering students a unique opportunity
-              to walk in the footsteps of history's greatest minds.{" "}
+              to walk in the footsteps of history s greatest minds.{" "}
             </p>
 
             <h2>Ready to become a part of the TEFL Tuscany tradition?</h2>
