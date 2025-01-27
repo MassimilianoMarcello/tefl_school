@@ -1,5 +1,5 @@
 // FooterWrapper.tsx
-import React from 'react';
+
 import styles from './FooterWrapper.module.scss'; // Importa i tuoi stili Sass
 import QuickLinks from './B_QuickLinks';
 import Contact from './A_Contact';

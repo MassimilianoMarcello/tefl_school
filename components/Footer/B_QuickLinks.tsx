@@ -1,6 +1,6 @@
-// B_QuickLinks.tsx
+
 import Link from 'next/link';
-import React from 'react';
+
 import styles from './B_QuickLinks.module.scss'; 
 
 const QuickLinks = () => {
