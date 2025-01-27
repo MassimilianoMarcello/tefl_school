@@ -208,8 +208,43 @@ export async function getPage(index: number): Promise<PageType> {
 
     
     [0]`
+
   );
 }
+
+export async function getPages(id: string): Promise<PageType> {
+  return client.fetch(
+    groq`*[_type == 'page' && _id == $id]{
+      _id,
+      mainImage{
+        asset->{
+          url
+        },
+        crop,
+        hotspot
+      },
+      mainTitle,
+      pageType,
+      sections[]{
+        _key,
+        order,
+        title,
+        subtitle,
+        text,
+        image{
+          asset->{
+            url
+          },
+          crop,
+          hotspot
+        },
+        content[]
+      }
+    }[0]`, 
+    { id }
+  );
+}
+
 
 export async function getAccredited(index: number): Promise<AccreditedType> {
   return client.fetch(
