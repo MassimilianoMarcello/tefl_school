@@ -1,35 +1,36 @@
-'use server'
+"use server";
 
 import { getHomePage, getCourse, getTestimonials } from "@/sanity/sanity.query";
+import { revalidateTag } from "next/cache";
+import dynamic from "next/dynamic";
 
-
-
- 
-import { revalidateTag } from 'next/cache'
-
-import dynamic from 'next/dynamic';
-
-const FirstComponent = dynamic(() => import("./A_FirstComponent"), { ssr: false });
-const SecondComponent = dynamic(() => import("./B_SecondComponent"), { ssr: false });
-const ThirdComponent = dynamic(() => import("./C_ThirdComponent"), { ssr: false });
-const D_CoursesPreview = dynamic(() => import("./D_CoursesPreview"), { ssr: false });
-const E_Testimonials = dynamic(() => import("./E_Testimonials"), { ssr: false });
+const FirstComponent = dynamic(() => import("./A_FirstComponent"));
+const SecondComponent = dynamic(() => import("./B_SecondComponent"));
+const ThirdComponent = dynamic(() => import("./C_ThirdComponent"));
+const D_CoursesPreview = dynamic(() => import("./D_CoursesPreview"));
+const E_Testimonials = dynamic(() => import("./E_Testimonials"));
 const F_Parallax = dynamic(() => import("./F_Parallax"), { ssr: false });
-const RenameComponent = dynamic(() => import("./G_RenameLater"), { ssr: false });
-const FeaturedCourseTitle = dynamic(() => import("./Z_TitleFeaturedCourse"), { ssr: false });
+const FeaturedCourseTitle = dynamic(() => import("./Z_TitleFeaturedCourse"));
+
+const fetchData = async () => {
+  const [homePageData, courseData, testimonialData] = await Promise.all([
+    getHomePage(),
+    getCourse(),
+    getTestimonials(),
+  ]);
+
+  return { homePageData, courseData, testimonialData };
+};
 
 const MainPageWrapper = async () => {
-  revalidateTag('collection');
+  revalidateTag("collection");
+
   try {
-    const homePageData = await getHomePage();
-    const [courseData, testimonialData] = await Promise.all([
-      getCourse(),
-      getTestimonials(),
-    ]);
+    const { homePageData, courseData, testimonialData } = await fetchData();
 
     if (!homePageData || !courseData || !testimonialData) {
       console.error("Errore: alcuni dati non sono stati recuperati");
-      return null;
+      return <h1>Errore nel caricamento dei dati.</h1>;
     }
 
     return (
@@ -45,9 +46,10 @@ const MainPageWrapper = async () => {
     );
   } catch (error) {
     console.error("Errore nel recupero dei dati:", error);
-    return null;
+    return <h1>Si è verificato un errore durante il caricamento.</h1>;
   }
 };
 
 export default MainPageWrapper;
+
 
