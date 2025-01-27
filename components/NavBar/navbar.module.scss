@@ -2,11 +2,12 @@
 
 @mixin navNames {
   font-size: 1.2rem;
-  color: #748b67;
+
   color: $blueColor;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 2rem;
+
 }
 
 
@@ -20,6 +21,8 @@
 
 .flexContainer {
     @include flexProperties; 
+    
+  
 // @include padOne;
   }
   .navItem{
@@ -27,12 +30,14 @@
     margin-left: .5rem;
     @include respond-to(sm, max) {
       display: none;
+    
     }
 
   }
     .navItemMobile{
     @include listItem;
     margin-left: .5rem;
+  
  
 
   }
@@ -40,34 +45,11 @@
     @include Link;
     text-align: left;
     text-transform: capitalize;
+  
 
   }
 
 
-  // NAVBAR WRAPPER
-  // .topNavBar {
-  //   display: none;
-  //   @include respond-to(sm, max) {
-  //     display: none;
-  //   }
-  //   @include respond-to(md, max) {
-  //     display: none;
-  //   }
-  //   @include respond-to(lg, max) {
-  //     display: none;
-  //   }
-  // }
-
-    
- 
-
-  
-  
-  // .bottomNavBar {
-  //   @include respond-to(sm, max) {
-  //     display: none;
-  //   }
-  // }
 
 
 
@@ -75,16 +57,20 @@
 // TOPNAVABAR
   .navOne{
     display: none;
+    background-color: #738ca6;
 
    
 
     @include respond-to(lg,min){
     display: block;
-      font-family: "ZeitungPro Regular";
+      // font-family: "ZeitungPro Regular";
       text-transform: uppercase;
+
     
       @include flexProperties; 
-      background-color: rgba(116, 139, 103, 0.8);
+      // background-color: rgba(116, 139, 103, 0.8);
+ 
+      
    color: $genericNuances2;
       height: 2rem;
       cursor: pointer;
@@ -128,7 +114,7 @@
     height: 6rem;
     border-bottom: solid 1rem $generic1;
     @include respond-to(md,min){
-    font-family: "ZeitungPro Regular";
+    // font-family: "ZeitungPro Regular";   forse questo mofifica
     text-transform: uppercase;
     position: sticky;
     top: 0;
@@ -319,6 +305,7 @@ display: none;
   width: auto;
   // margin-right: 40rem;
   background-color: $genericNuances4;
+
 p{
   color: $generic6;
   padding: .4rem 2rem;
@@ -378,7 +365,7 @@ p{
     // text-align: center;
 
     &:hover {
-      background-color: #0056b3; 
+      background-color: #7695b6; 
         }
   }
 
