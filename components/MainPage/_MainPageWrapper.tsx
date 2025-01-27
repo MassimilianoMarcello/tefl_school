@@ -1,23 +1,25 @@
 'use server'
 
 import { getHomePage, getCourse, getTestimonials } from "@/sanity/sanity.query";
-import FirstComponent from "./A_FirstComponent";
-import SecondComponent from "./B_SecondComponent";
-import ThirdComponent from "./C_ThirdComponent";
-import D_CoursesPreview from "./D_CoursesPreview";
-import E_Testimonials from "./E_Testimonials";
-import SlideItem from "../SlideItem/SlideItem";
-import F_Parallax from "./F_Parallax";
+
 
 
  
 import { revalidateTag } from 'next/cache'
 
-import RenameComponent from "./G_RenameLater";
-import FeaturedCourseTitle from "./Z_TitleFeaturedCourse";
+import dynamic from 'next/dynamic';
+
+const FirstComponent = dynamic(() => import("./A_FirstComponent"), { ssr: false });
+const SecondComponent = dynamic(() => import("./B_SecondComponent"), { ssr: false });
+const ThirdComponent = dynamic(() => import("./C_ThirdComponent"), { ssr: false });
+const D_CoursesPreview = dynamic(() => import("./D_CoursesPreview"), { ssr: false });
+const E_Testimonials = dynamic(() => import("./E_Testimonials"), { ssr: false });
+const F_Parallax = dynamic(() => import("./F_Parallax"), { ssr: false });
+const RenameComponent = dynamic(() => import("./G_RenameLater"), { ssr: false });
+const FeaturedCourseTitle = dynamic(() => import("./Z_TitleFeaturedCourse"), { ssr: false });
 
 const MainPageWrapper = async () => {
-  revalidateTag('collection')
+  revalidateTag('collection');
   try {
     const [
       firstComponentData,
@@ -52,19 +54,13 @@ const MainPageWrapper = async () => {
 
     return (
       <>
-        {/* Passa i dati come props ai componenti figlio */}
-       
-       <FirstComponent data={firstComponentData} />
-        {/*  <SlideItem/>*/}
-        <SecondComponent data={secondComponentData} /> 
-   {/* <OurCourses/> */}
+        <FirstComponent data={firstComponentData} />
+        <SecondComponent data={secondComponentData} />
         <ThirdComponent data={thirdComponentData} />
-        <FeaturedCourseTitle/>
+        <FeaturedCourseTitle />
         <D_CoursesPreview data={courseData} />
         <E_Testimonials data={testimonialData} />
-      
-        <F_Parallax/>
-        {/* <RenameComponent data={renameComponentData}  />    */}
+        <F_Parallax />
       </>
     );
   } catch (error) {
