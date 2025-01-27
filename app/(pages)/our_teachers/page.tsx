@@ -1,15 +1,12 @@
-
-
-
-import OurTeachers from '@/components/Our teachers/OurTeachers'
-
+import OurTeachers from "@/components/Our-teachers/OurTeachers";
 
 const ourTeachers = () => {
   return (
     <div>
-      <OurTeachers  />
+      <OurTeachers />
+      
     </div>
-  )
-}
+  );
+};
 
-export default ourTeachers
+export default ourTeachers;

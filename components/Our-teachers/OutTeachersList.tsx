@@ -9,17 +9,20 @@ import Link from "next/dist/client/link";
 import { revalidateTag } from "next/cache";
 import ButtonAzure from "../Buttons/ButtonAzure";
 
-export default async function OurTeachers() {
+
+interface OurTeachersProps {
+  data: TeachersType[]; // Tipizza l'array degli insegnanti
+}
+
+
+export default function OurTeachersList({ data }: OurTeachersProps) {
+
   revalidateTag("collection");
-  const dataTopPage = await getCommonTopPage();
-  const data = await getTeachers();
+ 
+
+ 
   return (
     <>
-      <TopPageTeachers
-        data={dataTopPage}
-        dynamicStyle="ourteachersContainer"
-        id="d1b1177b-c086-4f38-86c6-ac32c794b342"
-      />
       <main className={styles.mainContainer}>
         <section className={styles.coursesTextContainer}>
           <span className={styles.square3}></span>

@@ -1,9 +1,13 @@
 
+      //  <AboutUs data={aboutUsData} pageType={""} pageIndex={0} />
+
+
+
 
 
 'use server'
 
-import { getAboutUs, getCommonTopPage,getTeachers } from "@/sanity/sanity.query";
+import { getAboutUs, getCommonTopPage, getTeachers } from "@/sanity/sanity.query";
 import AboutUs from "@/components/About_Us/AboutUs";
 import TopPageAboutUs from '@/components/About_Us/TopPageAboutUS';
 
@@ -11,57 +15,27 @@ import TopPageAboutUs from '@/components/About_Us/TopPageAboutUS';
 
  
 import { revalidateTag } from 'next/cache'
-import OurTeachers from "@/components/Our teachers/OurTeachers";
+import OurTeachersList from "@/components/Our-teachers/OutTeachersList";
 
 
 
-const AboutUsPageWrapper = async () => {
-  revalidateTag('collection')
-  try {
-    const [
-      aboutUsData,
-      commonTopPageData,
-      teachersData,
-  
-    ] = await Promise.all([
-      getAboutUs(0),
-      getCommonTopPage(),
-      getTeachers(),
 
-    ]);
 
-    // Verifica che entrambi i set di dati non siano nulli
-    if (
-      !aboutUsData ||
-      ! commonTopPageData ||
-      ! teachersData
+const page = async () => {
+  const commonTopPageData = await getCommonTopPage();
+  const aboutUsData = await getAboutUs(0);
+  const dataTeachers = await getTeachers();
 
-    ) {
-      console.error(
-        "Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli"
-      );
-      return null;
-    }
-
-    return (
-      <>
-        {/* Passa i dati come props ai componenti figlio */}
-        <TopPageAboutUs data={commonTopPageData  } />
-       <AboutUs data={aboutUsData} pageType={""} pageIndex={0} />
-       <OurTeachers data={teachersData}/>
+  return (
+    <div>
+        <TopPageAboutUs data={commonTopPageData} />
    
-   
-        {/* <CommonTopPage data={commonTopPageData } />  */}
- 
-       
+        <AboutUs data={aboutUsData} pageType={""} pageIndex={0} />
+           <OurTeachersList data={dataTeachers} />
 
-      </>
-    );
-  } catch (error) {
-    console.error("Errore nel recupero dei dati:", error);
-    return null;
-  }
-};
+    </div>
+  )
+}
 
-export default AboutUsPageWrapper;
-
+export default page
+      
