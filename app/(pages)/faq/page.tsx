@@ -5,7 +5,7 @@ import FaqCommonTopPage from '@/common-components/topPage';
 import { getAllFaqs } from '@/sanity/sanity.query';
 import { getCommonTopPage } from '@/sanity/sanity.query';
 import { revalidateTag } from "next/cache";
-import FaqTopPageData from '@/components/FAQ/FaqTopPageData';
+
 
 
 

@@ -1,27 +1,18 @@
-import { getCommonTopPage } from "@/sanity/sanity.query";
-import TopPageOurCourses from '@/components/OurCourses/TopPageOurCourses';
-import { revalidateTag } from 'next/cache';
+
+import TopPageCourses from '@/components/OurCourses/TopPageCourses';
+import OurCoursesExport from '@/components/OurCourses/OurCoursesExport';
 
 const OurCoursesWrapper = async () => {
-  revalidateTag('collection');
 
-  try {
-    const commonTopPageData = await getCommonTopPage();
 
-    if (!commonTopPageData) {
-      console.error("Errore nel recupero dei dati: il dato è nullo");
-      return null;
-    }
+
 
     return (
       <>
-        <TopPageOurCourses data={commonTopPageData} />
+      
+        <TopPageCourses  />
+        <OurCoursesExport />
       </>
-    );
-  } catch (error) {
-    console.error("Errore nel recupero dei dati:", error);
-    return null;
-  }
-};
+    )};
 
-export default OurCoursesWrapper;
+export default OurCoursesWrapper

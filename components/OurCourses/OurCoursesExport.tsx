@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Course as CourseType } from "@/Types/Course";
 import Link from "next/dist/client/link";
 import styles from "./OurCoursesExport.module.scss";
-// import { revalidateTag } from "next/cache";
+ import { revalidateTag } from "next/cache";
 
 export default async function OurCoursesExport() {
-  // revalidateTag("collection");
+  revalidateTag("collection");
   const courseCard: CourseType[] = await getCourse();
 
   return (
