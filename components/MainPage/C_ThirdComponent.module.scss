@@ -205,37 +205,3 @@ margin: 1rem;
 
 }
 
-// .parallax1 {
-//   margin-top: 22rem;
-//   margin-right: 3rem;
-//   padding-bottom: 2rem;
-//   @include respond-to(md, min) {
-//     margin-top: -12rem;
-//     // background-position: left;
-
-//     padding-bottom: 0rem;
-//   }
-//   .blueBack {
-//     background-color: $generic12;
-//     // background-color: #748b67;
-//     padding-bottom: 10rem;
-//     // border-radius: 0% 0% 15% 15%;
-//   }
-//   .parallax1Inner {
-//     a {
-//       @include listItem;
-//       @include Link;
-//       text-transform: uppercase;
-//       color: $genericSkip1;
-//       background-color: $blueColor;
-//       font-size: 1.5rem;
-//       padding: 0.5rem 1rem;
-//       border-radius: 5%;
-//       text-align: left;
-//       position: absolute;
-//       right: 12rem;
-//       bottom: 2rem;
-//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//     }
-//   }
-// }
