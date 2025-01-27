@@ -21,42 +21,22 @@ const FeaturedCourseTitle = dynamic(() => import("./Z_TitleFeaturedCourse"), { s
 const MainPageWrapper = async () => {
   revalidateTag('collection');
   try {
-    const [
-      firstComponentData,
-      secondComponentData,
-      thirdComponentData,
-      courseData,
-      testimonialData,
-      renameComponentData,
-    ] = await Promise.all([
-      getHomePage(),
-      getHomePage(),
-      getHomePage(),
+    const homePageData = await getHomePage();
+    const [courseData, testimonialData] = await Promise.all([
       getCourse(),
       getTestimonials(),
-      getHomePage(),
     ]);
 
-    // Verifica che entrambi i set di dati non siano nulli
-    if (
-      !firstComponentData ||
-      !secondComponentData ||
-      !thirdComponentData ||
-      !courseData         ||
-      !testimonialData    ||
-      !renameComponentData
-    ) {
-      console.error(
-        "Errore nel recupero dei dati: uno o entrambi i set di dati sono nulli"
-      );
+    if (!homePageData || !courseData || !testimonialData) {
+      console.error("Errore: alcuni dati non sono stati recuperati");
       return null;
     }
 
     return (
       <>
-        <FirstComponent data={firstComponentData} />
-        <SecondComponent data={secondComponentData} />
-        <ThirdComponent data={thirdComponentData} />
+        <FirstComponent data={homePageData} />
+        <SecondComponent data={homePageData} />
+        <ThirdComponent data={homePageData} />
         <FeaturedCourseTitle />
         <D_CoursesPreview data={courseData} />
         <E_Testimonials data={testimonialData} />
@@ -70,3 +50,4 @@ const MainPageWrapper = async () => {
 };
 
 export default MainPageWrapper;
+

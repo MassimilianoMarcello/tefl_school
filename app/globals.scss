@@ -9,35 +9,4 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
-  font-family: "Zeitung Micro Pro", Arial, sans-serif;
-  background-color: #fff;
-  // @include respond-to (sm, min) {
-  //   background-color: red;
-  // }
-  // @include respond-to (md, min) {
-  //   background-color: blue;
-  // }
-  // @include respond-to (lg, min) {
-  //   background-color: orange;
-  // }
-  // @include respond-to (xl, min) {
-  //   background-color: green;
-  // }
-  // @include respond-to (xxl, min) {
-  //   background-color: yellow;
-  // }
-  // @include respond-to (xxxl, min) {
-  //   background-color: purple;
-  // }
-
-}
-p{
-  color: #687188 ;
-}
-h1,h2,h3,h4,h5{
-  color: #161221;
-}
 

@@ -2,10 +2,13 @@ import React from 'react';
 import { getCommonTopPage } from '@/sanity/sanity.query';
 import OurCoursesCommonTopPage from '@/common-components/topPage';
 import './TopPageCourse.module.scss'
+  // import { revalidateTag } from 'next/cache'
+
 
 import TextForTopPAge from './TextForTopPage';
 
 const TopPageCourses = async () => {
+  // revalidateTag('collection');
   const dataTopPage = await getCommonTopPage();
   return (
     <>
