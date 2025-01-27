@@ -37,9 +37,9 @@ import EnrollNowButton from "../Buttons/EnrollNow";
             height={500}
           />
         )}
-           {/* <div className={styles.applyButton}>
+           <div className={styles.applyButton}>
            <ApplyTodayButton/>
-           </div> */}
+           </div>
      
         <span className={styles.square1}></span>
         <span className={styles.square2}></span>
