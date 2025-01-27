@@ -1,4 +1,5 @@
-import styles from "./teachers.module.scss";
+import styles from "./style.module.scss";
+
 import { getCommonTopPage } from "@/sanity/sanity.query";
 import { urlFor } from "@/sanity/sanity.client";
 
