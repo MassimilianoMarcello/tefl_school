@@ -93,11 +93,7 @@ export default function D_CoursesPreview({ data }: CourseProps) {
       <Link href={"/our_courses"} className={styles.testimonialsLink}> all courses &gt;</Link>
 
         </div>
-                {/* <div className={styles.container2} style={{ height: "400px" }}>
-       
-       lamo
-        </div> */}
-        {/* Aggiungi altri contenitori se necessario */}
+
       </div>
 </main>
 
