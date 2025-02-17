@@ -12,7 +12,7 @@ const CenterNavBar = () => {
     <nav className={s.navTwo}>
       <div className={s.navTwoBox}>
         <div className={s.logoContainer}>
-          
+          <Link href={"/"}>
           <Image
             src={tefl_logo}
             alt={"logo image"}
@@ -21,6 +21,7 @@ const CenterNavBar = () => {
             className={s.logoImage}
             // priority
           /> 
+          </Link>
         {/* <h1>website name</h1> */}
         </div>
         <div className={s.allLinksDesktop}>
