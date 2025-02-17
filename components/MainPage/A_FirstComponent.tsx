@@ -21,19 +21,21 @@ export default function FirstComponent({ data }: FirstComponentProps) {
               <p className={styles.mainText}>{homePage.mainText}</p>
             </div>
             {homePage.bannerImage && (
-              <Image 
-                className={styles.backgroundImage}
-                priority
-                src={urlFor(homePage.bannerImage).width(1250).height(950).url()} // Genera URL ottimizzati con Sanity
-                alt={homePage.mainTitle || "Banner Image"}
-                sizes="100vw"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-                width={1250}
-                height={600}
-              />
+   <Image 
+   className={styles.backgroundImage}
+   priority
+   src={urlFor(homePage.bannerImage).width(1250).height(950).url()} // URL immagine finale
+   alt={homePage.mainTitle || "Banner Image"}
+   sizes="100vw"
+   placeholder="blur"
+   blurDataURL={urlFor(homePage.bannerImage).width(50).height(50).url()} // URL dell'immagine sfocata a bassa risoluzione
+   style={{
+     width: '100%',
+     height: 'auto',
+   }}
+   width={1250}
+   height={600}
+ />
             )}
           </div>
         ))}

@@ -77,11 +77,11 @@ const BottomNavbar = () => {
           <ul className={s.flexContainer}>
             <li className={s.navItem}>
               {/* <button className={s.primaryButton}>Dates & Prices </button> */}
-              <ButtonAzure text={"Dates & Prices"} />            </li>
+              <ButtonAzure text={"Dates & Prices"} color={"#ffd704"} />            </li>
 
             <li className={s.navItem}>
               {/* <button className={s.warningButton}>Apply Now </button> */}
-              <ButtonAzure text={"Apply Now"}/>  
+              <ButtonAzure text={"Apply Now"} color={"#ffd704"} />
             </li>
           </ul>
         </div>

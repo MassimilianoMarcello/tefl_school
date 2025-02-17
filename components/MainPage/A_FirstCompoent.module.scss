@@ -2,15 +2,17 @@
 
 .OneMainContainer {
   background-color: #fff;
+
 }
 .TwoSectionContainer {
   background-color: #fff;
+
 }
 
 .threeMapContainer {
   position: relative;
   background-color: #fff;
-
+  border-bottom: $primary-color 10rem solid;
   margin-bottom: 8rem;
   @include respond-to(sm, max) {
     margin-top: 4rem;
@@ -82,8 +84,8 @@ font-size: 3.5rem;
   // display: none;
  
   background-color: $bgColor;
-  padding: 1.5rem;
-  margin-top: 8rem;
+  padding: 2rem;
+  margin-top: 6rem;
   margin-left: 0rem;
   width: 25rem;
   color: $generic6;
@@ -96,7 +98,7 @@ font-size: 3.5rem;
   @include respond-to(md, min) {
 margin-top: 16rem;
     color: $blueColor;
-    padding: 1rem;
+ 
     font-size: 2rem;
     font-weight: 300;
     width: 40rem;
@@ -130,20 +132,20 @@ pointer-events: none;
   top: 6rem;
   left: 0rem;
 
-  height: 4rem;
-  width: 4rem;
+  height: 8rem;
+  width: 8rem;
   background-color: lightblue;
   z-index: 3;
   @include respond-to(sm, min) {
     top: 8.5rem;
     left: 2rem;
-    height: 31rem;
+    // height: 31rem;
   }
   @include respond-to(md, min) {
     left: 41rem;
     top: 54rem;
-    height: 5rem;
-    width: 5rem;
+    // height: 5rem;
+    // width: 5rem;
   
     font-weight: 100;
   }
@@ -152,8 +154,8 @@ left: 34rem;
 top: 43rem;
   }
   @include respond-to(xl, min) {
-    left: 45rem;
-    top: 42rem;
+    left: 41rem;
+    top: 39.5rem;
       }
       @include respond-to(xxl, min) {
         left: 55rem;
@@ -187,6 +189,6 @@ z-index: 1;
   }
   @include respond-to(lg, min) {
     top: 25rem;
-    left: 6rem;
+    left: 5rem;
   }
 }

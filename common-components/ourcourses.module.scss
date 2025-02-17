@@ -3,7 +3,7 @@
 // top page image and titles
 // main container
 .ourcoursesTopPage {
-  
+
   display: grid;
   grid-template-columns: repeat(6,1fr);
   grid-template-rows: repeat(4,auto);
@@ -14,7 +14,6 @@
     grid-column: 1/7;
     grid-row: 1/2;
   }
-
 
 // all text container
 .topTextContainer{

@@ -7,9 +7,9 @@ import Image from "next/image";
 import { CommonTop as CommonTopType } from "@/Types/CommonTop";
 
 interface CommonTopTypeProps {
-  data: CommonTopType[]; // Accetta i dati come prop
-  dynamicStyle?: string; // Classe dinamica opzionale
-  id: string; // ID dinamico per filtrare i dati
+  data: CommonTopType[];
+  dynamicStyle?: string;
+  id: string; //
 }
 
 export default function CommonTopPage({

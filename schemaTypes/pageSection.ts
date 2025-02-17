@@ -43,36 +43,6 @@ export default{
         ]
       },
 
-
-
-    //   add video
-
-    //   {
-    //     name: 'video',
-    //     title: 'Video URL',
-    //     type: 'url'
-    //   },
-
-
-    //   add  list
-
-
-    //   {
-    //     name: 'list',
-    //     title: 'List',
-    //     type: 'array',
-    //     of: [{ type: 'string' }], 
-    //   },
-
-
-    //   add link
-
-
-    //   {
-    //     name: 'link',
-    //     title: 'Link',
-    //     type: 'url' 
-    //   }
     ]
   }
   

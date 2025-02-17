@@ -1,4 +1,4 @@
-@import  '../../app/page.module.scss';
+@import "../../app/page.module.scss";
 
 @mixin navNames {
   font-size: 1.2rem;
@@ -7,214 +7,169 @@
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 2rem;
-
 }
-
-
-
-
-
-
-
 
 // COMMON GENERAL STYLES
 
 .flexContainer {
-    @include flexProperties; 
-    
-  
-// @include padOne;
+  @include flexProperties;
+
+  // @include padOne;
+}
+.navItem {
+  @include listItem;
+  margin-left: 0.5rem;
+  @include respond-to(sm, max) {
+    display: none;
   }
-  .navItem{
-    @include listItem;
-    margin-left: .5rem;
-    @include respond-to(sm, max) {
-      display: none;
-    
-    }
-
-  }
-    .navItemMobile{
-    @include listItem;
-    margin-left: .5rem;
-  
- 
-
-  }
-  .linkTag{
-    @include Link;
-    text-align: left;
-    text-transform: capitalize;
-  
-
-  }
-
-
-
-
-
+}
+.navItemMobile {
+  @include listItem;
+  margin-left: 0.5rem;
+}
+.linkTag {
+  @include Link;
+  text-align: left;
+  text-transform: capitalize;
+}
 
 // TOPNAVABAR
-  .navOne{
-    display: none;
-    background-color: #738ca6;
-
-   
-
-    @include respond-to(lg,min){
+.navOne {
+  display: none;
+  background-color: #add9e6;
+  @include respond-to(lg, min) {
     display: block;
-      // font-family: "ZeitungPro Regular";
-      text-transform: uppercase;
+    text-transform: uppercase;
 
-    
-      @include flexProperties; 
-      // background-color: rgba(116, 139, 103, 0.8);
- 
-      
-   color: $genericNuances2;
-      height: 2rem;
-      cursor: pointer;
-      z-index: 10000;
+    @include flexProperties;
 
-    }
- 
-
-
+    color: #1f3c4c;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 10000;
   }
+}
 
+.phone {
+  margin: 0 2.5rem;
+}
+.callMeIcon {
+  margin-left: 0.5rem;
+}
 
-  .phone{
-    margin:0 2.5rem;
+.navNamesTop {
+  @include navNames;
+  margin-top: 0;
+  margin-left: 1rem;
+  color: #1f3c4c;
+  &:hover {
+    color: $generic12;
   }
-  .callMeIcon{
-    margin-left: .5rem;
-  }
-
-  .navNamesTop{
-    @include navNames;
-    margin-top: 0;
-    margin-left: 1rem;
-    color: $generic13;
-    &:hover{
-      color:$generic12;
-    }
-      }
+}
 
 // CENTER NAVBAR
 
-  .navTwo{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 3rem;
-    background-color:white;
-    z-index: 100;
-    width: 100%;
-    height: 6rem;
-    border-bottom: solid 1rem $generic1;
-    @include respond-to(md,min){
+.navTwo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3rem;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+  height: 6rem;
+  border-bottom: solid 1rem #1f3c4c;
+
+  @include respond-to(md, min) {
     // font-family: "ZeitungPro Regular";   forse questo mofifica
     text-transform: uppercase;
     position: sticky;
     top: 0;
     display: block;
-   background-color: #fff;
+    background-color: #fff;
     height: 6rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-left: 0rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     color: black;
-    cursor: pointer;}
- 
-    @include respond-to(lg, min) {
-   
-      
-    }
-
-  }
-  .navTwoBox{
-
-    @include flexProperties; 
-  }
-  .logoContainer{
-    @include flexProperties; 
-    align-items: center;
-
- 
-  }
-  .logoImage{
-    width: 15rem;
-    height: 4rem;
-    display: block;
-     margin-top:  .5rem ;
-    margin-left: 1rem;
-@include respond-to(lg, min) {
-      width: 15rem;
-      height: 2.5rem;
-      margin-top:  1.5rem ;
-      margin-left: 1rem;
-    }
-
-    @include respond-to(lg, min) {
-      width: 20rem;
-      height: 5rem;
-      margin-top:  -.5rem ;
-      margin-left: 1rem;
-      
-    }
-  
+    cursor: pointer;
   }
 
-  .navNamesCenter{
-    display: none;
-    @include respond-to(lg, min) {
-      display: block;
-    @include navNames;
-    margin-left: -.5rem;
-&:hover{
-  color:$generic12;
+  @include respond-to(lg, min) {
+  }
 }
+.navTwoBox {
+  @include flexProperties;
+}
+.logoContainer {
+  @include flexProperties;
+  align-items: center;
+}
+.logoImage {
+  width: 15rem;
+  height: 4rem;
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  @include respond-to(lg, min) {
+    width: 15rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  @include respond-to(lg, min) {
+    width: 20rem;
+    height: 5rem;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+  }
+}
+
+.navNamesCenter {
+  display: none;
+  @include respond-to(lg, min) {
+    display: block;
+    @include navNames;
+    margin-left: -0.5rem;
+    &:hover {
+      color: $generic12;
     }
-      }
-
-
-
-
-
-
-
-  // BOTTOM NAVBAR
-
-  .bottomNavContainer{
-display: none;
- 
-    @include respond-to(lg,min){
-      display: block;
-      font-family: "ZeitungPro Regular";
-   text-transform: uppercase;
-      background-color: #fff;
-      position: sticky;
-      top: 0;
-    
-      z-index: 10000;
-  }}
-
-  .fixed{
-    background-color: #eceff0 ;
   }
+}
 
-  .navNames{
-@include navNames;
+// BOTTOM NAVBAR
+
+.bottomNavContainer {
+  display: none;
+
+  @include respond-to(lg, min) {
+    display: block;
+    // font-family: "ZeitungPro Regular";
+    text-transform: uppercase;
+    background-color: #fff;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10000;
   }
+}
 
+.fixed {
+  background-color: #eceff0;
+}
 
-  // buttons in bottom navbar
+.navNames {
+  @include navNames;
+}
 
-  // Utilizzo del mixin per creare un pulsante primario
+// buttons in bottom navbar
+
+// Utilizzo del mixin per creare un pulsante primario
 .primaryButton {
   @include button-style($generic10, #fff, darken($primary-color, 10%), #fff);
-
 }
 
 // Utilizzo del mixin per creare un pulsante di avviso
@@ -222,11 +177,7 @@ display: none;
   @include button-style($warning-color, #fff, darken($genericSkip1, 10%), #fff);
 }
 
-
-
 // mediaqueries
-
-
 
 // Esempio di utilizzo del mixin
 // .container {
@@ -239,7 +190,6 @@ display: none;
 //   }
 // }
 
-
 // hamburger button
 
 .hamburgerMenu {
@@ -249,22 +199,18 @@ display: none;
 }
 
 .hamburgerIcon {
-// margin: 0rem 4rem;
+  // margin: 0rem 4rem;
   position: absolute;
-  bottom: .1rem;
+  bottom: 0.1rem;
   right: 2rem;
 
   background: none;
   border: none;
   cursor: pointer;
   @include respond-to(lg, min) {
-
     display: none;
-}}
-// .iconMenuClose {
-//   fill: red; 
-// }
-// .iconMenuOpen{}
+  }
+}
 
 .menuMobile {
   position: fixed;
@@ -276,84 +222,64 @@ display: none;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // gap: 10px;
+
   z-index: 10;
 }
 
-// @media (min-width: 768px) {
-//   .hamburgerMenu {
-//     display: none; 
-// }
-
-// dropdownmenu
-
-
-
-.dropdownContainer{
+.dropdownContainer {
   color: $generic1;
   font-family: $fontThird;
   @include respond-to(sm, max) {
-  display: none;
+    display: none;
   }
   @include posAbsoluteBottomRightLeft;
-  margin:0 1.6rem -15rem 2rem;
+  margin: 0 1.6rem -15rem 2rem;
 
   height: 15rem;
   width: auto;
   // margin-right: 40rem;
   background-color: $genericNuances4;
 
-p{
-  color: $generic6;
-  padding: .4rem 2rem;
-}
+  p {
+    color: $generic6;
+    padding: 0.4rem 2rem;
+  }
 }
 
 .dropdownMenu {
   list-style: none;
   margin: 0;
   padding: 2rem;
-  background-color:#add8e6 ;
+  background-color: #add8e6;
   height: 15rem;
   width: 20rem;
   border-radius: 5%;
   text-align: left;
 
   .dropdownItem {
-    margin-bottom: 20px; 
-    .linkTag   {
+    margin-bottom: 20px;
+    .linkTag {
       @include Link;
-  @include listItem;
+      @include listItem;
     }
-
   }
- 
 
   h3 {
- 
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10px;
- 
-  
   }
 
   p {
     font-family: $fontSecond;
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin-bottom: 10px;
     color: #666;
-
   }
-
-
 
   .testButton {
     font-family: $fontSecond;
-    @include  button-styling;
+    @include button-styling;
     // background-color: $blueColor;
     // color: white;
     // border: none;
@@ -365,19 +291,11 @@ p{
     // text-align: center;
 
     &:hover {
-      background-color: #7695b6; 
-        }
+      background-color: #7695b6;
+    }
   }
 
   .linkTag {
     text-decoration: none;
-
-   
   }
 }
-
-
-
-
-
-
