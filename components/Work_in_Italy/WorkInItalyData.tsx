@@ -1,31 +1,19 @@
-// "use server";
+import React from 'react'
+import WorkingInItalyTopPage from '@/common-components/topPage';
+ import { getCommonTopPage } from '@/sanity/sanity.query';
+import { revalidateTag } from 'next/cache'
 
+const WorkInItalyData = async () => {
+    revalidateTag('collection')
+      const dataTopPage = await getCommonTopPage();
+  return (
+    <div>
+        <WorkingInItalyTopPage
+          data={dataTopPage}
+          dynamicStyle="workingInItalyTopPage"
+          id="ee6d9b24-7a59-4c2f-a31b-19cf7aa81a2d"/>
+    </div>
+  )
+}
 
-
-// import { getPage } from "@/sanity/sanity.query";
-// import Page from "@/components/Common_Page/Page";
-
-// const WorkInItalyPageWrapper = async () => {
-//   try {
-//     const pageData = await getPage(1); // Passa l'indice corretto
-
-//     // Verifica che i dati non siano nulli
-//     if (!pageData) {
-//       console.error(
-//         "Errore nel recupero dei dati: i dati della pagina sono nulli"
-//       );
-//       return null;
-//     }
-
-//     return (
-//       <>
-//         <Page data={pageData} pageType={pageData.pageType.current} pageI/>
-//       </>
-//     );
-//   } catch (error) {
-//     console.error("Errore nel recupero dei dati:", error);
-//     return null;
-//   }
-// };
-
-// export default WorkInItalyPageWrapper;
+export default WorkInItalyData
