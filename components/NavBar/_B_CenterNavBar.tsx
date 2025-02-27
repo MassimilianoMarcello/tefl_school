@@ -32,7 +32,7 @@ const CenterNavBar = () => {
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href={"/work_in_italy"} className={s.linkTag}>
+              <Link href={"/work-in-italy"} className={s.linkTag}>
               <p className={s.navNamesCenter}>work in italy</p>
               </Link>
             </li>

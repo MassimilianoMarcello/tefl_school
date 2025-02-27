@@ -1,0 +1,158 @@
+.workingInItalyBottomPage {
+    position: relative;
+    padding: 3rem 1rem;
+    background-color: #f9f9f9; 
+   
+  }
+  
+  .mainTitlePage {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  
+  }
+  
+  .mainImage {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .applyButton {
+    position: absolute;
+    top: 14rem;
+    right: 8rem;
+    z-index: 3;
+  }
+  
+  .square1,
+  .square2 {
+    position: absolute;
+    height: 12rem;
+    width: 8rem;
+    background-color: gold;
+    z-index: 2;
+    display: none;
+  }
+  
+  .square1 {
+    top: 4rem;
+    right: 35rem;
+  }
+  
+  .square2 {
+    top: 2rem;
+    right: 0rem;
+    background-color: lightblue;
+  }
+  
+  .gridContainer {
+
+    gap: 2rem;
+    margin-top: 3rem;
+
+  }
+  
+  .sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+   
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .sectionContainer0 {
+    .imageContainer {
+        grid-column:1/3 ;
+        grid-row:1/2 ;
+}
+.topTextContainer {
+    grid-column:3/4 ;
+    grid-row:1/2 ;
+  }
+
+  }
+  .sectionContainer1 {
+    .imageContainer {
+        grid-column:2/5 ;
+        grid-row:1/2 ;
+   }
+   .topTextContainer {
+    grid-column:    1/2 ;
+   grid-row:1/2 ;
+  }
+
+  }
+
+
+  
+  .imageBackground {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .topTextContainer {
+
+    padding: 1.5rem;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .mainSubtitle {
+    font-size: 1.2rem;
+    color: #66d4fd;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .mainText {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .portableTextContainer {
+    margin-top: 1.5rem;
+  }
+  
+  .enrollButton {
+    position: absolute;
+    top: 85rem;
+    right: 2rem;
+    left: 32rem;
+  }
+  
+//   @media (max-width: 768px) {
+//     .gridContainer {
+//       grid-template-columns: 1fr;
+//     }
+  
+//     .topMainContainer {
+//       padding: 1.5rem;
+//     }
+  
+//     .mainTitlePage {
+//       font-size: 2rem;
+//     }
+  
+//     .applyButton {
+//       top: 10rem;
+//       right: 3rem;
+//     }
+  
+//     .square1,
+//     .square2 {
+//       height: 8rem;
+//       width: 5rem;
+//     }
+//   }
+  
