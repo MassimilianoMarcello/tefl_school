@@ -3,24 +3,19 @@ import { getTeachers, getCommonTopPage } from "@/sanity/sanity.query";
 import { urlFor } from "@/sanity/sanity.client";
 
 import Image from "next/image";
-import TopPageTeachers from "@/common-components/topPage";
+import TopPageTeachers from "@/common-components/common-top-page/topPage";
 import { Teachers as TeachersType } from "@/Types/Teachers";
 import Link from "next/dist/client/link";
 import { revalidateTag } from "next/cache";
 import ButtonAzure from "../Buttons/ButtonAzure";
 
-
 interface OurTeachersProps {
   data: TeachersType[]; // Tipizza l'array degli insegnanti
 }
 
-
 export default function OurTeachersList({ data }: OurTeachersProps) {
-
   revalidateTag("collection");
- 
 
- 
   return (
     <>
       <main className={styles.mainContainer}>

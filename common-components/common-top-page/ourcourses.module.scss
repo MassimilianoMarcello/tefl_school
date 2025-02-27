@@ -1,9 +1,9 @@
-@import "../app/page.module.scss";
+@import "../../app/page.module.scss";
 
 // top page image and titles
 // main container
-.faqContainer {
-  
+.ourcoursesTopPage {
+
   display: grid;
   grid-template-columns: repeat(6,1fr);
   grid-template-rows: repeat(4,auto);
@@ -15,10 +15,9 @@
     grid-row: 1/2;
   }
 
-
 // all text container
 .topTextContainer{
-    border-top: solid .5rem goldenrod;
+    border-top: solid .5rem gold;
   position: absolute;
   left: 44rem;
   top: 12rem;
@@ -49,7 +48,7 @@
 .mainTitle {
 text-align: center;
   font-size: 1.5rem;
-  padding:0 1rem;
+  padding: 2rem;
   padding-top: 1rem;
   color: $blueColor;
   font-weight: 900;
@@ -59,11 +58,11 @@ text-align: center;
   
   }
   @include respond-to(lg, min) {
-    font-size: 4rem;
+    font-size: 3rem;
   
   }
   @include respond-to(xl, min) {
-    font-size: 6rem;
+    font-size: 5rem;
   
   }
 }
@@ -75,7 +74,7 @@ text-align: center;
     padding-top: 1rem;
     color: $blueColor;
     font-weight: 900;
-    background-color: goldenrod;
+    background-color:lightblue;
   
     
     @include respond-to(sm, min) {
