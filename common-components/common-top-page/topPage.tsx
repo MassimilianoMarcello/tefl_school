@@ -9,7 +9,7 @@ import { CommonTop as CommonTopType } from "@/Types/CommonTop";
 interface CommonTopTypeProps {
   data: CommonTopType[];
   dynamicStyle?: string;
-  id: string; //
+  id: string; 
 }
 
 export default function CommonTopPage({
@@ -46,6 +46,7 @@ export default function CommonTopPage({
         <h1 className={styles.mainTitle}>{title}</h1>
         <p className={styles.mainText}>{subtitle}</p>
       </div>
+   
       <span className={styles.square1}></span>
       <span className={styles.square2}></span>
     </div>

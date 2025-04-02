@@ -4,6 +4,7 @@
     position: relative;
     margin-top: -30rem;
     margin-bottom: 5rem;
+    
 }
 
 
@@ -20,14 +21,16 @@
   font-family: $fontFirst;
   
   // font-weight: 900;
-  overflow-x: auto;
+  // overflow-x: auto;
   @include respond-to(sm, min) {
 
   }
   @include respond-to(md, min) {}
   @include respond-to(lg, min) {}
   @include respond-to(xl, min) {}
-  @include respond-to(xxl, min) {}
+  @include respond-to(xxl, min) {
+  
+  }
 
 
 
@@ -60,17 +63,19 @@ background-color: $bgColor;
       padding: 3rem 2rem;
     }
     @include respond-to(xl, min) {}
-    @include respond-to(xxl, min) {}
+    @include respond-to(xxl, min) {
+    
+    }
   }
 
   .coursesIntroductionOne {
     grid-column: 1/4;
     grid-row: 2/3;
- 
+    font-size: 1.1rem;
     background-color: $bgColor;
     padding: 6rem;
     margin-left: 1rem;
-
+margin-top: 0;
     height: auto;
     width: auto;
     z-index: 4;
@@ -85,7 +90,15 @@ background-color: $bgColor;
     @include respond-to(md, min) {}
     @include respond-to(lg, min) {}
     @include respond-to(xl, min) {}
-    @include respond-to(xxl, min) {}
+    @include respond-to(xxl, min) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      width: 35rem;
+      padding: 3rem 2rem;
+      font-size: 1.4rem;
+   margin-top: -15rem;
+
+    }
 
   }
   .coursesIntroductionTwo {
@@ -113,7 +126,9 @@ margin-top: 1rem;
     margin: 0 4rem;
 }
 @include respond-to(xl, min) {}
-@include respond-to(xxl, min) {}
+@include respond-to(xxl, min) {
+  margin-top: 1.9rem;
+}
 
 } }
 
@@ -127,6 +142,9 @@ margin-top: 1rem;
   width: 12rem;
 background-color: gold;
 z-index: 2;
+@include respond-to(xxl, min) {
+  margin-top: 1.9rem;
+}
 }
 .coursesListCards{
   grid-column: 1/4;
@@ -138,10 +156,15 @@ z-index: 2;
   height: 5rem;
   width: 20rem;
   background-color: lightblue;
+
   right: 10rem;
   top: 54rem;
   z-index: 2;
   @include respond-to(sm, min) {}
+  @include respond-to(xxl, min) {
+  top: -17rem;
+  right: 22rem;
+  }
   
 }
 
@@ -155,6 +178,9 @@ z-index: 2;
   background-color: gold;
 
   z-index: 2;
+  @include respond-to(xxl, min) {
+  
+  }
 }
 
 .square4 {
@@ -166,7 +192,12 @@ z-index: 2;
   background-color: lightblue;
   z-index: 2;
     @include respond-to(lg, min) {
+    
       left: 0rem;
       width: 10rem;
+      top: 20rem;
+    }
+    @include respond-to(xxl, min) {
+  
     }
   }

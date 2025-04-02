@@ -1,61 +1,65 @@
 @import "../../app/page.module.scss";
 
 .mainContainer {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; // Spazio tra le due colonne
-    // padding: 1rem;
-  
-    letter-spacing: 1px;
-    font-family: "Zeitung Micro Pro";
-    font-weight: 700;
-    overflow-x: auto;
-  
-  }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  font-family: "Zeitung Micro Pro";
+  font-weight: 700;
+  overflow-x: auto;
+}
 
 .titleBox {
-    grid-column: 1/4;
-    grid-row: 4/5;
+  grid-column: 1/4;
+  grid-row: 4/5;
 
+  h1 {
+    display: block;
+    width: 94%;
+
+    margin: 0 auto;
+    font-size: 1.4rem;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    color: $blueColor;
+    text-align: center;
+    background-image: #add8e6;
+
+    border: 0.2rem solid #90cee3;
+  }
+
+  p {
+    margin-left: 2.5rem;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  @include respond-to(sm, min) {
     h1 {
-      display: block;
-      width: 94%;
-
-      margin: 0 auto;
-      font-size: 1.4rem;
-      padding: 3rem 1rem;
-      margin-top: 4rem;
-      color: $blueColor;
-      text-align: center;
-      background-image: #add8e6;
-
-      border: 0.2rem solid #90cee3;
+      font-size: 4rem;
     }
-    p{
-      margin-left: 2.5rem;
-      padding: 2rem 1rem;
-      font-size: 1.2rem;
-    }
-
-    @include respond-to(sm, min) {
-h1{      font-size: 4rem;}
-    }
-    @include respond-to(md, min) {}
-    @include respond-to(lg, min) {}
-    @include respond-to(xl, min) {}
-    @include respond-to(xxl, min) {}
-  }
-  .courseCardsBox {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-column: 1/4;
-    grid-row: 5/6;
-    width: 100%;
   }
 
+  @include respond-to(md, min) {}
+
+  @include respond-to(lg, min) {}
+
+  @include respond-to(xl, min) {}
+
+  @include respond-to(xxl, min) {}
+}
+
+.courseCardsBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column: 1/4;
+  grid-row: 5/6;
+  width: 100%;
+}
 
 .square1 {
   position: absolute;
@@ -92,16 +96,16 @@ h1{      font-size: 4rem;}
 }
 
 .square4 {
-    position: absolute;
-    left: 0rem;
-    top: 50rem;
-    height: 25rem;
-    width: 6rem;
-  
-    background-color: lightblue;
-  
-    z-index: 2;
-  }
+  position: absolute;
+  left: 0rem;
+  top: 50rem;
+  height: 25rem;
+  width: 6rem;
+
+  background-color: lightblue;
+
+  z-index: 2;
+}
 
 // card courses style
 
@@ -125,7 +129,8 @@ h1{      font-size: 4rem;}
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  margin: 2rem auto; /* Centra le carte */
+  margin: 2rem auto;
+  /* Centra le carte */
 
   overflow: hidden;
 
@@ -143,7 +148,8 @@ h1{      font-size: 4rem;}
 
 .cardImage {
   width: 100%;
-  height: 25rem;
+  min-height: 22rem;
+  max-height: 22rem;
   display: block;
 }
 
@@ -157,42 +163,52 @@ h1{      font-size: 4rem;}
   font-size: 24px;
   margin-bottom: 10px;
   color: #333;
-
+  height: 2rem;
 }
-.cardName{
-  background-color:$generic1;
+
+.cardName {
+  background-color: $generic1;
   color: #f1f1f1;
   font-size: 2rem;
   text-align: center;
+  height: 4rem;
 }
 
 .cardDescription {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #424242;
+  margin-top: 0;
+  // margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  height: 20rem;
 }
 
 .courseDetails {
   display: flex;
   flex-wrap: wrap;
   
+
 }
 
 .courseDetail {
   font-size: 14px;
   color: #888;
   margin-right: 10px;
-  
+
 }
+
 // link more details
 .detailsLink {
-  display: inline-block;
+  // display: inline-block;
   grid-row: 4/5;
   grid-column: 1/3;
 
-  background-color:$generic1;
+
+  background-color: $generic1;
+
   color: #fff;
   padding: 10px 20px;
+
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -200,7 +216,7 @@ h1{      font-size: 4rem;}
 }
 
 .detailsLink:hover {
-  background-color:$generic2;
+  background-color: $generic2;
 }
 
 // level course
@@ -220,10 +236,11 @@ h1{      font-size: 4rem;}
   padding-right: 2.5rem;
   font-size: 0.8rem;
   text-align: center;
-  background-color:$generic1;
+  background-color: $generic1;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Aggiunge una leggera ombra */
 }
 
 // hours card
@@ -236,19 +253,26 @@ h1{      font-size: 4rem;}
   left: 2rem;
   text-align: center;
   // transform: translateX(-50%);
-  background-color: #1a3847; /* Colore blu notte */
-  color: #d2d8da; /* Testo bianco */
-  padding: 1.5rem; /* Padding */
+  background-color: #1a3847;
+  /* Colore blu notte */
+  color: #d2d8da;
+  /* Testo bianco */
+  padding: 1.5rem;
+  /* Padding */
   height: 8rem;
   width: 8rem;
-  border: 2px solid #ddb239; /* Bordo dorato */
-  border-radius: 25px; /* Bordi arrotondati */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra */
+  border: 2px solid #ddb239;
+  /* Bordo dorato */
+  border-radius: 25px;
+  /* Bordi arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Ombra */
   font-weight: 700;
 }
 
 .cardHoursText {
-  font-size: 2.8rem; /* Dimensione del testo grande */
+  font-size: 2.8rem;
+  /* Dimensione del testo grande */
   color: #ddb239;
   margin-top: -2.8rem;
   margin-bottom: -1.8rem;
@@ -256,6 +280,7 @@ h1{      font-size: 4rem;}
   letter-spacing: 2px;
   padding: 1rem;
 }
+
 .hourSpan {
   font-size: 1.8rem;
   letter-spacing: 1px;
